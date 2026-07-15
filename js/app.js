@@ -25,6 +25,23 @@ function saveAttendanceRecords(records) {
   localStorage.setItem(storageKey(ATTENDANCE_STORAGE_KEY), JSON.stringify(records));
 }
 
+// Baja la asistencia de Firestore para validar duplicados con la data mas reciente.
+async function syncAttendanceFromCloud() {
+  if (!window.PRFirebase || !window.PRFirebase.enabled || typeof window.PRFirebase.getAttendance !== "function") {
+    return;
+  }
+
+  try {
+    const cloudAttendance = await window.PRFirebase.getAttendance();
+
+    if (cloudAttendance.length) {
+      localStorage.setItem(storageKey(ATTENDANCE_STORAGE_KEY), JSON.stringify(cloudAttendance));
+    }
+  } catch (error) {
+    console.warn("No se pudo cargar la asistencia compartida.", error);
+  }
+}
+
 // Lee los estudiantes creados desde el panel de maestra.
 function getStudentRecords() {
   const rawStudents = localStorage.getItem(storageKey(STUDENTS_STORAGE_KEY));
@@ -58,6 +75,14 @@ function normalizeText(value) {
   return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+// Crea una fecha estable para evitar asistencia duplicada el mismo dia.
+function getDateKey(date = new Date()) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 // Busca un estudiante por su numero.
 function findStudentByCode(code) {
   const cleanCode = normalizeCode(code);
@@ -80,9 +105,10 @@ function findStudentsByName(query) {
 // Crea un registro de asistencia usando el estudiante ya registrado.
 function buildAttendanceRecord(student) {
   const now = new Date();
+  const dateKey = getDateKey(now);
 
   return {
-    id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
+    id: `${normalizeCode(student.code)}_${dateKey}`,
     studentId: student.id,
     studentCode: student.code,
     name: student.name,
@@ -92,10 +118,23 @@ function buildAttendanceRecord(student) {
     emergencyPhone: student.emergencyPhone || "",
     group: student.group,
     groupLabel: student.groupLabel,
+    dateKey,
     date: now.toLocaleDateString("es-PR"),
     time: now.toLocaleTimeString("es-PR", { hour: "2-digit", minute: "2-digit" }),
     createdAt: now.toISOString()
   };
+}
+
+// Verifica si ya existe asistencia para este estudiante en el dia actual.
+function hasAttendanceToday(student) {
+  const todayKey = getDateKey();
+  const todayLabel = new Date().toLocaleDateString("es-PR");
+  const studentCode = normalizeCode(student.code);
+
+  return getAttendanceRecords().some((record) => {
+    return normalizeCode(record.studentCode) === studentCode
+      && (record.dateKey === todayKey || record.date === todayLabel);
+  });
 }
 
 // Muestra los datos del estudiante antes de guardar la asistencia.
@@ -129,10 +168,15 @@ function showStudentPreview(student) {
 }
 
 // Muestra una notificacion corta si Bootstrap esta disponible.
-function showSuccessToast() {
+function showToast(message, variant = "primary") {
   const toastElement = document.getElementById("appToast");
+  const toastBody = toastElement ? toastElement.querySelector(".toast-body") : null;
 
   if (toastElement && window.bootstrap) {
+    toastElement.className = `toast align-items-center text-bg-${variant} border-0`;
+    if (toastBody) {
+      toastBody.textContent = message;
+    }
     const toast = new bootstrap.Toast(toastElement);
     toast.show();
   }
@@ -264,6 +308,7 @@ async function setupAttendanceForm() {
   }
 
   await syncStudentsFromCloud();
+  await syncAttendanceFromCloud();
   showCurrentAttendanceDate();
   setupQrScanner();
   setupNameSearch();
@@ -279,10 +324,18 @@ async function setupAttendanceForm() {
     event.preventDefault();
 
     await syncStudentsFromCloud();
+    await syncAttendanceFromCloud();
     const student = findStudentByCode(codeInput.value);
 
     if (!student) {
       showStudentPreview(null);
+      return;
+    }
+
+    if (hasAttendanceToday(student)) {
+      showStudentPreview(student);
+      showToast("Este estudiante ya tiene asistencia registrada hoy.", "warning");
+      form.reset();
       return;
     }
 
@@ -296,7 +349,7 @@ async function setupAttendanceForm() {
       await window.PRFirebase.saveAttendance(record);
     }
 
-    showSuccessToast();
+    showToast("Asistencia registrada correctamente.", "primary");
     form.reset();
     showStudentPreview(student);
   });

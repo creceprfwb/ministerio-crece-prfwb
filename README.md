@@ -44,7 +44,7 @@ Abre `index.html` directamente en el navegador o usa la extension Live Server de
 4. El sistema genera un numero de estudiante y un codigo QR.
 5. En cada clase, la maestra o lider escanea el QR o escribe el numero en `asistencia.html`.
 6. La fecha y hora se guardan automaticamente.
-7. El sistema redirige a la clase correspondiente.
+7. El sistema evita registrar asistencia duplicada para el mismo estudiante el mismo dia.
 
 ## Panel de maestra
 
@@ -186,7 +186,7 @@ Este proyecto no depende del editor de Wix. Puedes integrarlo de tres maneras:
 ## Proximas mejoras recomendadas
 
 - Pantalla para que el administrador agregue mas maestras a su iglesia.
-- Evitar asistencia duplicada por estudiante y fecha.
+- Pantalla para editar o desactivar estudiantes registrados.
 - Escaneo avanzado de QR con camara en todos los dispositivos.
 - Reportes automaticos por semana y mes.
 - Panel de contenido para cargar clases.
