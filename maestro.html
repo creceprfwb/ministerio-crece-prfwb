@@ -37,8 +37,8 @@
       <article class="app-card">
         <div class="panel-heading">
           <div>
-            <h2>Nuevo estudiante</h2>
-            <p>Al guardar se genera un numero y codigo QR.</p>
+            <h2 id="studentFormTitle">Nuevo estudiante</h2>
+            <p id="studentFormHelp">Al guardar se genera un numero y codigo QR.</p>
           </div>
         </div>
 
@@ -70,10 +70,16 @@
             </div>
           </div>
 
-          <button class="btn btn-primary btn-lg w-100 submit-button mt-4" type="submit">
-            <i class="bi bi-person-plus"></i>
-            REGISTRAR Y CREAR QR
-          </button>
+          <div class="student-form-actions">
+            <button id="studentSubmitButton" class="btn btn-primary btn-lg w-100 submit-button mt-4" type="submit">
+              <i class="bi bi-person-plus"></i>
+              REGISTRAR Y CREAR QR
+            </button>
+            <button id="cancelStudentEdit" class="btn btn-outline-secondary btn-lg w-100 mt-2 d-none" type="button">
+              <i class="bi bi-x-circle"></i>
+              Cancelar edicion
+            </button>
+          </div>
         </form>
       </article>
 
@@ -116,7 +122,9 @@
               <th>Grupo</th>
               <th>Encargado</th>
               <th>Telefono</th>
+              <th>Estado</th>
               <th>QR</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody id="studentsTable"></tbody>

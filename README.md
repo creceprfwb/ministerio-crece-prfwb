@@ -53,6 +53,8 @@ Abre `maestro.html`.
 Desde ahi puedes:
 
 - Registrar estudiantes.
+- Editar informacion de estudiantes sin cambiar su QR.
+- Activar o desactivar estudiantes para controlar si aparecen en asistencia.
 - Asignar grupo automaticamente por edad.
 - Crear numero unico.
 - Generar codigo QR.

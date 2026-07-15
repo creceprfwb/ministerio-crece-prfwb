@@ -88,11 +88,12 @@ function getSummary(records) {
 // Pinta las tarjetas de metricas.
 function renderStats(records) {
   const summary = getSummary(records);
+  const activeStudents = studentRecords.filter((student) => student.active !== false);
 
   document.getElementById("totalAttendance").textContent = summary.total;
   document.getElementById("totalNinos").textContent = summary.ninos;
   document.getElementById("totalJuveniles").textContent = summary.juveniles;
-  document.getElementById("totalStudents").textContent = studentRecords.length;
+  document.getElementById("totalStudents").textContent = activeStudents.length;
 }
 
 // Pinta la tabla historica.

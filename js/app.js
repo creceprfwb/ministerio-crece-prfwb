@@ -75,6 +75,10 @@ function normalizeText(value) {
   return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+function isActiveStudent(student) {
+  return student && student.active !== false;
+}
+
 // Crea una fecha estable para evitar asistencia duplicada el mismo dia.
 function getDateKey(date = new Date()) {
   const year = date.getFullYear();
@@ -86,7 +90,7 @@ function getDateKey(date = new Date()) {
 // Busca un estudiante por su numero.
 function findStudentByCode(code) {
   const cleanCode = normalizeCode(code);
-  return getStudentRecords().find((student) => normalizeCode(student.code) === cleanCode);
+  return getStudentRecords().find((student) => isActiveStudent(student) && normalizeCode(student.code) === cleanCode);
 }
 
 // Busca estudiantes por nombre cuando perdieron el numero o QR.
@@ -98,7 +102,7 @@ function findStudentsByName(query) {
   }
 
   return getStudentRecords()
-    .filter((student) => normalizeText(student.name).includes(cleanQuery))
+    .filter((student) => isActiveStudent(student) && normalizeText(student.name).includes(cleanQuery))
     .slice(0, 8);
 }
 

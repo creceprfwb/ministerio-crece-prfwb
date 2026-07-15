@@ -3,6 +3,7 @@ const STUDENTS_STORAGE_KEY = "prfwb_student_records";
 
 let students = [];
 let selectedQrStudent = null;
+let editingStudentCode = null;
 
 function storageKey(baseKey) {
   return window.PRFirebase && typeof window.PRFirebase.getScopedStorageKey === "function"
@@ -97,8 +98,67 @@ function buildStudentRecord(formData) {
     guardianName: String(formData.get("guardianName") || "").trim(),
     guardianPhone: String(formData.get("guardianPhone") || "").trim(),
     emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
+    active: true,
     createdAt: now.toISOString()
   };
+}
+
+// Actualiza un estudiante existente sin cambiar su numero ni QR.
+function buildUpdatedStudentRecord(existingStudent, formData) {
+  const age = Number(formData.get("studentAge"));
+  const groupInfo = getGroupByAge(age);
+
+  if (!groupInfo) {
+    throw new Error("La edad debe estar entre 3 y 16 aÃ±os.");
+  }
+
+  return {
+    ...existingStudent,
+    name: String(formData.get("studentName") || "").trim(),
+    age,
+    group: groupInfo.group,
+    groupLabel: groupInfo.groupLabel,
+    guardianName: String(formData.get("guardianName") || "").trim(),
+    guardianPhone: String(formData.get("guardianPhone") || "").trim(),
+    emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
+    active: existingStudent.active !== false,
+    updatedAt: new Date().toISOString()
+  };
+}
+
+function getStudentByCode(code) {
+  return students.find((student) => student.code === code);
+}
+
+function fillStudentForm(student) {
+  document.getElementById("studentName").value = student.name || "";
+  document.getElementById("studentAge").value = student.age || "";
+  document.getElementById("guardianName").value = student.guardianName || "";
+  document.getElementById("guardianPhone").value = student.guardianPhone || "";
+  document.getElementById("emergencyPhone").value = student.emergencyPhone || "";
+}
+
+function setStudentFormMode(mode) {
+  const isEditing = mode === "edit";
+  const title = document.getElementById("studentFormTitle");
+  const help = document.getElementById("studentFormHelp");
+  const submitButton = document.getElementById("studentSubmitButton");
+  const cancelButton = document.getElementById("cancelStudentEdit");
+
+  title.textContent = isEditing ? "Editar estudiante" : "Nuevo estudiante";
+  help.textContent = isEditing
+    ? "Actualiza la informacion sin cambiar el numero ni el QR."
+    : "Al guardar se genera un numero y codigo QR.";
+  submitButton.innerHTML = isEditing
+    ? '<i class="bi bi-save"></i> GUARDAR CAMBIOS'
+    : '<i class="bi bi-person-plus"></i> REGISTRAR Y CREAR QR';
+  cancelButton.classList.toggle("d-none", !isEditing);
+}
+
+function resetStudentForm(form) {
+  editingStudentCode = null;
+  form.reset();
+  setStudentFormMode("create");
 }
 
 // Dibuja el QR del estudiante seleccionado.
@@ -144,14 +204,14 @@ function renderStudentsTable() {
   if (!visibleStudents.length) {
     tableBody.innerHTML = `
       <tr>
-        <td colspan="7" class="text-center text-muted py-4">No hay estudiantes registrados.</td>
+        <td colspan="9" class="text-center text-muted py-4">No hay estudiantes registrados.</td>
       </tr>
     `;
     return;
   }
 
   tableBody.innerHTML = visibleStudents.map((student) => `
-    <tr>
+    <tr class="${student.active === false ? "inactive-student" : ""}">
       <td><strong>${student.code}</strong></td>
       <td>${student.name}</td>
       <td>${student.age}</td>
@@ -159,9 +219,24 @@ function renderStudentsTable() {
       <td>${student.guardianName || ""}</td>
       <td>${student.guardianPhone || ""}</td>
       <td>
+        <span class="badge ${student.active === false ? "text-bg-secondary" : "text-bg-success"}">
+          ${student.active === false ? "Inactivo" : "Activo"}
+        </span>
+      </td>
+      <td>
         <button class="btn btn-sm btn-outline-primary show-qr" type="button" data-code="${student.code}">
           <i class="bi bi-qr-code"></i> Ver
         </button>
+      </td>
+      <td>
+        <div class="table-actions">
+          <button class="btn btn-sm btn-outline-secondary edit-student" type="button" data-code="${student.code}">
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button class="btn btn-sm ${student.active === false ? "btn-outline-success" : "btn-outline-warning"} toggle-student" type="button" data-code="${student.code}">
+            <i class="bi ${student.active === false ? "bi-check-circle" : "bi-slash-circle"}"></i>
+          </button>
+        </div>
       </td>
     </tr>
   `).join("");
@@ -170,6 +245,36 @@ function renderStudentsTable() {
     button.addEventListener("click", () => {
       const student = students.find((item) => item.code === button.dataset.code);
       renderQr(student);
+    });
+  });
+
+  tableBody.querySelectorAll(".edit-student").forEach((button) => {
+    button.addEventListener("click", () => {
+      const student = getStudentByCode(button.dataset.code);
+      editingStudentCode = student.code;
+      fillStudentForm(student);
+      setStudentFormMode("edit");
+      document.getElementById("studentForm").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  tableBody.querySelectorAll(".toggle-student").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const student = getStudentByCode(button.dataset.code);
+      const updatedStudent = {
+        ...student,
+        active: student.active === false,
+        updatedAt: new Date().toISOString()
+      };
+
+      students = students.map((item) => item.code === updatedStudent.code ? updatedStudent : item);
+      saveStudents(students);
+
+      if (window.PRFirebase && typeof window.PRFirebase.saveStudent === "function") {
+        await window.PRFirebase.saveStudent(updatedStudent);
+      }
+
+      renderStudentsTable();
     });
   });
 }
@@ -193,6 +298,7 @@ async function setupTeacherPanel() {
   const form = document.getElementById("studentForm");
   const searchInput = document.getElementById("studentSearch");
   const downloadButton = document.getElementById("downloadQr");
+  const cancelEditButton = document.getElementById("cancelStudentEdit");
 
   if (window.PRFirebase && typeof window.PRFirebase.requireAuth === "function") {
     const profile = await window.PRFirebase.requireAuth();
@@ -208,15 +314,25 @@ async function setupTeacherPanel() {
     event.preventDefault();
 
     try {
-      const student = buildStudentRecord(new FormData(form));
-      students.unshift(student);
+      const formData = new FormData(form);
+      const existingStudent = editingStudentCode ? getStudentByCode(editingStudentCode) : null;
+      const student = existingStudent
+        ? buildUpdatedStudentRecord(existingStudent, formData)
+        : buildStudentRecord(formData);
+
+      if (existingStudent) {
+        students = students.map((item) => item.code === student.code ? student : item);
+      } else {
+        students.unshift(student);
+      }
+
       saveStudents(students);
 
       if (window.PRFirebase && typeof window.PRFirebase.saveStudent === "function") {
         await window.PRFirebase.saveStudent(student);
       }
 
-      form.reset();
+      resetStudentForm(form);
       renderStudentsTable();
       renderQr(student);
     } catch (error) {
@@ -226,6 +342,7 @@ async function setupTeacherPanel() {
 
   searchInput.addEventListener("input", renderStudentsTable);
   downloadButton.addEventListener("click", downloadVisibleQr);
+  cancelEditButton.addEventListener("click", () => resetStudentForm(form));
 }
 
 // Carga la clase actual del grupo seleccionado dentro del editor.

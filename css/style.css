@@ -1027,6 +1027,16 @@ body {
   text-transform: uppercase;
 }
 
+.inactive-student {
+  opacity: 0.62;
+}
+
+.table-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
 @media (max-width: 900px) {
   .hero-shell,
   .page-shell {
