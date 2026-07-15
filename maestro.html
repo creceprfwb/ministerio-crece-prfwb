@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Panel de maestra para registrar estudiantes Ministerio CRECE PRFWB.">
+  <title>Panel de Maestra | Ministerio CRECE</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="admin-body">
+  <nav class="admin-nav">
+    <div>
+      <img src="assets/logo.png" alt="PRFWB" class="nav-logo">
+      <strong>Ministerio CRECE Maestra</strong>
+      <span>Registro de estudiantes</span>
+    </div>
+    <div class="admin-actions">
+      <a href="index.html" class="btn btn-light btn-sm"><i class="bi bi-house"></i> Volver al inicio</a>
+      <a href="asistencia.html" class="btn btn-outline-light btn-sm"><i class="bi bi-qr-code-scan"></i> Asistencia</a>
+      <a href="biblioteca.html" class="btn btn-outline-light btn-sm"><i class="bi bi-journal-richtext"></i> Biblioteca de clases</a>
+    </div>
+  </nav>
+
+  <main class="admin-shell">
+    <section class="admin-hero">
+      <div>
+        <p class="section-kicker">Panel de maestra</p>
+        <h1>Registrar estudiante</h1>
+        <p>El grupo se asigna automaticamente por edad: 3-10 Niños, 11-16 Juveniles.</p>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="app-card">
+        <div class="panel-heading">
+          <div>
+            <h2>Nuevo estudiante</h2>
+            <p>Al guardar se genera un numero y codigo QR.</p>
+          </div>
+        </div>
+
+        <form id="studentForm">
+          <div class="mb-3">
+            <label for="studentName" class="form-label">Nombre del estudiante</label>
+            <input id="studentName" name="studentName" class="form-control form-control-lg" type="text" required>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-sm-4">
+              <label for="studentAge" class="form-label">Edad</label>
+              <input id="studentAge" name="studentAge" class="form-control form-control-lg" type="number" min="3" max="16" required>
+            </div>
+          <div class="col-sm-8">
+              <label for="guardianName" class="form-label">Padre, madre o encargado</label>
+              <input id="guardianName" name="guardianName" class="form-control form-control-lg" type="text" placeholder="Nombre completo" required>
+          </div>
+        </div>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <label for="guardianPhone" class="form-label">Telefono principal</label>
+              <input id="guardianPhone" name="guardianPhone" class="form-control form-control-lg" type="tel" placeholder="787-000-0000" required>
+            </div>
+            <div class="col-md-6">
+              <label for="emergencyPhone" class="form-label">Telefono alterno</label>
+              <input id="emergencyPhone" name="emergencyPhone" class="form-control form-control-lg" type="tel" placeholder="Opcional">
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-lg w-100 submit-button mt-4" type="submit">
+            <i class="bi bi-person-plus"></i>
+            REGISTRAR Y CREAR QR
+          </button>
+        </form>
+      </article>
+
+      <aside class="app-card">
+        <div class="panel-heading">
+          <div>
+            <h2>Codigo generado</h2>
+            <p>Entrega este QR al estudiante o al encargado.</p>
+          </div>
+        </div>
+        <div id="qrResult" class="qr-result empty-state">
+          <i class="bi bi-qr-code"></i>
+          <span>El QR aparecera aqui.</span>
+        </div>
+        <button id="downloadQr" class="btn btn-outline-primary w-100 mt-3" type="button" disabled>
+          <i class="bi bi-download"></i>
+          Descargar QR
+        </button>
+      </aside>
+    </section>
+
+    <section class="app-card mt-4">
+      <div class="panel-heading">
+        <div>
+          <h2>Estudiantes registrados</h2>
+          <p>Lista de estudiantes de la iglesia activa.</p>
+        </div>
+        <div class="input-group search-inline">
+          <span class="input-group-text"><i class="bi bi-search"></i></span>
+          <input id="studentSearch" class="form-control" type="search" placeholder="Buscar">
+        </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table align-middle admin-table">
+          <thead>
+            <tr>
+              <th>Numero</th>
+              <th>Nombre</th>
+              <th>Edad</th>
+              <th>Grupo</th>
+              <th>Encargado</th>
+              <th>Telefono</th>
+              <th>QR</th>
+            </tr>
+          </thead>
+          <tbody id="studentsTable"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/maestro.js"></script>
+</body>
+</html>

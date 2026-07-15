@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Login de iglesia para Ministerio CRECE PRFWB.">
+  <title>Entrar | Ministerio CRECE</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="app-body">
+  <main class="page-shell">
+    <section class="container narrow-container">
+      <a href="index.html" class="back-link"><i class="bi bi-arrow-left"></i> Volver al inicio</a>
+
+      <div class="app-card attendance-card">
+        <img src="assets/logo.png" alt="Ministerio CRECE" class="card-logo">
+        <div class="card-icon"><i class="bi bi-shield-lock"></i></div>
+        <p class="section-kicker">Acceso por iglesia</p>
+        <h1>Entrar</h1>
+        <p class="muted-text">Usa el correo y contrasena de la iglesia para ver su data privada.</p>
+
+        <div id="authMessage" class="alert alert-danger d-none" role="alert"></div>
+
+        <form id="loginForm" class="mt-4">
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electronico</label>
+            <input id="email" name="email" class="form-control form-control-lg" type="email" autocomplete="email" required>
+          </div>
+
+          <div class="mb-4">
+            <label for="password" class="form-label">Contrasena</label>
+            <input id="password" name="password" class="form-control form-control-lg" type="password" autocomplete="current-password" required>
+          </div>
+
+          <button class="btn btn-primary btn-lg w-100 submit-button" type="submit">
+            <i class="bi bi-box-arrow-in-right"></i>
+            ENTRAR
+          </button>
+        </form>
+
+        <div class="text-center mt-4">
+          <a href="registro-iglesia.html" class="plain-link">Crear cuenta para una iglesia</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
