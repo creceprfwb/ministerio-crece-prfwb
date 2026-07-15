@@ -483,8 +483,38 @@ body {
   margin-top: 16px;
 }
 
+.compact-actions {
+  margin-top: 0;
+}
+
 .lesson-action-buttons .btn {
   flex: 1 1 260px;
+}
+
+.compact-actions .btn {
+  flex: 0 1 auto;
+}
+
+.library-control-card,
+.lesson-preview-panel,
+.lesson-editor-panel {
+  margin-bottom: 22px;
+}
+
+.lesson-preview-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+
+.lesson-preview-actions h2 {
+  margin: 0;
+}
+
+.library-print-page {
+  margin: 0 auto;
 }
 
 .lesson-editor textarea[readonly],
@@ -1038,6 +1068,7 @@ body {
 
   .class-header,
   .admin-nav,
+  .lesson-preview-actions,
   .lesson-actions,
   .panel-heading {
     align-items: flex-start;
@@ -1081,13 +1112,18 @@ body {
   }
 
   .no-print,
+  .admin-nav,
+  .admin-hero,
+  .library-control-card,
+  .lesson-editor-panel,
+  .lesson-preview-actions,
   .back-link,
-  .print-button,
-  .class-badge {
+  .print-button {
     display: none !important;
   }
 
-  .page-shell {
+  .page-shell,
+  .admin-shell {
     display: block;
     min-height: 0;
     padding: 0;

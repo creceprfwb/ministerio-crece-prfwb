@@ -10,8 +10,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="admin-body">
-  <nav class="admin-nav">
+<body class="admin-body library-body">
+  <nav class="admin-nav no-print">
     <div>
       <img src="assets/logo.png" alt="PRFWB" class="nav-logo">
       <strong>Biblioteca de Clases</strong>
@@ -24,46 +24,107 @@
   </nav>
 
   <main class="admin-shell">
-    <section class="admin-hero">
+    <section class="admin-hero no-print">
       <div>
-        <p class="section-kicker">Solo maestras y líderes</p>
+        <p class="section-kicker">Solo maestras y lideres</p>
         <h1>Biblioteca de clases</h1>
-        <p>Selecciona la clase por fecha, revísala y publica la versión que verá cada grupo.</p>
+        <p>Selecciona una clase por fecha para verla lista para imprimir. Edita solo cuando necesites ajustar el contenido.</p>
       </div>
     </section>
 
-    <section class="app-card">
+    <section class="app-card library-control-card no-print">
       <div class="panel-heading">
         <div>
-          <h2>Preparar clase</h2>
-          <p>Este módulo no toma asistencia. Solo prepara el contenido de Niños o Juveniles.</p>
+          <h2>Selecciona la clase</h2>
+          <p>La vista imprimible aparecera automaticamente al escoger una fecha.</p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label for="lessonGroup" class="form-label">Grupo</label>
+          <select id="lessonGroup" name="lessonGroup" class="form-select form-select-lg" required>
+            <option value="ninos">Ninos</option>
+            <option value="juveniles">Juveniles</option>
+          </select>
+        </div>
+        <div class="col-md-8">
+          <label for="lessonLibrarySelect" class="form-label">Selecciona la clase por fecha</label>
+          <select id="lessonLibrarySelect" class="form-select form-select-lg">
+            <option value="">Selecciona la clase por fecha</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section id="lessonPreviewPanel" class="lesson-preview-panel d-none">
+      <div class="lesson-preview-actions no-print">
+        <div>
+          <p class="section-kicker">Vista imprimible</p>
+          <h2 id="previewHeading">Clase seleccionada</h2>
+        </div>
+        <div class="lesson-action-buttons compact-actions">
+          <button id="printLessonButton" class="btn btn-primary submit-button" type="button">
+            <i class="bi bi-printer"></i>
+            Imprimir
+          </button>
+          <button id="savePdfButton" class="btn btn-outline-primary submit-button" type="button">
+            <i class="bi bi-file-earmark-pdf"></i>
+            Guardar PDF
+          </button>
+          <button id="editLessonButton" class="btn btn-outline-secondary submit-button" type="button">
+            <i class="bi bi-pencil-square"></i>
+            Editar
+          </button>
+        </div>
+      </div>
+
+      <article id="printableLesson" class="lesson-book-page library-print-page">
+        <header class="class-header">
+          <div>
+            <img src="assets/logo.png" alt="Ministerio CRECE" class="lesson-logo">
+            <p class="section-kicker" id="previewGroup">Ministerio CRECE</p>
+            <h1 id="previewTitle">Selecciona una clase</h1>
+            <p id="previewIntro">La clase imprimible aparecera aqui.</p>
+          </div>
+          <div class="class-badge">
+            <i class="bi bi-journal-text"></i>
+            <span id="previewDate">Fecha</span>
+          </div>
+        </header>
+
+        <div class="lesson-layout">
+          <div id="previewContent" class="app-card lesson-card"></div>
+          <aside id="previewResources" class="app-card lesson-side"></aside>
+        </div>
+
+        <footer class="lesson-disclaimer">
+          <strong>Nota PRFWB:</strong>
+          Este material es una guia educativa para Ministerio CRECE. La maestra o lider debe revisarlo,
+          adaptarlo a la edad del grupo y confirmar que toda ensenanza se mantenga fiel a la Biblia y a
+          la doctrina de la iglesia local. No sustituye la preparacion espiritual, pastoral ni familiar.
+        </footer>
+      </article>
+    </section>
+
+    <section id="lessonEditorPanel" class="app-card lesson-editor-panel d-none no-print">
+      <div class="panel-heading">
+        <div>
+          <h2>Editar clase</h2>
+          <p>Ajusta el contenido y publica la version que usara la iglesia.</p>
         </div>
       </div>
 
       <form id="lessonForm" class="lesson-editor">
-        <div class="row g-3">
-          <div class="col-md-4">
-            <label for="lessonGroup" class="form-label">Grupo</label>
-            <select id="lessonGroup" name="lessonGroup" class="form-select form-select-lg" required>
-              <option value="ninos">Niños</option>
-              <option value="juveniles">Juveniles</option>
-            </select>
-          </div>
-          <div class="col-md-8">
-            <label for="lessonLibrarySelect" class="form-label">Selecciona la clase por fecha</label>
-            <select id="lessonLibrarySelect" class="form-select form-select-lg">
-              <option value="">Selecciona la clase por fecha</option>
-            </select>
-          </div>
-        </div>
+        <input id="lessonGroupHidden" name="lessonGroup" type="hidden">
 
         <div class="mt-3">
-          <label for="lessonTitle" class="form-label">Título</label>
+          <label for="lessonTitle" class="form-label">Titulo</label>
           <input id="lessonTitle" name="lessonTitle" class="form-control form-control-lg" type="text" required>
         </div>
 
         <div class="mt-3">
-          <label for="lessonVerse" class="form-label">Versículo clave</label>
+          <label for="lessonVerse" class="form-label">Versiculo clave</label>
           <input id="lessonVerse" name="lessonVerse" class="form-control" type="text" placeholder="Ejemplo: Juan 3:16">
         </div>
 
@@ -79,7 +140,7 @@
 
         <div class="row g-3 mt-1">
           <div class="col-md-6">
-            <label for="lessonWarmup" class="form-label">Inicio dinámico</label>
+            <label for="lessonWarmup" class="form-label">Inicio dinamico</label>
             <textarea id="lessonWarmup" name="lessonWarmup" class="form-control" rows="3"></textarea>
           </div>
           <div class="col-md-6">
@@ -95,18 +156,18 @@
 
         <div class="row g-3 mt-1">
           <div class="col-md-6">
-            <label for="lessonDynamic" class="form-label">Dinámica</label>
+            <label for="lessonDynamic" class="form-label">Dinamica</label>
             <textarea id="lessonDynamic" name="lessonDynamic" class="form-control" rows="4"></textarea>
           </div>
           <div class="col-md-6">
-            <label for="lessonApplication" class="form-label">Aplicación</label>
+            <label for="lessonApplication" class="form-label">Aplicacion</label>
             <textarea id="lessonApplication" name="lessonApplication" class="form-control" rows="4"></textarea>
           </div>
         </div>
 
         <div class="mt-3">
           <label for="lessonQuestions" class="form-label">Preguntas</label>
-          <textarea id="lessonQuestions" name="lessonQuestions" class="form-control" rows="3" placeholder="Una pregunta por línea."></textarea>
+          <textarea id="lessonQuestions" name="lessonQuestions" class="form-control" rows="3" placeholder="Una pregunta por linea."></textarea>
         </div>
 
         <div class="row g-3 mt-1">
@@ -120,20 +181,15 @@
           </div>
         </div>
 
-        <button class="btn btn-primary btn-lg submit-button mt-4" type="submit">
-          <i class="bi bi-cloud-arrow-up"></i>
-          PUBLICAR CLASE
-        </button>
-
-        <div id="lessonActionButtons" class="lesson-action-buttons d-none">
-          <button id="editLessonButton" class="btn btn-outline-secondary btn-lg submit-button" type="button">
-            <i class="bi bi-pencil-square"></i>
-            Editar clase
+        <div class="lesson-action-buttons">
+          <button class="btn btn-primary btn-lg submit-button" type="submit">
+            <i class="bi bi-cloud-arrow-up"></i>
+            Publicar clase
           </button>
-          <a id="printSelectedLesson" href="#" class="btn btn-outline-primary btn-lg submit-button">
-            <i class="bi bi-printer"></i>
-            Ver o imprimir clase seleccionada
-          </a>
+          <button id="cancelEditButton" class="btn btn-outline-secondary btn-lg submit-button" type="button">
+            <i class="bi bi-x-circle"></i>
+            Cancelar
+          </button>
         </div>
       </form>
     </section>
