@@ -3465,6 +3465,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "2/1/2026",
+      "displayTitle": "Un Dios, tres personas: misterio que adoramos",
+      "closingSummary": "La Trinidad no es una formula fria, sino la verdad del Dios vivo: Padre, Hijo y Espiritu Santo, un solo Dios que salva, acompana y merece adoracion.",
+      "teacherGuide": [
+        "Evita analogias simplistas que puedan confundir. Presenta la doctrina con reverencia biblica.",
+        "Aclara tres afirmaciones: hay un solo Dios; el Padre es Dios, el Hijo es Dios y el Espiritu es Dios; las personas son distintas.",
+        "Conecta doctrina con vida: adoracion, identidad, oracion y comunion con Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 28:19",
+        "activity": "Escribe tres columnas: Padre, Hijo y Espiritu Santo. Anota una verdad biblica y una aplicacion personal para cada una.",
+        "reflection": "Conocer al Dios trino me llama a adorarlo con humildad y confianza."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la Trinidad: un solo Dios en tres personas.",
+        "homeQuestion": "Como cambia tu oracion saber que Dios se revela como Padre, Hijo y Espiritu Santo?",
+        "familyChallenge": "Oren reconociendo al Padre, agradeciendo al Hijo y pidiendo ayuda al Espiritu Santo."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "28",
+        "verses": "19; apoyo: 2 Corintios 13:14",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "Jesus resucitado envia a sus discipulos a bautizar en el nombre del Padre, del Hijo y del Espiritu Santo. La bendicion apostolica tambien presenta comunion con el Dios trino."
+      },
+      "centralIdea": "Dios es uno en esencia y tres en personas: Padre, Hijo y Espiritu Santo.",
+      "objectives": [
+        "Comprender las afirmaciones basicas de la doctrina de la Trinidad.",
+        "Reconocer que la Trinidad es revelacion biblica, no especulacion humana.",
+        "Aplicar esta verdad adorando y orando con mayor reverencia."
+      ],
+      "bibleContext": "La Gran Comision muestra que la mision cristiana nace del Dios trino. No bautizamos en nombres separados, sino en el nombre del Padre, del Hijo y del Espiritu Santo.",
+      "exposition": [
+        {
+          "title": "La Biblia afirma un solo Dios",
+          "text": "La fe cristiana no es politeista. Adoramos a un solo Dios vivo y verdadero."
+        },
+        {
+          "title": "La Biblia distingue tres personas",
+          "text": "El Padre, el Hijo y el Espiritu Santo no son mascaras, sino personas divinas que actuan en perfecta unidad."
+        },
+        {
+          "title": "La Trinidad nos lleva a adorar",
+          "text": "No entendemos a Dios por completo, pero recibimos con humildad lo que El revelo de si mismo."
+        }
+      ],
       "title": "EL PADRE, EL HIJO Y EL ESPÍRITU SANTO",
       "verse": "Mateo 28:19 \"...bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo.\"",
       "goal": "Entender que Dios es uno en esencia pero tres en persona: el Padre, el Hijo y el Espíritu Santo, actuando en perfecta unidad.",
@@ -3479,12 +3525,58 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Apartar cinco minutos diarios para orar recordando que Dios está presente.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Dios trino, gracias por revelarte como Padre, Hijo y Espíritu. Enséñame a conocerte más. Amén.",
+      "prayer": "\"Dios trino, gracias por revelarte como Padre, Hijo y Espíritu. Enséñame a conocerte más. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
       "group": "juveniles",
       "date": "2/8/2026",
+      "displayTitle": "El Padre que crea, sostiene y cuida",
+      "closingSummary": "Dios Padre no es distante ni indiferente. Es Creador, sustentador y Padre que cuida; por eso podemos vivir con gratitud, confianza y responsabilidad.",
+      "teacherGuide": [
+        "Distingue entre la idea humana de padre y la revelacion perfecta de Dios como Padre.",
+        "Conecta creacion con identidad: no somos accidente, pertenecemos al Creador.",
+        "Permite hablar de experiencias familiares dificiles con sensibilidad pastoral."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 6:26",
+        "activity": "Haz una lista: evidencias del cuidado del Padre esta semana. Luego escribe una respuesta de gratitud.",
+        "reflection": "Si Dios es mi Padre, puedo confiar en su cuidado y obedecer con gratitud."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron a Dios Padre como Creador y Cuidador.",
+        "homeQuestion": "En que area necesitamos confiar mas en el cuidado del Padre?",
+        "familyChallenge": "Practicar una oracion de gratitud diaria por la provision de Dios."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "6",
+        "verses": "25-34; apoyo: Genesis 1:1",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "Jesus ensena a sus discipulos a no vivir dominados por ansiedad, porque el Padre celestial conoce sus necesidades y cuida de su creacion."
+      },
+      "centralIdea": "Dios Padre creo la vida y cuida personalmente de sus hijos.",
+      "objectives": [
+        "Reconocer a Dios Padre como Creador y sustentador.",
+        "Comprender que su cuidado nos llama a confiar, no a vivir en ansiedad.",
+        "Aplicar esta verdad entregando una preocupacion a Dios en oracion."
+      ],
+      "bibleContext": "En el Sermon del Monte, Jesus corrige la ansiedad que nace de vivir como si estuvieramos solos. Las aves y los lirios sirven como recordatorio del cuidado del Padre.",
+      "exposition": [
+        {
+          "title": "El Padre es Creador",
+          "text": "Todo lo que existe depende de Dios. Nuestra vida tiene origen, valor y proposito en El."
+        },
+        {
+          "title": "El Padre conoce nuestras necesidades",
+          "text": "Jesus no niega necesidades reales; nos llama a confiar en el Padre que las conoce."
+        },
+        {
+          "title": "El Padre nos llama a buscar su Reino",
+          "text": "Confiar en el cuidado de Dios libera el corazon para priorizar su voluntad."
+        }
+      ],
       "title": "DIOS PADRE - CREADOR Y CUIDADOR",
       "verse": "Mateo 6:26 \"...vuestro Padre celestial las alimenta. ¿No valéis vosotros mucho más que ellas?\"",
       "goal": "Reconocer a Dios Padre como la fuente de la vida y como un Padre que cuida personalmente de nosotros.",
@@ -3505,6 +3597,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "2/15/2026",
+      "displayTitle": "Jesus, el Hijo que salva",
+      "closingSummary": "Jesus no es solo ejemplo moral ni personaje religioso. Es el Hijo de Dios enviado por amor, suficiente para salvar y digno de una respuesta personal de fe y entrega.",
+      "teacherGuide": [
+        "Presenta el evangelio completo: encarnacion, vida perfecta, muerte sustituta y resurreccion.",
+        "Evita presionar decisiones emocionales; invita a responder con fe sincera y preguntas honestas.",
+        "Conecta la suficiencia de Cristo con identidad juvenil: no necesitan ganarse el valor delante de Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 3:16",
+        "activity": "Escribe una carta a Jesus agradeciendo una verdad de su obra salvadora.",
+        "reflection": "Jesus no solo debe ser conocido; debe ser recibido y seguido."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron a Jesus como Hijo de Dios y Salvador.",
+        "homeQuestion": "Que significa confiar personalmente en Jesus?",
+        "familyChallenge": "Lean Juan 3:16 juntos y conversen sobre la palabra creer."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "3",
+        "verses": "16-18",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus conversa con Nicodemo y explica la necesidad de nacer de nuevo y creer en el Hijo enviado por el amor de Dios."
+      },
+      "centralIdea": "Jesus es el Hijo de Dios enviado para salvar, y debemos responder con fe.",
+      "objectives": [
+        "Comprender que Jesus es Dios Hijo y Salvador.",
+        "Reconocer la suficiencia de su muerte y resurreccion.",
+        "Aplicar esta verdad evaluando si mi fe en Jesus es personal y viva."
+      ],
+      "bibleContext": "Juan 3 presenta el amor de Dios y el llamado a creer en el Hijo. La vida eterna no se recibe por merito religioso, sino por fe en Cristo.",
+      "exposition": [
+        {
+          "title": "Dios dio a su Hijo",
+          "text": "La salvacion nace del amor de Dios. Jesus fue enviado, no improvisado."
+        },
+        {
+          "title": "Jesus salva completamente",
+          "text": "Su obra es suficiente: vivio sin pecado, murio por pecadores y resucito."
+        },
+        {
+          "title": "El evangelio exige respuesta",
+          "text": "Creer es confiar, recibir y seguir a Jesus, no solo conocer datos sobre El."
+        }
+      ],
       "title": "JESÚS, EL HIJO - NUESTRO SALV ADOR",
       "verse": "Juan 3:16 \"Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito...\"",
       "goal": "Comprender que Jesús es Dios Hijo, enviado por amor para salvarnos del pecado y darnos vida eterna.",
@@ -3525,6 +3663,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "2/22/2026",
+      "displayTitle": "El Espiritu Santo, presencia que transforma",
+      "closingSummary": "El Espiritu Santo no es una energia impersonal. Es Dios presente en el creyente: ensena, consuela, convence, da poder y forma el caracter de Cristo.",
+      "teacherGuide": [
+        "Corrige ideas vagas sobre el Espiritu como fuerza o emocion solamente.",
+        "Conecta su obra con vida diaria: conviccion, obediencia, fruto, poder para testificar.",
+        "Invita a orar por una situacion real donde necesitan ayuda del Espiritu."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 14:26",
+        "activity": "Escribe una situacion donde necesitas ayuda del Espiritu y una verdad biblica que debes recordar.",
+        "reflection": "No camino solo; el Espiritu Santo me ensena y me transforma."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la persona y obra del Espiritu Santo.",
+        "homeQuestion": "En que area necesitamos pedir la ayuda del Espiritu Santo?",
+        "familyChallenge": "Oren por fruto del Espiritu en una situacion concreta de la semana."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "14",
+        "verses": "16-17, 26; apoyo: Galatas 5:22-23",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus prepara a sus discipulos antes de la cruz y promete el Consolador, quien estaria con ellos y en ellos."
+      },
+      "centralIdea": "El Espiritu Santo habita en los creyentes y los ayuda a vivir como discipulos de Jesus.",
+      "objectives": [
+        "Reconocer que el Espiritu Santo es persona divina, no fuerza impersonal.",
+        "Comprender su obra de ensenar, consolar, convencer y transformar.",
+        "Aplicar esta verdad pidiendo su ayuda en una situacion real."
+      ],
+      "bibleContext": "Juan 14 presenta el consuelo de Jesus a discipulos temerosos. La promesa del Espiritu asegura que Dios continuara presente y activo en su pueblo.",
+      "exposition": [
+        {
+          "title": "El Espiritu es nuestro Ayudador",
+          "text": "Jesus lo llama Consolador o Ayudador. Su presencia acompana al creyente."
+        },
+        {
+          "title": "El Espiritu ensena y recuerda",
+          "text": "El Espiritu dirige al creyente hacia la verdad de Cristo y su Palabra."
+        },
+        {
+          "title": "El Espiritu transforma",
+          "text": "Su fruto se ve en amor, gozo, paz, dominio propio y una vida que se parece mas a Jesus."
+        }
+      ],
       "title": "EL ESPÍRITU SANTO - NUESTRO AYUDADOR",
       "verse": "Juan 14:26 \"El Espíritu Santo... os enseñará todas las cosas.\"",
       "goal": "Conocer que el Espíritu Santo no es una fuerza, sino una Persona divina que habita en los creyentes y los ayuda en su caminar.",
