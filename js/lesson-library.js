@@ -519,6 +519,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "3/1/2026",
+      "displayTitle": "Dios nos habla por su Palabra",
+      "closingSummary": "La Biblia no es solo un libro importante; es la Palabra de Dios. En ella Dios nos muestra quien es, que hizo por nosotros y como quiere que vivamos.",
+      "teacherGuide": [
+        "Presenta la Biblia como una carta confiable de Dios, no como un libro cualquiera.",
+        "Muestra una Biblia fisica y deja que los ninos la vean, la sostengan y reconozcan que contiene muchos libros con un solo gran mensaje.",
+        "Conecta toda la clase con Jesus: la Biblia nos lleva a conocer al Salvador."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "2 Timoteo 3:16",
+        "activity": "Dibuja una Biblia abierta y escribe dentro: Dios me habla por su Palabra.",
+        "reflection": "Cuando leo la Biblia, escucho lo que Dios quiere ensenarme."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que la Biblia es inspirada por Dios y nos ensena la verdad.",
+        "homeQuestion": "Que historia de la Biblia te ayuda a conocer mejor a Dios?",
+        "familyChallenge": "Lean juntos un versiculo corto esta semana y cada uno diga una cosa que aprendio."
+      },
+      "biblicalText": {
+        "book": "2 Timoteo",
+        "chapter": "3",
+        "verses": "16-17",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 64-67 d.C.",
+        "context": "Pablo escribe a Timoteo para animarlo a permanecer firme en la verdad. Le recuerda que toda la Escritura viene de Dios y prepara al creyente para vivir y servir."
+      },
+      "centralIdea": "Dios nos habla por medio de la Biblia, y su Palabra es verdadera, util y suficiente para guiarnos.",
+      "objectives": [
+        "Conocer que la Biblia viene de Dios.",
+        "Comprender que la Biblia ensena, corrige y guia.",
+        "Aplicar esta verdad escuchando y obedeciendo la Palabra de Dios."
+      ],
+      "bibleContext": "2 Timoteo fue escrito en un momento dificil para Pablo y para la iglesia. En vez de decirle a Timoteo que confiara en opiniones humanas, Pablo lo dirige a la Escritura. La Biblia es inspirada por Dios y sigue siendo la guia segura para la fe y la vida.",
+      "exposition": [
+        {
+          "title": "La Biblia viene de Dios",
+          "text": "Inspirada por Dios significa que Dios guio su Palabra. Aunque uso personas para escribir, el mensaje viene de El."
+        },
+        {
+          "title": "La Biblia nos ensena la verdad",
+          "text": "La Palabra nos muestra quien es Dios, que es el pecado, quien es Jesus y como podemos vivir para agradarle."
+        },
+        {
+          "title": "La Biblia nos prepara para obedecer",
+          "text": "Dios usa su Palabra para formar nuestro corazon y ayudarnos a hacer lo correcto."
+        }
+      ],
       "title": "LA BIBLIA ES LA PALABRA DE DIOS",
       "verse": "2 Timoteo 3:16 \"Toda la Escritura es inspirada por Dios...\"",
       "goal": "Que los niños entiendan que la Biblia viene de Dios y es verdadera en todo.",
@@ -540,6 +586,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "3/8/2026",
+      "displayTitle": "Como Dios nos dio la Biblia",
+      "closingSummary": "Dios uso personas reales, en tiempos reales, para escribir su Palabra. El Espiritu Santo guio ese proceso para que hoy podamos confiar en la Biblia.",
+      "teacherGuide": [
+        "Explica que Dios no lanzo la Biblia del cielo como un libro terminado; uso autores, historias y momentos reales.",
+        "Usa la dramatizacion de escuchar y escribir para mostrar la idea de inspiracion sin hacerla complicada.",
+        "Reafirma que la Biblia es confiable porque Dios mismo cuido su mensaje."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "2 Pedro 1:21",
+        "activity": "Haz una pluma de papel y escribe: Dios guio su Palabra.",
+        "reflection": "Puedo confiar en la Biblia porque Dios cuido su mensaje."
+      },
+      "parentMaterial": {
+        "summary": "Hoy hablamos de como Dios uso personas guiadas por el Espiritu Santo para escribir la Biblia.",
+        "homeQuestion": "Por que podemos confiar en la Biblia?",
+        "familyChallenge": "Busquen juntos quien escribio un libro de la Biblia y que ensena sobre Dios."
+      },
+      "biblicalText": {
+        "book": "2 Pedro",
+        "chapter": "1",
+        "verses": "20-21",
+        "author": "El apostol Pedro",
+        "date": "Aproximadamente 64-68 d.C.",
+        "context": "Pedro anima a los creyentes a confiar en la Palabra profetica. Les ensena que la Escritura no nacio de ideas humanas, sino que hombres de Dios hablaron siendo guiados por el Espiritu Santo."
+      },
+      "centralIdea": "La Biblia llego a nosotros porque Dios guio a sus siervos por medio del Espiritu Santo.",
+      "objectives": [
+        "Conocer que Dios uso autores humanos para escribir la Biblia.",
+        "Comprender que el Espiritu Santo guio el mensaje biblico.",
+        "Aplicar esta verdad confiando en la Biblia como Palabra de Dios."
+      ],
+      "bibleContext": "2 Pedro responde a la necesidad de distinguir la verdad de ensenanzas falsas. Pedro afirma que la Palabra de Dios no depende de la imaginacion humana. Dios cuido el mensaje para que su pueblo tuviera una guia firme.",
+      "exposition": [
+        {
+          "title": "Dios uso personas reales",
+          "text": "La Biblia fue escrita por profetas, reyes, discipulos y siervos de Dios. Cada uno escribio en su tiempo, pero Dios dirigio el mensaje."
+        },
+        {
+          "title": "El Espiritu Santo guio la Escritura",
+          "text": "2 Pedro dice que los hombres de Dios hablaron siendo inspirados por el Espiritu Santo. La Biblia tiene autoridad porque Dios esta detras de ella."
+        },
+        {
+          "title": "Podemos recibir la Biblia con confianza",
+          "text": "Aunque la Biblia fue escrita hace muchos anos, su verdad sigue viva porque Dios no cambia."
+        }
+      ],
       "title": "CÓMO LLEGÓ LA BIBLIA A NOSOTROS",
       "verse": "2 Pedro 1:21 \"...los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo.\"",
       "goal": "Enseñar que Dios usó personas guiadas por su Espíritu para escribir la Biblia.",
@@ -561,6 +653,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "3/15/2026",
+      "displayTitle": "La Biblia guia mis pasos",
+      "closingSummary": "La Palabra de Dios es como una luz en el camino. Nos ayuda a tomar decisiones sabias, reconocer el bien y seguir a Jesus cada dia.",
+      "teacherGuide": [
+        "Usa una linterna para explicar que la Palabra no siempre muestra todo el camino de una vez, pero si ilumina el proximo paso.",
+        "Haz que los ninos practiquen buscar un versiculo sencillo sin convertirlo en competencia que averguence a nadie.",
+        "Termina con una decision concreta que puedan practicar en casa o escuela."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Salmos 119:105",
+        "activity": "Dibuja una linterna alumbrando un camino y escribe: Tu Palabra me guia.",
+        "reflection": "Antes de decidir, puedo preguntarme: Que dice Dios?"
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que la Biblia guia nuestras decisiones como una luz en el camino.",
+        "homeQuestion": "Que decision puedes tomar esta semana obedeciendo a Dios?",
+        "familyChallenge": "Escojan un versiculo para memorizar juntos durante la semana."
+      },
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "119",
+        "verses": "105",
+        "author": "Autor no identificado; salmo de amor por la Palabra de Dios",
+        "date": "Periodo del Antiguo Testamento",
+        "context": "El Salmo 119 celebra la Palabra de Dios como guia, consuelo y verdad. El versiculo 105 compara la Palabra con una lampara que ayuda al creyente a caminar correctamente."
+      },
+      "centralIdea": "La Biblia ilumina nuestras decisiones y nos ayuda a caminar con Dios.",
+      "objectives": [
+        "Conocer que la Palabra de Dios guia nuestra vida.",
+        "Comprender que leer la Biblia nos ayuda a tomar buenas decisiones.",
+        "Aplicar esta verdad escogiendo una accion de obediencia esta semana."
+      ],
+      "bibleContext": "En tiempos biblicos, una lampara pequena ayudaba a caminar de noche sin tropezar. El salmista usa esa imagen para ensenar que la Palabra de Dios guia paso a paso al pueblo de Dios.",
+      "exposition": [
+        {
+          "title": "La Palabra ilumina",
+          "text": "La Biblia nos ayuda a ver lo que agrada a Dios y lo que puede hacernos tropezar."
+        },
+        {
+          "title": "La Palabra guia paso a paso",
+          "text": "Dios no siempre nos muestra todo el futuro, pero nos da suficiente luz para obedecer hoy."
+        },
+        {
+          "title": "La Palabra se practica",
+          "text": "Leer la Biblia es importante, pero Dios tambien quiere que la obedezcamos en nuestras palabras, decisiones y trato a otros."
+        }
+      ],
       "title": "CÓMO LEER Y ESTUDIAR LA BIBLIA",
       "verse": "Salmos 119:105 \"Lámpara es a mis pies tu palabra...\"",
       "goal": "Motivar a los niños a leer la Biblia todos los días y confiar en su guía.",
@@ -582,6 +720,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "3/22/2026",
+      "displayTitle": "La Palabra cambia mi corazon",
+      "closingSummary": "La Biblia es viva y poderosa. Dios usa su Palabra para mostrarnos lo que hay en el corazon, llamarnos al arrepentimiento y ayudarnos a vivir una vida nueva.",
+      "teacherGuide": [
+        "Usa el ejemplo de Saulo/Pablo para mostrar que Dios cambia vidas reales, no solo conductas externas.",
+        "Explica que la Palabra puede corregirnos porque Dios nos ama, no para avergonzarnos.",
+        "Invita a los ninos a identificar una actitud que Dios puede transformar: enojo, mentira, miedo, egoismo o desobediencia."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Hebreos 4:12",
+        "activity": "Haz un corazon de papel con dos lados: antes y despues. Escribe: La Palabra cambia mi corazon.",
+        "reflection": "Dios puede cambiar lo que pienso, digo y hago cuando escucho su Palabra."
+      },
+      "parentMaterial": {
+        "summary": "Hoy vimos que la Palabra de Dios es viva y transforma el corazon.",
+        "homeQuestion": "Que actitud quieres que Dios te ayude a cambiar?",
+        "familyChallenge": "Oren juntos por una area del corazon que necesite obedecer mejor a Dios."
+      },
+      "biblicalText": {
+        "book": "Hebreos",
+        "chapter": "4",
+        "verses": "12",
+        "author": "Autor no identificado",
+        "date": "Aproximadamente antes del 70 d.C.",
+        "context": "Hebreos anima a creyentes cansados a permanecer fieles. Les recuerda que la Palabra de Dios esta viva, revela el corazon y llama a responder con fe."
+      },
+      "centralIdea": "Dios usa su Palabra para revelar y transformar nuestro corazon.",
+      "objectives": [
+        "Conocer que la Palabra de Dios es viva y eficaz.",
+        "Comprender que Dios usa la Biblia para mostrar y cambiar el corazon.",
+        "Aplicar esta verdad permitiendo que Dios corrija una actitud concreta."
+      ],
+      "bibleContext": "Hebreos 4 habla de responder a Dios con fe y obediencia. La Palabra no es letra muerta; Dios la usa para descubrir lo que pensamos y deseamos, y para llamarnos a confiar en Cristo.",
+      "exposition": [
+        {
+          "title": "La Palabra esta viva",
+          "text": "La Biblia sigue hablando hoy porque Dios sigue usando su verdad para alcanzar nuestro corazon."
+        },
+        {
+          "title": "La Palabra revela el corazon",
+          "text": "Dios conoce lo que nadie mas ve. Su Palabra nos ayuda a reconocer pecado, necesidad y esperanza."
+        },
+        {
+          "title": "La Palabra transforma",
+          "text": "Cuando escuchamos y obedecemos, Dios nos cambia desde adentro y nos ayuda a parecernos mas a Jesus."
+        }
+      ],
       "title": "LA PALABRA TRANSFORMA VIDAS",
       "verse": "Hebreos 4:12 \"La palabra de Dios es viva y eficaz...\"",
       "goal": "Que los niños reconozcan que la Biblia cambia corazones y transforma vidas.",
@@ -589,7 +773,7 @@ window.PRLessonLibrary = {
       "warmup": "Empieza con una pregunta sencilla: ¿dónde vemos esta verdad en nuestra vida diaria?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo sugerido: una escena simple del tema con una frase bíblica corta debajo.",
-      "dynamic": "Dinámica: antes y después. Los niños representan con gestos una vida sin Dios y una con Dios. Manualidad: Corazón de papel con dos mitades: una gris, una brillante. Escribir: \"La Palabra cambia mi corazón\". Oración: \"Señor, quiero que tu Palabra transforme mi vida. Ayúdame a obedecerla. Amén.\" DIOS Y EL SER HUMANO - El propósito del hombre Paso adicional: Lee el versículo, repítanlo juntos con movimientos y luego hagan una actividad manual relacionada.",
+      "dynamic": "Dinámica: antes y después. Los niños representan con gestos una vida sin Dios y una con Dios. Manualidad: Corazón de papel con dos mitades: una gris, una brillante. Escribir: \"La Palabra cambia mi corazón\". Paso adicional: Lee el versículo, repítanlo juntos con movimientos y luego hagan una actividad manual relacionada.",
       "application": "Practicar una acción sencilla que refleje la enseñanza de hoy.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -673,7 +857,7 @@ window.PRLessonLibrary = {
       "warmup": "Muestra una hoja, una piedra, una flor o una imagen del cielo. Pregunta: ¿quién puede hacer algo tan hermoso desde cero?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo dividido en cuatro cuadros: sol, árbol, ave y niño. Abajo escribe: Dios hizo todo con amor.",
-      "dynamic": "Juego de \"antes y después\": representar tristeza/alegría, enojo/paz, etc. Manualidad: Mariposa de papel con la frase: \"Jesús me hace nuevo(a)\". Oración: \"Señor, gracias por cambiarme. Quiero vivir como tu hijo(a) todos los días. Amén.\" DIOS Y SU PLAN DE REDENCIÓN - El plan eterno de Dios Paso adicional: Después de leer el versículo, cada niño dibuja algo creado por Dios y comparte una frase: Gracias, Dios, por ____.",
+      "dynamic": "Juego de \"antes y después\": representar tristeza/alegría, enojo/paz, etc. Manualidad: Mariposa de papel con la frase: \"Jesús me hace nuevo(a)\". Paso adicional: Después de leer el versículo, cada niño dibuja algo creado por Dios y comparte una frase: Gracias, Dios, por ____.",
       "application": "Durante la semana, mirar cada día algo creado por Dios y decir una oración corta de gratitud.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -1554,7 +1738,7 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Escribir una acción concreta para vivir la enseñanza antes del próximo domingo.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Espíritu Santo, usa la Palabra para cambiarme cada día. Quiero parecerme a Cristo. Amén.\" DIOS Y EL SER HUMANO - El propósito del hombre",
+      "prayer": "\"Espíritu Santo, usa la Palabra para cambiarme cada día. Quiero parecerme a Cristo. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
@@ -1634,7 +1818,7 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Durante la semana, anotar tres momentos donde vea evidencia de Dios y compartir uno el próximo domingo.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Espíritu Santo, transforma mi vida. Quiero vivir como nueva criatura, para la gloria de Dios. Amén.\" DIOS Y SU PLAN DE REDENCIÓN - El plan eterno de Dios",
+      "prayer": "\"Espíritu Santo, transforma mi vida. Quiero vivir como nueva criatura, para la gloria de Dios. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
