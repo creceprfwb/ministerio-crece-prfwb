@@ -5514,6 +5514,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "9/13/2026",
+      "displayTitle": "Fuerza en el Senor para la batalla real",
+      "closingSummary": "La vida cristiana incluye lucha espiritual, pero el creyente no pelea con su propia fuerza. Dios nos llama a fortalecernos en El y a permanecer firmes con la armadura que El provee.",
+      "teacherGuide": [
+        "Evita sensacionalismo; presenta la batalla espiritual con sobriedad biblica.",
+        "Enfoca la fortaleza en el Senor, no en fuerza de voluntad juvenil.",
+        "Conecta la lucha con tentaciones reales: mentira, temor, orgullo, desanimo y presion."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Efesios 6:10",
+        "activity": "Escudo personal: escribir tres ataques comunes contra la fe y una verdad biblica para responder.",
+        "reflection": "No estoy solo ni indefenso; mi fuerza viene del Senor."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la fuerza en el Senor frente a la batalla espiritual.",
+        "homeQuestion": "Que presiones espirituales o emocionales necesitas enfrentar con la fuerza de Dios?",
+        "familyChallenge": "Memorizar juntos Efesios 6:10 y orar por firmeza."
+      },
+      "biblicalText": {
+        "book": "Efesios",
+        "chapter": "6",
+        "verses": "10-13",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo concluye Efesios llamando a la iglesia a mantenerse firme en el poder de Dios frente a la lucha espiritual."
+      },
+      "centralIdea": "Dios fortalece a sus hijos para permanecer firmes en la lucha espiritual.",
+      "objectives": [
+        "Reconocer que la batalla espiritual es real y requiere dependencia de Dios.",
+        "Identificar presiones que intentan debilitar la fe.",
+        "Aplicar una verdad biblica para mantenerse firme esta semana."
+      ],
+      "bibleContext": "Efesios 6 describe una lucha no meramente humana. La respuesta del creyente es fortalecerse en el Senor y ponerse toda la armadura de Dios.",
+      "exposition": [
+        {
+          "title": "La fuerza viene del Senor",
+          "text": "Pablo no dice sean fuertes solos, sino fortaleceos en el Senor y en su poder."
+        },
+        {
+          "title": "La lucha es espiritual",
+          "text": "Detras de muchas presiones hay una batalla por la verdad, la fe y la obediencia."
+        },
+        {
+          "title": "Dios llama a estar firmes",
+          "text": "La meta no es impresionar, sino resistir fielmente con lo que Dios provee."
+        }
+      ],
       "title": "FUERZA EN EL SEÑOR",
       "verse": "Efesios 6:10 \"Fortaleceos en el Señor, y en el poder de su fuerza.\"",
       "goal": "Reconocer que la batalla espiritual es real y que Dios nos equipa con su poder.",
@@ -5534,6 +5580,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "9/20/2026",
+      "displayTitle": "Verdad y justicia que protegen el corazon",
+      "closingSummary": "La verdad sostiene al creyente y la justicia protege el corazon. En un mundo de medias verdades y presiones, Dios llama a vivir con integridad delante de El.",
+      "teacherGuide": [
+        "Presenta la verdad como fundamento, no solo como no decir mentiras.",
+        "Explica justicia como vida recta recibida en Cristo y practicada en obediencia.",
+        "Usa casos reales de redes, escuela y amistades para aplicar integridad."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Efesios 6:14",
+        "activity": "Caso de integridad: analizar dos escenarios donde decir la verdad cuesta y escoger una respuesta biblica.",
+        "reflection": "La verdad de Dios me sostiene cuando la presion quiere moverme."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el cinturon de la verdad y la coraza de justicia.",
+        "homeQuestion": "Donde es mas dificil vivir con transparencia?",
+        "familyChallenge": "Practicar una conversacion honesta y orar por integridad."
+      },
+      "biblicalText": {
+        "book": "Efesios",
+        "chapter": "6",
+        "verses": "14",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo describe piezas de la armadura de Dios que ayudan al creyente a permanecer firme."
+      },
+      "centralIdea": "La verdad de Dios y una vida justa protegen al creyente frente al engaño y la corrupcion.",
+      "objectives": [
+        "Comprender la importancia de la verdad como fundamento espiritual.",
+        "Relacionar justicia con identidad en Cristo y conducta diaria.",
+        "Escoger una decision de integridad para practicar esta semana."
+      ],
+      "bibleContext": "El cinturon aseguraba la preparacion del soldado y la coraza protegía organos vitales. Pablo usa estas imagenes para hablar de verdad y justicia espiritual.",
+      "exposition": [
+        {
+          "title": "La verdad sostiene",
+          "text": "Sin verdad, la vida se afloja y queda vulnerable al engaño."
+        },
+        {
+          "title": "La justicia protege",
+          "text": "Cristo nos justifica y tambien nos llama a practicar una vida recta."
+        },
+        {
+          "title": "La integridad se decide",
+          "text": "La verdad se prueba en conversaciones, examenes, redes y decisiones privadas."
+        }
+      ],
       "title": "VERDAD Y JUSTICIA",
       "verse": "Efesios 6:14 \"Ceñidos vuestros lomos con la verdad, y vestidos con la coraza de justicia.\"",
       "goal": "Enseñar que vivir en la verdad y justicia protege nuestro corazón espiritual.",
@@ -5554,6 +5646,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "9/27/2026",
+      "displayTitle": "Fe y paz para avanzar",
+      "closingSummary": "La fe apaga los dardos de duda, temor y acusacion, y el evangelio de paz nos prepara para caminar con firmeza. El creyente avanza no porque no haya lucha, sino porque confia en Cristo.",
+      "teacherGuide": [
+        "Explica los dardos como ataques de mentira, temor, culpa, tentacion o desanimo.",
+        "Conecta la paz del evangelio con relaciones, decisiones y testimonio.",
+        "Practica respuestas biblicas breves ante pensamientos que debilitan la fe."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Efesios 6:15-16",
+        "activity": "Dardos y escudo: escribir mentiras comunes y responderlas con una verdad del evangelio.",
+        "reflection": "La fe no niega la batalla; levanta la verdad de Cristo frente al temor."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el escudo de la fe y el evangelio de paz.",
+        "homeQuestion": "Que pensamiento o temor necesitas enfrentar con fe?",
+        "familyChallenge": "Compartir una verdad biblica que trae paz en tiempos de presion."
+      },
+      "biblicalText": {
+        "book": "Efesios",
+        "chapter": "6",
+        "verses": "15-16",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo presenta el evangelio de paz y la fe como parte esencial de la armadura espiritual."
+      },
+      "centralIdea": "La fe en Cristo y la paz del evangelio preparan al creyente para resistir y avanzar.",
+      "objectives": [
+        "Identificar dardos espirituales que atacan la fe.",
+        "Responder con verdades del evangelio a mentiras comunes.",
+        "Practicar una accion de paz y fe en una relacion o situacion real."
+      ],
+      "bibleContext": "Los calzados permitian avanzar con estabilidad, y el escudo protegía de ataques. Pablo muestra que el evangelio y la fe sostienen al creyente en movimiento.",
+      "exposition": [
+        {
+          "title": "El evangelio nos da paz",
+          "text": "La paz con Dios nos prepara para vivir con firmeza aun en ambientes dificiles."
+        },
+        {
+          "title": "La fe levanta defensa",
+          "text": "La fe responde a la mentira recordando quien es Cristo y lo que ha prometido."
+        },
+        {
+          "title": "El creyente avanza",
+          "text": "No solo resistimos; tambien caminamos llevando paz y verdad donde Dios nos coloca."
+        }
+      ],
       "title": "FE Y PAZ EN MOVIMIENTO",
       "verse": "Efesios 6:16 \"Sobre todo, tomad el escudo de la fe...\"",
       "goal": "Descubrir cómo la fe y el evangelio de paz nos ayudan a avanzar en medio de la lucha.",
@@ -5574,6 +5712,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "10/4/2026",
+      "displayTitle": "Salvacion y Palabra: mente protegida, vida dirigida",
+      "closingSummary": "La salvacion protege nuestra identidad y la Palabra de Dios dirige nuestra respuesta. En medio de tentaciones y mentiras, el creyente recuerda quien es en Cristo y usa la Escritura con sabiduria.",
+      "teacherGuide": [
+        "Conecta el yelmo con identidad: culpa, verguenza, comparacion y seguridad en Cristo.",
+        "Presenta la espada del Espiritu como uso correcto de la Biblia, no como frases fuera de contexto.",
+        "Practica buscar textos biblicos para responder a situaciones reales."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Efesios 6:17",
+        "activity": "Versiculos para la batalla: buscar una respuesta biblica para temor, tentacion, culpa y desanimo.",
+        "reflection": "Mi mente necesita recordar la salvacion, y mi vida necesita ser dirigida por la Palabra."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el yelmo de la salvacion y la espada del Espiritu.",
+        "homeQuestion": "Que verdad de la salvacion necesitas recordar cuando te sientes acusado o inseguro?",
+        "familyChallenge": "Escoger un versiculo para memorizar y usarlo en oracion durante la semana."
+      },
+      "biblicalText": {
+        "book": "Efesios",
+        "chapter": "6",
+        "verses": "17",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo completa la imagen de la armadura con la salvacion y la Palabra de Dios como proteccion y arma espiritual."
+      },
+      "centralIdea": "La salvacion guarda nuestra identidad y la Palabra de Dios equipa nuestra respuesta espiritual.",
+      "objectives": [
+        "Comprender como la salvacion protege la mente y la identidad.",
+        "Aprender a usar la Palabra de Dios ante situaciones reales.",
+        "Memorizar o escoger un texto biblico para responder con fe."
+      ],
+      "bibleContext": "Efesios 6 culmina la armadura con el yelmo y la espada. La mente del creyente necesita seguridad en Cristo y su boca necesita la verdad de Dios.",
+      "exposition": [
+        {
+          "title": "La salvacion protege la mente",
+          "text": "Recordar que pertenecemos a Cristo combate culpa falsa, comparacion y miedo."
+        },
+        {
+          "title": "La Palabra responde a la mentira",
+          "text": "La Escritura nos equipa para discernir, resistir y obedecer."
+        },
+        {
+          "title": "La Biblia se usa con sabiduria",
+          "text": "No se trata de repetir frases, sino de entender y aplicar la verdad de Dios correctamente."
+        }
+      ],
       "title": "SALV ACIÓN Y PALABRA DE DIOS",
       "verse": "Efesios 6:17 \"Tomad el yelmo de la salvación, y la espada del Espíritu, que es la palabra de Dios.\"",
       "goal": "Entender que la salvación y la Palabra de Dios son nuestra protección y arma espiritual.",
