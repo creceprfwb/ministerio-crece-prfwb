@@ -15,6 +15,7 @@ const SCHEDULE_STATUSES = [
 
 let teachers = [];
 let scheduleEntries = [];
+let currentMonthDate = new Date();
 
 function storageKey(baseKey) {
   return window.PRFirebase && typeof window.PRFirebase.getScopedStorageKey === "function"
@@ -56,6 +57,10 @@ function lessonDateKey(date) {
 
 function isoDate(date) {
   return date.toISOString().slice(0, 10);
+}
+
+function monthKey(date) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
 }
 
 function loadLocal(key) {
@@ -356,6 +361,117 @@ function renderSchedule() {
   });
 }
 
+function renderUnassigned() {
+  const board = document.getElementById("unassignedBoard");
+  const entries = scheduleEntries
+    .filter((entry) => !entry.teacherId || entry.status === "sin-asignar")
+    .sort((a, b) => new Date(a.dateIso || 0) - new Date(b.dateIso || 0));
+
+  if (!entries.length) {
+    board.innerHTML = `
+      <div class="empty-inline">
+        Todo lo generado tiene maestro principal asignado.
+      </div>
+    `;
+    return;
+  }
+
+  board.innerHTML = entries.map((entry) => `
+    <article class="unassigned-card">
+      <div>
+        <strong>${escapeHtml(entry.dateLabel)}</strong>
+        <span>${escapeHtml(getGroupLabel(entry.group))} - ${escapeHtml(entry.lessonTitle || "Clase por confirmar")}</span>
+      </div>
+      <button class="btn btn-sm btn-outline-primary focus-schedule-entry" type="button" data-id="${entry.id}">
+        Asignar
+      </button>
+    </article>
+  `).join("");
+
+  board.querySelectorAll(".focus-schedule-entry").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.getElementById("scheduleGroupFilter").value = "todos";
+      document.getElementById("scheduleStatusFilter").value = "todos";
+      renderSchedule();
+
+      const card = document.querySelector(`.schedule-card[data-id="${button.dataset.id}"]`);
+      if (card) {
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        card.classList.add("schedule-highlight");
+        window.setTimeout(() => card.classList.remove("schedule-highlight"), 1600);
+      }
+    });
+  });
+}
+
+function renderMonthCalendar() {
+  const calendar = document.getElementById("monthCalendar");
+  const label = document.getElementById("monthLabel");
+  const year = currentMonthDate.getFullYear();
+  const month = currentMonthDate.getMonth();
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+  const cells = [];
+  const monthEntries = scheduleEntries.filter((entry) => entry.dateIso && entry.dateIso.startsWith(monthKey(currentMonthDate)));
+
+  label.textContent = currentMonthDate.toLocaleDateString("es-PR", {
+    month: "long",
+    year: "numeric"
+  });
+
+  for (let i = 0; i < firstDay.getDay(); i += 1) {
+    cells.push({ empty: true });
+  }
+
+  for (let day = 1; day <= lastDay.getDate(); day += 1) {
+    const date = new Date(year, month, day, 12);
+    const dateIso = isoDate(date);
+    cells.push({
+      day,
+      dateIso,
+      entries: monthEntries.filter((entry) => entry.dateIso === dateIso)
+    });
+  }
+
+  calendar.innerHTML = cells.map((cell) => {
+    if (cell.empty) {
+      return '<div class="month-cell empty"></div>';
+    }
+
+    return `
+      <div class="month-cell ${cell.entries.length ? "has-service" : ""}">
+        <strong>${cell.day}</strong>
+        <div class="month-services">
+          ${cell.entries.map((entry) => {
+            const teacher = getTeacher(entry.teacherId);
+            return `
+              <button class="month-service status-${entry.status || "sin-asignar"}" type="button" data-id="${entry.id}">
+                <span>${escapeHtml(getGroupLabel(entry.group))}</span>
+                <small>${teacher ? escapeHtml(teacher.name) : "Sin asignar"}</small>
+              </button>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  calendar.querySelectorAll(".month-service").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.getElementById("scheduleGroupFilter").value = "todos";
+      document.getElementById("scheduleStatusFilter").value = "todos";
+      renderSchedule();
+
+      const card = document.querySelector(`.schedule-card[data-id="${button.dataset.id}"]`);
+      if (card) {
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        card.classList.add("schedule-highlight");
+        window.setTimeout(() => card.classList.remove("schedule-highlight"), 1600);
+      }
+    });
+  });
+}
+
 function renderStats() {
   const activeTeachers = teachers.filter((teacher) => teacher.active !== false);
   const openCount = scheduleEntries.filter((entry) => !entry.teacherId || entry.status === "sin-asignar").length;
@@ -368,6 +484,8 @@ function renderStats() {
 
 function renderAll() {
   renderTeachers();
+  renderUnassigned();
+  renderMonthCalendar();
   renderSchedule();
   renderStats();
 }
@@ -456,6 +574,14 @@ async function setupSchedulePage() {
   document.getElementById("printSchedule").addEventListener("click", () => window.print());
   document.getElementById("scheduleGroupFilter").addEventListener("change", renderSchedule);
   document.getElementById("scheduleStatusFilter").addEventListener("change", renderSchedule);
+  document.getElementById("prevMonth").addEventListener("click", () => {
+    currentMonthDate = new Date(currentMonthDate.getFullYear(), currentMonthDate.getMonth() - 1, 1);
+    renderMonthCalendar();
+  });
+  document.getElementById("nextMonth").addEventListener("click", () => {
+    currentMonthDate = new Date(currentMonthDate.getFullYear(), currentMonthDate.getMonth() + 1, 1);
+    renderMonthCalendar();
+  });
 }
 
 document.addEventListener("DOMContentLoaded", setupSchedulePage);

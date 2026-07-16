@@ -120,6 +120,40 @@
     <section class="app-card mt-4">
       <div class="panel-heading">
         <div>
+          <h2>Sin asignar</h2>
+          <p>Servicios que necesitan maestro principal.</p>
+        </div>
+      </div>
+      <div id="unassignedBoard" class="unassigned-board"></div>
+    </section>
+
+    <section class="app-card mt-4">
+      <div class="panel-heading">
+        <div>
+          <h2>Vista mensual</h2>
+          <p>Calendario completo del mes seleccionado.</p>
+        </div>
+        <div class="schedule-filters">
+          <button id="prevMonth" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-chevron-left"></i></button>
+          <strong id="monthLabel" class="month-label">Mes</strong>
+          <button id="nextMonth" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-chevron-right"></i></button>
+        </div>
+      </div>
+      <div class="month-grid-head">
+        <span>Dom</span>
+        <span>Lun</span>
+        <span>Mar</span>
+        <span>Mie</span>
+        <span>Jue</span>
+        <span>Vie</span>
+        <span>Sab</span>
+      </div>
+      <div id="monthCalendar" class="month-calendar"></div>
+    </section>
+
+    <section class="app-card mt-4">
+      <div class="panel-heading">
+        <div>
           <h2>Proximos domingos</h2>
           <p>Asignacion por grupo, clase y estado.</p>
         </div>

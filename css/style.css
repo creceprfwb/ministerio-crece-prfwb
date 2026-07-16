@@ -1447,6 +1447,148 @@ body {
   text-align: center;
 }
 
+.unassigned-board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.unassigned-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ffd7b5;
+  border-left: 5px solid #f97316;
+  border-radius: 10px;
+  background: #fff8f1;
+}
+
+.unassigned-card div {
+  display: grid;
+  gap: 2px;
+}
+
+.unassigned-card span {
+  color: #667085;
+  font-size: 0.84rem;
+}
+
+.month-label {
+  display: inline-flex;
+  align-items: center;
+  min-width: 170px;
+  justify-content: center;
+  color: #0b1f3a;
+  text-transform: capitalize;
+}
+
+.month-grid-head,
+.month-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.month-grid-head {
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.month-grid-head span {
+  color: #667085;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.month-calendar {
+  gap: 8px;
+}
+
+.month-cell {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 124px;
+  padding: 10px;
+  border: 1px solid #e4eaf5;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.month-cell.empty {
+  background: #f8fafc;
+}
+
+.month-cell.has-service {
+  border-color: #bfd7ff;
+  background: #f8fbff;
+}
+
+.month-cell > strong {
+  color: #0b1f3a;
+  font-size: 0.95rem;
+}
+
+.month-services {
+  display: grid;
+  gap: 6px;
+}
+
+.month-service {
+  display: grid;
+  gap: 1px;
+  padding: 7px;
+  border: 1px solid #d9e2f3;
+  border-left: 4px solid #98a2b3;
+  border-radius: 8px;
+  background: #fff;
+  text-align: left;
+}
+
+.month-service.status-asignado {
+  border-left-color: #0d6efd;
+}
+
+.month-service.status-confirmado {
+  border-left-color: #198754;
+}
+
+.month-service.status-completado {
+  border-left-color: #6f42c1;
+}
+
+.month-service span {
+  color: #0b3d91;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.month-service small {
+  overflow: hidden;
+  color: #344054;
+  font-size: 0.72rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.schedule-highlight {
+  animation: schedulePulse 1.6s ease;
+}
+
+@keyframes schedulePulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 rgba(13, 110, 253, 0);
+  }
+
+  35% {
+    box-shadow: 0 0 0 5px rgba(13, 110, 253, 0.2);
+  }
+}
+
 @media (max-width: 900px) {
   .hero-shell,
   .page-shell {
@@ -1478,8 +1620,14 @@ body {
   }
 
   .schedule-fields,
-  .schedule-stats {
+  .schedule-stats,
+  .month-grid-head,
+  .month-calendar {
     grid-template-columns: 1fr;
+  }
+
+  .month-cell.empty {
+    display: none;
   }
 
   .schedule-hero,
