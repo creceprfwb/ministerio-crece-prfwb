@@ -3927,6 +3927,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "3/29/2026",
+      "displayTitle": "Identidad: imagen de Dios en un mundo de etiquetas",
+      "closingSummary": "Nuestra identidad no depende de popularidad, apariencia, logros ni redes sociales. Fuimos creados a imagen de Dios con dignidad, valor y proposito espiritual.",
+      "teacherGuide": [
+        "Conecta imagen de Dios con presiones reales de identidad, cuerpo, redes y comparacion.",
+        "Aclara que el pecado distorsiono la imagen, pero no borro la dignidad humana.",
+        "Lleva la clase hacia respeto por otros y responsabilidad personal."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Genesis 1:27",
+        "activity": "Haz dos columnas: etiquetas que el mundo pone y verdades que Dios declara sobre mi valor.",
+        "reflection": "Mi valor viene de Dios, no de la aprobacion de otros."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron que fueron creados a imagen de Dios con dignidad y proposito.",
+        "homeQuestion": "Que voces intentan definir nuestra identidad aparte de Dios?",
+        "familyChallenge": "Afirmar una verdad biblica sobre la identidad de cada miembro de la familia."
+      },
+      "biblicalText": {
+        "book": "Genesis",
+        "chapter": "1",
+        "verses": "26-27",
+        "author": "Tradicionalmente Moises",
+        "date": "Periodo de Moises, aproximadamente siglo XV-XIII a.C.",
+        "context": "Genesis presenta al ser humano como creacion especial de Dios, hecho a su imagen para relacionarse con El y representar su gobierno en la creacion."
+      },
+      "centralIdea": "Ser imagen de Dios nos da dignidad, identidad y responsabilidad delante de El.",
+      "objectives": [
+        "Comprender que la identidad humana comienza en Dios.",
+        "Reconocer que toda persona tiene dignidad por ser imagen de Dios.",
+        "Aplicar esta verdad rechazando etiquetas falsas y tratando a otros con respeto."
+      ],
+      "bibleContext": "Genesis 1 muestra que el ser humano no es accidente ni producto sin valor. La imagen de Dios implica relacion, moralidad, creatividad, responsabilidad y capacidad de reflejar a Dios.",
+      "exposition": [
+        {
+          "title": "Dios define nuestro valor",
+          "text": "La dignidad humana no depende de likes, apariencia, talentos o estatus."
+        },
+        {
+          "title": "La imagen de Dios tiene proposito",
+          "text": "Fuimos creados para conocer a Dios, reflejar su caracter y cuidar lo que El hizo."
+        },
+        {
+          "title": "La imagen de Dios exige respeto",
+          "text": "Si cada persona tiene dignidad dada por Dios, no podemos usar, humillar ni despreciar a otros."
+        }
+      ],
       "title": "HECHOS A IMAGEN DE DIOS",
       "verse": "Génesis 1:27 \"Y creó Dios al hombre a su imagen...\"",
       "goal": "Comprender que fuimos creados a imagen de Dios con dignidad, valor y un propósito espiritual.",
@@ -3947,6 +3993,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "4/5/2026",
+      "displayTitle": "El pecado: la ruptura que no puedo negar",
+      "closingSummary": "El pecado no es solo error o debilidad; es rebelion contra Dios que rompe nuestra relacion con El, distorsiona nuestra identidad y afecta nuestras relaciones.",
+      "teacherGuide": [
+        "Habla del pecado con claridad, evitando tanto condena aplastante como suavizarlo.",
+        "Conecta pecado con decisiones actuales: orgullo, mentira, deseo desordenado, indiferencia, doble vida.",
+        "Termina apuntando a la necesidad de gracia, no solo a culpa."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Romanos 3:23",
+        "activity": "Dibuja una linea partida entre Dios y humanidad. Anota formas en que el pecado rompe relaciones.",
+        "reflection": "No necesito excusar mi pecado; necesito traerlo a Dios con arrepentimiento."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la realidad del pecado y sus efectos.",
+        "homeQuestion": "Que diferencia hay entre justificar el pecado y confesarlo?",
+        "familyChallenge": "Practicar una oracion de confesion y gratitud por la gracia de Dios."
+      },
+      "biblicalText": {
+        "book": "Romanos",
+        "chapter": "3",
+        "verses": "23; apoyo: Genesis 3",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 57 d.C.",
+        "context": "Pablo demuestra que toda la humanidad esta bajo pecado y necesita la justicia de Dios revelada en Cristo."
+      },
+      "centralIdea": "El pecado separa de Dios y revela nuestra necesidad urgente de gracia.",
+      "objectives": [
+        "Reconocer que todos hemos pecado delante de Dios.",
+        "Comprender que el pecado afecta identidad, relaciones y destino.",
+        "Aplicar esta verdad dejando de justificar el pecado y buscando perdon."
+      ],
+      "bibleContext": "Romanos 3 elimina toda presuncion humana. Nadie queda justo delante de Dios por sus propios meritos. Genesis 3 muestra la raiz: desconfiar de Dios y escoger autonomia.",
+      "exposition": [
+        {
+          "title": "El pecado es contra Dios",
+          "text": "No es solo romper una regla; es rechazar el gobierno bueno de Dios."
+        },
+        {
+          "title": "El pecado rompe la gloria",
+          "text": "Romanos 3:23 dice que todos estan destituidos de la gloria de Dios; no alcanzamos el proposito para el que fuimos creados."
+        },
+        {
+          "title": "El pecado requiere rescate",
+          "text": "La solucion no es negar, compararnos o mejorar la imagen externa, sino recibir la gracia de Dios."
+        }
+      ],
       "title": "EL PECADO Y LA CAÍDA",
       "verse": "Romanos 3:23 \"Por cuanto todos pecaron, y están destituidos de la gloria de Dios.\"",
       "goal": "Reconocer el origen del pecado y su efecto en nuestra relación con Dios.",
@@ -3967,6 +4059,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "4/12/2026",
+      "displayTitle": "Salvacion: el regalo que no puedo comprar",
+      "closingSummary": "La salvacion es necesaria porque el pecado trae muerte, y es posible porque Dios ofrece vida eterna en Cristo. No se gana por rendimiento religioso; se recibe por fe.",
+      "teacherGuide": [
+        "Usa el contraste paga/regalo en Romanos 6:23 para explicar gracia.",
+        "Evita presentar salvacion como solo ir al cielo; incluye reconciliacion con Dios y nueva vida.",
+        "Invita a responder con fe, sin manipular emocionalmente."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Romanos 6:23",
+        "activity": "Escribe dos columnas: lo que el pecado paga y lo que Dios regala en Cristo.",
+        "reflection": "La vida eterna es un regalo que recibo por fe, no un premio que gano."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la necesidad de salvacion y el regalo de vida eterna en Cristo.",
+        "homeQuestion": "Por que es tan dificil aceptar que no podemos salvarnos a nosotros mismos?",
+        "familyChallenge": "Lean Romanos 6:23 y oren agradeciendo por la gracia de Dios."
+      },
+      "biblicalText": {
+        "book": "Romanos",
+        "chapter": "6",
+        "verses": "23",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 57 d.C.",
+        "context": "Pablo contrasta la esclavitud al pecado con la nueva vida en Cristo, resumiendo el destino del pecado y el regalo de Dios."
+      },
+      "centralIdea": "Todos necesitamos salvacion, y Dios la ofrece gratuitamente en Cristo Jesus.",
+      "objectives": [
+        "Comprender que el pecado tiene consecuencia espiritual.",
+        "Reconocer que la vida eterna es dadiva de Dios.",
+        "Aplicar esta verdad examinando si he recibido a Cristo por fe."
+      ],
+      "bibleContext": "Romanos 6 ensena que el creyente ya no vive esclavo del pecado. La vida eterna no es sueldo ganado, sino regalo de gracia en Cristo.",
+      "exposition": [
+        {
+          "title": "El pecado paga muerte",
+          "text": "La muerte espiritual es separacion de Dios y muestra la gravedad real del pecado."
+        },
+        {
+          "title": "Dios da vida",
+          "text": "La salvacion es regalo inmerecido. Dios da lo que no podiamos producir."
+        },
+        {
+          "title": "Cristo es el centro",
+          "text": "La vida eterna no esta en mi esfuerzo, mi iglesia o mi reputacion, sino en Cristo Jesus."
+        }
+      ],
       "title": "LA NECESIDAD DE SALV ACIÓN",
       "verse": "Romanos 6:23 \"La paga del pecado es muerte, mas la dádiva de Dios es vida eterna en Cristo Jesús.\"",
       "goal": "Comprender que todos necesitamos ser salvados del pecado, y que esa salvación solo se encuentra en Cristo.",
@@ -3987,6 +4125,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "4/19/2026",
+      "displayTitle": "Nueva vida: identidad transformada en Cristo",
+      "closingSummary": "En Cristo no recibimos solo una segunda oportunidad, sino una nueva identidad. Dios transforma mente, deseos, relaciones y proposito para vivir como nueva criatura.",
+      "teacherGuide": [
+        "Enfatiza que nueva vida no es perfeccion instantanea, sino una obra real de Dios.",
+        "Conecta viejos habitos con nueva identidad: redes, amistades, lenguaje, prioridades.",
+        "Invita a una decision concreta de obediencia, no solo reflexion general."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "2 Corintios 5:17",
+        "activity": "Escribe dos columnas: viejo patron y nueva respuesta en Cristo.",
+        "reflection": "En Cristo no soy definido por mi pasado; soy llamado a vivir una vida nueva."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la nueva vida e identidad en Cristo.",
+        "homeQuestion": "Que area de la vida necesita reflejar mejor la nueva identidad en Cristo?",
+        "familyChallenge": "Escoger un habito concreto para entregar a Dios esta semana."
+      },
+      "biblicalText": {
+        "book": "2 Corintios",
+        "chapter": "5",
+        "verses": "17-21",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 55-56 d.C.",
+        "context": "Pablo habla de reconciliacion con Dios por medio de Cristo y de la nueva creacion que nace en quienes estan en El."
+      },
+      "centralIdea": "En Cristo somos nueva creacion, reconciliados con Dios y llamados a vivir con nuevo proposito.",
+      "objectives": [
+        "Comprender que la salvacion transforma identidad y vida.",
+        "Reconocer viejos patrones que deben rendirse a Cristo.",
+        "Aplicar esta verdad escogiendo una accion concreta de nueva vida."
+      ],
+      "bibleContext": "2 Corintios 5 conecta nueva creacion con reconciliacion. Dios no solo perdona; restaura la relacion y encomienda una vida con proposito.",
+      "exposition": [
+        {
+          "title": "En Cristo hay nueva identidad",
+          "text": "La frase en Cristo define pertenencia, perdon y nueva realidad espiritual."
+        },
+        {
+          "title": "Lo viejo pasa",
+          "text": "Dios confronta viejos patrones de pecado y nos llama a caminar de manera nueva."
+        },
+        {
+          "title": "Lo nuevo tiene mision",
+          "text": "La reconciliacion con Dios nos convierte en personas que representan a Cristo en el mundo."
+        }
+      ],
       "title": "LA NUEV A VIDA EN CRISTO",
       "verse": "2 Corintios 5:17 \"Si alguno está en Cristo, nueva criatura es...\"",
       "goal": "Entender que en Cristo somos transformados completamente: nueva identidad, nuevo propósito, nueva vida.",
