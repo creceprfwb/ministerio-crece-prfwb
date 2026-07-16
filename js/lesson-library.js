@@ -787,6 +787,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "3/29/2026",
+      "displayTitle": "Hechos a imagen de Dios",
+      "closingSummary": "Cada nino tiene valor porque fue creado por Dios a su imagen. No somos valiosos por lo que tenemos o logramos, sino porque Dios nos hizo para conocerlo, amarlo y reflejar su caracter.",
+      "teacherGuide": [
+        "Afirma el valor de cada nino con cuidado pastoral, evitando comparaciones entre ellos.",
+        "Explica imagen de Dios con palabras sencillas: podemos amar, pensar, crear, decidir y relacionarnos con Dios.",
+        "Conecta identidad con responsabilidad: porque somos imagen de Dios, tratamos a otros con respeto."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Genesis 1:27",
+        "activity": "Dibuja tu rostro dentro de un marco y escribe: Dios me hizo con valor y proposito.",
+        "reflection": "Dios me hizo para conocerlo y reflejar su amor."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que cada persona fue creada a imagen de Dios y tiene valor.",
+        "homeQuestion": "Como podemos tratar mejor a otros porque tambien son imagen de Dios?",
+        "familyChallenge": "Esta semana, cada miembro de la familia dira una forma de mostrar respeto y amor a otra persona."
+      },
+      "biblicalText": {
+        "book": "Genesis",
+        "chapter": "1",
+        "verses": "26-27",
+        "author": "Tradicionalmente Moises",
+        "date": "Periodo de Moises, aproximadamente siglo XV-XIII a.C.",
+        "context": "Genesis presenta a Dios como Creador y muestra que el ser humano fue creado de manera especial, a imagen de Dios, con dignidad y proposito."
+      },
+      "centralIdea": "Dios creo al ser humano a su imagen, con valor, dignidad y proposito.",
+      "objectives": [
+        "Conocer que cada persona fue creada a imagen de Dios.",
+        "Comprender que nuestra identidad viene de Dios.",
+        "Aplicar esta verdad tratando a otros con respeto y gratitud."
+      ],
+      "bibleContext": "Genesis 1 ensena que Dios creo todo bueno, pero al ser humano lo creo de forma especial: a su imagen. Esto significa que somos llamados a representar a Dios en la creacion y vivir en relacion con El.",
+      "exposition": [
+        {
+          "title": "Dios nos hizo con valor",
+          "text": "Nuestro valor no depende de apariencia, edad, talentos o popularidad. Dios nos dio dignidad al crearnos a su imagen."
+        },
+        {
+          "title": "Dios nos hizo con proposito",
+          "text": "Fuimos creados para conocer a Dios, obedecerlo, cuidar lo que El hizo y reflejar su amor."
+        },
+        {
+          "title": "Dios nos llama a respetar a otros",
+          "text": "Si cada persona es imagen de Dios, entonces debemos hablar y actuar con amor, respeto y cuidado."
+        }
+      ],
       "title": "HECHOS A IMAGEN DE DIOS",
       "verse": "Génesis 1:27 \"Y creó Dios al hombre a su imagen...\"",
       "goal": "Enseñar a los niños que fueron creados por Dios a su imagen, con valor y propósito especial.",
@@ -808,6 +854,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "4/5/2026",
+      "displayTitle": "Cuando el pecado rompe lo bueno",
+      "closingSummary": "El pecado es desobedecer a Dios y rompe nuestra relacion con El y con otros. Pero desde el principio, Dios muestra que no abandona a las personas que ama.",
+      "teacherGuide": [
+        "Habla del pecado con claridad, pero sin crear miedo innecesario. Lleva la conversacion hacia la esperanza de Dios.",
+        "Usa ejemplos cotidianos: mentir, desobedecer, tratar mal, querer hacer mi voluntad antes que la de Dios.",
+        "No cierres la clase solo con culpa; apunta hacia la necesidad del Salvador."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Romanos 3:23",
+        "activity": "Dibuja un corazon manchado y una cruz cerca. Escribe: Dios puede limpiar mi corazon.",
+        "reflection": "El pecado me aleja de Dios, pero Dios quiere rescatarme."
+      },
+      "parentMaterial": {
+        "summary": "Hoy hablamos del pecado como desobediencia que rompe lo bueno que Dios hizo.",
+        "homeQuestion": "Que hacemos en casa cuando desobedecemos o herimos a alguien?",
+        "familyChallenge": "Practiquen pedir perdon y orar juntos cuando haya una falta."
+      },
+      "biblicalText": {
+        "book": "Romanos",
+        "chapter": "3",
+        "verses": "23; apoyo: Genesis 3",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 57 d.C.",
+        "context": "Pablo explica que todos han pecado y necesitan la gracia de Dios. Genesis 3 muestra como la desobediencia entro en la historia humana."
+      },
+      "centralIdea": "El pecado nos separa de Dios, pero Dios preparo un camino de rescate.",
+      "objectives": [
+        "Conocer que todos hemos pecado.",
+        "Comprender que el pecado rompe nuestra relacion con Dios.",
+        "Aplicar esta verdad reconociendo nuestra necesidad de perdon."
+      ],
+      "bibleContext": "Romanos 3 muestra que nadie puede presumir delante de Dios porque todos han pecado. Genesis 3 ayuda a ver que el pecado comenzo con desconfianza y desobediencia, pero Dios no dejo a la humanidad sin esperanza.",
+      "exposition": [
+        {
+          "title": "El pecado es desobedecer a Dios",
+          "text": "Pecar no es solo equivocarse; es escoger mi camino en lugar del camino de Dios."
+        },
+        {
+          "title": "El pecado rompe relaciones",
+          "text": "El pecado afecta nuestra relacion con Dios, con otras personas y con nosotros mismos."
+        },
+        {
+          "title": "Dios no abandona",
+          "text": "Aunque el pecado es serio, Dios muestra misericordia y prepara el camino hacia Jesus."
+        }
+      ],
       "title": "EL PECADO Y LA CAÍDA",
       "verse": "Romanos 3:23 \"Por cuanto todos pecaron...\"",
       "goal": "Que los niños comprendan que el pecado nos aleja de Dios, pero Dios tiene un plan para rescatarnos.",
@@ -829,6 +921,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "4/12/2026",
+      "displayTitle": "El regalo que no puedo ganar",
+      "closingSummary": "El pecado trae muerte y separacion, pero Dios ofrece vida eterna como regalo por medio de Jesus. La salvacion no se compra ni se gana; se recibe por fe.",
+      "teacherGuide": [
+        "Usa una caja de regalo para explicar gracia: un regalo se recibe, no se compra.",
+        "Aclara que obedecer es fruto de amar a Dios, no la forma de comprar la salvacion.",
+        "Invita a preguntas personales con sensibilidad, especialmente si algun nino pregunta como recibir a Jesus."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Romanos 6:23",
+        "activity": "Dibuja una caja de regalo y escribe dentro: Vida eterna en Cristo Jesus.",
+        "reflection": "Dios me ofrece salvacion por gracia, no porque yo la gane."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que la salvacion es un regalo de Dios por medio de Jesus.",
+        "homeQuestion": "Por que un regalo no se puede comprar despues de recibirlo?",
+        "familyChallenge": "Lean Romanos 6:23 y den gracias a Dios por su regalo de vida eterna."
+      },
+      "biblicalText": {
+        "book": "Romanos",
+        "chapter": "6",
+        "verses": "23",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 57 d.C.",
+        "context": "Pablo contrasta las consecuencias del pecado con el regalo de Dios. El pecado paga muerte, pero Dios da vida eterna en Cristo Jesus."
+      },
+      "centralIdea": "Necesitamos salvacion porque el pecado trae muerte, y Dios ofrece vida eterna en Cristo.",
+      "objectives": [
+        "Conocer que el pecado tiene consecuencias.",
+        "Comprender que la vida eterna es un regalo de Dios.",
+        "Aplicar esta verdad respondiendo con gratitud y fe."
+      ],
+      "bibleContext": "Romanos 6 explica que el creyente ya no vive esclavo del pecado. El versiculo 23 resume el contraste: lo que el pecado paga y lo que Dios regala en Cristo.",
+      "exposition": [
+        {
+          "title": "El pecado tiene paga",
+          "text": "La Biblia dice que la paga del pecado es muerte. Esto muestra que el pecado es serio y que necesitamos ayuda."
+        },
+        {
+          "title": "Dios ofrece un regalo",
+          "text": "La vida eterna no se gana por portarnos bien. Dios la da por amor, por medio de Jesus."
+        },
+        {
+          "title": "El regalo se recibe por fe",
+          "text": "Responder a Dios significa confiar en Jesus, agradecer su gracia y comenzar a seguirlo."
+        }
+      ],
       "title": "LA NECESIDAD DE SALV ACIÓN",
       "verse": "Romanos 6:23 \"Porque la paga del pecado es muerte... mas la dádiva de Dios es vida eterna en Cristo Jesús.\"",
       "goal": "Enseñar que el pecado tiene consecuencias, pero Dios ofrece el regalo de la vida eterna por Jesús.",
@@ -850,6 +988,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "4/19/2026",
+      "displayTitle": "Una vida nueva en Cristo",
+      "closingSummary": "Cuando una persona esta en Cristo, Dios comienza una obra nueva en su vida. No es solo portarse mejor; es recibir una nueva identidad y aprender a vivir como hijo de Dios.",
+      "teacherGuide": [
+        "Explica la nueva vida como una obra de Dios en el corazon, no solo como cambio externo de conducta.",
+        "Usa el contraste antes/despues para hablar de actitudes concretas: mentira/verdad, enojo/paz, egoismo/amor.",
+        "Refuerza que crecer en Cristo toma tiempo y que Dios ayuda a sus hijos."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "2 Corintios 5:17",
+        "activity": "Haz una mariposa de papel y escribe: En Cristo soy nueva criatura.",
+        "reflection": "Jesus no solo perdona mi pasado; tambien me ayuda a vivir diferente."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que en Cristo Dios nos da una vida nueva.",
+        "homeQuestion": "Que cambio quiere Dios formar en nuestro hogar esta semana?",
+        "familyChallenge": "Celebren una accion nueva que refleje a Jesus: perdonar, decir la verdad, compartir o servir."
+      },
+      "biblicalText": {
+        "book": "2 Corintios",
+        "chapter": "5",
+        "verses": "17",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 55-56 d.C.",
+        "context": "Pablo explica que la obra de Cristo reconcilia al creyente con Dios y le da una nueva identidad. En Cristo, lo viejo pasa y Dios hace algo nuevo."
+      },
+      "centralIdea": "En Cristo, Dios perdona y transforma, dando una nueva vida con proposito.",
+      "objectives": [
+        "Conocer que en Cristo somos nueva criatura.",
+        "Comprender que Dios cambia el corazon y la manera de vivir.",
+        "Aplicar esta verdad escogiendo una actitud que refleje la nueva vida."
+      ],
+      "bibleContext": "2 Corintios 5 habla de reconciliacion: Dios acerca a los pecadores a El por medio de Cristo. La nueva vida nace de esa obra de gracia y se ve en una forma diferente de vivir.",
+      "exposition": [
+        {
+          "title": "En Cristo hay nueva identidad",
+          "text": "El creyente no se define por su pecado pasado, sino por lo que Jesus hizo y por la gracia de Dios."
+        },
+        {
+          "title": "Dios transforma desde adentro",
+          "text": "La nueva vida comienza en el corazon y luego se nota en palabras, decisiones y relaciones."
+        },
+        {
+          "title": "La nueva vida tiene proposito",
+          "text": "Dios nos cambia para vivir para El y mostrar su amor a otros."
+        }
+      ],
       "title": "LA NUEV A VIDA EN CRISTO",
       "verse": "2 Corintios 5:17 \"De modo que si alguno está en Cristo, nueva criatura es...\"",
       "goal": "Mostrar que cuando creemos en Jesús, Dios nos da una nueva vida: limpia, alegre y con propósito.",
@@ -941,7 +1125,7 @@ window.PRLessonLibrary = {
       "warmup": "Muestra una cruz pequeña o dibujada y pregunta: ¿qué hizo Jesús por amor?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo de una cruz con rayos de luz y la frase: Jesús es mi Salvador.",
-      "dynamic": "Juego \"Estoy listo\". Reaccionar rápido cuando se diga \"Jesús viene\". Manualidad: Cielo de papel con nubes y la frase: \"Jesús volverá\". Oración: \"Jesús, quiero estar listo para cuando regreses. Ayúdame a obedecerte. Amén.\" DIOS Y LA VIDA DEL CREYENTE - Vivir para la gloria de Dios Paso adicional: Dramatiza una escena sencilla donde Jesús ayuda, perdona o llama a seguirle.",
+      "dynamic": "Juego \"Estoy listo\". Reaccionar rápido cuando se diga \"Jesús viene\". Manualidad: Cielo de papel con nubes y la frase: \"Jesús volverá\". Paso adicional: Dramatiza una escena sencilla donde Jesús ayuda, perdona o llama a seguirle.",
       "application": "Contarle a alguien una cosa que Jesús ha hecho por mí.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -1898,7 +2082,7 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Escoger una prioridad que debo ordenar alrededor de Cristo esta semana.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Jesús, ayúdame a vivir preparado para tu regreso. Amén.\" DIOS Y LA VIDA DEL CREYENTE - Vivir para la gloria de Dios",
+      "prayer": "\"Jesús, ayúdame a vivir preparado para tu regreso. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
