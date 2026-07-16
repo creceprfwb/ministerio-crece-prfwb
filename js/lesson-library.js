@@ -3729,6 +3729,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "3/8/2026",
+      "displayTitle": "Como Dios nos entrego su Palabra",
+      "closingSummary": "La Biblia llego a nosotros por la obra soberana de Dios: autores humanos fueron guiados por el Espiritu Santo, y el mensaje central apunta a Cristo y su redencion.",
+      "teacherGuide": [
+        "Distingue inspiracion de dictado mecanico: Dios uso autores reales sin perder autoridad divina.",
+        "Conecta la historia de la Biblia con su unidad: muchos autores, un mensaje redentor.",
+        "Invita a valorar la Biblia como tesoro recibido, no como libro comun."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "2 Pedro 1:21",
+        "activity": "Crea una linea de tiempo con cinco momentos: creacion, profetas, Jesus, apostoles, iglesia.",
+        "reflection": "Puedo confiar en la Biblia porque Dios guio su mensaje."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron como Dios inspiro y preservo su Palabra.",
+        "homeQuestion": "Por que es importante saber que la Biblia no nacio solo de ideas humanas?",
+        "familyChallenge": "Lean 2 Pedro 1:20-21 y conversen sobre la confianza en la Escritura."
+      },
+      "biblicalText": {
+        "book": "2 Pedro",
+        "chapter": "1",
+        "verses": "20-21",
+        "author": "El apostol Pedro",
+        "date": "Aproximadamente 64-68 d.C.",
+        "context": "Pedro anima a creyentes a confiar en la Palabra profetica, aclarando que la Escritura no surge de voluntad humana sino de hombres guiados por el Espiritu Santo."
+      },
+      "centralIdea": "La Biblia es Palabra de Dios escrita por autores humanos guiados por el Espiritu Santo.",
+      "objectives": [
+        "Comprender la inspiracion divina de la Escritura.",
+        "Reconocer la unidad del mensaje biblico en Cristo.",
+        "Aplicar esta verdad valorando la Biblia como autoridad para la vida."
+      ],
+      "bibleContext": "2 Pedro combate la falsa ensenanza y afirma la seguridad de la Palabra de Dios. La Escritura no depende de interpretaciones caprichosas ni de inventos humanos.",
+      "exposition": [
+        {
+          "title": "Dios uso autores humanos",
+          "text": "La Biblia fue escrita por personas reales en contextos reales, con estilos y situaciones diferentes."
+        },
+        {
+          "title": "El Espiritu Santo guio el mensaje",
+          "text": "La autoridad de la Biblia viene de Dios, quien dirigio a sus siervos para comunicar su Palabra."
+        },
+        {
+          "title": "La Biblia tiene un mensaje unido",
+          "text": "Aunque contiene muchos libros, la historia apunta a la redencion de Dios en Cristo."
+        }
+      ],
       "title": "CÓMO LLEGÓ LA BIBLIA A NOSOTROS",
       "verse": "2 Pedro 1:21 \"...los santos hombres de Dios hablaron siendo inspirados por el Espíritu Santo.\"",
       "goal": "Entender que la Biblia fue escrita por humanos guiados por el Espíritu Santo y preservada por Dios para nosotros.",
@@ -3749,6 +3795,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "3/15/2026",
+      "displayTitle": "Leer la Biblia para ser formado",
+      "closingSummary": "Leer la Biblia no es solo completar una rutina espiritual. Es acercarnos a la voz de Dios para conocer su verdad, examinar el corazon y responder con obediencia.",
+      "teacherGuide": [
+        "Ensena un metodo simple: observar, interpretar, aplicar y orar.",
+        "Anima a comenzar con planes realistas, no metas imposibles que abandonen rapido.",
+        "Conecta estudio biblico con decisiones reales de escuela, redes, familia y amistades."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Salmos 119:105",
+        "activity": "Practica con un texto corto: que dice, que significa, que debo obedecer, como oro.",
+        "reflection": "La Biblia ilumina mis decisiones cuando la leo con humildad."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles practicaron como leer y aplicar la Biblia.",
+        "homeQuestion": "Que horario realista puede ayudar a leer la Biblia esta semana?",
+        "familyChallenge": "Lean un Salmo juntos y cada persona comparta una aplicacion."
+      },
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "119",
+        "verses": "105",
+        "author": "Autor no identificado; salmo de amor por la Palabra",
+        "date": "Periodo del Antiguo Testamento",
+        "context": "El Salmo 119 celebra la Palabra de Dios como guia, consuelo, instruccion y deleite para el creyente."
+      },
+      "centralIdea": "La Palabra de Dios guia nuestras decisiones y forma nuestra vida cuando la leemos con obediencia.",
+      "objectives": [
+        "Aprender una forma sencilla de leer y estudiar la Biblia.",
+        "Comprender que la Biblia ilumina decisiones reales.",
+        "Aplicar esta verdad creando un plan de lectura semanal."
+      ],
+      "bibleContext": "La imagen de lampara habla de guia paso a paso. La Palabra no siempre muestra todo el futuro, pero si ilumina el camino de obediencia para hoy.",
+      "exposition": [
+        {
+          "title": "La Biblia ilumina",
+          "text": "La Palabra revela la verdad de Dios y expone caminos que pueden hacernos tropezar."
+        },
+        {
+          "title": "La Biblia requiere atencion",
+          "text": "Leer con cuidado implica observar el texto, entender su mensaje y escuchar lo que Dios dice."
+        },
+        {
+          "title": "La Biblia llama a obedecer",
+          "text": "El estudio biblico queda incompleto si no produce una respuesta concreta de fe y obediencia."
+        }
+      ],
       "title": "CÓMO LEER Y ESTUDIAR LA BIBLIA",
       "verse": "Salmos 119:105 \"Lámpara es a mis pies tu palabra...\"",
       "goal": "Guiar a los adolescentes a desarrollar el hábito de leer la Biblia con reverencia y aplicación personal.",
@@ -3769,6 +3861,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "3/22/2026",
+      "displayTitle": "La Palabra que confronta y transforma",
+      "closingSummary": "La Biblia no solo informa la mente; Dios la usa para revelar el corazon, confrontar pecado, consolar al herido y formar una vida semejante a Cristo.",
+      "teacherGuide": [
+        "Usa testimonios biblicos como Pablo o Zaqueo, pero lleva a aplicaciones actuales.",
+        "Permite que cada joven identifique un area personal de cambio sin exponerla publicamente.",
+        "Conecta transformacion con gracia: Dios no solo senala lo malo, tambien restaura."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Hebreos 4:12",
+        "activity": "Escribe un area donde necesitas cambio y busca un versiculo que hable a esa area.",
+        "reflection": "Dios usa su Palabra para mostrarme la verdad y cambiarme desde adentro."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron que la Palabra de Dios es viva, eficaz y transformadora.",
+        "homeQuestion": "Que area de nuestra vida necesita ser guiada por la Palabra?",
+        "familyChallenge": "Escoger un versiculo para memorizar y practicar durante la semana."
+      },
+      "biblicalText": {
+        "book": "Hebreos",
+        "chapter": "4",
+        "verses": "12-13",
+        "author": "Autor de Hebreos no identificado",
+        "date": "Aproximadamente antes del 70 d.C.",
+        "context": "Hebreos llama a responder con fe y obediencia. La Palabra de Dios revela lo profundo del corazon delante de Aquel a quien daremos cuenta."
+      },
+      "centralIdea": "Dios usa su Palabra viva para revelar y transformar el corazon.",
+      "objectives": [
+        "Reconocer que la Palabra de Dios es viva y eficaz.",
+        "Comprender que la Biblia confronta y consuela.",
+        "Aplicar esta verdad identificando un area donde necesito obedecer."
+      ],
+      "bibleContext": "Hebreos 4 advierte contra la incredulidad y llama al descanso en Dios. La Palabra penetra mas alla de apariencias y expone la condicion real del corazon.",
+      "exposition": [
+        {
+          "title": "La Palabra esta viva",
+          "text": "Dios sigue hablando por su Palabra y aplicandola a situaciones reales."
+        },
+        {
+          "title": "La Palabra revela",
+          "text": "La Escritura muestra deseos, motivos y pecados que a veces intentamos esconder."
+        },
+        {
+          "title": "La Palabra transforma",
+          "text": "Cuando respondemos con fe y obediencia, Dios nos cambia para parecernos mas a Cristo."
+        }
+      ],
       "title": "LA PALABRA TRANSFORMA VIDAS",
       "verse": "Hebreos 4:12 \"La palabra de Dios es viva y eficaz...\"",
       "goal": "Mostrar que la Biblia no solo informa, sino que transforma corazones, vidas y decisiones.",
