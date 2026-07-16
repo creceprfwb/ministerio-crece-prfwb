@@ -2395,6 +2395,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "9/13/2026",
+      "displayTitle": "Dios me equipa para estar firme",
+      "closingSummary": "La armadura de Dios nos recuerda que no estamos solos. Dios protege a sus hijos y nos da lo necesario para permanecer firmes en la verdad, la fe y la obediencia.",
+      "teacherGuide": [
+        "Presenta la armadura como una imagen biblica para estar firmes, no como un juego de miedo.",
+        "Aclara que nuestra fuerza viene de Dios, no de ser valientes por cuenta propia.",
+        "Usa piezas visuales de armadura para introducir el bloque completo."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Efesios 6:11",
+        "activity": "Dibuja una armadura sencilla y escribe: Dios me ayuda a estar firme.",
+        "reflection": "Cuando tengo miedo o tentacion, Dios me ayuda a permanecer firme."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Dios protege y equipa a sus hijos para estar firmes.",
+        "homeQuestion": "En que situacion necesitas pedir ayuda a Dios para estar firme?",
+        "familyChallenge": "Oren juntos pidiendo fortaleza para obedecer a Dios esta semana."
+      },
+      "biblicalText": {
+        "book": "Efesios",
+        "chapter": "6",
+        "verses": "10-11",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo escribe a la iglesia sobre vivir en Cristo y termina animando a los creyentes a fortalecerse en el Senor y vestirse de la armadura de Dios."
+      },
+      "centralIdea": "Dios fortalece y equipa a sus hijos para estar firmes contra el mal.",
+      "objectives": [
+        "Conocer que Dios nos da una armadura espiritual.",
+        "Comprender que nuestra fuerza viene del Senor.",
+        "Aplicar esta verdad pidiendo ayuda a Dios para obedecer."
+      ],
+      "bibleContext": "Efesios 6 usa la imagen de la armadura para explicar como el creyente permanece firme. La batalla espiritual no se gana con fuerza humana, sino dependiendo del poder de Dios.",
+      "exposition": [
+        {
+          "title": "Fortaleceos en el Senor",
+          "text": "La primera instruccion es buscar fuerza en Dios. El creyente no pelea solo."
+        },
+        {
+          "title": "Dios nos da armadura",
+          "text": "Cada pieza representa una verdad que Dios usa para cuidarnos y ayudarnos."
+        },
+        {
+          "title": "Estamos firmes con Dios",
+          "text": "Estar firme significa seguir confiando y obedeciendo aunque haya tentaciones o dificultades."
+        }
+      ],
       "title": "DIOS ME PROTEGE",
       "verse": "Efesios 6:11 \"Pónganse toda la armadura de Dios para poder estar firmes contra las trampas del diablo.\"",
       "goal": "Aprender que Dios es nuestro protector y nos da una armadura especial.",
@@ -2416,6 +2462,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "9/20/2026",
+      "displayTitle": "Verdad y justicia protegen mi corazon",
+      "closingSummary": "La verdad de Dios sostiene nuestra vida y la justicia protege nuestro corazon. Un discipulo aprende a rechazar la mentira y escoger lo que agrada a Dios.",
+      "teacherGuide": [
+        "Explica verdad como vivir de acuerdo con lo que Dios dice, no solo no mentir.",
+        "Presenta justicia como hacer lo correcto delante de Dios por la ayuda de Cristo.",
+        "Usa situaciones cotidianas para que los ninos practiquen escoger verdad y justicia."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Efesios 6:14",
+        "activity": "Haz un cinturon de papel que diga Verdad y una coraza con un corazon limpio.",
+        "reflection": "Dios me ayuda a decir la verdad y escoger lo correcto."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos sobre el cinturon de la verdad y la coraza de justicia.",
+        "homeQuestion": "Cuando es dificil decir la verdad o hacer lo correcto?",
+        "familyChallenge": "Practiquen una decision de verdad y justicia durante la semana."
+      },
+      "biblicalText": {
+        "book": "Efesios",
+        "chapter": "6",
+        "verses": "14",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo describe piezas de la armadura de Dios para mostrar como el creyente permanece firme en Cristo."
+      },
+      "centralIdea": "La verdad de Dios y la justicia que El ensena ayudan al creyente a vivir firme.",
+      "objectives": [
+        "Conocer el cinturon de la verdad y la coraza de justicia.",
+        "Comprender que la mentira y el pecado debilitan el corazon.",
+        "Aplicar esta verdad escogiendo una accion correcta."
+      ],
+      "bibleContext": "En una armadura antigua, el cinturon sostenia otras piezas y la coraza protegia organos vitales. Pablo usa estas imagenes para ensenar que la verdad y la justicia son esenciales para la vida cristiana.",
+      "exposition": [
+        {
+          "title": "La verdad sostiene",
+          "text": "La verdad de Dios nos ayuda a reconocer lo correcto y rechazar la mentira."
+        },
+        {
+          "title": "La justicia protege",
+          "text": "Hacer lo correcto protege nuestro corazon y muestra que pertenecemos a Dios."
+        },
+        {
+          "title": "Jesus nos ayuda a vivir bien",
+          "text": "No somos justos por nuestras fuerzas. Jesus nos perdona y nos ensena a vivir de una manera nueva."
+        }
+      ],
       "title": "CINTURÓN DE LA VERDAD Y CORAZA DE JUSTICIA",
       "verse": "Efesios 6:14 \"Estén firmes, ceñidos con el cinturón de la verdad y vestidos con la coraza de justicia.\"",
       "goal": "Comprender que debemos vivir en la verdad y la justicia que viene de Dios.",
@@ -2437,6 +2529,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "9/27/2026",
+      "displayTitle": "Camino en paz y levanto la fe",
+      "closingSummary": "El evangelio nos da paz con Dios y nos envia a llevar paz a otros. La fe es como un escudo: nos ayuda a confiar en Dios cuando llegan dudas, miedo o tentacion.",
+      "teacherGuide": [
+        "Explica el evangelio de la paz como la buena noticia de que Jesus nos reconcilia con Dios.",
+        "Usa huellas para hablar de llevar paz a los lugares donde caminamos.",
+        "Presenta el escudo de la fe como confianza en Dios frente a mentiras, miedo y tentaciones."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Efesios 6:15-16",
+        "activity": "Dibuja huellas con palabras de paz y un escudo con la palabra Fe.",
+        "reflection": "Puedo llevar paz y confiar en Dios cuando tengo miedo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos sobre el calzado del evangelio de la paz y el escudo de la fe.",
+        "homeQuestion": "Como podemos llevar paz a nuestra casa esta semana?",
+        "familyChallenge": "Memoricen una frase de fe para recordar cuando haya miedo: Dios esta conmigo."
+      },
+      "biblicalText": {
+        "book": "Efesios",
+        "chapter": "6",
+        "verses": "15-16",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo continua describiendo la armadura de Dios, mostrando que el creyente camina con el evangelio y se protege con la fe."
+      },
+      "centralIdea": "El evangelio nos da paz para caminar y la fe nos ayuda a confiar en Dios.",
+      "objectives": [
+        "Conocer el calzado de la paz y el escudo de la fe.",
+        "Comprender que el evangelio nos mueve a llevar paz.",
+        "Aplicar esta verdad confiando en Dios ante una situacion dificil."
+      ],
+      "bibleContext": "El calzado ayudaba al soldado a mantenerse listo para caminar. El escudo protegia de ataques. Pablo usa estas imagenes para explicar una vida preparada por el evangelio y protegida por la fe.",
+      "exposition": [
+        {
+          "title": "El evangelio trae paz",
+          "text": "Jesus nos da paz con Dios por medio de su obra salvadora."
+        },
+        {
+          "title": "Caminamos llevando paz",
+          "text": "Un discipulo busca hablar y actuar de maneras que reflejen la paz de Cristo."
+        },
+        {
+          "title": "La fe protege",
+          "text": "Cuando aparecen dudas o miedo, la fe recuerda que Dios es fiel y verdadero."
+        }
+      ],
       "title": "CALZADO DE LA PAZ Y ESCUDO DE LA FE",
       "verse": "Efesios 6:15 \"Y calzados los pies con el apresto del evangelio de la paz.\"",
       "goal": "Entender que debemos llevar el mensaje de paz y confiar en Dios en todo.",
@@ -2458,6 +2596,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "10/4/2026",
+      "displayTitle": "Mi salvacion y la Palabra me defienden",
+      "closingSummary": "Dios protege nuestra mente con la seguridad de la salvacion y nos da su Palabra como espada espiritual. La Biblia nos ayuda a responder con verdad cuando enfrentamos mentira, miedo o tentacion.",
+      "teacherGuide": [
+        "Explica el casco como proteccion de la mente: recordamos que somos salvos por Jesus.",
+        "Presenta la espada del Espiritu como la Palabra de Dios, no como agresion contra personas.",
+        "Practica respuestas biblicas breves para miedo, mentira, soledad y tentacion."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Efesios 6:17",
+        "activity": "Haz un casco de papel que diga Soy de Jesus y una espada con un versiculo.",
+        "reflection": "La Palabra de Dios me ayuda a responder con verdad."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos sobre el casco de salvacion y la espada del Espiritu, que es la Palabra de Dios.",
+        "homeQuestion": "Que versiculo puede ayudarte cuando sientes miedo o tentacion?",
+        "familyChallenge": "Escojan un versiculo corto y repitanlo cada dia esta semana."
+      },
+      "biblicalText": {
+        "book": "Efesios",
+        "chapter": "6",
+        "verses": "17",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo concluye la lista de piezas de la armadura destacando la salvacion y la Palabra de Dios como defensa espiritual."
+      },
+      "centralIdea": "La salvacion en Cristo guarda nuestra mente y la Palabra de Dios nos ayuda a permanecer firmes.",
+      "objectives": [
+        "Conocer el casco de salvacion y la espada del Espiritu.",
+        "Comprender que la Palabra de Dios nos ayuda a responder con verdad.",
+        "Aplicar esta verdad memorizando un versiculo para usar durante la semana."
+      ],
+      "bibleContext": "El casco protegia la cabeza y la espada era usada en batalla. Pablo ensena que el creyente necesita recordar su salvacion y usar la Palabra de Dios para resistir el mal.",
+      "exposition": [
+        {
+          "title": "La salvacion protege la mente",
+          "text": "Recordar que pertenecemos a Jesus nos ayuda cuando llegan dudas, culpa o miedo."
+        },
+        {
+          "title": "La Palabra es espada",
+          "text": "La Biblia nos da verdad para responder a mentiras y tentaciones."
+        },
+        {
+          "title": "Memorizar ayuda a obedecer",
+          "text": "Guardar versiculos en el corazon nos prepara para vivir firmes durante la semana."
+        }
+      ],
       "title": "CASCO DE SALV ACIÓN Y ESPADA DEL ESPÍRITU",
       "verse": "Efesios 6:17 \"Tomen el casco de la salvación y la espada del Espíritu, que es la palabra de Dios.\"",
       "goal": "Aprender que Dios protege nuestra mente con su salvación y nos da la Biblia como arma.",
