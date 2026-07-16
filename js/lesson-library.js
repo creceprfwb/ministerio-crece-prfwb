@@ -5183,6 +5183,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "8/9/2026",
+      "displayTitle": "La iglesia: equipo en mision",
+      "closingSummary": "La mision no es una tarea solitaria. Jesus da poder por su Espiritu y llama a la iglesia a testificar unida, usando los dones, relaciones y oportunidades que Dios provee.",
+      "teacherGuide": [
+        "Enfatiza que la evangelizacion se vive mejor en comunidad, con apoyo y oracion.",
+        "Ayuda a los jovenes a pensar en proyectos pequenos y realistas desde su iglesia.",
+        "Conecta Hechos 1:8 con testimonio local: casa, escuela, comunidad y mundo."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Hechos 1:8",
+        "activity": "Proyecto de alcance: disenar una idea sencilla en equipo con objetivo, personas, recursos y primer paso.",
+        "reflection": "No tengo que cumplir la mision solo; Dios usa a su iglesia como equipo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron que la iglesia trabaja unida para compartir a Jesus.",
+        "homeQuestion": "Como podemos apoyar un proyecto de alcance de nuestra iglesia?",
+        "familyChallenge": "Orar por una persona o comunidad que la iglesia pueda alcanzar."
+      },
+      "biblicalText": {
+        "book": "Hechos",
+        "chapter": "1",
+        "verses": "8",
+        "author": "Lucas, medico y colaborador de Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Antes de ascender, Jesus promete el poder del Espiritu Santo para que sus discipulos sean testigos hasta lo ultimo de la tierra."
+      },
+      "centralIdea": "La iglesia cumple la mision de Jesus unida, dependiente del Espiritu y comprometida con el testimonio.",
+      "objectives": [
+        "Comprender que la mision de la iglesia se realiza en comunidad.",
+        "Identificar recursos y dones del grupo para servir y evangelizar.",
+        "Planificar un primer paso de alcance como equipo."
+      ],
+      "bibleContext": "Hechos 1:8 establece el patron de la mision cristiana: poder del Espiritu, testimonio fiel y expansion desde lo cercano hasta lo lejano.",
+      "exposition": [
+        {
+          "title": "El poder viene del Espiritu",
+          "text": "La mision no depende solo de estrategia humana, sino de la presencia y poder de Dios."
+        },
+        {
+          "title": "El testimonio se vive juntos",
+          "text": "La iglesia ora, acompana, sirve y comparte el evangelio como cuerpo."
+        },
+        {
+          "title": "La mision empieza cerca",
+          "text": "Jerusalen nos recuerda que el testimonio comienza donde ya vivimos."
+        }
+      ],
       "title": "LA IGLESIA ES UN EQUIPO EN MISIÓN",
       "verse": "Hechos 1:8 \"Y me seréis testigos... hasta lo último de la tierra.\"",
       "goal": "Reconocer que la evangelización es un esfuerzo conjunto de la iglesia, no una tarea solitaria.",
@@ -5204,6 +5250,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "8/16/2026",
+      "displayTitle": "La oracion que agrada a Dios",
+      "closingSummary": "La oracion que agrada a Dios nace de fe, sinceridad y rendicion. No manipula a Dios ni exige caprichos; se acerca al Padre confiando en su poder, su caracter y su voluntad.",
+      "teacherGuide": [
+        "Aclara que orar con fe no significa controlar a Dios.",
+        "Distingue fe verdadera de formulas religiosas o pensamiento magico.",
+        "Invita a presentar peticiones con confianza y terminar con rendicion a la voluntad de Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Marcos 11:24",
+        "activity": "Tarjetas de fe: escribir una peticion personal, una por otra persona y una frase de entrega a la voluntad de Dios.",
+        "reflection": "Puedo orar con confianza porque Dios escucha y sabe lo que es mejor."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la oracion con fe y sinceridad.",
+        "homeQuestion": "Como podemos confiar en Dios aun cuando su respuesta no sea inmediata?",
+        "familyChallenge": "Orar juntos por una necesidad y cerrar diciendo: Senor, haz tu voluntad."
+      },
+      "biblicalText": {
+        "book": "Marcos",
+        "chapter": "11",
+        "verses": "22-25",
+        "author": "Juan Marcos",
+        "date": "Aproximadamente 55-70 d.C.",
+        "context": "Jesus ensena sobre fe, oracion y perdon despues de una leccion visual con la higuera."
+      },
+      "centralIdea": "Dios se agrada de una oracion hecha con fe sincera, confianza y un corazon rendido.",
+      "objectives": [
+        "Comprender que la fe en la oracion descansa en Dios, no en una formula.",
+        "Practicar una oracion con confianza y rendicion.",
+        "Relacionar la oracion con un corazon dispuesto a perdonar."
+      ],
+      "bibleContext": "Marcos 11 conecta fe, oracion y perdon. Jesus llama a confiar en Dios, no a usar la oracion como mecanismo egoista.",
+      "exposition": [
+        {
+          "title": "La fe mira a Dios",
+          "text": "Orar con fe no es confiar en mi intensidad, sino en el Dios que escucha."
+        },
+        {
+          "title": "La oracion sincera se rinde",
+          "text": "El creyente pide con confianza y descansa en la sabiduria del Padre."
+        },
+        {
+          "title": "La oracion toca el corazon",
+          "text": "Jesus une oracion y perdon porque no podemos separar comunion con Dios de nuestras relaciones."
+        }
+      ],
       "title": "LA ORACIÓN QUE AGRADA A DIOS",
       "verse": "Marcos 11:24 \"Todo lo que pidáis orando, creed que lo recibiréis, y os vendrá.\"",
       "goal": "Que los adolescentes comprendan que orar con fe y sinceridad agrada a Dios.",
@@ -5224,6 +5316,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "8/23/2026",
+      "displayTitle": "Escuchar a Dios en medio del ruido",
+      "closingSummary": "La oracion tambien incluye quietud, atencion y obediencia. Dios nos habla principalmente por su Palabra, y aprendemos a escuchar cuando bajamos el ruido y rendimos el corazon.",
+      "teacherGuide": [
+        "Aclara que escuchar a Dios debe estar guiado por la Biblia, no solo por emociones.",
+        "Habla del ruido digital y emocional que dificulta la atencion espiritual.",
+        "Incluye un momento breve de lectura, silencio y respuesta escrita."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Salmo 46:10",
+        "activity": "Lectura atenta: leer un salmo, guardar un minuto de silencio y escribir una verdad, una advertencia y una respuesta.",
+        "reflection": "Para escuchar mejor a Dios, necesito hacer espacio para su Palabra."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la importancia de escuchar a Dios en oracion y por su Palabra.",
+        "homeQuestion": "Que ruido nos distrae mas de escuchar a Dios?",
+        "familyChallenge": "Tener cinco minutos sin pantallas para leer un salmo y orar."
+      },
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "46",
+        "verses": "10",
+        "author": "Los hijos de Core",
+        "date": "Periodo del Antiguo Testamento",
+        "context": "El salmo declara la seguridad del pueblo de Dios en medio de crisis, llamando a quietud y confianza en el Senor."
+      },
+      "centralIdea": "Escuchar a Dios requiere quietud, Palabra y un corazon dispuesto a obedecer.",
+      "objectives": [
+        "Reconocer que la oracion no es solo hablar, sino atender a Dios.",
+        "Practicar una lectura biblica pausada y reflexiva.",
+        "Identificar distracciones que necesitan ser reducidas para escuchar mejor."
+      ],
+      "bibleContext": "Salmo 46 presenta a Dios como refugio firme. La quietud no es pasividad, sino reconocimiento humilde de que El es Dios.",
+      "exposition": [
+        {
+          "title": "La quietud reconoce a Dios",
+          "text": "Detenernos delante de Dios nos recuerda que El gobierna y nosotros dependemos."
+        },
+        {
+          "title": "La Palabra dirige la escucha",
+          "text": "Dios no contradice su Palabra; ella forma nuestra manera de discernir."
+        },
+        {
+          "title": "Escuchar lleva a responder",
+          "text": "La meta no es solo sentir paz, sino obedecer lo que Dios nos muestra."
+        }
+      ],
       "title": "ESCUCHAR A DIOS EN ORACIÓN",
       "verse": "Salmo 46:10 \"Estad quietos, y conoced que yo soy Dios.\"",
       "goal": "Aprender que la oración no solo es hablar, sino también escuchar la voz de Dios.",
@@ -5244,6 +5382,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "8/30/2026",
+      "displayTitle": "Interceder: llevar a otros delante de Dios",
+      "closingSummary": "Interceder es amar en oracion. Cuando oramos por otros, participamos en el cuidado de Dios, cargamos necesidades con compasion y recordamos que la iglesia es una familia espiritual.",
+      "teacherGuide": [
+        "Presenta la intercesion como expresion de amor, no como lista mecanica.",
+        "Incluye categorias: familia, iglesia, escuela, autoridades, enfermos y personas sin Cristo.",
+        "Cuida la privacidad: no obligues a compartir detalles sensibles en publico."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Timoteo 2:1",
+        "activity": "Calendario de intercesion: asignar una persona o necesidad para cada dia de la semana.",
+        "reflection": "Puedo amar a otros llevandolos fielmente delante de Dios."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la intercesion como oracion por otros.",
+        "homeQuestion": "Por quien deberiamos orar con mas constancia?",
+        "familyChallenge": "Crear una lista familiar de intercesion y orar por una persona cada dia."
+      },
+      "biblicalText": {
+        "book": "1 Timoteo",
+        "chapter": "2",
+        "verses": "1-4",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 62-66 d.C.",
+        "context": "Pablo instruye a Timoteo sobre la vida de la iglesia, incluyendo oraciones por todos y por las autoridades."
+      },
+      "centralIdea": "Dios llama a su pueblo a interceder por otros con amor, amplitud y esperanza en su salvacion.",
+      "objectives": [
+        "Definir la intercesion como oracion amorosa por otros.",
+        "Identificar personas y necesidades por las cuales orar.",
+        "Crear un plan semanal sencillo de intercesion."
+      ],
+      "bibleContext": "1 Timoteo 2 muestra una iglesia que ora mas alla de sus propios intereses, incluyendo gobernantes y toda clase de personas.",
+      "exposition": [
+        {
+          "title": "La intercesion amplía el corazon",
+          "text": "Orar por otros nos saca del egoismo y nos enseña compasion."
+        },
+        {
+          "title": "La iglesia ora por todos",
+          "text": "Pablo llama a orar no solo por amigos, sino por autoridades y personas de todo tipo."
+        },
+        {
+          "title": "La intercesion mira a la salvacion",
+          "text": "Dios desea que las personas sean salvas y lleguen al conocimiento de la verdad."
+        }
+      ],
       "title": "INTERCEDER POR OTROS",
       "verse": "1 Timoteo 2:1 \"Exhorto ante todo, a que se hagan rogativas, oraciones, peticiones y acciones de gracias por todos los hombres.\"",
       "goal": "Motivar a los jóvenes a orar intencionalmente por otros, como parte del cuerpo de Cristo.",
@@ -5264,6 +5448,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "9/6/2026",
+      "displayTitle": "Orar sin cesar: vivir conectado a Dios",
+      "closingSummary": "Orar sin cesar no significa hablar sin parar, sino vivir con una actitud constante de dependencia, gratitud y comunion con Dios en toda la rutina.",
+      "teacherGuide": [
+        "Explica que una vida de oracion integra momentos apartados y oraciones durante el dia.",
+        "Ayuda a los jovenes a disenar un ritmo realista, no una meta imposible.",
+        "Conecta oracion constante con gozo, gratitud y dependencia de Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Tesalonicenses 5:17",
+        "activity": "Ritmo diario: escoger tres momentos del dia para orar brevemente: mañana, escuela/trabajo y noche.",
+        "reflection": "Dios quiere caminar conmigo en lo ordinario, no solo en emergencias."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron una vida de oracion constante.",
+        "homeQuestion": "En que momento del dia podemos recordar orar juntos?",
+        "familyChallenge": "Poner una alarma familiar de oracion breve durante una semana."
+      },
+      "biblicalText": {
+        "book": "1 Tesalonicenses",
+        "chapter": "5",
+        "verses": "16-18",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 50-51 d.C.",
+        "context": "Pablo concluye su carta con instrucciones breves para una vida cristiana marcada por gozo, oracion y gratitud."
+      },
+      "centralIdea": "La oracion constante es una actitud diaria de dependencia y comunion con Dios.",
+      "objectives": [
+        "Comprender que orar sin cesar describe una vida conectada a Dios.",
+        "Identificar momentos cotidianos donde se puede orar.",
+        "Crear un plan sencillo y sostenible de oracion semanal."
+      ],
+      "bibleContext": "1 Tesalonicenses 5 une gozo, oracion y gratitud como marcas de una comunidad que vive esperando al Senor.",
+      "exposition": [
+        {
+          "title": "La oracion acompana la rutina",
+          "text": "Dios no esta limitado al templo o al domingo; podemos depender de El durante todo el dia."
+        },
+        {
+          "title": "La constancia se practica",
+          "text": "Un habito espiritual crece con pasos pequenos, intencionales y repetidos."
+        },
+        {
+          "title": "La gratitud sostiene el corazon",
+          "text": "Orar constantemente tambien implica reconocer la bondad de Dios en medio de la vida diaria."
+        }
+      ],
       "title": "UNA VIDA DE ORACIÓN CONSTANTE",
       "verse": "1 Tesalonicenses 5:17 \"Orad sin cesar.\"",
       "goal": "Fomentar el hábito de una vida de oración continua, no solo ocasional.",
