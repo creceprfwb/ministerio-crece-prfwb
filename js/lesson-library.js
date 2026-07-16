@@ -84,6 +84,9 @@ window.PRLessonLibrary = {
         "application": "Voy a dar gracias a Dios cada dia por algo que El creo."
       },
       "parentMaterial": {
+        "summary": "Hoy los ninos aprendieron que la creacion muestra la gloria de Dios y nos llama a adorarlo con gratitud.",
+        "homeQuestion": "Que cosa creada por Dios viste hoy y que te ensena acerca de El?",
+        "familyChallenge": "Caminar juntos y nombrar cinco cosas creadas por Dios, dando gracias por cada una.",
         "whatWeLearned": "Los ninos aprendieron que la creacion muestra la gloria de Dios y nos llama a adorarlo con gratitud.",
         "verse": "Salmos 19:1",
         "familyQuestions": [
