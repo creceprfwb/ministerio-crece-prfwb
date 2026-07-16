@@ -1055,6 +1055,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "4/26/2026",
+      "displayTitle": "La promesa del Salvador",
+      "closingSummary": "Dios no improviso la salvacion. Desde el principio prometio enviar al Salvador, y Jesus es la promesa cumplida que trae esperanza al mundo.",
+      "teacherGuide": [
+        "Muestra la idea de promesa y cumplimiento con tarjetas sencillas: Dios prometio, Dios cumplio.",
+        "Conecta Genesis 3:15 con Isaias 9:6 sin hacerlo pesado: Dios anuncio que vendria un Salvador.",
+        "Ayuda a los ninos a ver que Dios cumple su Palabra aunque pase mucho tiempo."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Isaias 9:6",
+        "activity": "Haz una estrella o pergamino y escribe: Jesus es la promesa cumplida.",
+        "reflection": "Puedo confiar en Dios porque El cumple sus promesas."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Dios prometio enviar un Salvador y cumplio su promesa en Jesus.",
+        "homeQuestion": "Que promesa de Dios te ayuda a confiar en El?",
+        "familyChallenge": "Hablen de una promesa cumplida por Dios y oren dando gracias."
+      },
+      "biblicalText": {
+        "book": "Isaias",
+        "chapter": "9",
+        "verses": "6; apoyo: Genesis 3:15",
+        "author": "El profeta Isaias",
+        "date": "Aproximadamente siglo VIII a.C.",
+        "context": "Isaias anuncia esperanza al pueblo de Dios en medio de oscuridad. Genesis 3:15 ya habia mostrado que Dios prometia vencer el mal por medio de un descendiente."
+      },
+      "centralIdea": "Dios prometio enviar un Salvador, y Jesus cumple perfectamente esa promesa.",
+      "objectives": [
+        "Conocer que Dios prometio un Salvador desde el principio.",
+        "Comprender que Jesus es el cumplimiento de la promesa de Dios.",
+        "Aplicar esta verdad confiando en que Dios siempre cumple su Palabra."
+      ],
+      "bibleContext": "Despues de la caida, Dios anuncio esperanza. Siglos despues, Isaias hablo de un nino dado por Dios. La historia biblica muestra que Dios estaba preparando el camino para Jesus.",
+      "exposition": [
+        {
+          "title": "Dios prometio rescate",
+          "text": "Desde Genesis, Dios mostro que el pecado no tendria la ultima palabra. El prometio vencer el mal."
+        },
+        {
+          "title": "Dios anuncio al Salvador",
+          "text": "Isaias hablo de un nino con nombres grandes porque el Salvador seria enviado por Dios."
+        },
+        {
+          "title": "Jesus cumple la promesa",
+          "text": "Jesus no llego por accidente. El es el Salvador prometido por Dios para rescatarnos."
+        }
+      ],
       "title": "LA PROMESA DEL SALV ADOR",
       "verse": "Isaías 9:6 \"Porque un niño nos es nacido, hijo nos es dado...\"",
       "goal": "Comprender que desde el principio, Dios prometió enviar a Jesús para salvarnos del pecado.",
@@ -1076,6 +1122,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "5/3/2026",
+      "displayTitle": "Jesus tomo mi lugar",
+      "closingSummary": "Jesus murio por nuestros pecados conforme a las Escrituras. En la cruz vemos la justicia de Dios contra el pecado y el amor de Dios por los pecadores.",
+      "teacherGuide": [
+        "Explica la cruz con sencillez y reverencia. Evita detalles graficos innecesarios para la edad.",
+        "Usa la frase: Jesus tomo nuestro lugar, para explicar sustitucion de forma clara.",
+        "Conecta la muerte de Jesus con amor, perdon y respuesta de fe, no solo con tristeza."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Corintios 15:3",
+        "activity": "Decora una cruz de papel con corazones y escribe: Jesus murio por mis pecados.",
+        "reflection": "La cruz me muestra cuanto Dios me ama y cuanto necesito a Jesus."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Jesus murio por nuestros pecados y tomo nuestro lugar.",
+        "homeQuestion": "Que nos ensena la cruz sobre el amor de Dios?",
+        "familyChallenge": "Den gracias juntos por Jesus y hablen de una forma de seguirlo esta semana."
+      },
+      "biblicalText": {
+        "book": "1 Corintios",
+        "chapter": "15",
+        "verses": "3",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 53-55 d.C.",
+        "context": "Pablo recuerda a la iglesia el mensaje central del evangelio: Cristo murio por nuestros pecados conforme a las Escrituras."
+      },
+      "centralIdea": "Jesus murio por nuestros pecados para abrirnos el camino al perdon y la reconciliacion con Dios.",
+      "objectives": [
+        "Conocer que Jesus murio por nuestros pecados.",
+        "Comprender que Jesus tomo nuestro lugar por amor.",
+        "Aplicar esta verdad respondiendo con gratitud, fe y obediencia."
+      ],
+      "bibleContext": "1 Corintios 15 resume el evangelio que la iglesia recibio y predica. La muerte de Jesus no fue una derrota inesperada; ocurrio conforme al plan de Dios revelado en las Escrituras.",
+      "exposition": [
+        {
+          "title": "Cristo murio por nuestros pecados",
+          "text": "La cruz tiene que ver con nuestro pecado y con el amor de Dios. Jesus cargo lo que nosotros no podiamos resolver."
+        },
+        {
+          "title": "Cristo murio conforme a las Escrituras",
+          "text": "Dios habia anunciado su plan. La cruz muestra que Dios cumple su Palabra y salva a su manera."
+        },
+        {
+          "title": "La cruz llama a responder",
+          "text": "Al mirar la cruz, somos invitados a confiar en Jesus, agradecer su amor y seguirlo."
+        }
+      ],
       "title": "JESÚS MURIÓ POR NUESTROS PECADOS",
       "verse": "1 Corintios 15:3 \"...Cristo murió por nuestros pecados, conforme a las Escrituras.\"",
       "goal": "Enseñar que Jesús murió por amor, para pagar el precio de nuestros pecados.",
@@ -1097,6 +1189,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "5/10/2026",
+      "displayTitle": "La tumba esta vacia",
+      "closingSummary": "Jesus resucito y vive hoy. La resurreccion confirma que Jesus vencio la muerte y que nuestra fe tiene esperanza verdadera.",
+      "teacherGuide": [
+        "Presenta la resurreccion como un hecho central del evangelio, no solo como final feliz.",
+        "Usa una manualidad de tumba vacia para reforzar la frase: No esta aqui; ha resucitado.",
+        "Ayuda a los ninos a conectar la resurreccion con esperanza, valentia y gozo."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Lucas 24:6",
+        "activity": "Haz una tumba vacia con papel y escribe: Jesus vive.",
+        "reflection": "Porque Jesus vive, puedo tener esperanza y confiar en El."
+      },
+      "parentMaterial": {
+        "summary": "Hoy celebramos que Jesus resucito y vive para siempre.",
+        "homeQuestion": "Por que es importante que Jesus haya resucitado?",
+        "familyChallenge": "Compartan una razon para tener esperanza porque Jesus vive."
+      },
+      "biblicalText": {
+        "book": "Lucas",
+        "chapter": "24",
+        "verses": "1-8",
+        "author": "Lucas, medico y colaborador de Pablo",
+        "date": "Aproximadamente 60-80 d.C.",
+        "context": "Lucas narra como las mujeres fueron a la tumba y escucharon que Jesus habia resucitado. La tumba vacia confirma la victoria de Cristo."
+      },
+      "centralIdea": "Jesus resucito, vencio la muerte y vive para siempre.",
+      "objectives": [
+        "Conocer que Jesus resucito verdaderamente.",
+        "Comprender que la resurreccion muestra su victoria sobre la muerte.",
+        "Aplicar esta verdad viviendo con esperanza y gozo."
+      ],
+      "bibleContext": "Lucas 24 ocurre despues de la crucifixion. Los seguidores de Jesus estaban tristes y confundidos, pero la noticia de la resurreccion transformo su temor en esperanza.",
+      "exposition": [
+        {
+          "title": "La tumba estaba vacia",
+          "text": "Las mujeres no encontraron el cuerpo de Jesus porque El habia resucitado."
+        },
+        {
+          "title": "Jesus vencio la muerte",
+          "text": "La resurreccion muestra que Jesus es mas fuerte que el pecado y la muerte."
+        },
+        {
+          "title": "La resurreccion nos da esperanza",
+          "text": "Porque Jesus vive, podemos confiar en sus promesas y vivir con gozo."
+        }
+      ],
       "title": "JESÚS RESUCITÓ Y VIVE HOY",
       "verse": "Lucas 24:6 \"No está aquí, sino que ha resucitado.\"",
       "goal": "Recordar que Jesús no quedó en la tumba: ¡resucitó y está vivo!",
@@ -1118,6 +1256,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "5/17/2026",
+      "displayTitle": "Jesus volvera",
+      "closingSummary": "Jesus prometio volver. Los creyentes viven con esperanza, preparados no por miedo, sino por amor y confianza en el Senor que viene.",
+      "teacherGuide": [
+        "Habla del regreso de Jesus con esperanza y sobriedad, evitando especulaciones de fechas o miedo.",
+        "Enfatiza preparacion como vivir confiando y obedeciendo a Jesus cada dia.",
+        "Conecta la clase con acciones concretas: amar, perdonar, servir y hablar de Jesus."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Hechos 1:11",
+        "activity": "Dibuja nubes y escribe: Jesus volvera.",
+        "reflection": "Espero a Jesus viviendo con amor, obediencia y esperanza."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Jesus volvera y que vivimos preparados al seguirlo cada dia.",
+        "homeQuestion": "Como puede nuestra familia vivir con esperanza esta semana?",
+        "familyChallenge": "Elijan una accion de servicio para practicar mientras esperan a Jesus."
+      },
+      "biblicalText": {
+        "book": "Hechos",
+        "chapter": "1",
+        "verses": "9-11",
+        "author": "Lucas",
+        "date": "Aproximadamente 60-80 d.C.",
+        "context": "Despues de resucitar, Jesus ascendio al cielo. Los angeles anunciaron que El volveria de la misma manera."
+      },
+      "centralIdea": "Jesus volvera, y sus seguidores viven con esperanza y obediencia mientras lo esperan.",
+      "objectives": [
+        "Conocer que Jesus prometio volver.",
+        "Comprender que la esperanza cristiana mira hacia el regreso de Cristo.",
+        "Aplicar esta verdad viviendo preparados con amor y obediencia."
+      ],
+      "bibleContext": "Hechos 1 muestra a los discipulos mirando al cielo despues de la ascension de Jesus. El mensaje angelical los dirige a vivir con mision y esperanza hasta que Cristo vuelva.",
+      "exposition": [
+        {
+          "title": "Jesus ascendio al cielo",
+          "text": "Jesus resucitado subio al cielo, mostrando que su obra continua y que El reina."
+        },
+        {
+          "title": "Jesus prometio volver",
+          "text": "La Biblia ensena que el mismo Jesus regresara. Esto da esperanza a su pueblo."
+        },
+        {
+          "title": "Esperamos viviendo para El",
+          "text": "No esperamos cruzados de brazos. Amamos, obedecemos, servimos y compartimos el evangelio."
+        }
+      ],
       "title": "JESÚS VOLVERÁ POR SU IGLESIA",
       "verse": "Hechos 1:11 \"Este mismo Jesús... vendrá otra vez.\"",
       "goal": "Enseñar que Jesús volverá un día por todos los que creen en Él.",
@@ -1293,7 +1477,7 @@ window.PRLessonLibrary = {
       "warmup": "Muestra una cruz pequeña o dibujada y pregunta: ¿qué hizo Jesús por amor?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo de una cruz con rayos de luz y la frase: Jesús es mi Salvador.",
-      "dynamic": "Historias breves sobre confiar en Dios (Daniel, Noé) y elegir la favorita. Manualidad: Puente de cartón que dice: “Confío en Dios” con dibujos. Oración: \"Señor, ayúdame a confiar en ti, aunque no entienda todo. Amén.\" LA MISIÓN DE LA IGLESIA - Compartimos a Jesús Paso adicional: Dramatiza una escena sencilla donde Jesús ayuda, perdona o llama a seguirle.",
+      "dynamic": "Historias breves sobre confiar en Dios (Daniel, Noé) y elegir la favorita. Manualidad: Puente de cartón que dice: “Confío en Dios” con dibujos. Paso adicional: Dramatiza una escena sencilla donde Jesús ayuda, perdona o llama a seguirle.",
       "application": "Contarle a alguien una cosa que Jesús ha hecho por mí.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -1524,7 +1708,7 @@ window.PRLessonLibrary = {
       "warmup": "Muestra una hoja, una piedra, una flor o una imagen del cielo. Pregunta: ¿quién puede hacer algo tan hermoso desde cero?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo dividido en cuatro cuadros: sol, árbol, ave y niño. Abajo escribe: Dios hizo todo con amor.",
-      "dynamic": "“Espada bíblica”: usar versículos para defenderse de situaciones como miedo, mentira, soledad. Manualidad: Casco de papel decorado con la frase “Soy salvo” y espada con un versículo. Oración: \"Gracias Dios por darme tu Palabra y salvarme. Protégeme siempre. Amén.\" FRUTO DEL DISCIPULADO - Jesús cambia mi corazón Paso adicional: Después de leer el versículo, cada niño dibuja algo creado por Dios y comparte una frase: Gracias, Dios, por ____.",
+      "dynamic": "“Espada bíblica”: usar versículos para defenderse de situaciones como miedo, mentira, soledad. Manualidad: Casco de papel decorado con la frase “Soy salvo” y espada con un versículo. Paso adicional: Después de leer el versículo, cada niño dibuja algo creado por Dios y comparte una frase: Gracias, Dios, por ____.",
       "application": "Durante la semana, mirar cada día algo creado por Dios y decir una oración corta de gratitud.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -2242,7 +2426,7 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Escribir una acción concreta para vivir la enseñanza antes del próximo domingo.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Padre, quiero confiar en ti más cada día. Dirige mis pasos. Amén.\" LA MISIÓN DE LA IGLESIA - Compartimos a Jesús",
+      "prayer": "\"Padre, quiero confiar en ti más cada día. Dirige mis pasos. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
@@ -2485,7 +2669,7 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Identificar una decisión donde debo actuar con integridad esta semana.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Gracias, Dios, por salvarme y darme tu Palabra. Enséñame a usarla cada día. Amén.\" FRUTO DEL DISCIPULADO - Cristo transforma mi carácter",
+      "prayer": "\"Gracias, Dios, por salvarme y darme tu Palabra. Enséñame a usarla cada día. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
