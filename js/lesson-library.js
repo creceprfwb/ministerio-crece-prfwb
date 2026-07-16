@@ -245,12 +245,58 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Hacer una acción de amor por alguien de la familia sin que se lo pidan.",
       "teacherNotes": "Usa frases cortas, permite respuestas espontáneas y conecta cada actividad con una verdad sencilla acerca de Dios.",
-      "prayer": "\"Gracias, Dios, por amarme tanto. Ayúdame a amar a otros como tú me amas. Amén.\" LA TRINIDAD - Un solo Dios en tres personas",
+      "prayer": "\"Gracias, Dios, por amarme tanto. Ayúdame a amar a otros como tú me amas. Amén.\"",
       "pdf": "clases-originales/ninos/Clases Biblicas 3-10.pdf"
     },
     {
       "group": "ninos",
       "date": "2/1/2026",
+      "displayTitle": "Un solo Dios, tres personas",
+      "closingSummary": "Dios es uno y se da a conocer como Padre, Hijo y Espiritu Santo. Esta verdad nos llama a confiar, adorar y hablar con Dios sabiendo que El se acerco a nosotros con amor.",
+      "teacherGuide": [
+        "Evita explicar la Trinidad con comparaciones que puedan confundir, como agua/hielo/vapor o partes de un huevo. Mejor afirma con sencillez lo que la Biblia revela.",
+        "Repite tres frases: El Padre es Dios, el Hijo es Dios, el Espiritu Santo es Dios; y hay un solo Dios.",
+        "Conecta la doctrina con adoracion: no es solo informacion, es una razon para confiar en Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 28:19",
+        "activity": "Dibuja un triangulo. En cada lado escribe: Padre, Hijo, Espiritu Santo. En el centro escribe: Un solo Dios.",
+        "reflection": "Cuando oro, puedo hablar con confianza porque Dios me ama, Jesus me salva y el Espiritu Santo me ayuda."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que hay un solo Dios en tres personas: Padre, Hijo y Espiritu Santo.",
+        "homeQuestion": "Como podemos adorar a Dios esta semana como familia?",
+        "familyChallenge": "Antes de dormir, hagan una oracion corta dando gracias al Padre, al Hijo y al Espiritu Santo."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "28",
+        "verses": "19; apoyo: 2 Corintios 13:14",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "Jesus resucitado envia a sus discipulos a hacer discipulos y bautizar en el nombre del Padre, del Hijo y del Espiritu Santo. La iglesia confiesa un solo Dios en tres personas."
+      },
+      "centralIdea": "Dios es uno, y se ha revelado como Padre, Hijo y Espiritu Santo para salvarnos y caminar con nosotros.",
+      "objectives": [
+        "Conocer que hay un solo Dios en tres personas.",
+        "Comprender que Padre, Hijo y Espiritu Santo trabajan unidos en nuestra salvacion.",
+        "Aplicar esta verdad adorando a Dios con confianza y reverencia."
+      ],
+      "bibleContext": "Mateo 28 presenta la Gran Comision. Jesus no manda a bautizar en tres nombres separados, sino en el nombre del Padre, del Hijo y del Espiritu Santo. Esto no significa tres dioses, sino un solo Dios verdadero que existe eternamente en tres personas.",
+      "exposition": [
+        {
+          "title": "Dios es uno",
+          "text": "La Biblia ensena que solo hay un Dios. No adoramos tres dioses. Esto protege nuestro corazon de confundir a Dios con cualquier criatura o idea humana."
+        },
+        {
+          "title": "Dios se revela en tres personas",
+          "text": "El Padre ama y envia, el Hijo viene a salvar, y el Espiritu Santo ayuda y transforma. Las tres personas son Dios, y actuan en perfecta unidad."
+        },
+        {
+          "title": "La Trinidad nos invita a adorar",
+          "text": "Aunque no entendemos todo el misterio de Dios, podemos confiar en lo que El revelo. La Trinidad no es un rompecabezas para ganar discusiones, sino una verdad para adorar al Dios vivo."
+        }
+      ],
       "title": "EL PADRE, EL HIJO Y EL ESPÍRITU SANTO",
       "verse": "Mateo 28:19 \"...bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo.\"",
       "goal": "Que los niños entiendan que hay un solo Dios, que se muestra en tres personas: Padre, Hijo y Espíritu Santo.",
@@ -272,6 +318,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "2/8/2026",
+      "displayTitle": "El Padre que crea y cuida",
+      "closingSummary": "Dios Padre creo todo con poder y sostiene su creacion con amor. Si El cuida de las aves y de la naturaleza, tambien podemos confiar en su cuidado diario.",
+      "teacherGuide": [
+        "Usa objetos sencillos de la naturaleza para iniciar la conversacion: hoja, piedra, flor o imagen del cielo.",
+        "Ayuda a los ninos a distinguir entre crear desde cero y fabricar con materiales que ya existen.",
+        "Termina llevando la clase a gratitud: cada nino puede mencionar algo por lo que da gracias a Dios Padre."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Genesis 1:1",
+        "activity": "Dibuja cuatro cosas creadas por Dios y escribe debajo: Dios Padre me cuida.",
+        "reflection": "Cuando veo la creacion, recuerdo que Dios es poderoso, bueno y cuidadoso."
+      },
+      "parentMaterial": {
+        "summary": "Hoy hablamos de Dios Padre como Creador y Cuidador.",
+        "homeQuestion": "Que cosa creada por Dios viste hoy y que te ensena sobre El?",
+        "familyChallenge": "Esta semana, den gracias por una parte de la creacion antes de una comida o antes de dormir."
+      },
+      "biblicalText": {
+        "book": "Genesis",
+        "chapter": "1",
+        "verses": "1; apoyo: Mateo 6:26",
+        "author": "Tradicionalmente Moises",
+        "date": "Periodo de Moises, aproximadamente siglo XV-XIII a.C.",
+        "context": "Genesis abre la Biblia mostrando que Dios es el Creador de todas las cosas. Jesus luego ensena que el Padre no solo crea, sino que tambien cuida de su creacion."
+      },
+      "centralIdea": "Dios Padre hizo todas las cosas y cuida de sus hijos con amor fiel.",
+      "objectives": [
+        "Conocer que Dios Padre es Creador.",
+        "Comprender que el Padre cuida de su creacion y de sus hijos.",
+        "Aplicar esta verdad confiando en Dios y dando gracias por su cuidado."
+      ],
+      "bibleContext": "Genesis 1 presenta a Dios como el origen de todo. Nada existe por accidente. En Mateo 6, Jesus usa las aves como ejemplo para ensenar que el Padre cuida de lo pequeno y tambien de nosotros. Esta verdad ayuda a los ninos a vivir con gratitud y confianza.",
+      "exposition": [
+        {
+          "title": "El Padre es Creador",
+          "text": "Genesis 1:1 afirma que Dios creo los cielos y la tierra. Antes de todo lo creado, Dios ya existia. La creacion muestra su poder y sabiduria."
+        },
+        {
+          "title": "El Padre cuida lo que hizo",
+          "text": "Jesus dijo que el Padre alimenta a las aves. Si Dios cuida de ellas, podemos confiar en que tambien cuida de sus hijos."
+        },
+        {
+          "title": "El cuidado de Dios produce confianza",
+          "text": "Los ninos pueden aprender a orar cuando sienten preocupacion. Dios no promete que nunca tendremos problemas, pero si promete estar con nosotros y cuidar de nuestro corazon."
+        }
+      ],
       "title": "DIOS PADRE - CREADOR Y CUIDADOR",
       "verse": "Génesis 1:1 \"En el principio creó Dios los cielos y la tierra.\"",
       "goal": "Aprender que Dios Padre creó todas las cosas y cuida de nosotros con amor.",
@@ -293,6 +385,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "2/15/2026",
+      "displayTitle": "Jesus vino a rescatarnos",
+      "closingSummary": "Jesus vino porque Dios nos ama. El murio y resucito para salvarnos, y nos invita a confiar en El con todo el corazon.",
+      "teacherGuide": [
+        "Presenta el evangelio con claridad y ternura: Dios ama, el pecado nos separa, Jesus salva y podemos responder con fe.",
+        "Evita presionar respuestas emocionales. Invita a los ninos a hablar con un maestro o padre si desean orar o tienen preguntas.",
+        "Usa Juan 3:16 como versiculo central y repitelo por partes para que lo entiendan."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 3:16",
+        "activity": "Dibuja un corazon con una cruz en el centro y escribe: Jesus vino a rescatarme.",
+        "reflection": "Jesus me ama y puedo confiar en El como mi Salvador."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Jesus, el Hijo de Dios, vino a salvarnos por amor.",
+        "homeQuestion": "Que significa confiar en Jesus?",
+        "familyChallenge": "Lean Juan 3:16 juntos y expliquen en una frase que parte muestra el amor de Dios."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "3",
+        "verses": "16; apoyo: Mateo 1:21",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus conversa con Nicodemo y explica el amor de Dios y la necesidad de creer en el Hijo. Mateo 1:21 anuncia que Jesus vino para salvar a su pueblo de sus pecados."
+      },
+      "centralIdea": "Jesus, el Hijo de Dios, vino por amor para salvarnos del pecado y llevarnos al Padre.",
+      "objectives": [
+        "Conocer que Jesus es el Hijo de Dios.",
+        "Comprender que Jesus vino a salvarnos por medio de su muerte y resurreccion.",
+        "Aplicar esta verdad respondiendo con fe, gratitud y obediencia."
+      ],
+      "bibleContext": "Juan 3:16 resume el mensaje del evangelio: Dios ama, Dios da a su Hijo, y todo el que cree en El recibe vida eterna. La salvacion no se gana con buenas obras; se recibe por la gracia de Dios mediante la fe en Cristo.",
+      "exposition": [
+        {
+          "title": "Dios amo al mundo",
+          "text": "El evangelio comienza con el amor de Dios. Dios no espero que fueramos perfectos para amarnos. Su amor actua para rescatar."
+        },
+        {
+          "title": "Dios dio a su Hijo",
+          "text": "Jesus no vino solo a ensenar cosas bonitas. Vino a cargar nuestro pecado, morir en la cruz y resucitar. El es el Salvador prometido."
+        },
+        {
+          "title": "Creer en Jesus cambia la vida",
+          "text": "Creer no es solo saber datos de Jesus; es confiar en El, recibirlo como Salvador y seguirlo como Senor."
+        }
+      ],
       "title": "JESÚS, EL HIJO - NUESTRO SALV ADOR",
       "verse": "Juan 3:16 \"Porque de tal manera amó Dios al mundo...\"",
       "goal": "Conocer que Jesús es el Hijo de Dios y vino a salvarnos por amor.",
@@ -314,6 +452,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "2/22/2026",
+      "displayTitle": "El Ayudador que camina conmigo",
+      "closingSummary": "El Espiritu Santo no es una fuerza impersonal; es Dios con nosotros, ayudandonos a recordar la Palabra, obedecer a Jesus y vivir con fruto.",
+      "teacherGuide": [
+        "Explica que el Espiritu Santo ayuda al creyente, pero no reemplaza la responsabilidad de obedecer.",
+        "Conecta la clase con situaciones concretas: decir la verdad, pedir perdon, tener paciencia o compartir.",
+        "Cierra con una oracion sencilla pidiendo ayuda para vivir esta semana como seguidores de Jesus."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 14:26",
+        "activity": "Dibuja una llama o una luz y escribe una forma en que necesitas ayuda de Dios esta semana.",
+        "reflection": "No obedezco solo. Dios me ayuda por medio del Espiritu Santo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que el Espiritu Santo ensena, consuela y ayuda al creyente a obedecer.",
+        "homeQuestion": "En que momento necesitaste ayuda de Dios esta semana?",
+        "familyChallenge": "Escojan un fruto del Espiritu y oren para practicarlo en casa."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "14",
+        "verses": "26; apoyo: Galatas 5:22-23",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus prepara a sus discipulos antes de la cruz y promete que el Padre enviara al Espiritu Santo para ensenarles, recordarles su Palabra y acompañarlos."
+      },
+      "centralIdea": "El Espiritu Santo ayuda a los creyentes a recordar la Palabra de Dios y obedecer a Jesus.",
+      "objectives": [
+        "Conocer que el Espiritu Santo es Dios y ayuda al creyente.",
+        "Comprender que El nos ensena, consuela y guia a obedecer.",
+        "Aplicar esta verdad pidiendo ayuda a Dios para vivir de forma correcta."
+      ],
+      "bibleContext": "En Juan 14, Jesus habla con sus discipulos cuando ellos se sienten confundidos y tristes. Les promete el Consolador, el Espiritu Santo. Esta promesa ensena que Dios no abandona a sus hijos; El vive con ellos y los ayuda a seguir a Cristo.",
+      "exposition": [
+        {
+          "title": "El Espiritu Santo ensena",
+          "text": "Juan 14:26 dice que el Espiritu Santo ensenara todas las cosas. Esto significa que El ayuda al creyente a entender y recordar la Palabra de Dios."
+        },
+        {
+          "title": "El Espiritu Santo consuela",
+          "text": "Jesus llama al Espiritu Santo el Ayudador o Consolador. Cuando tenemos miedo, tristeza o confusion, Dios no nos deja solos."
+        },
+        {
+          "title": "El Espiritu Santo produce fruto",
+          "text": "Galatas 5 habla del fruto del Espiritu: amor, gozo, paz, paciencia y mas. No obedecemos solos; Dios trabaja en nuestro corazon para parecernos mas a Jesus."
+        }
+      ],
       "title": "EL ESPÍRITU SANTO - NUESTRO AYUDADOR",
       "verse": "Juan 14:26 \"El Espíritu Santo... os enseñará todas las cosas.\"",
       "goal": "Aprender que el Espíritu Santo vive en nosotros para enseñarnos y ayudarnos a obedecer a Dios.",
@@ -321,7 +505,7 @@ window.PRLessonLibrary = {
       "warmup": "Pide a los niños respirar profundo y pregunta: ¿ven el aire? Explícales que no todo lo real se puede ver.",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo de una nube suave con la frase: Dios está conmigo aunque no lo vea.",
-      "dynamic": "Luces del Espíritu: con linternas, hablar de cómo él nos guía. Manualidad: Dibujo de una llama con la frase: \"El Espíritu me ayuda a obedecer.\" Oración: \"Espíritu Santo, gracias por vivir en mí. Enséñame a hacer lo correcto. Amén.\" DIOS Y SU PALABRA - La Biblia: Palabra revelada Paso adicional: Juego: un niño cierra los ojos y reconoce una voz conocida. Conecta con escuchar y confiar en Dios aunque no lo veamos.",
+      "dynamic": "Luces del Espíritu: con linternas, hablar de cómo él nos guía. Manualidad: Dibujo de una llama con la frase: \"El Espíritu me ayuda a obedecer.\" Paso adicional: Juego: un niño cierra los ojos y reconoce una voz conocida. Conecta con escuchar y confiar en Dios aunque no lo veamos.",
       "application": "Antes de dormir, repetir: Dios está conmigo y puedo hablar con Él.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -1230,7 +1414,7 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Durante la semana, anotar tres momentos donde vea evidencia de Dios y compartir uno el próximo domingo.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Gracias, Padre, porque aunque no lo merezco, me amas y me perdonas. Ayúdame a vivir como alguien que ha sido amado. Amén LA TRINIDAD - Un solo Dios en tres personas",
+      "prayer": "\"Gracias, Padre, porque aunque no lo merezco, me amas y me perdonas. Ayúdame a vivir como alguien que ha sido amado. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
@@ -1310,7 +1494,7 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Apartar cinco minutos diarios para orar recordando que Dios está presente.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Espíritu Santo, lléname y guíame cada día. No quiero vivir sin ti. Amén.\" DIOS Y SU PALABRA - La Biblia: Palabra revelada 3/12026: LA BIBLIA ES LA PALABRA DE DIOS",
+      "prayer": "\"Espíritu Santo, lléname y guíame cada día. No quiero vivir sin ti. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
