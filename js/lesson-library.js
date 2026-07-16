@@ -2127,6 +2127,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "8/16/2026",
+      "displayTitle": "Oro confiando en mi Padre",
+      "closingSummary": "Orar con fe no significa mandar a Dios ni exigirle lo que queremos. Significa confiar en que Dios escucha, ama y responde como Padre sabio y bueno.",
+      "teacherGuide": [
+        "Explica que fe es confianza en Dios, no una formula para recibir todo exactamente como pedimos.",
+        "Aclara que Dios puede responder si, no o espera, siempre con sabiduria y amor.",
+        "Usa el cubo de oraciones para practicar peticiones sencillas y confiadas."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Marcos 11:24",
+        "activity": "Haz una tarjeta con la frase: Confio en ti, Dios, y dibuja algo por lo que quieres orar.",
+        "reflection": "Puedo pedir con fe porque Dios me escucha y sabe lo que necesito."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que orar con fe es confiar en Dios como Padre bueno.",
+        "homeQuestion": "Que peticion podemos presentar a Dios confiando en su voluntad?",
+        "familyChallenge": "Oren juntos por una necesidad y agreguen: Dios, confiamos en tu voluntad."
+      },
+      "biblicalText": {
+        "book": "Marcos",
+        "chapter": "11",
+        "verses": "22-24",
+        "author": "Marcos",
+        "date": "Aproximadamente 55-70 d.C.",
+        "context": "Jesus ensena a sus discipulos sobre fe, oracion y confianza en Dios. La oracion verdadera se apoya en Dios, no en palabras magicas."
+      },
+      "centralIdea": "La oracion con fe confia en que Dios escucha y responde con sabiduria.",
+      "objectives": [
+        "Conocer que Jesus enseno a orar con fe.",
+        "Comprender que la fe descansa en el caracter de Dios.",
+        "Aplicar esta verdad orando por una necesidad con confianza."
+      ],
+      "bibleContext": "Marcos 11 muestra a Jesus formando la fe de sus discipulos. La oracion no es manipulacion; es dependencia confiada del Dios que tiene poder y bondad.",
+      "exposition": [
+        {
+          "title": "La fe mira a Dios",
+          "text": "Orar con fe significa confiar en quien Dios es: bueno, poderoso y sabio."
+        },
+        {
+          "title": "Dios escucha",
+          "text": "Podemos hablar con Dios porque El escucha a sus hijos y conoce nuestras necesidades."
+        },
+        {
+          "title": "Dios responde sabiamente",
+          "text": "A veces Dios responde diferente a lo que esperamos, pero siempre actua con amor y verdad."
+        }
+      ],
       "title": "ORAR CON FE",
       "verse": "Marcos 11:24 \"Todo lo que pidan orando, créanlo y lo recibirán.\"",
       "goal": "Que los niños aprendan que orar con fe significa confiar en que Dios escucha.",
@@ -2148,6 +2194,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "8/23/2026",
+      "displayTitle": "Aprendo a escuchar a Dios",
+      "closingSummary": "Escuchar a Dios requiere un corazon atento y humilde. Dios nos guia principalmente por su Palabra, y la oracion nos ayuda a estar quietos delante de El.",
+      "teacherGuide": [
+        "Evita presentar escuchar a Dios como buscar voces raras. Enfatiza escuchar su Palabra con atencion.",
+        "Practica un minuto de silencio guiado y luego lee un versiculo corto.",
+        "Conecta quietud con confianza: puedo detenerme porque Dios es Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Salmo 46:10",
+        "activity": "Dibuja una oreja y una Biblia abierta. Escribe: Escucho a Dios en su Palabra.",
+        "reflection": "Puedo estar quieto, leer la Biblia y pedir a Dios que me ensene."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que orar tambien incluye escuchar a Dios con un corazon atento.",
+        "homeQuestion": "Que versiculo podemos leer y escuchar juntos esta semana?",
+        "familyChallenge": "Tomen dos minutos de silencio, lean un versiculo y compartan que aprendieron."
+      },
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "46",
+        "verses": "10",
+        "author": "Hijos de Core",
+        "date": "Periodo del Antiguo Testamento",
+        "context": "El Salmo 46 presenta a Dios como refugio y fortaleza. En medio de problemas, el pueblo es llamado a estar quieto y reconocer que Dios reina."
+      },
+      "centralIdea": "Escuchamos a Dios con un corazon quieto, atento a su Palabra y confiado en su gobierno.",
+      "objectives": [
+        "Conocer que Dios nos llama a estar quietos delante de El.",
+        "Comprender que escuchamos a Dios principalmente por su Palabra.",
+        "Aplicar esta verdad practicando un momento de quietud y lectura biblica."
+      ],
+      "bibleContext": "Salmo 46 habla de seguridad en Dios aunque todo parezca moverse. La quietud no es vaciar la mente, sino reconocer que Dios es Senor.",
+      "exposition": [
+        {
+          "title": "Dios es refugio",
+          "text": "Podemos estar quietos porque Dios cuida de su pueblo."
+        },
+        {
+          "title": "Escuchar requiere atencion",
+          "text": "A veces hay mucho ruido alrededor. Dios nos llama a detenernos y prestar atencion."
+        },
+        {
+          "title": "La Palabra guia",
+          "text": "Dios nos habla con seguridad en la Biblia. Por eso escuchamos leyendo, pensando y obedeciendo su Palabra."
+        }
+      ],
       "title": "ESCUCHAR A DIOS",
       "verse": "Salmo 46:10 \"Estad quietos, y conoced que yo soy Dios.\"",
       "goal": "Enseñar que orar también es escuchar a Dios con un corazón quieto.",
@@ -2169,6 +2261,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "8/30/2026",
+      "displayTitle": "Oro por los demas",
+      "closingSummary": "La oracion no es solo para mis necesidades. Dios nos invita a interceder por otros: familia, amigos, iglesia, autoridades, enfermos y personas que necesitan a Jesus.",
+      "teacherGuide": [
+        "Explica interceder como hablar con Dios a favor de otra persona.",
+        "Usa tarjetas de nombres o categorias para orar de forma ordenada.",
+        "Cuida la privacidad: no obligues a compartir necesidades personales sensibles."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Timoteo 2:1",
+        "activity": "Haz un corazon con nombres o dibujos de personas por quienes vas a orar.",
+        "reflection": "Puedo amar a otros orando por ellos."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Dios quiere que oremos por otras personas.",
+        "homeQuestion": "Por quien podemos orar como familia esta semana?",
+        "familyChallenge": "Hagan una lista de tres personas y oren por ellas durante la semana."
+      },
+      "biblicalText": {
+        "book": "1 Timoteo",
+        "chapter": "2",
+        "verses": "1-4",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 62-65 d.C.",
+        "context": "Pablo instruye a Timoteo sobre la vida de la iglesia y anima a hacer rogativas, oraciones, peticiones y acciones de gracias por todos."
+      },
+      "centralIdea": "Dios llama a sus hijos a orar por otros con amor y gratitud.",
+      "objectives": [
+        "Conocer que la Biblia nos manda orar por todos.",
+        "Comprender que interceder es una forma de amar.",
+        "Aplicar esta verdad orando por personas concretas."
+      ],
+      "bibleContext": "1 Timoteo 2 muestra que la oracion de la iglesia mira mas alla de uno mismo. Dios desea que todos sean salvos y conozcan la verdad.",
+      "exposition": [
+        {
+          "title": "Dios escucha oraciones por otros",
+          "text": "Podemos llevar a Dios las necesidades de personas que amamos y tambien de personas que no conocemos."
+        },
+        {
+          "title": "Interceder es amar",
+          "text": "Cuando oramos por otros, mostramos cuidado, compasion y dependencia de Dios."
+        },
+        {
+          "title": "Oramos por salvacion y cuidado",
+          "text": "Pedimos por salud, ayuda, sabiduria, autoridades y sobre todo para que las personas conozcan a Jesus."
+        }
+      ],
       "title": "ORAR POR LOS DEMÁS",
       "verse": "1 Timoteo 2:1 \"Rueguen por todos.\"",
       "goal": "Que los niños comprendan el valor de interceder por otros en oración.",
@@ -2190,6 +2328,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "9/6/2026",
+      "displayTitle": "Puedo hablar con Dios siempre",
+      "closingSummary": "Orar sin cesar significa vivir con el corazon conectado a Dios. Podemos hablar con El en la iglesia, en casa, en la escuela, cuando estamos felices o cuando necesitamos ayuda.",
+      "teacherGuide": [
+        "Explica que orar siempre no significa repetir palabras todo el dia, sino vivir dependiendo de Dios.",
+        "Usa el reloj de oracion para mostrar momentos diarios donde podemos hablar con Dios.",
+        "Ayuda a los ninos a crear oraciones cortas para diferentes situaciones."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Tesalonicenses 5:17",
+        "activity": "Haz un reloj de oracion con frases: gracias, ayudame, perdoname, te adoro.",
+        "reflection": "Dios esta conmigo todo el dia, y puedo hablar con El en cualquier momento."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que podemos vivir con una actitud constante de oracion.",
+        "homeQuestion": "En que momento del dia podemos recordar hablar con Dios?",
+        "familyChallenge": "Escojan tres momentos del dia para hacer oraciones cortas juntos."
+      },
+      "biblicalText": {
+        "book": "1 Tesalonicenses",
+        "chapter": "5",
+        "verses": "16-18",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 50-51 d.C.",
+        "context": "Pablo da instrucciones breves para una vida cristiana saludable: gozo, oracion constante y gratitud en todo."
+      },
+      "centralIdea": "El creyente puede vivir cada dia en comunion constante con Dios por medio de la oracion.",
+      "objectives": [
+        "Conocer que la Biblia nos llama a orar sin cesar.",
+        "Comprender que podemos hablar con Dios en todo momento.",
+        "Aplicar esta verdad practicando oraciones cortas durante el dia."
+      ],
+      "bibleContext": "1 Tesalonicenses anima a una iglesia joven a vivir firme en Cristo. Orar sin cesar es parte de una vida que depende de Dios en todo momento.",
+      "exposition": [
+        {
+          "title": "La oracion acompana el dia",
+          "text": "Podemos hablar con Dios al despertar, estudiar, jugar, comer, sentir miedo o dar gracias."
+        },
+        {
+          "title": "La oracion expresa dependencia",
+          "text": "Orar siempre nos recuerda que necesitamos a Dios y que El esta cerca."
+        },
+        {
+          "title": "La oracion va con gratitud",
+          "text": "Pablo une orar con dar gracias. Un corazon que ora aprende a reconocer la bondad de Dios."
+        }
+      ],
       "title": "ORAR SIEMPRE",
       "verse": "1 Tesalonicenses 5:17 \"Oren sin cesar.\"",
       "goal": "Motivar a los niños a tener una actitud constante de oración.",
