@@ -122,6 +122,7 @@
               <th>Grupo</th>
               <th>Encargado</th>
               <th>Telefono</th>
+              <th>Premios</th>
               <th>Estado</th>
               <th>QR</th>
               <th>Acciones</th>
@@ -129,6 +130,68 @@
           </thead>
           <tbody id="studentsTable"></tbody>
         </table>
+      </div>
+    </section>
+
+    <section class="app-card mt-4" id="rewardsPanel">
+      <div class="panel-heading">
+        <div>
+          <h2>Sistema de premios CRECE</h2>
+          <p>Asigna puntos por asistencia, Biblia, versiculo, tarea, conducta, invitados y servicio.</p>
+        </div>
+      </div>
+      <div id="rewardEmptyState" class="reward-empty">
+        <i class="bi bi-award"></i>
+        <span>Selecciona “Premios” en un estudiante para administrar sus puntos.</span>
+      </div>
+      <div id="rewardManager" class="reward-manager d-none">
+        <div class="reward-student-card">
+          <div>
+            <p class="section-kicker">Estudiante seleccionado</p>
+            <h3 id="rewardStudentName">Estudiante</h3>
+            <span id="rewardStudentMeta">Grupo</span>
+          </div>
+          <div class="reward-score">
+            <strong id="rewardStudentPoints">0</strong>
+            <span>puntos</span>
+          </div>
+        </div>
+
+        <div class="reward-level-line">
+          <div>
+            <strong id="rewardStudentLevel">Semilla CRECE</strong>
+            <span id="rewardNextLevel">Proxima meta: 50 puntos</span>
+          </div>
+          <div class="reward-progress">
+            <span id="rewardProgressBar"></span>
+          </div>
+        </div>
+
+        <form id="rewardForm" class="reward-form">
+          <div>
+            <label for="rewardReason" class="form-label">Motivo</label>
+            <select id="rewardReason" class="form-select" required></select>
+          </div>
+          <div>
+            <label for="rewardPoints" class="form-label">Puntos</label>
+            <input id="rewardPoints" class="form-control" type="number" min="-200" max="200" value="5" required>
+          </div>
+          <div>
+            <label for="rewardNote" class="form-label">Nota opcional</label>
+            <input id="rewardNote" class="form-control" type="text" placeholder="Ej. memorizo Juan 3:16">
+          </div>
+          <button class="btn btn-primary" type="submit">
+            <i class="bi bi-plus-circle"></i>
+            Añadir puntos
+          </button>
+        </form>
+
+        <div class="reward-quick-actions" id="rewardQuickActions"></div>
+
+        <div class="reward-history-wrap">
+          <h3>Historial de puntos</h3>
+          <div id="rewardHistory" class="reward-history"></div>
+        </div>
       </div>
     </section>
 

@@ -1,9 +1,29 @@
 // Clave local para guardar estudiantes hasta conectar Firebase, Supabase o Google Sheets.
 const STUDENTS_STORAGE_KEY = "prfwb_student_records";
+const REWARD_ACTIONS = [
+  { id: "asistencia", label: "Asistencia del domingo", points: 5, icon: "bi-calendar-check" },
+  { id: "biblia", label: "Trajo Biblia", points: 3, icon: "bi-book" },
+  { id: "versiculo", label: "Memorizo versiculo", points: 3, icon: "bi-chat-quote" },
+  { id: "tarea", label: "Completo tarea del hogar", points: 2, icon: "bi-house-check" },
+  { id: "participacion", label: "Participo con respeto", points: 2, icon: "bi-hand-thumbs-up" },
+  { id: "invitado", label: "Trajo invitado", points: 2, icon: "bi-person-plus" },
+  { id: "servicio", label: "Ayudo o sirvio a otro", points: 1, icon: "bi-heart" },
+  { id: "canje", label: "Canje de premio", points: -25, icon: "bi-gift" }
+];
+
+const REWARD_LEVELS = [
+  { name: "Semilla CRECE", points: 0 },
+  { name: "Brote CRECE", points: 25 },
+  { name: "Raiz Firme", points: 50 },
+  { name: "Luz CRECE", points: 100 },
+  { name: "Discipulo CRECE", points: 150 },
+  { name: "Embajador CRECE", points: 200 }
+];
 
 let students = [];
 let selectedQrStudent = null;
 let editingStudentCode = null;
+let selectedRewardStudentCode = null;
 
 function storageKey(baseKey) {
   return window.PRFirebase && typeof window.PRFirebase.getScopedStorageKey === "function"
@@ -77,6 +97,46 @@ function normalizeText(value) {
   return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+function escapeHtml(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function normalizeRewardData(student) {
+  return {
+    ...student,
+    rewardPoints: Number(student.rewardPoints || 0),
+    rewardHistory: Array.isArray(student.rewardHistory) ? student.rewardHistory : []
+  };
+}
+
+function getRewardLevel(points) {
+  return REWARD_LEVELS.reduce((currentLevel, level) => {
+    return points >= level.points ? level : currentLevel;
+  }, REWARD_LEVELS[0]);
+}
+
+function getNextRewardLevel(points) {
+  return REWARD_LEVELS.find((level) => points < level.points) || null;
+}
+
+function getRewardProgress(points) {
+  const currentLevel = getRewardLevel(points);
+  const nextLevel = getNextRewardLevel(points);
+
+  if (!nextLevel) {
+    return 100;
+  }
+
+  const levelRange = nextLevel.points - currentLevel.points;
+  const progress = ((points - currentLevel.points) / levelRange) * 100;
+  return Math.max(0, Math.min(100, progress));
+}
+
 // Crea el objeto del estudiante registrado.
 function buildStudentRecord(formData) {
   const age = Number(formData.get("studentAge"));
@@ -99,6 +159,8 @@ function buildStudentRecord(formData) {
     guardianPhone: String(formData.get("guardianPhone") || "").trim(),
     emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
     active: true,
+    rewardPoints: 0,
+    rewardHistory: [],
     createdAt: now.toISOString()
   };
 }
@@ -122,6 +184,8 @@ function buildUpdatedStudentRecord(existingStudent, formData) {
     guardianPhone: String(formData.get("guardianPhone") || "").trim(),
     emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
     active: existingStudent.active !== false,
+    rewardPoints: Number(existingStudent.rewardPoints || 0),
+    rewardHistory: Array.isArray(existingStudent.rewardHistory) ? existingStudent.rewardHistory : [],
     updatedAt: new Date().toISOString()
   };
 }
@@ -204,20 +268,30 @@ function renderStudentsTable() {
   if (!visibleStudents.length) {
     tableBody.innerHTML = `
       <tr>
-        <td colspan="9" class="text-center text-muted py-4">No hay estudiantes registrados.</td>
+        <td colspan="10" class="text-center text-muted py-4">No hay estudiantes registrados.</td>
       </tr>
     `;
     return;
   }
 
-  tableBody.innerHTML = visibleStudents.map((student) => `
+  tableBody.innerHTML = visibleStudents.map((rawStudent) => {
+    const student = normalizeRewardData(rawStudent);
+    const rewardLevel = getRewardLevel(student.rewardPoints);
+
+    return `
     <tr class="${student.active === false ? "inactive-student" : ""}">
-      <td><strong>${student.code}</strong></td>
-      <td>${student.name}</td>
-      <td>${student.age}</td>
-      <td>${student.groupLabel}</td>
-      <td>${student.guardianName || ""}</td>
-      <td>${student.guardianPhone || ""}</td>
+      <td><strong>${escapeHtml(student.code)}</strong></td>
+      <td>${escapeHtml(student.name)}</td>
+      <td>${escapeHtml(student.age)}</td>
+      <td>${escapeHtml(student.groupLabel)}</td>
+      <td>${escapeHtml(student.guardianName || "")}</td>
+      <td>${escapeHtml(student.guardianPhone || "")}</td>
+      <td>
+        <button class="reward-pill manage-rewards" type="button" data-code="${escapeHtml(student.code)}">
+          <strong>${student.rewardPoints}</strong>
+          <span>${escapeHtml(rewardLevel.name)}</span>
+        </button>
+      </td>
       <td>
         <span class="badge ${student.active === false ? "text-bg-secondary" : "text-bg-success"}">
           ${student.active === false ? "Inactivo" : "Activo"}
@@ -239,7 +313,8 @@ function renderStudentsTable() {
         </div>
       </td>
     </tr>
-  `).join("");
+  `;
+  }).join("");
 
   tableBody.querySelectorAll(".show-qr").forEach((button) => {
     button.addEventListener("click", () => {
@@ -255,6 +330,14 @@ function renderStudentsTable() {
       fillStudentForm(student);
       setStudentFormMode("edit");
       document.getElementById("studentForm").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  tableBody.querySelectorAll(".manage-rewards").forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedRewardStudentCode = button.dataset.code;
+      renderRewardManager();
+      document.getElementById("rewardsPanel").scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 
@@ -276,6 +359,151 @@ function renderStudentsTable() {
 
       renderStudentsTable();
     });
+  });
+}
+
+function populateRewardControls() {
+  const reasonSelect = document.getElementById("rewardReason");
+  const quickActions = document.getElementById("rewardQuickActions");
+
+  if (!reasonSelect || !quickActions) {
+    return;
+  }
+
+  reasonSelect.innerHTML = REWARD_ACTIONS.map((action) => `
+    <option value="${action.id}" data-points="${action.points}">
+      ${action.label} (${action.points > 0 ? "+" : ""}${action.points})
+    </option>
+  `).join("");
+
+  quickActions.innerHTML = REWARD_ACTIONS.filter((action) => action.points > 0).map((action) => `
+    <button class="reward-chip" type="button" data-action="${action.id}">
+      <i class="bi ${action.icon}"></i>
+      <span>${action.label}</span>
+      <strong>+${action.points}</strong>
+    </button>
+  `).join("");
+
+  reasonSelect.addEventListener("change", () => {
+    const selectedOption = reasonSelect.selectedOptions[0];
+    document.getElementById("rewardPoints").value = selectedOption ? selectedOption.dataset.points : "5";
+  });
+
+  quickActions.querySelectorAll(".reward-chip").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const action = REWARD_ACTIONS.find((item) => item.id === button.dataset.action);
+      if (!action) {
+        return;
+      }
+
+      await addRewardPoints(action.points, action.label, "");
+    });
+  });
+}
+
+function renderRewardManager() {
+  const emptyState = document.getElementById("rewardEmptyState");
+  const manager = document.getElementById("rewardManager");
+  const student = selectedRewardStudentCode ? normalizeRewardData(getStudentByCode(selectedRewardStudentCode)) : null;
+
+  if (!emptyState || !manager) {
+    return;
+  }
+
+  if (!student) {
+    emptyState.classList.remove("d-none");
+    manager.classList.add("d-none");
+    return;
+  }
+
+  const level = getRewardLevel(student.rewardPoints);
+  const nextLevel = getNextRewardLevel(student.rewardPoints);
+
+  emptyState.classList.add("d-none");
+  manager.classList.remove("d-none");
+
+  document.getElementById("rewardStudentName").textContent = student.name;
+  document.getElementById("rewardStudentMeta").textContent = `${student.code} · ${student.groupLabel}`;
+  document.getElementById("rewardStudentPoints").textContent = student.rewardPoints;
+  document.getElementById("rewardStudentLevel").textContent = level.name;
+  document.getElementById("rewardNextLevel").textContent = nextLevel
+    ? `Proxima meta: ${nextLevel.name} a ${nextLevel.points} puntos`
+    : "Nivel maximo alcanzado";
+  document.getElementById("rewardProgressBar").style.width = `${getRewardProgress(student.rewardPoints)}%`;
+
+  const history = student.rewardHistory || [];
+  const historyContainer = document.getElementById("rewardHistory");
+  historyContainer.innerHTML = history.length
+    ? history.slice(0, 12).map((entry) => `
+      <div class="reward-history-item">
+        <div>
+          <strong>${escapeHtml(entry.reason)}</strong>
+          <span>${escapeHtml(entry.note || new Date(entry.createdAt).toLocaleDateString("es-PR"))}</span>
+        </div>
+        <b class="${entry.points >= 0 ? "reward-positive" : "reward-negative"}">
+          ${entry.points > 0 ? "+" : ""}${entry.points}
+        </b>
+      </div>
+    `).join("")
+    : '<div class="text-muted small">Todavia no hay puntos registrados.</div>';
+}
+
+async function addRewardPoints(points, reason, note) {
+  const student = selectedRewardStudentCode ? normalizeRewardData(getStudentByCode(selectedRewardStudentCode)) : null;
+
+  if (!student) {
+    window.alert("Selecciona un estudiante primero.");
+    return;
+  }
+
+  const entry = {
+    id: crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}`,
+    points: Number(points),
+    reason,
+    note: String(note || "").trim(),
+    createdAt: new Date().toISOString()
+  };
+
+  const updatedStudent = {
+    ...student,
+    rewardPoints: Math.max(0, Number(student.rewardPoints || 0) + entry.points),
+    rewardHistory: [entry, ...(student.rewardHistory || [])],
+    updatedAt: new Date().toISOString()
+  };
+
+  students = students.map((item) => item.code === updatedStudent.code ? updatedStudent : item);
+  saveStudents(students);
+
+  if (window.PRFirebase && typeof window.PRFirebase.saveStudent === "function") {
+    await window.PRFirebase.saveStudent(updatedStudent);
+  }
+
+  renderStudentsTable();
+  renderRewardManager();
+}
+
+function setupRewardsForm() {
+  const form = document.getElementById("rewardForm");
+
+  if (!form) {
+    return;
+  }
+
+  populateRewardControls();
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const reasonSelect = document.getElementById("rewardReason");
+    const selectedAction = REWARD_ACTIONS.find((action) => action.id === reasonSelect.value);
+    const points = Number(document.getElementById("rewardPoints").value || 0);
+    const reason = selectedAction ? selectedAction.label : "Ajuste de puntos";
+    const note = document.getElementById("rewardNote").value;
+
+    await addRewardPoints(points, reason, note);
+    form.reset();
+    reasonSelect.value = REWARD_ACTIONS[0].id;
+    document.getElementById("rewardPoints").value = REWARD_ACTIONS[0].points;
   });
 }
 
@@ -308,7 +536,10 @@ async function setupTeacherPanel() {
   }
 
   await loadSharedStudents();
+  students = students.map(normalizeRewardData);
+  saveStudents(students);
   renderStudentsTable();
+  setupRewardsForm();
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
