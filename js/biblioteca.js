@@ -29,6 +29,14 @@ function formatList(items) {
   return `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
 }
 
+function asList(value) {
+  if (!value) {
+    return [];
+  }
+
+  return Array.isArray(value) ? value.filter(Boolean) : [value].filter(Boolean);
+}
+
 function renderBiblicalText(lesson) {
   if (!lesson.biblicalText) {
     return "";
@@ -40,9 +48,9 @@ function renderBiblicalText(lesson) {
     <section class="lesson-section visual-box">
       <p class="section-kicker">Texto biblico</p>
       <h2>${escapeHtml(text.book || "")} ${escapeHtml(text.chapter || "")}:${escapeHtml(text.verses || "")}</h2>
-      <p><strong>Autor:</strong> ${escapeHtml(text.author || "Pendiente")}</p>
-      <p><strong>Fecha aproximada:</strong> ${escapeHtml(text.date || "Pendiente")}</p>
-      <p>${formatParagraph(text.context, "Contexto pendiente.")}</p>
+      <p><strong>Autor:</strong> ${escapeHtml(text.author || "Informacion no especificada")}</p>
+      <p><strong>Fecha aproximada:</strong> ${escapeHtml(text.date || "Informacion no especificada")}</p>
+      <p>${formatParagraph(text.context, "Lee el pasaje principal y conecta la verdad biblica con la vida diaria del grupo.")}</p>
     </section>
   `;
 }
@@ -71,7 +79,7 @@ function renderExposition(lesson) {
       ${lesson.exposition.map((point) => `
         <div class="exposition-point">
           <h2>${escapeHtml(point.title || "Punto")}</h2>
-          <p>${formatParagraph(point.text, "Contenido pendiente.")}</p>
+          <p>${formatParagraph(point.text, "Explica esta verdad con palabras sencillas y aplica el texto a la vida del grupo.")}</p>
         </div>
       `).join("")}
     </section>
@@ -79,76 +87,88 @@ function renderExposition(lesson) {
 }
 
 function renderTeacherGuide(lesson) {
-  const guide = lesson.teacherGuide || {
-    teacherObjective: lesson.teacherNotes || lesson.goal || "Guiar la clase con claridad biblica, participacion y aplicacion practica.",
-    openingIdeas: [lesson.warmup || "Comienza con una pregunta sencilla conectada con la vida diaria."],
-    difficultQuestions: ["Si surge una pregunta dificil, responde con humildad y vuelve al texto biblico principal."],
-    commonErrors: ["Hacer la actividad sin conectar la verdad biblica con Cristo y la vida diaria."],
-    extraVerses: [lesson.verse || "Versiculo pendiente"]
-  };
+  const guide = lesson.teacherGuide;
+  const guideList = Array.isArray(guide) ? guide : [];
+  const teacherObjective = !Array.isArray(guide) && guide && guide.teacherObjective
+    ? guide.teacherObjective
+    : lesson.goal || lesson.centralIdea || "Guiar la clase con claridad biblica y aplicacion practica.";
+  const openingIdeas = !Array.isArray(guide) && guide && guide.openingIdeas
+    ? asList(guide.openingIdeas)
+    : guideList.length
+      ? guideList
+      : asList(lesson.warmup || "Comienza conectando el tema con una experiencia diaria.");
+  const difficultQuestions = !Array.isArray(guide) && guide && guide.difficultQuestions
+    ? asList(guide.difficultQuestions)
+    : asList("Si surge una pregunta dificil, responde con humildad y vuelve al texto biblico principal.");
+  const commonErrors = !Array.isArray(guide) && guide && guide.commonErrors
+    ? asList(guide.commonErrors)
+    : asList("Evita hacer la actividad sin conectar la verdad biblica con Cristo y la vida diaria.");
+  const extraVerses = !Array.isArray(guide) && guide && guide.extraVerses
+    ? asList(guide.extraVerses)
+    : asList(lesson.verse || (lesson.studentMaterial && lesson.studentMaterial.memoryVerse));
 
   return `
     <section class="lesson-section teacher-guide-box">
       <p class="section-kicker">Material para el maestro</p>
       <h2>Guia de preparacion</h2>
-      <p>${formatParagraph(guide.teacherObjective, "Objetivo del maestro pendiente.")}</p>
+      <p>${formatParagraph(teacherObjective, "Guiar la clase con claridad biblica y aplicacion practica.")}</p>
       <h3>Ideas para comenzar</h3>
-      ${formatList(guide.openingIdeas)}
+      ${formatList(openingIdeas)}
       <h3>Preguntas dificiles</h3>
-      ${formatList(guide.difficultQuestions)}
+      ${formatList(difficultQuestions)}
       <h3>Errores doctrinales comunes</h3>
-      ${formatList(guide.commonErrors)}
+      ${formatList(commonErrors)}
       <h3>Versiculos adicionales</h3>
-      ${formatList(guide.extraVerses)}
+      ${formatList(extraVerses)}
     </section>
   `;
 }
 
 function renderStudentMaterial(lesson) {
-  const material = lesson.studentMaterial || {
-    memoryVerse: lesson.verse || "Versiculo pendiente",
-    weeklyReading: lesson.verse || "Repasar el versiculo de la clase.",
-    activity: lesson.challenge || lesson.dynamic || "Practicar la ensenanza durante la semana.",
-    notesPrompt: "Hoy aprendi que...",
-    application: lesson.application || lesson.challenge || "Aplicar la verdad aprendida esta semana."
-  };
+  const material = lesson.studentMaterial || {};
+  const memoryVerse = material.memoryVerse || lesson.verse || "Repasar el versiculo principal de la clase.";
+  const weeklyReading = material.weeklyReading || lesson.verse || "Repasar el pasaje biblico principal con un adulto.";
+  const activity = material.activity || lesson.challenge || lesson.dynamic || "Practicar la ensenanza durante la semana.";
+  const notesPrompt = material.notesPrompt || material.reflection || "Hoy aprendi que...";
+  const application = material.application || material.homework || material.reflection || lesson.application || lesson.challenge || "Aplicar la verdad aprendida esta semana.";
 
   return `
     <section class="lesson-section student-material-box">
       <p class="section-kicker">Material para el estudiante</p>
       <h2>Para recordar y practicar</h2>
-      <p><strong>Versiculo:</strong> ${escapeHtml(material.memoryVerse || "Pendiente")}</p>
-      <p><strong>Lectura semanal:</strong> ${escapeHtml(material.weeklyReading || "Pendiente")}</p>
-      <p><strong>Actividad:</strong> ${formatParagraph(material.activity, "Actividad pendiente.")}</p>
-      <p><strong>Notas:</strong> ${escapeHtml(material.notesPrompt || "Hoy aprendi que...")}</p>
-      <p><strong>Aplicacion:</strong> ${formatParagraph(material.application, "Aplicacion pendiente.")}</p>
+      <p><strong>Versiculo:</strong> ${escapeHtml(memoryVerse)}</p>
+      <p><strong>Lectura semanal:</strong> ${escapeHtml(weeklyReading)}</p>
+      <p><strong>Actividad:</strong> ${formatParagraph(activity, "Practicar la ensenanza durante la semana.")}</p>
+      <p><strong>Notas:</strong> ${escapeHtml(notesPrompt)}</p>
+      <p><strong>Aplicacion:</strong> ${formatParagraph(application, "Aplicar la verdad aprendida esta semana.")}</p>
     </section>
   `;
 }
 
 function renderParentMaterial(lesson) {
-  const material = lesson.parentMaterial || {
-    whatWeLearned: lesson.summary || "Esta semana estudiamos una verdad biblica importante para vivir en casa.",
-    verse: lesson.verse || "Versiculo pendiente",
-    familyQuestions: lesson.questions && lesson.questions.length ? lesson.questions.slice(0, 3) : [
-      "Que aprendiste acerca de Dios?",
-      "Como podemos vivir esto en casa?",
-      "Como podemos orar por esto juntos?"
-    ],
-    activity: lesson.challenge || "Conversen en familia y practiquen una accion sencilla relacionada con la clase.",
-    prayer: lesson.prayer || "Senor, ayudanos a vivir tu Palabra en nuestro hogar. Amen."
-  };
+  const material = lesson.parentMaterial || {};
+  const summary = material.summary || material.whatWeLearned || lesson.summary || "Esta semana estudiamos una verdad biblica importante para vivir en casa.";
+  const verse = material.verse || (lesson.studentMaterial && lesson.studentMaterial.memoryVerse) || lesson.verse || "Repasar el versiculo principal.";
+  const familyQuestions = material.familyQuestions && material.familyQuestions.length
+    ? material.familyQuestions
+    : [
+      material.homeQuestion,
+      lesson.questions && lesson.questions[0],
+      "Como podemos vivir esto en casa?"
+    ].filter(Boolean).slice(0, 3);
+  const activity = material.activity || material.familyChallenge || lesson.challenge || "Conversen en familia y practiquen una accion sencilla relacionada con la clase.";
+  const prayer = material.prayer || material.parentNote || lesson.prayer || "Senor, ayudanos a vivir tu Palabra en nuestro hogar. Amen.";
 
   return `
     <section class="lesson-section parent-material-box">
       <p class="section-kicker">Material para los padres</p>
       <h2>Discipulado en el hogar</h2>
-      <p>${formatParagraph(material.whatWeLearned, "Resumen del hogar pendiente.")}</p>
-      <p><strong>Versiculo:</strong> ${escapeHtml(material.verse || "Pendiente")}</p>
+      <p>${formatParagraph(summary, "Esta semana estudiamos una verdad biblica importante para vivir en casa.")}</p>
+      <p><strong>Versiculo:</strong> ${escapeHtml(verse)}</p>
       <h3>Preguntas familiares</h3>
-      ${formatList(material.familyQuestions)}
-      <p><strong>Actividad:</strong> ${formatParagraph(material.activity, "Actividad pendiente.")}</p>
-      <p><strong>Oracion:</strong> ${formatParagraph(material.prayer, "Oracion pendiente.")}</p>
+      ${formatList(familyQuestions)}
+      <p><strong>Actividad:</strong> ${formatParagraph(activity, "Conversen en familia y practiquen una accion sencilla relacionada con la clase.")}</p>
+      <p><strong>Oracion:</strong> ${formatParagraph(prayer, "Senor, ayudanos a vivir tu Palabra en nuestro hogar. Amen.")}</p>
     </section>
   `;
 }
@@ -267,13 +287,13 @@ function renderLessonPreview(lesson) {
 
     <section class="lesson-section">
       <p class="section-kicker">Versiculo clave</p>
-      <h2>${escapeHtml(lesson.verse || "Pendiente")}</h2>
+      <h2>${escapeHtml(lesson.verse || (lesson.studentMaterial && lesson.studentMaterial.memoryVerse) || "Repasar el versiculo principal de la clase.")}</h2>
     </section>
 
     ${lesson.bibleContext ? `
       <section class="lesson-section">
         <p class="section-kicker">Contexto biblico</p>
-        <p>${formatParagraph(lesson.bibleContext, "Contexto pendiente.")}</p>
+        <p>${formatParagraph(lesson.bibleContext, "Lee el pasaje principal y conecta la verdad biblica con la vida diaria del grupo.")}</p>
       </section>
     ` : ""}
 
@@ -286,27 +306,27 @@ function renderLessonPreview(lesson) {
 
     <section class="lesson-section">
       <p class="section-kicker">Inicio dinamico</p>
-      <p>${formatParagraph(lesson.warmup, "Inicio dinamico pendiente.")}</p>
+      <p>${formatParagraph(lesson.warmup, "Comienza con una pregunta sencilla conectada con la experiencia diaria del grupo.")}</p>
     </section>
 
     <section class="lesson-section visual-box">
       <p class="section-kicker">Recurso visual</p>
-      <p>${formatParagraph(lesson.visual, "Recurso visual pendiente.")}</p>
+      <p>${formatParagraph(lesson.visual, "Usa una imagen, dibujo, objeto o palabra clave que ayude a recordar la verdad central.")}</p>
     </section>
 
     <section class="lesson-section dynamic-box">
       <p class="section-kicker">Dinamica</p>
-      <p>${formatParagraph(lesson.dynamic, "Dinamica pendiente.")}</p>
+      <p>${formatParagraph(lesson.dynamic, "Realiza una actividad participativa que conecte el texto biblico con una decision practica.")}</p>
     </section>
 
     <section class="lesson-section">
       <p class="section-kicker">Aplicacion</p>
-      <p>${formatParagraph(lesson.application, "Aplicacion pendiente.")}</p>
+      <p>${formatParagraph(lesson.application || lesson.challenge || (lesson.studentMaterial && (lesson.studentMaterial.homework || lesson.studentMaterial.reflection)), "Escoge una accion concreta para vivir esta verdad durante la semana.")}</p>
     </section>
 
     <section class="lesson-section">
       <p class="section-kicker">Reto de la semana</p>
-      <p>${formatParagraph(lesson.challenge, "Reto pendiente.")}</p>
+      <p>${formatParagraph(lesson.challenge || (lesson.studentMaterial && lesson.studentMaterial.homework), "Practicar la ensenanza con una accion sencilla durante la semana.")}</p>
     </section>
 
     <section class="lesson-section">
@@ -325,9 +345,9 @@ function renderLessonPreview(lesson) {
   document.getElementById("previewResources").innerHTML = `
     <h2>Recursos</h2>
     <ul class="resource-list">
-      <li><i class="bi bi-bullseye"></i> ${escapeHtml(lesson.goal || "Objetivo pendiente")}</li>
-      <li><i class="bi bi-backpack"></i> ${escapeHtml(lesson.materials || "Materiales pendientes")}</li>
-      <li><i class="bi bi-person-video3"></i> ${escapeHtml(lesson.teacherNotes || "Notas para la maestra pendientes")}</li>
+      <li><i class="bi bi-bullseye"></i> ${escapeHtml(lesson.goal || lesson.centralIdea || "Guiar la clase hacia una respuesta practica a la Palabra.")}</li>
+      <li><i class="bi bi-backpack"></i> ${escapeHtml(lesson.materials || "Biblia, hojas, lapices y materiales sencillos para la actividad.")}</li>
+      <li><i class="bi bi-person-video3"></i> ${escapeHtml(lesson.teacherNotes || "Conecta cada actividad con la verdad biblica y la aplicacion semanal.")}</li>
       <li><i class="bi bi-chat-square-text"></i> Preguntas de conversacion</li>
     </ul>
 
