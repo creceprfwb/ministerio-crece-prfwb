@@ -4455,6 +4455,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "5/24/2026",
+      "displayTitle": "Orar: hablar con Dios desde la confianza",
+      "closingSummary": "La oracion no es una formula ni un recurso solo para emergencias. Es una relacion viva con el Padre, basada en confianza, reverencia y dependencia diaria.",
+      "teacherGuide": [
+        "Ayuda a los juveniles a ver la oracion como relacion, no como actuacion religiosa.",
+        "Usa el Padre Nuestro como modelo: adoracion, dependencia, perdon, direccion y proteccion.",
+        "Crea un ambiente seguro para que practiquen oraciones sencillas y sinceras."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 6:6",
+        "activity": "Mapa de oracion: escribir una oracion breve con cuatro partes: adoracion, gratitud, peticion y entrega.",
+        "reflection": "Dios no busca palabras perfectas; busca un corazon sincero que se acerca a El."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la oracion como conversacion real con Dios.",
+        "homeQuestion": "Por que cosas podemos orar juntos esta semana?",
+        "familyChallenge": "Apartar tres minutos cada noche para orar en familia por una necesidad y una gratitud."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "6",
+        "verses": "5-13",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "Jesus ensena a sus discipulos a orar sin hipocresia y les da un modelo centrado en el Padre y su voluntad."
+      },
+      "centralIdea": "La oracion es comunion sincera con Dios, no repeticion vacia ni impresion religiosa.",
+      "objectives": [
+        "Distinguir la oracion biblica de una oracion hecha para aparentar.",
+        "Aprender elementos del modelo de oracion que Jesus enseno.",
+        "Practicar una oracion sencilla, honesta y centrada en Dios."
+      ],
+      "bibleContext": "En el Sermon del Monte, Jesus corrige la religiosidad externa y llama a sus seguidores a una relacion autentica con el Padre.",
+      "exposition": [
+        {
+          "title": "Dios escucha en lo secreto",
+          "text": "La oracion no necesita escenario; Dios ve el corazon que se acerca con sinceridad."
+        },
+        {
+          "title": "Jesus nos ensena a ordenar el corazon",
+          "text": "El Padre Nuestro pone primero a Dios, luego nuestras necesidades, relaciones y obediencia."
+        },
+        {
+          "title": "Orar cambia nuestra dependencia",
+          "text": "Cuando oramos, reconocemos que no controlamos todo y que necesitamos a Dios cada dia."
+        }
+      ],
       "title": "LA ORACIÓN: HABLAR CON DIOS",
       "verse": "Mateo 6:6 \"...ora a tu Padre que está en secreto...\"",
       "goal": "Entender que la oración es una conversación real con Dios, basada en confianza y reverencia.",
@@ -4475,6 +4521,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "5/31/2026",
+      "displayTitle": "El fruto del Espiritu: caracter que se nota",
+      "closingSummary": "El Espiritu Santo no solo produce momentos emocionantes; forma el caracter de Cristo en nosotros. El fruto se ve en decisiones, palabras, relaciones y reacciones diarias.",
+      "teacherGuide": [
+        "Explica que Pablo habla de fruto, no de apariencias religiosas.",
+        "Contrasta obras de la carne con fruto del Espiritu sin avergonzar al grupo.",
+        "Invita a cada joven a escoger un fruto para practicar intencionalmente durante la semana."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Galatas 5:22-23",
+        "activity": "Autoevaluacion del fruto: escoger un fruto fuerte y uno que necesita crecer, y escribir una accion concreta.",
+        "reflection": "El Espiritu forma en mi un caracter que se parece mas a Jesus."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el fruto del Espiritu y como se refleja en la conducta diaria.",
+        "homeQuestion": "Que fruto del Espiritu necesitamos practicar mas como familia?",
+        "familyChallenge": "Escoger un fruto y celebrarlo cuando alguien lo practique durante la semana."
+      },
+      "biblicalText": {
+        "book": "Galatas",
+        "chapter": "5",
+        "verses": "16-25",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 48-55 d.C.",
+        "context": "Pablo contrasta la vida dominada por la carne con la vida guiada por el Espiritu."
+      },
+      "centralIdea": "El Espiritu Santo produce en el creyente un caracter visible que refleja a Cristo.",
+      "objectives": [
+        "Identificar el fruto del Espiritu y su significado practico.",
+        "Reconocer actitudes que compiten contra la obra del Espiritu.",
+        "Escoger una accion concreta para cultivar un fruto esta semana."
+      ],
+      "bibleContext": "Galatas 5 ensena que la libertad cristiana no es vivir sin direccion, sino caminar por el Espiritu y reflejar el caracter de Cristo.",
+      "exposition": [
+        {
+          "title": "El fruto nace de una vida guiada",
+          "text": "No producimos santidad por fuerza humana; caminamos con el Espiritu y El transforma el caracter."
+        },
+        {
+          "title": "El caracter se ve en relaciones",
+          "text": "Amor, paciencia, mansedumbre y dominio propio se prueban especialmente cuando convivir es dificil."
+        },
+        {
+          "title": "Crecer requiere rendicion diaria",
+          "text": "El fruto madura cuando entregamos deseos, reacciones y decisiones al Senor."
+        }
+      ],
       "title": "EL FRUTO DEL ESPÍRITU",
       "verse": "Gálatas 5:22 \"Mas el fruto del Espíritu es...\"",
       "goal": "Comprender que la vida llena del Espíritu produce frutos visibles que glorifican a Dios.",
@@ -4495,6 +4587,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "6/7/2026",
+      "displayTitle": "Obediencia: amor que toma decisiones",
+      "closingSummary": "La obediencia cristiana no compra el amor de Dios; responde al amor de Cristo. Jesus une amor y obediencia porque la fe verdadera se expresa en decisiones concretas.",
+      "teacherGuide": [
+        "Aclara que obedecer no es legalismo cuando nace del amor a Cristo.",
+        "Trabaja ejemplos reales: honestidad, redes, lenguaje, amistades, respeto y pureza.",
+        "Invita a una decision especifica de obediencia para la semana."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 14:15",
+        "activity": "Caso de decision: analizar una situacion diaria y escribir dos respuestas, una por presion y otra por obediencia a Cristo.",
+        "reflection": "Obedecer a Jesus muestra que mi amor por El no se queda en palabras."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron que la obediencia es una respuesta de amor a Dios.",
+        "homeQuestion": "En que area se nota mas dificil obedecer a Dios?",
+        "familyChallenge": "Orar por una decision concreta de obediencia durante la semana."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "14",
+        "verses": "15-24",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 80-90 d.C.",
+        "context": "Jesus prepara a sus discipulos antes de la cruz y les ensena que amarle implica guardar sus mandamientos."
+      },
+      "centralIdea": "La obediencia es una respuesta visible de amor, confianza y fe en Jesus.",
+      "objectives": [
+        "Comprender la relacion entre amor a Cristo y obediencia.",
+        "Distinguir obediencia por amor de obediencia por apariencia.",
+        "Aplicar la obediencia a una decision concreta de la vida diaria."
+      ],
+      "bibleContext": "Juan 14 muestra a Jesus consolando y formando a sus discipulos. La obediencia aparece conectada con amor, presencia de Dios y ayuda del Espiritu Santo.",
+      "exposition": [
+        {
+          "title": "Obedecer revela amor",
+          "text": "Jesus no separa amor de practica; amarle incluye tomar en serio su Palabra."
+        },
+        {
+          "title": "La obediencia requiere confianza",
+          "text": "Obedecemos porque creemos que Jesus es bueno, sabio y digno de dirigir nuestra vida."
+        },
+        {
+          "title": "El Espiritu ayuda al creyente",
+          "text": "Dios no nos deja solos; su Espiritu nos guia y fortalece para obedecer."
+        }
+      ],
       "title": "LA OBEDIENCIA A DIOS",
       "verse": "Juan 14:15 \"Si me amáis, guardad mis mandamientos.\"",
       "goal": "Aprender que la obediencia es una respuesta de amor a Dios y un signo de verdadera fe.",
@@ -4515,6 +4653,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "6/14/2026",
+      "displayTitle": "La iglesia: familia que aprende, adora y sirve",
+      "closingSummary": "La iglesia no es solo un lugar al que asistimos; es una comunidad espiritual donde perseveramos en la Palabra, la comunion, la oracion y el servicio. Cada joven tiene un lugar y una responsabilidad en el cuerpo de Cristo.",
+      "teacherGuide": [
+        "Presenta la iglesia como familia espiritual, no como evento semanal.",
+        "Evita hablar solo de asistencia; enfoca pertenencia, crecimiento y servicio.",
+        "Ayuda a los juveniles a identificar formas reales de participar en su iglesia local."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Hechos 2:42",
+        "activity": "Mapa de comunidad: escribir cuatro areas de la iglesia primitiva y una manera de practicarlas hoy.",
+        "reflection": "No fui llamado a seguir a Cristo solo; Dios me puso en una familia espiritual."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la importancia de la iglesia como comunidad de crecimiento y servicio.",
+        "homeQuestion": "Como podemos participar mejor como familia en la vida de la iglesia?",
+        "familyChallenge": "Escoger una forma sencilla de servir o animar a alguien de la iglesia esta semana."
+      },
+      "biblicalText": {
+        "book": "Hechos",
+        "chapter": "2",
+        "verses": "42-47",
+        "author": "Lucas, medico y colaborador de Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Despues de Pentecostes, la iglesia primitiva crece como comunidad centrada en la ensenanza, la comunion, el partimiento del pan y la oracion."
+      },
+      "centralIdea": "La iglesia es la comunidad de Cristo donde crecemos, adoramos, servimos y damos testimonio juntos.",
+      "objectives": [
+        "Valorar la iglesia como parte esencial de la vida cristiana.",
+        "Identificar practicas de la iglesia primitiva que siguen vigentes.",
+        "Encontrar una forma concreta de participar y servir en la iglesia."
+      ],
+      "bibleContext": "Hechos 2 describe una comunidad transformada por el evangelio. La fe se expresa en doctrina, comunion, adoracion, generosidad y testimonio.",
+      "exposition": [
+        {
+          "title": "La iglesia persevera en la Palabra",
+          "text": "La comunidad cristiana crece cuando se forma por la ensenanza apostolica."
+        },
+        {
+          "title": "La iglesia comparte vida",
+          "text": "La comunion biblica no es solo saludar; es cuidar, servir, orar y caminar juntos."
+        },
+        {
+          "title": "La iglesia testifica al mundo",
+          "text": "Una comunidad que ama y sirve muestra el evangelio de forma visible."
+        }
+      ],
       "title": "LA VIDA EN COMUNIDAD - LA IGLESIA",
       "verse": "Hechos 2:42 \"Y perseveraban en la doctrina... y en la comunión unos con otros.\"",
       "goal": "Valorar la importancia de la iglesia como comunidad espiritual donde crecemos y servimos.",
@@ -4535,6 +4719,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "6/21/2026",
+      "displayTitle": "Servir como Jesus: grandeza con humildad",
+      "closingSummary": "Jesus redefine la grandeza: no vino para ser servido, sino para servir y dar su vida. El servicio cristiano no busca aplausos; muestra el amor de Cristo en acciones concretas.",
+      "teacherGuide": [
+        "Conecta servicio con el ejemplo de Jesus, no solo con actividades de iglesia.",
+        "Trabaja la motivacion: servir sin buscar reconocimiento.",
+        "Cierra con un plan sencillo de servicio que el grupo pueda realizar."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Marcos 10:45",
+        "activity": "Plan de servicio: identificar una necesidad real y escribir quien, que, cuando y como ayudar.",
+        "reflection": "Seguir a Jesus significa usar mi vida para amar y servir a otros."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el servicio cristiano siguiendo el ejemplo de Jesus.",
+        "homeQuestion": "A quien podemos servir esta semana sin esperar nada a cambio?",
+        "familyChallenge": "Realizar una accion de servicio en casa, iglesia o comunidad."
+      },
+      "biblicalText": {
+        "book": "Marcos",
+        "chapter": "10",
+        "verses": "35-45",
+        "author": "Juan Marcos",
+        "date": "Aproximadamente 55-70 d.C.",
+        "context": "Jesus corrige la ambicion de sus discipulos y les ensena que la verdadera grandeza en su reino se expresa sirviendo."
+      },
+      "centralIdea": "El seguidor de Jesus sirve con humildad porque Cristo mismo vino a servir y dar su vida.",
+      "objectives": [
+        "Comprender como Jesus redefine la grandeza.",
+        "Examinar motivaciones personales al servir.",
+        "Disenar una accion concreta de servicio cristiano."
+      ],
+      "bibleContext": "Marcos 10 contrasta la ambicion humana con el camino de Jesus. El Hijo del Hombre muestra que el liderazgo del reino nace de la entrega.",
+      "exposition": [
+        {
+          "title": "El mundo busca posicion",
+          "text": "Los discipulos querian lugares de honor, pero Jesus les mostro un camino distinto."
+        },
+        {
+          "title": "Jesus modela servicio sacrificial",
+          "text": "Cristo no solo enseno a servir; entrego su vida como rescate por muchos."
+        },
+        {
+          "title": "Servir refleja el evangelio",
+          "text": "Cuando servimos con humildad, otros pueden ver el amor de Cristo de manera practica."
+        }
+      ],
       "title": "SERVIR A LOS DEMÁS",
       "verse": "Marcos 10:45 \"Porque el Hijo del Hombre no vino para ser servido, sino para servir.\"",
       "goal": "Comprender que el servicio es una expresión activa de amor cristiano, siguiendo el ejemplo de Jesús.",
