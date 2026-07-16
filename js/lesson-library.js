@@ -4785,6 +4785,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "6/28/2026",
+      "displayTitle": "Ser luz: una fe que se ve",
+      "closingSummary": "Jesus llama a sus discipulos luz del mundo. La fe no se esconde por miedo ni se usa para presumir; se vive con coherencia para que otros vean buenas obras y glorifiquen al Padre.",
+      "teacherGuide": [
+        "Enfoca la clase en coherencia cristiana en ambientes reales: escuela, redes, deportes y familia.",
+        "Aclara que ser luz no es actuar superior, sino reflejar a Cristo con humildad.",
+        "Anima a cada joven a escoger una accion visible y concreta de testimonio."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 5:14-16",
+        "activity": "24 horas de luz: escribir tres momentos del dia donde puede reflejar a Cristo con palabras, actitud o decisiones.",
+        "reflection": "Mi vida puede apuntar a Cristo aun cuando no tenga un microfono."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el llamado de Jesus a ser luz en el mundo.",
+        "homeQuestion": "En que lugar necesitas valentia para reflejar a Cristo?",
+        "familyChallenge": "Mencionar una buena obra que pueda bendecir a alguien esta semana."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "5",
+        "verses": "14-16",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "En el Sermon del Monte, Jesus describe la identidad y mision visible de sus discipulos en el mundo."
+      },
+      "centralIdea": "Los discipulos de Jesus reflejan su luz con una vida coherente que apunta al Padre.",
+      "objectives": [
+        "Comprender que ser luz es parte de la identidad del discipulo.",
+        "Reconocer situaciones donde el miedo apaga el testimonio.",
+        "Practicar una accion concreta que refleje a Cristo esta semana."
+      ],
+      "bibleContext": "Mateo 5 ubica a los creyentes como sal y luz. La fe personal tiene impacto publico cuando las obras apuntan a Dios.",
+      "exposition": [
+        {
+          "title": "La luz tiene proposito",
+          "text": "Jesus no llama a esconder la fe, sino a vivirla de manera visible y humilde."
+        },
+        {
+          "title": "La coherencia ilumina",
+          "text": "Las palabras pierden fuerza cuando la vida no refleja lo que confesamos."
+        },
+        {
+          "title": "La gloria es para el Padre",
+          "text": "El testimonio cristiano no busca fama personal; busca que otros vean a Dios."
+        }
+      ],
       "title": "SER LUZ EN EL MUNDO",
       "verse": "Mateo 5:14 \"V osotros sois la luz del mundo.\"",
       "goal": "Desafiar a los jóvenes a vivir con coherencia, siendo luz en su entorno.",
@@ -4805,6 +4851,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "7/5/2026",
+      "displayTitle": "Perdonar: soltar el rencor por gracia",
+      "closingSummary": "Perdonar no significa negar el dolor ni justificar el mal. Significa entregar la deuda a Dios, rechazar el rencor y reflejar la gracia que hemos recibido en Cristo.",
+      "teacherGuide": [
+        "Trata el tema con cuidado; algunos jovenes pueden cargar heridas profundas.",
+        "Aclara que perdonar no siempre significa restaurar confianza automaticamente ni permitir abuso.",
+        "Centra la clase en la gracia recibida de Dios como base para perdonar."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 6:14",
+        "activity": "Carga y entrega: escribir en privado una ofensa o rencor y orar entregandolo a Dios.",
+        "reflection": "Cristo me perdono; por su gracia puedo comenzar a soltar el rencor."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el perdon como respuesta a la gracia de Dios.",
+        "homeQuestion": "Que diferencia hay entre perdonar y permitir que alguien siga haciendo dano?",
+        "familyChallenge": "Orar por un corazon libre de rencor y dispuesto a obedecer a Dios."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "6",
+        "verses": "14-15",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "Jesus ensena sobre el perdon dentro del llamado a una vida de oracion sincera y dependencia del Padre."
+      },
+      "centralIdea": "El discipulo perdona porque ha recibido gracia y confia la justicia final a Dios.",
+      "objectives": [
+        "Comprender el perdon como obediencia nacida de la gracia.",
+        "Distinguir perdon de negacion del dano o falta de limites.",
+        "Dar un paso honesto para entregar rencor a Dios."
+      ],
+      "bibleContext": "Mateo 6 conecta la relacion con Dios con la manera en que tratamos las ofensas. El perdon recibido transforma como respondemos al dano.",
+      "exposition": [
+        {
+          "title": "Perdonar reconoce la gracia",
+          "text": "Solo entendemos el perdon cristiano cuando recordamos cuanto nos ha perdonado Dios."
+        },
+        {
+          "title": "Perdonar entrega la deuda",
+          "text": "Soltar el rencor no minimiza el dolor; pone la justicia en manos de Dios."
+        },
+        {
+          "title": "Perdonar puede iniciar sanidad",
+          "text": "El perdon libera al corazon del control de la amargura y abre camino a obedecer."
+        }
+      ],
       "title": "EL DISCÍPULO PERDONA",
       "verse": "Mateo 6:14 \"Porque si perdonáis a los hombres sus ofensas, os perdonará también a vosotros vuestro Padre celestial.\"",
       "goal": "Comprender que perdonar es un mandato y una forma de reflejar el amor y la gracia de Dios.",
@@ -4825,6 +4917,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "7/12/2026",
+      "displayTitle": "Confiar en Dios cuando no veo el camino",
+      "closingSummary": "Confiar en Dios no significa entender todo. Significa reconocerlo en cada area, rendir nuestro propio control y creer que su direccion es mejor que nuestra prudencia limitada.",
+      "teacherGuide": [
+        "No presentes la confianza como ausencia de preguntas; enfoca rendicion y fe.",
+        "Invita a los jovenes a nombrar areas donde quieren controlar todo.",
+        "Cierra con un paso practico de confianza: pedir consejo, obedecer, esperar o soltar ansiedad."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Proverbios 3:5-6",
+        "activity": "Mapa de control: escribir tres areas de preocupacion y marcar una accion de confianza para cada una.",
+        "reflection": "Dios puede dirigir mis pasos aun cuando yo no vea toda la ruta."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la confianza en Dios segun Proverbios 3.",
+        "homeQuestion": "Que decision necesita ser entregada a Dios en oracion?",
+        "familyChallenge": "Orar por una decision y buscar un principio biblico que la guie."
+      },
+      "biblicalText": {
+        "book": "Proverbios",
+        "chapter": "3",
+        "verses": "5-6",
+        "author": "Tradicionalmente asociado con Salomon",
+        "date": "Compilado durante el periodo de la monarquia de Israel",
+        "context": "Proverbios ofrece sabiduria para vivir bajo el temor de Dios, confiando en su direccion mas que en la autosuficiencia."
+      },
+      "centralIdea": "El discipulo confia en Dios rindiendo su propio control y reconociendo al Senor en cada camino.",
+      "objectives": [
+        "Explicar que confiar en Dios implica corazon, decisiones y direccion.",
+        "Identificar areas donde dependemos demasiado de nuestra propia prudencia.",
+        "Escoger un paso de confianza concreta para esta semana."
+      ],
+      "bibleContext": "Proverbios 3 llama a una fe practica: confiar, no apoyarse en la propia prudencia, reconocer a Dios y recibir su direccion.",
+      "exposition": [
+        {
+          "title": "Confiar involucra todo el corazon",
+          "text": "La confianza biblica no es parcial; entrega deseos, temores y decisiones."
+        },
+        {
+          "title": "Nuestra prudencia es limitada",
+          "text": "Podemos planificar, pero no somos Dios. Necesitamos sabiduria mayor que la nuestra."
+        },
+        {
+          "title": "Dios dirige caminos rendidos",
+          "text": "Reconocerlo en todo abre espacio para obedecer su direccion con paciencia."
+        }
+      ],
       "title": "EL DISCÍPULO CONFÍA EN DIOS",
       "verse": "Proverbios 3:5 \"Confía en Jehová con todo tu corazón, y no te apoyes en tu propia prudencia.\"",
       "goal": "Aprender a confiar plenamente en Dios, aún cuando no entendemos el camino.",
@@ -4845,6 +4983,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "7/19/2026",
+      "displayTitle": "Enviados: hablar de Jesus con amor y verdad",
+      "closingSummary": "La Gran Comision no fue dada solo a pastores o misioneros. Jesus envia a sus discipulos a hacer discipulos, confiando en su autoridad y presencia.",
+      "teacherGuide": [
+        "Ensenales que evangelizar no es ganar discusiones, sino presentar a Cristo con amor y claridad.",
+        "Practica una conversacion sencilla de testimonio personal.",
+        "Cierra con una lista de personas por quienes orar y una accion respetuosa para acercarse."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 28:19-20",
+        "activity": "Mi historia en un minuto: escribir antes, encuentro con Cristo y ahora, en lenguaje sencillo.",
+        "reflection": "Jesus me envia, y no voy solo: El prometio estar conmigo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la Gran Comision y el llamado a hablar de Jesus.",
+        "homeQuestion": "Con quien podemos compartir esperanza de manera respetuosa esta semana?",
+        "familyChallenge": "Orar por tres personas que necesitan conocer a Cristo."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "28",
+        "verses": "18-20",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "Despues de resucitar, Jesus comisiona a sus discipulos a hacer discipulos de todas las naciones bajo su autoridad."
+      },
+      "centralIdea": "Jesus envia a sus discipulos a compartir el evangelio y formar otros discipulos con amor, verdad y dependencia de El.",
+      "objectives": [
+        "Comprender que la mision pertenece a todos los discipulos.",
+        "Practicar una forma sencilla de explicar el testimonio personal.",
+        "Identificar personas por quienes orar y a quienes acercarse con amor."
+      ],
+      "bibleContext": "Mateo cierra con Jesus resucitado declarando su autoridad universal y enviando a la iglesia a discipular, bautizar y ensenar.",
+      "exposition": [
+        {
+          "title": "Jesus tiene toda autoridad",
+          "text": "La mision descansa en quien Jesus es, no en nuestra personalidad o valentia natural."
+        },
+        {
+          "title": "Hacer discipulos es mas que invitar",
+          "text": "Implica anunciar, acompanar, ensenar y ayudar a otros a seguir a Cristo."
+        },
+        {
+          "title": "No somos enviados solos",
+          "text": "La presencia de Jesus sostiene a sus discipulos mientras obedecen la mision."
+        }
+      ],
       "title": "JESÚS NOS ENVÍA A HABLAR DE ÉL",
       "verse": "Mateo 28:19 \"Por tanto, id, y haced discípulos a todas las naciones...\"",
       "goal": "Que los jóvenes comprendan su llamado personal a hacer discípulos y compartir el evangelio.",
@@ -4865,6 +5049,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "7/26/2026",
+      "displayTitle": "Todos necesitan escuchar de Jesus",
+      "closingSummary": "El evangelio es urgente porque las personas no pueden creer en aquel de quien no han oido. Dios usa mensajeros comunes para llevar una noticia eterna.",
+      "teacherGuide": [
+        "Enfoca urgencia sin manipular con culpa; usa compasion y responsabilidad.",
+        "Ayuda a identificar barreras reales para compartir: miedo, rechazo, falta de claridad.",
+        "Invita al grupo a disenar una estrategia simple para su escuela, comunidad o familia."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Romanos 10:14",
+        "activity": "Mapa de alcance: dibujar tres circulos: familia, escuela y comunidad; escribir nombres o grupos por quienes orar.",
+        "reflection": "Dios puede usar mi voz y mi vida para que otros escuchen de Jesus."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la necesidad de que todos escuchen el evangelio.",
+        "homeQuestion": "Que persona cerca de nosotros necesita una palabra de esperanza?",
+        "familyChallenge": "Orar por una persona y buscar una manera de servirle esta semana."
+      },
+      "biblicalText": {
+        "book": "Romanos",
+        "chapter": "10",
+        "verses": "13-17",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 57 d.C.",
+        "context": "Pablo explica que la salvacion se recibe por fe, y que la fe viene por oir la Palabra de Cristo."
+      },
+      "centralIdea": "Las personas necesitan escuchar el evangelio, y Dios llama a sus hijos a llevar el mensaje con compasion.",
+      "objectives": [
+        "Reconocer la urgencia espiritual de compartir el evangelio.",
+        "Comprender la cadena biblica: enviar, predicar, oir, creer e invocar.",
+        "Preparar una accion concreta de oracion, servicio o conversacion evangelistica."
+      ],
+      "bibleContext": "Romanos 10 muestra que el mensaje de Cristo debe ser anunciado. La fe no nace del silencio, sino de escuchar el evangelio.",
+      "exposition": [
+        {
+          "title": "El evangelio debe ser escuchado",
+          "text": "Pablo muestra que las personas necesitan recibir claramente la noticia de Cristo."
+        },
+        {
+          "title": "Dios envia mensajeros",
+          "text": "La mision ocurre cuando creyentes obedecen y llevan buenas nuevas con compasion."
+        },
+        {
+          "title": "La fe viene por la Palabra",
+          "text": "No confiamos en nuestra habilidad, sino en el poder del mensaje de Cristo."
+        }
+      ],
       "title": "TODOS NECESITAN CONOCER A JESÚS",
       "verse": "Romanos 10:14 \"¿Y cómo creerán en aquel de quien no han oído?\"",
       "goal": "Comprender que sin el mensaje de salvación, el mundo está perdido, y nosotros somos los portadores.",
@@ -4886,6 +5116,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "8/2/2026",
+      "displayTitle": "Dones que alcanzan y edifican",
+      "closingSummary": "Dios no da dones para orgullo personal, sino para servir a otros y edificar su obra. Cada talento puede convertirse en una herramienta de amor, evangelismo y discipulado.",
+      "teacherGuide": [
+        "Ayuda a los jovenes a ver dones amplios: escuchar, organizar, crear, ensenar, animar, tecnologia, musica y servicio.",
+        "Evita comparar talentos; enfatiza fidelidad y mayordomia.",
+        "Conecta cada don con una oportunidad practica dentro o fuera de la iglesia."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Pedro 4:10",
+        "activity": "Inventario de dones: escribir tres habilidades y una forma de usarlas para servir o alcanzar a alguien.",
+        "reflection": "Lo que Dios me dio no es solo para mi; puedo usarlo para bendecir y apuntar a Cristo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron como usar sus dones para servir y alcanzar vidas.",
+        "homeQuestion": "Que habilidad ves en mi que Dios puede usar para bendecir a otros?",
+        "familyChallenge": "Ayudar al joven a usar una habilidad en un acto concreto de servicio."
+      },
+      "biblicalText": {
+        "book": "1 Pedro",
+        "chapter": "4",
+        "verses": "10-11",
+        "author": "El apostol Pedro",
+        "date": "Aproximadamente 62-64 d.C.",
+        "context": "Pedro anima a creyentes bajo presion a vivir con amor, servicio y buena administracion de la gracia de Dios."
+      },
+      "centralIdea": "Los dones recibidos de Dios deben administrarse fielmente para servir, edificar y apuntar a Cristo.",
+      "objectives": [
+        "Reconocer que cada creyente ha recibido algo para servir.",
+        "Distinguir usar dones para gloria personal de usarlos para Dios.",
+        "Planificar una manera concreta de usar un don esta semana."
+      ],
+      "bibleContext": "1 Pedro 4 llama a servir como buenos administradores de la multiforme gracia de Dios. Los dones son expresiones de gracia para bendecir al cuerpo.",
+      "exposition": [
+        {
+          "title": "Cada creyente recibe para servir",
+          "text": "Pedro no trata los dones como decoracion personal, sino como herramientas para ministrar a otros."
+        },
+        {
+          "title": "Los dones se administran",
+          "text": "Somos mayordomos, no dueños absolutos; usamos lo recibido con responsabilidad delante de Dios."
+        },
+        {
+          "title": "El objetivo es que Dios sea glorificado",
+          "text": "Cuando servimos con lo que tenemos, la atencion debe apuntar a Cristo y no al ego."
+        }
+      ],
       "title": "TUS DONES PUEDEN ALCANZAR VIDAS",
       "verse": "1 Pedro 4:10 \"Cada uno según el don que ha recibido, minístrelo a los otros...\"",
       "goal": "Descubrir que los talentos dados por Dios tienen un propósito: edificar y evangelizar.",
