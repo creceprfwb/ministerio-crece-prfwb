@@ -5778,6 +5778,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "10/11/2026",
+      "displayTitle": "Amor verdadero: la marca del discipulo",
+      "closingSummary": "El amor cristiano no es solo emocion; es la marca visible de quienes siguen a Jesus. Amar como Cristo implica servir, perdonar, decir verdad y buscar el bien del otro.",
+      "teacherGuide": [
+        "Distingue amor biblico de atraccion, conveniencia o solo sentimiento.",
+        "Conecta Juan 13 con el ejemplo de Jesus lavando pies y entregandose por los suyos.",
+        "Invita a una accion concreta hacia alguien dificil de amar, sin forzar situaciones inseguras."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 13:35",
+        "activity": "Amor en accion: escoger una situacion dificil y escribir una respuesta que refleje paciencia, verdad y servicio.",
+        "reflection": "La gente debe poder reconocer a Cristo en la manera en que amo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el amor como marca del verdadero discipulo.",
+        "homeQuestion": "Que hace diferente al amor de Cristo del amor que el mundo promueve?",
+        "familyChallenge": "Realizar una accion concreta de amor y servicio hacia alguien esta semana."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "13",
+        "verses": "34-35",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 80-90 d.C.",
+        "context": "Jesus habla con sus discipulos antes de la cruz y les da un mandamiento nuevo: amarse como El los amo."
+      },
+      "centralIdea": "El amor de Cristo en sus discipulos es una evidencia visible del evangelio.",
+      "objectives": [
+        "Comprender que el amor cristiano nace del ejemplo de Jesus.",
+        "Distinguir amor biblico de emociones pasajeras o conveniencia.",
+        "Practicar una accion concreta de amor esta semana."
+      ],
+      "bibleContext": "Juan 13 muestra a Jesus sirviendo humildemente y preparando a sus discipulos para vivir una comunidad marcada por su amor.",
+      "exposition": [
+        {
+          "title": "Jesus define el amor",
+          "text": "No amamos segun moda o sentimiento, sino segun el amor sacrificial de Cristo."
+        },
+        {
+          "title": "El amor identifica al discipulo",
+          "text": "Jesus dijo que el mundo reconoceria a sus seguidores por el amor entre ellos."
+        },
+        {
+          "title": "El amor se vuelve accion",
+          "text": "El amor biblico se expresa con servicio, paciencia, perdon, verdad y humildad."
+        }
+      ],
       "title": "AMOR VERDADERO",
       "verse": "Juan 13:35 \"En esto conocerán todos que sois mis discípulos, si tuviereis amor los unos con los otros.\"",
       "goal": "Entender que el amor es la marca del verdadero discípulo.",
@@ -5799,6 +5845,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "10/18/2026",
+      "displayTitle": "Gozo a pesar de todo",
+      "closingSummary": "El gozo cristiano no depende de que todo salga bien. Pablo pudo llamar a regocijarse desde la dificultad porque el gozo verdadero se encuentra en el Senor.",
+      "teacherGuide": [
+        "Aclara que gozo no significa negar tristeza, dolor o problemas.",
+        "Conecta el gozo con Cristo, no con entretenimiento o circunstancias.",
+        "Incluye una practica de gratitud y esperanza para situaciones dificiles."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Filipenses 4:4",
+        "activity": "Tres razones de gozo: escribir una verdad de Dios, una bendicion presente y una esperanza futura.",
+        "reflection": "Mi gozo puede permanecer porque Cristo permanece conmigo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el gozo que nace del Senor aun en tiempos dificiles.",
+        "homeQuestion": "Que diferencia hay entre felicidad momentanea y gozo en Cristo?",
+        "familyChallenge": "Compartir cada dia una razon para regocijarse en Dios."
+      },
+      "biblicalText": {
+        "book": "Filipenses",
+        "chapter": "4",
+        "verses": "4-7",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo escribe desde prision animando a la iglesia a regocijarse, orar y descansar en la paz de Dios."
+      },
+      "centralIdea": "El gozo del creyente se sostiene en Cristo, no en circunstancias perfectas.",
+      "objectives": [
+        "Distinguir gozo cristiano de felicidad circunstancial.",
+        "Reconocer razones biblicas para regocijarse en el Senor.",
+        "Practicar gratitud y oracion como respuestas al desanimo."
+      ],
+      "bibleContext": "Filipenses es una carta llena de gozo escrita en medio de sufrimiento. Pablo demuestra que Cristo puede sostener el corazon en cualquier situacion.",
+      "exposition": [
+        {
+          "title": "El gozo tiene un centro",
+          "text": "Pablo no dice regocijaos en las circunstancias, sino en el Senor."
+        },
+        {
+          "title": "El gozo convive con pruebas",
+          "text": "El creyente puede llorar y aun asi tener esperanza firme en Cristo."
+        },
+        {
+          "title": "La oracion guarda el corazon",
+          "text": "Pablo conecta gozo, oracion y paz como respuestas a la ansiedad."
+        }
+      ],
       "title": "GOZO A PESAR DE TODO",
       "verse": "Filipenses 4:4 \"Regocijaos en el Señor siempre. Otra vez digo: ¡Regocijaos!\"",
       "goal": "Descubrir que el gozo viene de Cristo, no de las circunstancias.",
@@ -5820,6 +5912,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "10/25/2026",
+      "displayTitle": "Paz en tiempos dificiles",
+      "closingSummary": "La paz de Jesus no depende de ausencia de problemas. Es una seguridad profunda que nace de su presencia, sus promesas y su control sobre nuestra vida.",
+      "teacherGuide": [
+        "Habla de ansiedad y presion con sensibilidad; no minimices luchas reales.",
+        "Enfoca la paz como regalo de Cristo y practica espiritual de confianza.",
+        "Invita a una oracion guiada entregando una preocupacion especifica a Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 14:27",
+        "activity": "Entrego mi carga: escribir una preocupacion, una verdad de Jesus y una accion de confianza.",
+        "reflection": "La paz de Cristo puede guardar mi corazon aun cuando el problema no desaparece de inmediato."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la paz que Jesus da en tiempos dificiles.",
+        "homeQuestion": "Que preocupacion podemos entregar juntos al Senor?",
+        "familyChallenge": "Orar Juan 14:27 antes de dormir durante la semana."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "14",
+        "verses": "25-27",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 80-90 d.C.",
+        "context": "Jesus consuela a sus discipulos antes de la cruz, prometiendo el Espiritu Santo y dejando su paz."
+      },
+      "centralIdea": "Jesus da una paz que sostiene al creyente aun en medio de presion, temor y dificultad.",
+      "objectives": [
+        "Comprender que la paz de Cristo es distinta a la paz del mundo.",
+        "Identificar preocupaciones que necesitan ser entregadas a Dios.",
+        "Practicar una oracion de confianza basada en Juan 14:27."
+      ],
+      "bibleContext": "Juan 14 ocurre en un momento de incertidumbre para los discipulos. Jesus no promete ausencia de problemas, sino su paz y presencia.",
+      "exposition": [
+        {
+          "title": "Jesus deja su paz",
+          "text": "La paz cristiana no nace de controlar todo, sino de confiar en quien gobierna todo."
+        },
+        {
+          "title": "La paz del mundo es limitada",
+          "text": "El mundo ofrece distracciones temporales; Cristo ofrece seguridad profunda."
+        },
+        {
+          "title": "La paz combate el temor",
+          "text": "Jesus llama a no turbarse porque su presencia sostiene al corazon."
+        }
+      ],
       "title": "PAZ EN TIEMPOS DIFÍCILES",
       "verse": "Juan 14:27 \"Mi paz os dejo, mi paz os doy...\"",
       "goal": "Reconocer que la paz de Dios va más allá de lo que entendemos.",
@@ -5841,6 +5979,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "11/1/2026",
+      "displayTitle": "Dominio propio y bondad en las reacciones",
+      "closingSummary": "El Espiritu Santo transforma nuestras reacciones. Dominio propio y bondad se ven cuando respondemos con sabiduria, aun cuando tenemos presion, enojo o provocacion.",
+      "teacherGuide": [
+        "Trabaja ejemplos concretos: mensajes, bromas pesadas, discusiones, impulsos y tentaciones.",
+        "No presentes dominio propio como represion fria, sino como fruto del Espiritu.",
+        "Practica dramatizaciones cortas de respuesta impulsiva versus respuesta guiada por Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Galatas 5:22-23",
+        "activity": "Pausa santa: practicar tres pasos antes de reaccionar: detenerme, orar breve, responder con bondad.",
+        "reflection": "Mis reacciones tambien pueden mostrar que Cristo esta formando mi caracter."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron dominio propio y bondad como fruto del Espiritu.",
+        "homeQuestion": "Que situacion suele provocar reacciones impulsivas?",
+        "familyChallenge": "Practicar la frase: voy a pausar antes de responder."
+      },
+      "biblicalText": {
+        "book": "Galatas",
+        "chapter": "5",
+        "verses": "22-23",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 48-55 d.C.",
+        "context": "Pablo describe el fruto del Espiritu como evidencia de una vida guiada por Dios."
+      },
+      "centralIdea": "El Espiritu forma dominio propio y bondad para que nuestras reacciones reflejen a Cristo.",
+      "objectives": [
+        "Comprender que dominio propio y bondad son fruto del Espiritu.",
+        "Identificar situaciones donde reaccionamos impulsivamente.",
+        "Practicar una respuesta concreta guiada por Dios."
+      ],
+      "bibleContext": "Galatas 5 contrasta vivir por la carne con caminar por el Espiritu. El caracter cristiano se nota especialmente bajo presion.",
+      "exposition": [
+        {
+          "title": "El dominio propio frena el impulso",
+          "text": "No todo lo que sentimos debe dirigir nuestras palabras o acciones."
+        },
+        {
+          "title": "La bondad responde con gracia",
+          "text": "La bondad no depende de que otros nos traten bien; nace del caracter de Cristo."
+        },
+        {
+          "title": "El Espiritu transforma reacciones",
+          "text": "Dios trabaja no solo en lo que hacemos en publico, sino en como respondemos bajo presion."
+        }
+      ],
       "title": "DOMINIO PROPIO Y BONDAD",
       "verse": "Gálatas 5:22-23 \"Mas el fruto del Espíritu es... benignidad... templanza.\"",
       "goal": "Aprender a responder con dominio propio y actuar con bondad como reflejo de Cristo.",
@@ -5862,6 +6046,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "11/8/2026",
+      "displayTitle": "Vida de gratitud",
+      "closingSummary": "La gratitud cristiana no ignora los problemas; reconoce la bondad de Dios en medio de todo. Dar gracias forma un corazon humilde, atento y confiado.",
+      "teacherGuide": [
+        "Aclara que dar gracias en todo no significa agradecer por el mal como si fuera bueno.",
+        "Enfoca gratitud como acto de fe que reconoce a Dios aun en procesos dificiles.",
+        "Incluye un diario de gratitud realista para la semana."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Tesalonicenses 5:18",
+        "activity": "Diario de gratitud: escribir tres gracias diarias por una semana, incluyendo una en medio de dificultad.",
+        "reflection": "La gratitud entrena mi corazon para ver la fidelidad de Dios."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la gratitud como actitud del discipulo.",
+        "homeQuestion": "Que bendicion pasamos por alto con facilidad?",
+        "familyChallenge": "Compartir una gratitud antes de cada comida por una semana."
+      },
+      "biblicalText": {
+        "book": "1 Tesalonicenses",
+        "chapter": "5",
+        "verses": "18",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 50-51 d.C.",
+        "context": "Pablo anima a una iglesia joven a vivir con gozo, oracion constante y gratitud en la voluntad de Dios."
+      },
+      "centralIdea": "La gratitud es una respuesta de fe que reconoce la bondad de Dios en toda circunstancia.",
+      "objectives": [
+        "Comprender la gratitud como disciplina del corazon.",
+        "Distinguir gratitud biblica de negar dificultades.",
+        "Practicar un diario sencillo de gratitud durante la semana."
+      ],
+      "bibleContext": "1 Tesalonicenses 5 presenta una vida espiritual integrada: gozo, oracion y gratitud como voluntad de Dios en Cristo.",
+      "exposition": [
+        {
+          "title": "La gratitud reconoce a Dios",
+          "text": "Dar gracias nos recuerda que todo bien viene del Senor."
+        },
+        {
+          "title": "La gratitud se practica en todo",
+          "text": "No esperamos circunstancias perfectas para reconocer la fidelidad de Dios."
+        },
+        {
+          "title": "La gratitud cambia la mirada",
+          "text": "Un corazon agradecido aprende a ver gracia aun en dias comunes o dificiles."
+        }
+      ],
       "title": "VIDA DE GRATITUD",
       "verse": "1 Tesalonicenses 5:18 \"Dad gracias en todo...\"",
       "goal": "Reconocer que la gratitud es una actitud constante del discípulo.",
@@ -5883,6 +6113,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "11/15/2026",
+      "displayTitle": "Alabanza como estilo de vida",
+      "closingSummary": "Alabar no es solo cantar los domingos. Es vivir reconociendo la grandeza de Dios con palabras, decisiones, servicio, obediencia y gratitud diaria.",
+      "teacherGuide": [
+        "Amplia el concepto de alabanza mas alla de musica.",
+        "Conecta adoracion con vida diaria: redes, conversaciones, prioridades y servicio.",
+        "Permite una expresion creativa: poema, oracion, dibujo, canto o compromiso escrito."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Salmo 100:4",
+        "activity": "Alabanza creativa: escribir una oracion, poema o frase que reconozca quien es Dios y como responderle.",
+        "reflection": "Mi vida completa puede convertirse en adoracion a Dios."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la alabanza como estilo de vida.",
+        "homeQuestion": "Como se puede alabar a Dios fuera del culto?",
+        "familyChallenge": "Escoger una cancion o salmo para leer o cantar juntos."
+      },
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "100",
+        "verses": "1-5",
+        "author": "Salmo de accion de gracias",
+        "date": "Periodo del Antiguo Testamento",
+        "context": "El Salmo 100 invita al pueblo de Dios a entrar con gratitud y alabanza, reconociendo su bondad y fidelidad."
+      },
+      "centralIdea": "La alabanza verdadera reconoce a Dios y se expresa en toda la vida del creyente.",
+      "objectives": [
+        "Comprender que alabar es mas que cantar.",
+        "Identificar formas diarias de glorificar a Dios.",
+        "Crear una expresion personal de alabanza."
+      ],
+      "bibleContext": "Salmo 100 llama a adorar con gozo porque Dios es creador, pastor, bueno y fiel por todas las generaciones.",
+      "exposition": [
+        {
+          "title": "La alabanza reconoce quien es Dios",
+          "text": "Adoramos porque El es bueno, fiel y digno."
+        },
+        {
+          "title": "La gratitud abre la puerta",
+          "text": "El salmo une entrada, accion de gracias y alabanza como respuesta del pueblo."
+        },
+        {
+          "title": "La vida puede glorificar",
+          "text": "Nuestras palabras, actitudes y decisiones tambien pueden honrar a Dios."
+        }
+      ],
       "title": "ALABANZA COMO ESTILO DE VIDA",
       "verse": "Salmo 100:4 \"Entrad por sus puertas con acción de gracias, por sus atrios con alabanza.\"",
       "goal": "Comprender que la alabanza es parte del día a día del cristiano.",
@@ -5904,6 +6180,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "11/22/2026",
+      "displayTitle": "Testigos de su obra",
+      "closingSummary": "Los redimidos tienen una historia que contar. Testificar no es presumir perfeccion, sino decir con humildad lo que Dios ha hecho y como su gracia sigue obrando.",
+      "teacherGuide": [
+        "Ayuda a construir testimonios sencillos: antes, encuentro con Dios, cambio y esperanza.",
+        "Evita presionar a compartir detalles sensibles; cada joven decide cuanto contar.",
+        "Enfatiza que el centro del testimonio es Cristo, no el drama personal."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Salmo 107:2",
+        "activity": "Mi testimonio en cuatro frases: antes, Dios obro, hoy, mi esperanza.",
+        "reflection": "Lo que Dios hace en mi puede animar a otros y apuntar a Cristo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el llamado a compartir lo que Dios ha hecho.",
+        "homeQuestion": "Que obra de Dios en nuestra familia podemos contar con gratitud?",
+        "familyChallenge": "Compartir un testimonio breve durante una comida o devocional."
+      },
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "107",
+        "verses": "1-2",
+        "author": "Autor no especificado",
+        "date": "Periodo del Antiguo Testamento",
+        "context": "El salmo llama a los redimidos a dar gracias y declarar la misericordia de Dios."
+      },
+      "centralIdea": "Quienes han recibido la obra de Dios son llamados a contarla con gratitud y humildad.",
+      "objectives": [
+        "Comprender el testimonio como declaracion de la obra de Dios.",
+        "Preparar un testimonio breve centrado en Cristo.",
+        "Identificar una oportunidad segura y respetuosa para compartirlo."
+      ],
+      "bibleContext": "Salmo 107 celebra la misericordia de Dios hacia quienes fueron rescatados. La respuesta natural es gratitud y testimonio.",
+      "exposition": [
+        {
+          "title": "Los redimidos hablan",
+          "text": "La salvacion no se guarda como secreto privado; se cuenta para glorificar a Dios."
+        },
+        {
+          "title": "El testimonio apunta a Dios",
+          "text": "No se trata de impresionar, sino de mostrar misericordia, rescate y gracia."
+        },
+        {
+          "title": "Contar tambien fortalece",
+          "text": "Recordar la obra de Dios anima nuestra fe y puede animar la fe de otros."
+        }
+      ],
       "title": "TESTIGOS DE SU OBRA",
       "verse": "Salmo 107:2 \"Díganlo los redimidos de Jehová...\"",
       "goal": "Motivar a los adolescentes a compartir lo que Dios ha hecho en sus vidas.",
@@ -5925,6 +6247,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "11/29/2026",
+      "displayTitle": "Celebramos a Cristo, nuestra esperanza final",
+      "closingSummary": "La historia termina con Cristo reinando y su pueblo celebrando con El. Esta esperanza futura nos llama a vivir hoy con gozo, fidelidad y adoracion.",
+      "teacherGuide": [
+        "Presenta la esperanza futura sin especulacion; enfoca adoracion y fidelidad.",
+        "Conecta celebracion con vida preparada: Cristo es el centro hoy y por la eternidad.",
+        "Cierra el año con gratitud, testimonios breves y oracion de compromiso."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Apocalipsis 19:7",
+        "activity": "Celebracion de esperanza: escribir una gratitud del año, una verdad aprendida y una decision para seguir a Cristo.",
+        "reflection": "Mi esperanza final no esta en este mundo, sino en Cristo y su reino."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles cerraron celebrando a Cristo y la esperanza de su regreso.",
+        "homeQuestion": "Que verdad de Cristo queremos llevar al nuevo año?",
+        "familyChallenge": "Tener una oracion familiar de gratitud por lo aprendido y vivido."
+      },
+      "biblicalText": {
+        "book": "Apocalipsis",
+        "chapter": "19",
+        "verses": "6-9",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 90-95 d.C.",
+        "context": "Apocalipsis presenta la victoria final de Dios y la celebracion de las bodas del Cordero."
+      },
+      "centralIdea": "Cristo es nuestra esperanza final, y su victoria futura nos llama a vivir con gozo y fidelidad hoy.",
+      "objectives": [
+        "Celebrar que Cristo reina y cumplira su promesa final.",
+        "Recordar verdades aprendidas durante el año.",
+        "Responder con gratitud, adoracion y compromiso."
+      ],
+      "bibleContext": "Apocalipsis 19 mira hacia la celebracion final del pueblo redimido con Cristo. La esperanza futura fortalece la fidelidad presente.",
+      "exposition": [
+        {
+          "title": "La celebracion tiene centro",
+          "text": "El Cordero es el motivo de gozo, adoracion y esperanza."
+        },
+        {
+          "title": "La esperanza mira al futuro",
+          "text": "La victoria final de Cristo sostiene al creyente en el presente."
+        },
+        {
+          "title": "Esperar transforma el hoy",
+          "text": "Quien espera a Cristo vive con fidelidad, gratitud y adoracion."
+        }
+      ],
       "title": "CELEBRAMOS A CRISTO",
       "verse": "Apocalipsis 19:7 \"Gocémonos y alegrémonos... porque han llegado las bodas del Cordero.\"",
       "goal": "Celebrar que Jesús volverá y viviremos con Él eternamente.",
