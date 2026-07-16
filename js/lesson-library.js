@@ -2931,6 +2931,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "11/8/2026",
+      "displayTitle": "Vivo agradecido a Dios",
+      "closingSummary": "La gratitud nos ayuda a reconocer la bondad de Dios en todo momento. Aun cuando no todo es facil, podemos recordar que Dios nos cuida, nos salva y nos acompana.",
+      "teacherGuide": [
+        "Aclara que dar gracias en todo no significa llamar bueno a lo malo, sino confiar en Dios en toda situacion.",
+        "Usa el arbol de gratitud para que los ninos nombren bendiciones concretas.",
+        "Conecta la gratitud con adoracion: damos gracias porque Dios es bueno."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Tesalonicenses 5:18",
+        "activity": "Haz un arbol de gratitud y escribe en cada hoja una razon para dar gracias.",
+        "reflection": "Puedo dar gracias porque Dios es bueno y esta conmigo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos a vivir agradecidos a Dios en todo momento.",
+        "homeQuestion": "Por que cosas podemos dar gracias hoy?",
+        "familyChallenge": "Durante la semana, cada noche mencionen una razon para agradecer a Dios."
+      },
+      "biblicalText": {
+        "book": "1 Tesalonicenses",
+        "chapter": "5",
+        "verses": "18",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 50-51 d.C.",
+        "context": "Pablo anima a una iglesia joven a vivir con gozo, oracion y gratitud como parte de la voluntad de Dios en Cristo."
+      },
+      "centralIdea": "Dios quiere que sus hijos vivan con gratitud porque reconocen su bondad.",
+      "objectives": [
+        "Conocer que la Biblia nos llama a dar gracias.",
+        "Comprender que la gratitud nace de reconocer la bondad de Dios.",
+        "Aplicar esta verdad nombrando razones concretas para agradecer."
+      ],
+      "bibleContext": "1 Tesalonicenses 5 contiene instrucciones breves para la vida cristiana diaria. Dar gracias en todo forma un corazon que mira a Dios en medio de cada circunstancia.",
+      "exposition": [
+        {
+          "title": "Dios es digno de gratitud",
+          "text": "Damos gracias porque Dios es bueno, fiel y generoso."
+        },
+        {
+          "title": "La gratitud cambia la mirada",
+          "text": "Cuando agradecemos, recordamos lo que Dios ha hecho y dejamos de enfocarnos solo en lo que falta."
+        },
+        {
+          "title": "La gratitud se practica",
+          "text": "Podemos aprender a dar gracias con palabras, oraciones, canciones y acciones."
+        }
+      ],
       "title": "AGRADECIDOS A DIOS",
       "verse": "1 Tesalonicenses 5:18 \"Dad gracias en todo, porque esta es la voluntad de Dios.\"",
       "goal": "Que los niños aprendan a ser agradecidos en todo momento.",
@@ -2952,6 +2998,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "11/15/2026",
+      "displayTitle": "Alabo a Dios con alegria",
+      "closingSummary": "La alabanza es responder con gozo a quien Dios es y a lo que El ha hecho. Podemos alabar con canciones, palabras, servicio y una vida que honra al Senor.",
+      "teacherGuide": [
+        "Explica que alabar no es solo cantar; tambien es expresar admiracion y obediencia a Dios.",
+        "Permite alabanza participativa con instrumentos sencillos, palmas o lectura del Salmo 100.",
+        "Enfatiza reverencia y gozo: Dios es cercano y tambien digno de respeto."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Salmo 100:2",
+        "activity": "Haz una maraca o instrumento sencillo y escribe: Alabo a Dios con alegria.",
+        "reflection": "Dios merece mi alabanza porque es grande y bueno."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que podemos alabar a Dios con alegria por quien El es.",
+        "homeQuestion": "Que cancion o frase podemos usar para alabar a Dios esta semana?",
+        "familyChallenge": "Canten o lean juntos un salmo de alabanza."
+      },
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "100",
+        "verses": "1-5",
+        "author": "Salmo de alabanza",
+        "date": "Periodo del Antiguo Testamento",
+        "context": "El Salmo 100 invita a toda la tierra a servir a Dios con alegria y entrar en su presencia con gratitud."
+      },
+      "centralIdea": "Alabamos a Dios con alegria porque El es bueno, fiel y digno de adoracion.",
+      "objectives": [
+        "Conocer que la alabanza honra a Dios.",
+        "Comprender que podemos alabar con alegria y reverencia.",
+        "Aplicar esta verdad expresando alabanza a Dios de una forma sencilla."
+      ],
+      "bibleContext": "El Salmo 100 llama al pueblo a adorar a Dios recordando que El nos hizo, somos su pueblo y su misericordia permanece para siempre.",
+      "exposition": [
+        {
+          "title": "Dios invita a alabar",
+          "text": "La alabanza no es solo para algunos; toda la tierra es llamada a reconocer a Dios."
+        },
+        {
+          "title": "Alabamos con alegria",
+          "text": "Servir y cantar a Dios puede hacerse con gozo porque El es bueno."
+        },
+        {
+          "title": "Alabamos recordando quien es Dios",
+          "text": "Dios es Creador, Pastor, bueno, misericordioso y fiel."
+        }
+      ],
       "title": "ALABAMOS CON ALEGRÍA",
       "verse": "Salmo 100:2 \"Servid a Jehová con alegría; venid ante su presencia con regocijo.\"",
       "goal": "Alabar a Dios con gozo por quién es Él.",
@@ -2973,6 +3065,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "11/22/2026",
+      "displayTitle": "Cuento lo que Dios hizo",
+      "closingSummary": "Compartir un testimonio es contar con sencillez lo que Dios ha hecho. Cuando hablamos de su bondad, animamos a otros y damos gloria al Senor.",
+      "teacherGuide": [
+        "Ayuda a los ninos a formar testimonios simples: Dios me ayudo, Dios me consolo, Dios me enseno, Dios me perdono.",
+        "No fuerces experiencias dramaticas. Un testimonio puede ser sencillo y verdadero.",
+        "Cuida la privacidad y guia a los ninos a hablar de manera breve, clara y centrada en Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Salmo 107:2",
+        "activity": "Dibuja o escribe una frase: Algo que Dios hizo por mi.",
+        "reflection": "Puedo contar a otros lo bueno que Dios ha sido conmigo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que podemos compartir lo que Dios ha hecho en nuestra vida.",
+        "homeQuestion": "Que cosa buena ha hecho Dios por nuestra familia?",
+        "familyChallenge": "Compartan en casa un testimonio breve de gratitud a Dios."
+      },
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "107",
+        "verses": "1-2",
+        "author": "Salmo de accion de gracias",
+        "date": "Periodo del Antiguo Testamento",
+        "context": "El salmo invita a los redimidos a decir publicamente que Dios es bueno y que su misericordia permanece para siempre."
+      },
+      "centralIdea": "Los que han recibido la bondad de Dios pueden contar lo que El ha hecho.",
+      "objectives": [
+        "Conocer que la Biblia anima a los redimidos a hablar de Dios.",
+        "Comprender que un testimonio da gloria a Dios y anima a otros.",
+        "Aplicar esta verdad compartiendo una frase sencilla de gratitud."
+      ],
+      "bibleContext": "Salmo 107 celebra la misericordia de Dios hacia personas rescatadas de diferentes situaciones. La respuesta del pueblo es dar gracias y contar su bondad.",
+      "exposition": [
+        {
+          "title": "Dios hace el bien",
+          "text": "El testimonio comienza recordando que Dios es bueno y misericordioso."
+        },
+        {
+          "title": "Los redimidos hablan",
+          "text": "La Biblia dice: diganlo. Contar lo que Dios hizo ayuda a otros a conocer su amor."
+        },
+        {
+          "title": "El testimonio apunta a Dios",
+          "text": "No contamos para presumir, sino para dar gloria al Senor."
+        }
+      ],
       "title": "COMPARTIMOS LO QUE DIOS HIZO",
       "verse": "Salmo 107:2 \"Díganlo los redimidos de Jehová...\"",
       "goal": "Animar a los niños a contar lo que Dios ha hecho en sus vidas.",
@@ -2994,6 +3132,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "11/29/2026",
+      "displayTitle": "Celebramos la fiesta de Jesus",
+      "closingSummary": "La historia termina con Jesus reinando y su pueblo celebrando con El. Nuestra esperanza no es solo una clase bonita; es vivir para Cristo y esperar la gran celebracion con el Cordero.",
+      "teacherGuide": [
+        "Presenta Apocalipsis con esperanza, no con miedo. El centro de la fiesta es Jesus.",
+        "Conecta la fiesta final con todo el ano: Dios creo, salvo, transforma y promete estar con su pueblo.",
+        "Cierra con celebracion, gratitud y una invitacion sencilla a seguir a Jesus."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Apocalipsis 19:7",
+        "activity": "Haz una invitacion que diga: Jesus me invita a celebrar con El.",
+        "reflection": "Quiero seguir a Jesus y esperar con alegria su Reino."
+      },
+      "parentMaterial": {
+        "summary": "Hoy cerramos celebrando que Jesus es el centro de nuestra esperanza eterna.",
+        "homeQuestion": "Que aprendimos de Jesus este ano?",
+        "familyChallenge": "Den gracias por una leccion aprendida y oren para seguir creciendo en Cristo."
+      },
+      "biblicalText": {
+        "book": "Apocalipsis",
+        "chapter": "19",
+        "verses": "6-9",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 90-95 d.C.",
+        "context": "Juan ve una celebracion celestial donde el pueblo de Dios se goza porque el Cordero reina. La imagen de bodas muestra comunion, victoria y esperanza eterna."
+      },
+      "centralIdea": "Jesus es el centro de la celebracion eterna y la esperanza de su pueblo.",
+      "objectives": [
+        "Conocer que la Biblia presenta una celebracion final con Jesus.",
+        "Comprender que nuestra esperanza esta en Cristo y su Reino.",
+        "Aplicar esta verdad celebrando con gratitud y decidiendo seguir a Jesus."
+      ],
+      "bibleContext": "Apocalipsis fue escrito para animar a creyentes a perseverar. La vision de las bodas del Cordero recuerda que Jesus vencera y su pueblo celebrara con El.",
+      "exposition": [
+        {
+          "title": "Jesus es el Cordero",
+          "text": "El Cordero nos recuerda a Jesus, quien dio su vida para salvarnos."
+        },
+        {
+          "title": "Habra una gran celebracion",
+          "text": "La Biblia muestra el futuro del pueblo de Dios como gozo, comunion y adoracion."
+        },
+        {
+          "title": "Vivimos con esperanza",
+          "text": "Esperar esa celebracion nos anima a seguir a Jesus hoy con fe y alegria."
+        }
+      ],
       "title": "UNA GRAN FIESTA CON JESÚS",
       "verse": "Apocalipsis 19:7 \"Gocémonos y alegrémonos, y démosle gloria... porque han llegado las bodas del Cordero.\"",
       "goal": "Celebrar con alegría que Jesús viene y nos invita a su fiesta eterna.",
