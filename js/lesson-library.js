@@ -2663,6 +2663,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "10/11/2026",
+      "displayTitle": "Amo como Jesus me amo",
+      "closingSummary": "El amor verdadero no es solo una emocion bonita. Jesus nos amo con acciones, sacrificio y perdon, y nos llama a amar a otros de esa misma manera.",
+      "teacherGuide": [
+        "Conecta el amor cristiano con acciones concretas: ayudar, escuchar, compartir, perdonar y hablar con respeto.",
+        "Aclara que amar no significa aprobar todo lo malo, sino tratar a otros con la gracia y verdad de Jesus.",
+        "Usa el circulo del amor para afirmar a cada nino sin comparaciones."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 13:34",
+        "activity": "Haz una tarjeta en forma de corazon y escribe: Jesus me ensena a amar.",
+        "reflection": "Puedo mostrar amor con mis palabras, mis manos y mis decisiones."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Jesus nos manda amar como El nos amo.",
+        "homeQuestion": "Que accion de amor podemos practicar esta semana?",
+        "familyChallenge": "Hagan una accion de amor por alguien sin esperar recompensa."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "13",
+        "verses": "34-35",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus habla con sus discipulos antes de la cruz y les da un nuevo mandamiento: amarse unos a otros como El los amo."
+      },
+      "centralIdea": "El discipulo de Jesus ama a otros porque Jesus lo amo primero.",
+      "objectives": [
+        "Conocer el mandamiento de amar como Jesus.",
+        "Comprender que el amor verdadero se muestra con acciones.",
+        "Aplicar esta verdad haciendo una accion de amor concreta."
+      ],
+      "bibleContext": "Juan 13 ocurre en la ultima cena. Jesus muestra amor humilde lavando los pies de sus discipulos y luego les manda amarse unos a otros como evidencia de que le pertenecen.",
+      "exposition": [
+        {
+          "title": "Jesus nos amo primero",
+          "text": "Nuestro amor nace del amor que recibimos de Jesus."
+        },
+        {
+          "title": "Jesus manda amar",
+          "text": "Amar no es opcional para el discipulo; es parte central de seguir a Cristo."
+        },
+        {
+          "title": "El amor muestra a Jesus",
+          "text": "Cuando amamos como Jesus, otros pueden ver que somos sus discipulos."
+        }
+      ],
       "title": "AMOR VERDADERO",
       "verse": "Juan 13:34 \"Un mandamiento nuevo os doy: que os améis unos a otros.\"",
       "goal": "Aprender que amar como Jesús es el primer fruto del discipulado.",
@@ -2684,6 +2730,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "10/18/2026",
+      "displayTitle": "Gozo que nace en Jesus",
+      "closingSummary": "El gozo cristiano no depende de que todo salga perfecto. Nace de conocer a Jesus, confiar en su amor y recordar que Dios esta con nosotros aun en dias dificiles.",
+      "teacherGuide": [
+        "Distingue felicidad pasajera de gozo en el Senor con ejemplos sencillos.",
+        "Evita minimizar tristezas reales. Ensena que podemos tener gozo y tambien hablar con Dios cuando estamos tristes.",
+        "Invita a los ninos a nombrar razones para regocijarse en Jesus."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Filipenses 4:4",
+        "activity": "Haz una rueda del gozo con dibujos de razones para alegrarte en Jesus.",
+        "reflection": "Mi gozo viene de Jesus, no solo de lo que pasa alrededor."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que el gozo en Jesus permanece aun cuando el dia es dificil.",
+        "homeQuestion": "Que razon tenemos para alegrarnos en el Senor hoy?",
+        "familyChallenge": "Cada dia compartan una razon para dar gracias y regocijarse en Dios."
+      },
+      "biblicalText": {
+        "book": "Filipenses",
+        "chapter": "4",
+        "verses": "4",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo escribe desde la carcel y aun asi anima a la iglesia a regocijarse siempre en el Senor."
+      },
+      "centralIdea": "El gozo del discipulo se encuentra en Jesus y no depende solo de las circunstancias.",
+      "objectives": [
+        "Conocer que Dios nos llama a regocijarnos en El.",
+        "Comprender la diferencia entre gozo y felicidad momentanea.",
+        "Aplicar esta verdad dando gracias a Dios en una situacion dificil."
+      ],
+      "bibleContext": "Filipenses es una carta llena de gozo aunque Pablo estaba preso. Esto muestra que el gozo cristiano no depende de comodidad, sino de Cristo.",
+      "exposition": [
+        {
+          "title": "El gozo esta en el Senor",
+          "text": "Pablo no dice regocijense en que todo sea facil, sino en el Senor."
+        },
+        {
+          "title": "El gozo puede permanecer",
+          "text": "Aunque tengamos problemas, Jesus sigue siendo bueno, cercano y fiel."
+        },
+        {
+          "title": "El gozo se practica",
+          "text": "Recordar, agradecer, cantar y orar nos ayuda a mirar a Jesus."
+        }
+      ],
       "title": "GOZO EN JESÚS",
       "verse": "Filipenses 4:4 \"Regocijaos en el Señor siempre.\"",
       "goal": "Descubrir que el gozo en Jesús no depende de las circunstancias.",
@@ -2705,6 +2797,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "10/25/2026",
+      "displayTitle": "La paz de Jesus cuida mi corazon",
+      "closingSummary": "Jesus da una paz que el mundo no puede dar. Su paz no significa ausencia de problemas, sino confianza en que El esta con nosotros y guarda nuestro corazon.",
+      "teacherGuide": [
+        "Presenta la paz de Jesus como confianza en El, no como negar emociones.",
+        "Usa una respiracion breve con oracion para ayudar a los ninos a practicar calma delante de Dios.",
+        "Conecta miedo, preocupacion y paz con la promesa de Juan 14:27."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 14:27",
+        "activity": "Haz una paloma o nube de papel y escribe: Jesus me da paz.",
+        "reflection": "Cuando tengo miedo, puedo hablar con Jesus y recordar su paz."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Jesus da paz verdadera al corazon.",
+        "homeQuestion": "Que miedo o preocupacion podemos entregar a Jesus?",
+        "familyChallenge": "Practiquen una oracion corta cuando alguien se sienta preocupado."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "14",
+        "verses": "27",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus consuela a sus discipulos antes de la cruz. Les promete su paz y les dice que no se turbe su corazon."
+      },
+      "centralIdea": "Jesus da paz verdadera para confiar en El aun cuando hay problemas.",
+      "objectives": [
+        "Conocer la promesa de paz de Jesus.",
+        "Comprender que la paz de Jesus es diferente a la del mundo.",
+        "Aplicar esta verdad orando cuando haya miedo o preocupacion."
+      ],
+      "bibleContext": "Juan 14 contiene palabras de consuelo. Los discipulos iban a enfrentar confusion, pero Jesus les asegura que su paz puede guardar el corazon.",
+      "exposition": [
+        {
+          "title": "Jesus da su paz",
+          "text": "La paz verdadera viene de Jesus, no solo de que todo este tranquilo."
+        },
+        {
+          "title": "La paz vence el temor",
+          "text": "Jesus dice: no se turbe vuestro corazon. Podemos llevarle nuestros miedos."
+        },
+        {
+          "title": "La paz se recibe confiando",
+          "text": "Cuando recordamos quien es Jesus, nuestro corazon aprende a descansar."
+        }
+      ],
       "title": "PAZ EN MI CORAZÓN",
       "verse": "Juan 14:27 \"La paz os dejo, mi paz os doy... No se turbe vuestro corazón.\"",
       "goal": "Aprender que la paz de Jesús calma nuestros miedos y nos hace confiar.",
@@ -2726,6 +2864,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "11/1/2026",
+      "displayTitle": "Dios me ayuda a hacer el bien",
+      "closingSummary": "El Espiritu Santo ayuda al discipulo a practicar bondad y dominio propio. Dios puede transformar nuestras palabras, reacciones y decisiones para parecernos mas a Jesus.",
+      "teacherGuide": [
+        "Define dominio propio como pedir ayuda a Dios antes de reaccionar mal.",
+        "Define bondad como hacer el bien aun cuando no sea facil.",
+        "Usa escenas cortas para practicar respuestas distintas: respirar, orar, pedir perdon, escoger ayudar."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Galatas 5:22-23",
+        "activity": "Colorea dos tarjetas: una dice Bondad y otra Dominio propio. Dibuja una escena para cada una.",
+        "reflection": "El Espiritu Santo me ayuda a controlar mis reacciones y hacer el bien."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que el Espiritu Santo produce bondad y dominio propio.",
+        "homeQuestion": "En que momento necesitamos practicar dominio propio en casa?",
+        "familyChallenge": "Elijan una frase de ayuda: Dios, ayudame a responder con bondad."
+      },
+      "biblicalText": {
+        "book": "Galatas",
+        "chapter": "5",
+        "verses": "22-23",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 48-55 d.C.",
+        "context": "Pablo describe el fruto que el Espiritu Santo produce en los creyentes, incluyendo bondad y dominio propio."
+      },
+      "centralIdea": "El Espiritu Santo forma bondad y dominio propio en el discipulo de Jesus.",
+      "objectives": [
+        "Conocer que bondad y dominio propio son fruto del Espiritu.",
+        "Comprender que Dios puede transformar nuestras reacciones.",
+        "Aplicar esta verdad practicando una respuesta bondadosa esta semana."
+      ],
+      "bibleContext": "Galatas 5 contrasta vivir segun la carne con caminar por el Espiritu. El fruto no es decoracion religiosa; es el caracter de Cristo formandose en nosotros.",
+      "exposition": [
+        {
+          "title": "La bondad hace el bien",
+          "text": "La bondad busca ayudar, cuidar y tratar a otros con amor."
+        },
+        {
+          "title": "El dominio propio frena la reaccion",
+          "text": "Dios nos ayuda a no ser controlados por enojo, impulso o egoismo."
+        },
+        {
+          "title": "El Espiritu produce fruto",
+          "text": "No cambiamos solos. Dios trabaja en nuestro corazon cuando caminamos con El."
+        }
+      ],
       "title": "DOMINIO PROPIO Y BONDAD",
       "verse": "Gálatas 5:22 \"El fruto del Espíritu es... bondad, dominio propio...\"",
       "goal": "Comprender que el Espíritu Santo nos ayuda a controlar nuestras emociones y ser bondadosos.",
@@ -2733,7 +2917,7 @@ window.PRLessonLibrary = {
       "warmup": "Pide a los niños respirar profundo y pregunta: ¿ven el aire? Explícales que no todo lo real se puede ver.",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo de una nube suave con la frase: Dios está conmigo aunque no lo vea.",
-      "dynamic": "Obra corta con ejemplos de bondad y dominio propio. Manualidad: Tarjetas con escenas para colorear sobre hacer el bien. Oración: \"Espíritu Santo, ayúdame a ser bueno y a controlarme cuando me enojo. Amén.\" CELEBRAMOS A JESÚS - Gratitud, alabanza y testimonio Paso adicional: Juego: un niño cierra los ojos y reconoce una voz conocida. Conecta con escuchar y confiar en Dios aunque no lo veamos.",
+      "dynamic": "Obra corta con ejemplos de bondad y dominio propio. Manualidad: Tarjetas con escenas para colorear sobre hacer el bien. Paso adicional: Juego: un niño cierra los ojos y reconoce una voz conocida. Conecta con escuchar y confiar en Dios aunque no lo veamos.",
       "application": "Antes de dormir, repetir: Dios está conmigo y puedo hablar con Él.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -3687,10 +3871,10 @@ window.PRLessonLibrary = {
       "materials": "Biblia, libreta o notas del celular, pizarra o papel grande, marcadores.",
       "visual": "Recurso visual: balanza con Santidad y Justicia, y debajo: decisiones diarias.",
       "dynamic": "Dramatizaciones de reacciones correctas vs. impulsivas. Paso adicional: Estudio de caso: presentar dos situaciones reales de escuela/redes y evaluar cómo respondería alguien que toma en serio la santidad de Dios.",
-      "application": "¿Mis reacciones muestran que Cristo está en mí? Oración: \"Espíritu Santo, ayúdame a dominar mis impulsos y ser bueno con todos. Amén.\" CELEBRAMOS A JESÚS - Vivimos para su gloria",
+      "application": "¿Mis reacciones muestran que Cristo está en mí?",
       "questions": [
         "¿Mis reacciones muestran que Cristo está en mí?",
-        "Oración: \"Espíritu Santo, ayúdame a dominar mis impulsos y ser bueno con todos. Amén.\" CELEBRAMOS A JESÚS - Vivimos para su gloria"
+        "¿Cómo puedo responder con bondad y dominio propio?"
       ],
       "challenge": "Identificar una decisión donde debo actuar con integridad esta semana.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
