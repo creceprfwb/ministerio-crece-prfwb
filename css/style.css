@@ -1273,6 +1273,180 @@ body {
   font-size: 0.82rem;
 }
 
+.schedule-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.schedule-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.teacher-list,
+.schedule-board {
+  display: grid;
+  gap: 12px;
+}
+
+.teacher-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e4eaf5;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.teacher-card div {
+  display: grid;
+  gap: 2px;
+}
+
+.teacher-card span,
+.schedule-contact {
+  color: #667085;
+  font-size: 0.86rem;
+}
+
+.schedule-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.schedule-stats div {
+  display: grid;
+  place-items: center;
+  min-height: 92px;
+  border: 1px solid #d9e7ff;
+  border-radius: 10px;
+  background: #f7fbff;
+}
+
+.schedule-stats strong {
+  color: var(--primary);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.communication-note {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 9px;
+  color: #155724;
+  background: #eaf8ee;
+  font-size: 0.9rem;
+}
+
+.schedule-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.schedule-filters .form-select {
+  min-width: 170px;
+}
+
+.schedule-card {
+  display: grid;
+  gap: 13px;
+  padding: 16px;
+  border: 1px solid #d9e2f3;
+  border-left: 5px solid #98a2b3;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.schedule-card.status-asignado {
+  border-left-color: #0d6efd;
+}
+
+.schedule-card.status-confirmado {
+  border-left-color: #198754;
+}
+
+.schedule-card.status-completado {
+  border-left-color: #6f42c1;
+}
+
+.schedule-card-head,
+.schedule-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.schedule-card-head span:first-child {
+  color: #667085;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.schedule-card h3 {
+  margin: 0;
+  color: #0b1f3a;
+  font-size: 1.25rem;
+}
+
+.schedule-status {
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: #344054;
+  background: #eef2f7;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.schedule-lesson {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  color: #0b3d91;
+  font-weight: 800;
+}
+
+.schedule-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr)) auto;
+  gap: 10px;
+  align-items: end;
+}
+
+.schedule-fields label {
+  display: grid;
+  gap: 5px;
+  color: #344054;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.schedule-material {
+  display: flex !important;
+  align-items: center;
+  min-height: 38px;
+  padding-bottom: 2px;
+}
+
+.empty-inline {
+  padding: 18px;
+  border: 1px dashed #c8d6ee;
+  border-radius: 10px;
+  color: #667085;
+  background: #f8fbff;
+  text-align: center;
+}
+
 @media (max-width: 900px) {
   .hero-shell,
   .page-shell {
@@ -1301,6 +1475,17 @@ body {
 
   .reward-form {
     grid-template-columns: 1fr;
+  }
+
+  .schedule-fields,
+  .schedule-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-hero,
+  .schedule-filters {
+    align-items: stretch;
+    flex-direction: column;
   }
 }
 
@@ -1364,6 +1549,9 @@ body {
   .no-print,
   .admin-nav,
   .admin-hero,
+  .teacher-form,
+  .schedule-filters,
+  .schedule-actions,
   .library-control-card,
   .lesson-editor-panel,
   .lesson-preview-actions,

@@ -5,6 +5,8 @@
   churches/{churchId}/students
   churches/{churchId}/attendance
   churches/{churchId}/lessons
+  churches/{churchId}/teachers
+  churches/{churchId}/schedule
 
   Cada usuario tiene un perfil en users/{uid} con su churchId y role.
 */
@@ -270,5 +272,58 @@ window.PRFirebase = {
 
     const doc = await collection.doc(group).get();
     return doc.exists ? doc.data() : null;
+  },
+
+  async saveTeacher(teacher) {
+    await requireAuth();
+    const collection = getChurchCollection("teachers");
+
+    if (!collection) {
+      return;
+    }
+
+    await collection.doc(teacher.id).set({
+      ...teacher,
+      churchId: currentProfile.churchId
+    }, { merge: true });
+  },
+
+  async getTeachers() {
+    await requireAuth();
+    const collection = getChurchCollection("teachers");
+
+    if (!collection) {
+      return [];
+    }
+
+    const snapshot = await collection.get();
+    return sortByCreatedAtDesc(snapshot.docs.map((doc) => doc.data()));
+  },
+
+  async saveScheduleEntry(entry) {
+    await requireAuth();
+    const collection = getChurchCollection("schedule");
+
+    if (!collection) {
+      return;
+    }
+
+    await collection.doc(entry.id).set({
+      ...entry,
+      churchId: currentProfile.churchId
+    }, { merge: true });
+  },
+
+  async getSchedule() {
+    await requireAuth();
+    const collection = getChurchCollection("schedule");
+
+    if (!collection) {
+      return [];
+    }
+
+    const snapshot = await collection.get();
+    return snapshot.docs.map((doc) => doc.data())
+      .sort((a, b) => new Date(a.dateIso || 0) - new Date(b.dateIso || 0));
   }
 };
