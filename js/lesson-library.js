@@ -100,6 +100,25 @@ window.PRLessonLibrary = {
       "group": "ninos",
       "date": "1/11/2026",
       "displayTitle": "Dios esta presente aunque no lo vemos",
+      "closingSummary": "Aunque no vemos a Dios con nuestros ojos, El es real, eterno y cercano. Podemos hablar con Dios en cualquier lugar porque El no esta limitado por espacio, tiempo ni distancia.",
+      "teacherGuide": [
+        "Usa ejemplos sencillos de cosas reales que no se ven, como el aire, sin decir que Dios es igual al aire.",
+        "Repite la verdad central: no veo a Dios, pero Dios esta conmigo y me escucha.",
+        "Cierra con una oracion breve para que los ninos practiquen hablar con Dios con confianza."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 4:24",
+        "weeklyReading": "Leer Salmos 139:7-10 con un adulto.",
+        "activity": "Dibuja una nube o un cielo y escribe: Dios esta conmigo aunque no lo vea.",
+        "homework": "Antes de dormir, decir una oracion corta: Dios, gracias porque estas conmigo.",
+        "reflection": "Dios es real, eterno y puedo hablar con El."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los ninos aprendieron que Dios es Espiritu, eterno y esta presente aunque no lo veamos.",
+        "homeQuestion": "Donde puedes recordar que Dios esta contigo esta semana?",
+        "familyChallenge": "Orar juntos antes de dormir por tres noches, recordando que Dios escucha.",
+        "parentNote": "Ayude al nino a entender que no ver a Dios no significa que Dios este lejos."
+      },
       "biblicalText": {
         "book": "Juan",
         "chapter": "4",
@@ -151,6 +170,25 @@ window.PRLessonLibrary = {
       "group": "ninos",
       "date": "1/18/2026",
       "displayTitle": "Cuando Dios siempre hace lo correcto",
+      "closingSummary": "Dios es santo y justo: siempre hace lo correcto. Como Dios es bueno, podemos confiar en sus mandamientos y escoger obedecer aunque nadie nos este mirando.",
+      "teacherGuide": [
+        "Manten el tema en decisiones sencillas que los ninos entienden: decir la verdad, compartir, obedecer y pedir perdon.",
+        "Explica que Dios no es injusto ni caprichoso; El siempre hace lo correcto.",
+        "Evita que la clase se vuelva solo moralismo: conecta la obediencia con amar y honrar a Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Salmos 89:14",
+        "weeklyReading": "Leer 1 Pedro 1:15-16 con un adulto.",
+        "activity": "Dibuja una balanza y escribe dos decisiones correctas que puedes hacer esta semana.",
+        "homework": "Escoger una decision correcta para hacer aunque nadie te este mirando.",
+        "reflection": "Dios siempre hace lo correcto y me ayuda a obedecer."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los ninos aprendieron que Dios es santo, justo y siempre hace lo correcto.",
+        "homeQuestion": "Que decision correcta fue dificil tomar esta semana?",
+        "familyChallenge": "Celebrar una decision honesta del nino y orar por un corazon obediente.",
+        "parentNote": "Refuerce la obediencia como una respuesta de amor a Dios, no solo como evitar castigo."
+      },
       "biblicalText": {
         "book": "Salmos",
         "chapter": "89",
@@ -202,6 +240,25 @@ window.PRLessonLibrary = {
       "group": "ninos",
       "date": "1/25/2026",
       "displayTitle": "El amor que corre a perdonar",
+      "closingSummary": "Dios nos ama con misericordia y perdona al que vuelve a El. Como recibimos su amor, podemos mostrar amor, pedir perdon y perdonar a otros.",
+      "teacherGuide": [
+        "Cuenta la historia del hijo prodigo con lenguaje sencillo y enfoca el amor del padre.",
+        "Aclara que misericordia significa que Dios nos recibe con perdon cuando volvemos arrepentidos.",
+        "Conecta la clase con acciones pequenas de amor en casa, escuela e iglesia."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Juan 4:8",
+        "weeklyReading": "Leer Lucas 15:20-24 con un adulto.",
+        "activity": "Decora un corazon y escribe dentro una forma de mostrar amor esta semana.",
+        "homework": "Hacer una accion de amor por alguien de la familia sin que se lo pidan.",
+        "reflection": "Dios me ama y me ensena a amar a otros."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los ninos aprendieron que Dios es amor y misericordia, y que su perdon nos ensena a amar.",
+        "homeQuestion": "Como podemos mostrar amor cuando alguien se equivoca?",
+        "familyChallenge": "Practicar pedir perdon y perdonar durante la semana.",
+        "parentNote": "Use momentos cotidianos para recordar que el amor de Dios produce amor en la familia."
+      },
       "biblicalText": {
         "book": "1 Juan",
         "chapter": "4",
