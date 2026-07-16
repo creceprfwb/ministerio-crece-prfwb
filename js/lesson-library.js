@@ -3,6 +3,7 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "1/4/2026",
+      "displayTitle": "Cuando la creacion nos habla de Dios",
       "title": "Cuando la creacion nos habla de Dios",
       "verse": "Salmos 19:1 \"Los cielos cuentan la gloria de Dios.\"",
       "biblicalText": {
