@@ -4191,6 +4191,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "4/26/2026",
+      "displayTitle": "La promesa que encuentra su centro en Cristo",
+      "closingSummary": "Desde Genesis hasta los profetas, Dios anuncio que enviaria un Salvador. Jesus no aparece como un plan improvisado, sino como el cumplimiento fiel del plan eterno de Dios para rescatar a su pueblo.",
+      "teacherGuide": [
+        "Presenta la Biblia como una sola historia de redencion que apunta a Cristo.",
+        "Ayuda a los juveniles a conectar promesas del Antiguo Testamento con el cumplimiento en Jesus.",
+        "Lleva la aplicacion a prioridades reales: escuela, amistades, redes, familia y decisiones."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Isaias 9:6",
+        "activity": "Pistas profeticas: buscar textos del Antiguo Testamento que anuncian al Salvador y explicar como se cumplen en Jesus.",
+        "reflection": "Dios cumple sus promesas; puedo confiar en su plan aunque no vea todo el camino."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron que Jesus es el cumplimiento de la promesa del Salvador.",
+        "homeQuestion": "Que promesa de Dios te ayuda a confiar cuando hay incertidumbre?",
+        "familyChallenge": "Leer Lucas 24:44-47 y conversar sobre como toda la Biblia apunta a Cristo."
+      },
+      "biblicalText": {
+        "book": "Isaias",
+        "chapter": "9",
+        "verses": "6-7",
+        "author": "El profeta Isaias",
+        "date": "Siglo VIII a.C.",
+        "context": "Isaias anuncio esperanza a un pueblo en oscuridad: un Rey prometido que traeria justicia, paz y gobierno eterno."
+      },
+      "centralIdea": "Dios prometio desde el principio un Salvador, y Jesus cumple perfectamente el plan de redencion.",
+      "objectives": [
+        "Reconocer que el plan de salvacion nace en el corazon de Dios.",
+        "Identificar promesas biblicas que apuntan a Jesus.",
+        "Responder con confianza y adoracion al Dios que cumple su Palabra."
+      ],
+      "bibleContext": "Genesis 3:15 anuncia la primera esperanza de redencion despues del pecado. Los profetas amplian esa promesa, y el Nuevo Testamento presenta a Jesus como su cumplimiento perfecto.",
+      "exposition": [
+        {
+          "title": "Dios prometio rescate",
+          "text": "El pecado trajo ruptura, pero Dios anuncio victoria sobre el mal desde el inicio de la historia humana."
+        },
+        {
+          "title": "Los profetas apuntaron a Cristo",
+          "text": "Isaias presenta al Salvador como un Rey justo, poderoso y eterno, no como una solucion temporal."
+        },
+        {
+          "title": "Jesus ordena nuestras prioridades",
+          "text": "Si Jesus es el centro de la historia de Dios, tambien debe ser el centro de nuestra vida diaria."
+        }
+      ],
       "title": "LA PROMESA DEL SALV ADOR",
       "verse": "Isaías 9:6 \"Porque un niño nos es nacido... y se llamará su nombre Admirable, Consejero...\"",
       "goal": "Entender que desde el principio, Dios anunció su plan de salvación enviando al Mesías.",
@@ -4211,6 +4257,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "5/3/2026",
+      "displayTitle": "La cruz: justicia, amor y sustitucion",
+      "closingSummary": "La cruz muestra la gravedad del pecado y la profundidad del amor de Dios. Jesus tomo nuestro lugar, murio conforme a las Escrituras y abrio el camino para ser reconciliados con Dios.",
+      "teacherGuide": [
+        "Evita presentar la cruz solo como un simbolo emocional; explica sustitucion, justicia y amor.",
+        "Permite preguntas honestas sobre pecado, culpa, perdon y nueva vida.",
+        "Conecta gratitud con obediencia: Jesus no murio para dejarnos iguales."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Corintios 15:3",
+        "activity": "Carta de gratitud: escribir una oracion breve a Jesus respondiendo a su sacrificio.",
+        "reflection": "La cruz me recuerda que soy amado, perdonado y llamado a vivir para Cristo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el significado de la muerte de Jesus por nuestros pecados.",
+        "homeQuestion": "Como cambia nuestra semana recordar que Cristo murio por nosotros?",
+        "familyChallenge": "Leer Romanos 5:8 y dar gracias juntos por la gracia de Dios."
+      },
+      "biblicalText": {
+        "book": "1 Corintios",
+        "chapter": "15",
+        "verses": "3-4",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 53-55 d.C.",
+        "context": "Pablo resume el evangelio recibido y anunciado: Cristo murio por nuestros pecados, fue sepultado y resucito conforme a las Escrituras."
+      },
+      "centralIdea": "Jesus murio por nuestros pecados, tomando nuestro lugar para reconciliarnos con Dios.",
+      "objectives": [
+        "Comprender que el pecado requiere justicia y no puede ignorarse.",
+        "Explicar que Jesus murio voluntariamente como sustituto por nosotros.",
+        "Responder a la cruz con arrepentimiento, gratitud y obediencia."
+      ],
+      "bibleContext": "1 Corintios 15 presenta el evangelio como el fundamento de la fe cristiana. La muerte de Cristo no fue accidente, sino cumplimiento de las Escrituras y acto salvador de Dios.",
+      "exposition": [
+        {
+          "title": "El pecado exige justicia",
+          "text": "La cruz revela que el pecado no es pequeno; separa de Dios y necesita una respuesta santa."
+        },
+        {
+          "title": "Cristo tomo nuestro lugar",
+          "text": "Jesus no murio por sus propios pecados, sino por los nuestros, ofreciendo un sacrificio suficiente."
+        },
+        {
+          "title": "La cruz produce nueva vida",
+          "text": "Quien entiende la cruz no vive igual; responde con fe, gratitud y obediencia diaria."
+        }
+      ],
       "title": "JESÚS MURIÓ POR NUESTROS PECADOS",
       "verse": "1 Corintios 15:3 \"...Cristo murió por nuestros pecados, conforme a las Escrituras.\"",
       "goal": "Comprender la cruz como el centro del plan de redención: Jesús murió por amor y por nosotros.",
@@ -4231,6 +4323,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "5/10/2026",
+      "displayTitle": "La tumba vacia cambia todo",
+      "closingSummary": "Jesus resucito corporalmente y vive hoy. La resurreccion confirma que su sacrificio fue aceptado, que la muerte fue vencida y que nuestra esperanza no depende de emociones sino de una verdad historica y eterna.",
+      "teacherGuide": [
+        "Presenta la resurreccion como el centro de la esperanza cristiana, no como un detalle final.",
+        "Invita a los juveniles a pensar como seria la fe cristiana si Cristo no hubiera resucitado.",
+        "Aplica la verdad a temor, desanimo, culpa y decisiones diarias."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Lucas 24:6",
+        "activity": "Entrevista ficticia: representar a Maria, Pedro u otros testigos y responder que cambio al ver al Cristo resucitado.",
+        "reflection": "Jesus vive; por eso mi fe tiene fundamento y mi esperanza tiene futuro."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la resurreccion de Jesus y su importancia para la vida cristiana.",
+        "homeQuestion": "Que temor cambia cuando recordamos que Jesus vencio la muerte?",
+        "familyChallenge": "Leer 1 Corintios 15:14-20 y mencionar una razon para tener esperanza."
+      },
+      "biblicalText": {
+        "book": "Lucas",
+        "chapter": "24",
+        "verses": "1-8",
+        "author": "Lucas, medico y colaborador de Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Lucas registra el testimonio de la tumba vacia y el anuncio angelical de que Jesus habia resucitado como El mismo habia dicho."
+      },
+      "centralIdea": "La resurreccion de Jesus confirma su victoria y da esperanza viva a sus seguidores.",
+      "objectives": [
+        "Afirmar que Jesus resucito verdaderamente y vive hoy.",
+        "Comprender por que la resurreccion confirma el evangelio.",
+        "Vivir con esperanza y valentia porque Cristo vencio la muerte."
+      ],
+      "bibleContext": "Lucas 24 muestra sorpresa, recuerdo y fe. Las mujeres encuentran la tumba vacia y reciben la noticia que transforma la historia: Jesus ha resucitado.",
+      "exposition": [
+        {
+          "title": "Jesus resucito verdaderamente",
+          "text": "La tumba vacia no es una idea simbolica; anuncia la victoria real de Cristo sobre la muerte."
+        },
+        {
+          "title": "La resurreccion confirma el evangelio",
+          "text": "Si Cristo vive, su identidad, su sacrificio y sus promesas son verdaderas."
+        },
+        {
+          "title": "La esperanza se vive hoy",
+          "text": "La resurreccion fortalece al creyente para enfrentar culpa, miedo, dolor y presion con fe."
+        }
+      ],
       "title": "JESÚS RESUCITÓ Y VIVE HOY",
       "verse": "Lucas 24:6 \"No está aquí, sino que ha resucitado.\"",
       "goal": "Afirmar que Jesús resucitó corporalmente y vive hoy, dándonos esperanza y victoria.",
@@ -4251,6 +4389,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "5/17/2026",
+      "displayTitle": "Esperanza activa: Jesus volvera",
+      "closingSummary": "Jesus ascendio y prometio volver. La esperanza de su regreso no produce miedo ni pasividad, sino una vida preparada, santa, fiel y comprometida con la mision mientras esperamos al Rey.",
+      "teacherGuide": [
+        "Manten el enfoque en esperanza y fidelidad, no en especulacion de fechas.",
+        "Ayuda a distinguir estar preparado de vivir con miedo religioso.",
+        "Conecta la segunda venida con santidad, servicio y evangelismo."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Hechos 1:11",
+        "activity": "Mural de preparacion: escribir acciones concretas que reflejan que esperamos a Cristo.",
+        "reflection": "Esperar a Jesus significa vivir hoy con fe, obediencia y proposito."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron la promesa del regreso de Jesus y la esperanza cristiana.",
+        "homeQuestion": "Que significa vivir preparado para Jesus esta semana?",
+        "familyChallenge": "Escoger una accion de servicio o testimonio como familia."
+      },
+      "biblicalText": {
+        "book": "Hechos",
+        "chapter": "1",
+        "verses": "9-11",
+        "author": "Lucas, medico y colaborador de Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Despues de la resurreccion, Jesus asciende al cielo y los angeles anuncian que volvera de la misma manera."
+      },
+      "centralIdea": "Jesus volvera por su iglesia, y esa esperanza nos llama a vivir preparados, fieles y en mision.",
+      "objectives": [
+        "Conocer la promesa biblica del regreso de Jesus.",
+        "Rechazar la especulacion y abrazar una esperanza obediente.",
+        "Identificar una forma concreta de vivir preparados esta semana."
+      ],
+      "bibleContext": "Hechos 1 une la ascension de Jesus con la mision de la iglesia. Mientras esperamos su regreso, vivimos como testigos llenos del Espiritu.",
+      "exposition": [
+        {
+          "title": "Jesus reina y volvera",
+          "text": "La ascension no significa ausencia sin control; Cristo reina y cumplira su promesa."
+        },
+        {
+          "title": "Esperar no es adivinar fechas",
+          "text": "La Biblia llama a vigilancia, fidelidad y santidad, no a curiosidad vacia."
+        },
+        {
+          "title": "La esperanza activa la mision",
+          "text": "Mientras Cristo vuelve, la iglesia anuncia el evangelio y vive como luz en el mundo."
+        }
+      ],
       "title": "JESÚS VOLVERÁ POR SU IGLESIA",
       "verse": "Hechos 1:11 \"Este mismo Jesús... vendrá así como le habéis visto ir al cielo.\"",
       "goal": "Saber que Jesús prometió regresar, y debemos vivir preparados con fe y obediencia.",
