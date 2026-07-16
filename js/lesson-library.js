@@ -1859,6 +1859,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "7/19/2026",
+      "displayTitle": "Jesus me envia a hablar de El",
+      "closingSummary": "Jesus envio a sus discipulos a hacer mas discipulos. Los ninos tambien pueden participar contando con sencillez lo que Jesus ha hecho y mostrando su amor.",
+      "teacherGuide": [
+        "Presenta la mision como una invitacion gozosa, no como una carga pesada.",
+        "Practica frases sencillas que un nino pueda decir: Jesus me ama, Jesus escucha, Jesus perdona.",
+        "Recalca que hablar de Jesus debe ir unido a amar, escuchar y respetar a otros."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 28:19",
+        "activity": "Dibuja un mapa o tu escuela/casa y escribe: Jesus me envia a compartir su amor.",
+        "reflection": "Puedo hablar de Jesus con palabras sencillas y acciones de amor."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Jesus envia a sus discipulos a hablar de El.",
+        "homeQuestion": "A quien podemos mostrar el amor de Jesus esta semana?",
+        "familyChallenge": "Oren por una persona y busquen una forma sencilla de animarla."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "28",
+        "verses": "18-20",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "Jesus resucitado da la Gran Comision a sus discipulos. El manda a hacer discipulos, bautizar y ensenar, prometiendo estar con ellos."
+      },
+      "centralIdea": "Jesus envia a sus seguidores a compartir el evangelio y hacer discipulos.",
+      "objectives": [
+        "Conocer que Jesus dio una mision a sus discipulos.",
+        "Comprender que todos los creyentes pueden hablar de Jesus.",
+        "Aplicar esta verdad orando por alguien y mostrando el amor de Cristo."
+      ],
+      "bibleContext": "Mateo termina con Jesus resucitado hablando con autoridad. La mision no depende de nuestra fuerza, sino de la autoridad de Jesus y su promesa de estar con nosotros.",
+      "exposition": [
+        {
+          "title": "Jesus tiene autoridad",
+          "text": "La mision comienza con Jesus, no con nuestras ideas. El resucitado tiene toda autoridad."
+        },
+        {
+          "title": "Jesus envia a sus discipulos",
+          "text": "Hacer discipulos significa ayudar a otros a conocer, seguir y obedecer a Jesus."
+        },
+        {
+          "title": "Jesus esta con nosotros",
+          "text": "No compartimos solos. Jesus prometio estar con sus discipulos todos los dias."
+        }
+      ],
       "title": "JESÚS NOS ENVÍA A HABLAR DE ÉL",
       "verse": "Mateo 28:19 \"Vayan y hagan discípulos a todas las naciones...\"",
       "goal": "Que los niños entiendan que pueden hablar de Jesús a otros.",
@@ -1879,7 +1925,120 @@ window.PRLessonLibrary = {
     },
     {
       "group": "ninos",
+      "date": "7/26/2026",
+      "displayTitle": "Todos necesitan conocer a Jesus",
+      "closingSummary": "El evangelio es una buena noticia para todos. Dios ama al mundo, y por eso la iglesia comparte a Jesus con vecinos, amigos, familia y personas de otros lugares.",
+      "teacherGuide": [
+        "Habla de mision global con sensibilidad: Dios ama a personas de todo pueblo, idioma y lugar.",
+        "Usa un mapa o globo para mostrar que el amor de Dios no se limita a nuestra iglesia o comunidad.",
+        "Invita a los ninos a orar por alguien que necesita conocer a Jesus."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 3:16",
+        "activity": "Dibuja el mundo con corazones y escribe: Jesus es buena noticia para todos.",
+        "reflection": "Dios ama a las personas y quiere que conozcan a Jesus."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que todos necesitan conocer a Jesus.",
+        "homeQuestion": "Por que el evangelio es una buena noticia para todas las personas?",
+        "familyChallenge": "Oren por un misionero, una familia o un amigo que necesita conocer a Jesus."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "3",
+        "verses": "16; apoyo: Romanos 10:14-15",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus explica el amor de Dios por el mundo. Pablo luego pregunta como las personas oiran si nadie les anuncia el evangelio."
+      },
+      "centralIdea": "Todas las personas necesitan escuchar la buena noticia de Jesus.",
+      "objectives": [
+        "Conocer que Dios ama al mundo.",
+        "Comprender que la iglesia comparte el evangelio para que otros conozcan a Jesus.",
+        "Aplicar esta verdad orando por personas que necesitan escuchar de Cristo."
+      ],
+      "bibleContext": "Juan 3:16 resume el amor de Dios y su regalo en Cristo. Romanos 10 recuerda que el mensaje debe ser anunciado para que otros puedan oir y creer.",
+      "exposition": [
+        {
+          "title": "Dios ama al mundo",
+          "text": "El amor de Dios alcanza a personas de toda edad, cultura y lugar."
+        },
+        {
+          "title": "Jesus es la buena noticia",
+          "text": "La mejor noticia es que Jesus vino a salvarnos y darnos vida eterna."
+        },
+        {
+          "title": "La iglesia anuncia",
+          "text": "Dios usa a su pueblo para orar, servir y contar a otros acerca de Jesus."
+        }
+      ],
+      "title": "TODOS NECESITAN CONOCER A JESUS",
+      "verse": "Juan 3:16 \"Porque de tal manera amo Dios al mundo...\"",
+      "goal": "Que los ninos comprendan que el evangelio es para todas las personas.",
+      "summary": "- Dios ama al mundo. - Jesus es la buena noticia para todos. - Podemos orar y compartir su amor.",
+      "warmup": "Muestra un mapa o una imagen del mundo y pregunta: ¿A que lugares creen que Dios ama?",
+      "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, mapa o globo.",
+      "visual": "Mapa del mundo con corazones y la frase: Jesus es buena noticia para todos.",
+      "dynamic": "Oracion por el mundo: cada nino escoge un lugar o persona por quien orar. Manualidad: Globo de papel con corazones.",
+      "application": "Orar por una persona que necesita conocer a Jesus.",
+      "questions": [
+        "¿Por que todos necesitan conocer a Jesus?",
+        "¿Por quien puedo orar esta semana?"
+      ],
+      "challenge": "Orar por una persona que necesita conocer a Jesus.",
+      "teacherNotes": "Mantén el enfoque en el amor de Dios y en acciones sencillas que los ninos pueden practicar.",
+      "prayer": "\"Jesus, gracias porque amas al mundo. Ayudame a compartir tu amor. Amen.\"",
+      "pdf": "clases-originales/ninos/Clases Biblicas 3-10.pdf"
+    },
+    {
+      "group": "ninos",
       "date": "8/2/2026",
+      "displayTitle": "Uso mis dones para Jesus",
+      "closingSummary": "Dios da dones y talentos para servir a otros y glorificar a Cristo. Cada nino puede usar lo que Dios le dio para amar, ayudar y hablar de Jesus.",
+      "teacherGuide": [
+        "Ayuda a los ninos a identificar dones sencillos: cantar, ayudar, dibujar, animar, escuchar, ordenar o invitar.",
+        "Evita comparar talentos. Enfatiza que cada don viene de Dios y se usa para servir.",
+        "Conecta 1 Pedro 4:10 con servicio practico en la iglesia, casa y escuela."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "1 Pedro 4:10",
+        "activity": "Dibuja una corona o medalla y escribe un talento que puedes usar para Dios.",
+        "reflection": "Dios me dio dones para servir a otros y hablar de Jesus."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que los dones se usan para servir a otros y glorificar a Dios.",
+        "homeQuestion": "Que talento o habilidad puedes usar para ayudar a alguien?",
+        "familyChallenge": "Ayuden al nino a usar un don esta semana en casa, iglesia o escuela."
+      },
+      "biblicalText": {
+        "book": "1 Pedro",
+        "chapter": "4",
+        "verses": "10-11",
+        "author": "El apostol Pedro",
+        "date": "Aproximadamente 60-64 d.C.",
+        "context": "Pedro anima a los creyentes a servirse unos a otros con los dones que recibieron de Dios, para que Dios sea glorificado."
+      },
+      "centralIdea": "Dios nos da dones para servir a otros y glorificar a Jesus.",
+      "objectives": [
+        "Conocer que Dios da dones a sus hijos.",
+        "Comprender que los dones son para servir, no para presumir.",
+        "Aplicar esta verdad usando un talento para bendecir a alguien."
+      ],
+      "bibleContext": "1 Pedro fue escrito a creyentes que necesitaban vivir fielmente en medio de dificultades. Pedro les recuerda que cada don recibido debe administrarse para servir a otros.",
+      "exposition": [
+        {
+          "title": "Dios da dones",
+          "text": "Todo talento bueno viene de Dios. El nos hizo diferentes para servir de muchas maneras."
+        },
+        {
+          "title": "Los dones son para otros",
+          "text": "No usamos los dones para presumir, sino para ayudar, animar y mostrar el amor de Jesus."
+        },
+        {
+          "title": "Dios recibe la gloria",
+          "text": "Cuando servimos con lo que Dios nos dio, otros pueden ver su bondad."
+        }
+      ],
       "title": "PUEDO USAR MIS DONES PARA HABLAR DE JESÚS",
       "verse": "1 Pedro 4:10 \"Cada uno según el don que ha recibido, minístrelo a los otros...\"",
       "goal": "Que los niños descubran que sus talentos pueden ser usados para glorificar a Dios.",
@@ -1901,6 +2060,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "8/9/2026",
+      "displayTitle": "Mi iglesia comparte a Jesus",
+      "closingSummary": "La iglesia es un equipo en mision. Juntos oramos, servimos, damos testimonio y compartimos el amor de Jesus con nuestra comunidad y el mundo.",
+      "teacherGuide": [
+        "Presenta la iglesia como un equipo donde cada persona participa.",
+        "Conecta Hechos 1:8 con testimonio: contar lo que Jesus ha hecho y vivir como sus seguidores.",
+        "Invita a imaginar una accion misionera sencilla de la clase: orar, hacer tarjetas, invitar o servir."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Hechos 1:8",
+        "activity": "Dibuja tu iglesia como un equipo y escribe: Compartimos a Jesus juntos.",
+        "reflection": "No estoy solo; mi iglesia me ayuda a vivir la mision de Jesus."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que la iglesia comparte a Jesus como un equipo.",
+        "homeQuestion": "Como puede nuestra familia apoyar la mision de la iglesia?",
+        "familyChallenge": "Participen en una accion de servicio, oracion o invitacion esta semana."
+      },
+      "biblicalText": {
+        "book": "Hechos",
+        "chapter": "1",
+        "verses": "8",
+        "author": "Lucas",
+        "date": "Aproximadamente 60-80 d.C.",
+        "context": "Antes de ascender, Jesus promete el poder del Espiritu Santo para que sus discipulos sean testigos en todo lugar."
+      },
+      "centralIdea": "La iglesia recibe poder del Espiritu Santo para ser testigo de Jesus.",
+      "objectives": [
+        "Conocer que Jesus llama a la iglesia a ser testigo.",
+        "Comprender que la mision se vive juntos y con la ayuda del Espiritu Santo.",
+        "Aplicar esta verdad participando en una accion sencilla de mision."
+      ],
+      "bibleContext": "Hechos 1:8 prepara el libro de Hechos: el evangelio se extiende desde Jerusalen hasta lo ultimo de la tierra por el poder del Espiritu Santo.",
+      "exposition": [
+        {
+          "title": "Jesus promete poder",
+          "text": "La mision no depende solo de fuerza humana. El Espiritu Santo ayuda a la iglesia."
+        },
+        {
+          "title": "La iglesia da testimonio",
+          "text": "Ser testigo es contar y mostrar lo que Jesus ha hecho."
+        },
+        {
+          "title": "La mision se vive juntos",
+          "text": "La iglesia ora, sirve, envia, ayuda y comparte el evangelio como un equipo."
+        }
+      ],
       "title": "MI IGLESIA ME AYUDA A COMPARTIR A JESÚS",
       "verse": "",
       "goal": "Enseñar que la iglesia es un equipo de creyentes que juntos comparten a Jesús. Versáculo clave: Hechos 1:8 \"Y me seréis testigos...\"",
@@ -1908,7 +2113,7 @@ window.PRLessonLibrary = {
       "warmup": "Muestra un corazón de papel y pregunta: ¿cómo sabemos que alguien nos ama?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo de un corazón grande con una cruz en el centro y la frase: Dios me ama siempre.",
-      "dynamic": "Juego cooperativo: construir una torre con bloques entre todos. Manualidad: Dibujo de la iglesia con cada niño en ella y la frase: \"Somos un equipo para Jesús\". Oración: \"Gracias, Dios, por mi iglesia. Ayúdanos a compartir tu amor juntos. Amén.\" VIDA DE ORACIÓN PROFUNDA - Hablo con Dios Paso adicional: Cada niño escribe o dibuja una forma de mostrar amor en casa, iglesia o escuela.",
+      "dynamic": "Juego cooperativo: construir una torre con bloques entre todos. Manualidad: Dibujo de la iglesia con cada niño en ella y la frase: \"Somos un equipo para Jesús\". Paso adicional: Cada niño escribe o dibuja una forma de mostrar amor en casa, iglesia o escuela.",
       "application": "Hacer una acción de amor por alguien de la familia sin que se lo pidan.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -1992,7 +2197,7 @@ window.PRLessonLibrary = {
       "warmup": "Muestra una hoja, una piedra, una flor o una imagen del cielo. Pregunta: ¿quién puede hacer algo tan hermoso desde cero?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo dividido en cuatro cuadros: sol, árbol, ave y niño. Abajo escribe: Dios hizo todo con amor.",
-      "dynamic": "Crear un \"reloj de oración\": en cada hora dibujan algo por lo que pueden orar. Manualidad: Reloj de papel con frases: \"Gracias\", \"Ayúdame\", \"Perdóname\", etc. Oración: \"Gracias Dios porque puedo hablar contigo siempre. Enséñame a orar cada día. Amén.\" LA ARMADURA DE DIOS - Dios me protege y me equipa Paso adicional: Después de leer el versículo, cada niño dibuja algo creado por Dios y comparte una frase: Gracias, Dios, por ____.",
+      "dynamic": "Crear un \"reloj de oración\": en cada hora dibujan algo por lo que pueden orar. Manualidad: Reloj de papel con frases: \"Gracias\", \"Ayúdame\", \"Perdóname\", etc. Paso adicional: Después de leer el versículo, cada niño dibuja algo creado por Dios y comparte una frase: Gracias, Dios, por ____.",
       "application": "Durante la semana, mirar cada día algo creado por Dios y decir una oración corta de gratitud.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -2870,10 +3075,10 @@ window.PRLessonLibrary = {
       "materials": "Biblia, libreta o notas del celular, pizarra o papel grande, marcadores.",
       "visual": "Recurso visual: una pantalla o cartel con tres columnas: creación, conciencia y Escritura.",
       "dynamic": "Taller de ideas: proyectos grupales de alcance desde la iglesia. Paso adicional: Divide el grupo en parejas. Cada pareja identifica una evidencia de Dios en la creación, la conciencia o la Biblia y la presenta en 60 segundos.",
-      "application": "¿Estoy trabajando con mi iglesia para compartir a Jesús? Oración: \"Gracias por mi iglesia, Señor. Ayúdanos a ser un equipo en tu obra. Amén.\" VIDA DE ORACIÓN PROFUNDA - Caminando en oración",
+      "application": "¿Estoy trabajando con mi iglesia para compartir a Jesús?",
       "questions": [
         "¿Estoy trabajando con mi iglesia para compartir a Jesús?",
-        "Oración: \"Gracias por mi iglesia, Señor. Ayúdanos a ser un equipo en tu obra. Amén.\" VIDA DE ORACIÓN PROFUNDA - Caminando en oración"
+        "¿Cómo puede mi iglesia trabajar unida para compartir a Jesús?"
       ],
       "challenge": "Durante la semana, anotar tres momentos donde vea evidencia de Dios y compartir uno el próximo domingo.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
@@ -2957,7 +3162,7 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Durante la semana, anotar tres momentos donde vea evidencia de Dios y compartir uno el próximo domingo.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Señor, quiero vivir conectado a ti cada día. Enséñame a orar sin cesar. Amén.\" LA ARMADURA DE DIOS - Preparados para la batalla espiritual",
+      "prayer": "\"Señor, quiero vivir conectado a ti cada día. Enséñame a orar sin cesar. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
