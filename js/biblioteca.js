@@ -79,11 +79,13 @@ function renderExposition(lesson) {
 }
 
 function renderTeacherGuide(lesson) {
-  if (!lesson.teacherGuide) {
-    return "";
-  }
-
-  const guide = lesson.teacherGuide;
+  const guide = lesson.teacherGuide || {
+    teacherObjective: lesson.teacherNotes || lesson.goal || "Guiar la clase con claridad biblica, participacion y aplicacion practica.",
+    openingIdeas: [lesson.warmup || "Comienza con una pregunta sencilla conectada con la vida diaria."],
+    difficultQuestions: ["Si surge una pregunta dificil, responde con humildad y vuelve al texto biblico principal."],
+    commonErrors: ["Hacer la actividad sin conectar la verdad biblica con Cristo y la vida diaria."],
+    extraVerses: [lesson.verse || "Versiculo pendiente"]
+  };
 
   return `
     <section class="lesson-section teacher-guide-box">
@@ -103,11 +105,13 @@ function renderTeacherGuide(lesson) {
 }
 
 function renderStudentMaterial(lesson) {
-  if (!lesson.studentMaterial) {
-    return "";
-  }
-
-  const material = lesson.studentMaterial;
+  const material = lesson.studentMaterial || {
+    memoryVerse: lesson.verse || "Versiculo pendiente",
+    weeklyReading: lesson.verse || "Repasar el versiculo de la clase.",
+    activity: lesson.challenge || lesson.dynamic || "Practicar la ensenanza durante la semana.",
+    notesPrompt: "Hoy aprendi que...",
+    application: lesson.application || lesson.challenge || "Aplicar la verdad aprendida esta semana."
+  };
 
   return `
     <section class="lesson-section student-material-box">
@@ -123,11 +127,17 @@ function renderStudentMaterial(lesson) {
 }
 
 function renderParentMaterial(lesson) {
-  if (!lesson.parentMaterial) {
-    return "";
-  }
-
-  const material = lesson.parentMaterial;
+  const material = lesson.parentMaterial || {
+    whatWeLearned: lesson.summary || "Esta semana estudiamos una verdad biblica importante para vivir en casa.",
+    verse: lesson.verse || "Versiculo pendiente",
+    familyQuestions: lesson.questions && lesson.questions.length ? lesson.questions.slice(0, 3) : [
+      "Que aprendiste acerca de Dios?",
+      "Como podemos vivir esto en casa?",
+      "Como podemos orar por esto juntos?"
+    ],
+    activity: lesson.challenge || "Conversen en familia y practiquen una accion sencilla relacionada con la clase.",
+    prayer: lesson.prayer || "Senor, ayudanos a vivir tu Palabra en nuestro hogar. Amen."
+  };
 
   return `
     <section class="lesson-section parent-material-box">
@@ -173,7 +183,7 @@ function populateLessonLibrary(group) {
   library.forEach((lesson, index) => {
     const option = document.createElement("option");
     option.value = String(index);
-    option.textContent = `${lesson.date} - ${lesson.title}`;
+    option.textContent = `${lesson.date} - ${lesson.displayTitle || lesson.title}`;
     librarySelect.appendChild(option);
   });
 }
@@ -235,9 +245,11 @@ function getLessonFromForm() {
 }
 
 function renderLessonPreview(lesson) {
-  document.getElementById("previewHeading").textContent = lesson.title || "Clase seleccionada";
+  const lessonTitle = lesson.displayTitle || lesson.title || "Clase seleccionada";
+
+  document.getElementById("previewHeading").textContent = lessonTitle;
   document.getElementById("previewGroup").textContent = `Ministerio CRECE - ${getGroupLabel(lesson.group)}`;
-  document.getElementById("previewTitle").textContent = lesson.title || "Clase seleccionada";
+  document.getElementById("previewTitle").textContent = lessonTitle;
   document.getElementById("previewIntro").textContent = lesson.goal || "Clase preparada para el grupo.";
   document.getElementById("previewDate").textContent = lesson.date || "Clase";
 

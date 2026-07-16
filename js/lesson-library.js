@@ -98,6 +98,36 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "1/11/2026",
+      "displayTitle": "Dios esta presente aunque no lo vemos",
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "4",
+        "verses": "24; apoyo: Isaias 57:15 y Salmos 139:7-10",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus habla con la mujer samaritana y le ensena que la verdadera adoracion no depende de un lugar especial, sino de conocer a Dios y adorarlo en espiritu y verdad."
+      },
+      "centralIdea": "Aunque no vemos a Dios con los ojos, El es real, eterno y esta cerca de los que le buscan.",
+      "objectives": [
+        "Conocer que Dios es Espiritu y no tiene un cuerpo limitado como nosotros.",
+        "Comprender que Dios vive para siempre y esta presente en todo lugar.",
+        "Aplicar esta verdad hablando con Dios en oracion durante la semana."
+      ],
+      "bibleContext": "En Juan 4, Jesus conversa con una mujer que pensaba en lugares de adoracion. Jesus le muestra algo mas profundo: Dios es Espiritu, por eso no esta encerrado en un templo, monte o edificio. Dios es eterno, santo y cercano. Podemos hablar con El en cualquier lugar porque El no esta limitado por distancia, tiempo ni espacio.",
+      "exposition": [
+        {
+          "title": "Dios no esta limitado como nosotros",
+          "text": "Cuando Jesus dice que Dios es Espiritu, ensena que Dios no tiene un cuerpo humano que se canse, envejezca o solo pueda estar en un lugar. Dios es mas grande que todo lo creado. Esto ayuda a los ninos a entender que no ver a Dios no significa que Dios no exista."
+        },
+        {
+          "title": "Dios esta presente y escucha",
+          "text": "Salmos 139 ensena que no hay lugar donde podamos escondernos de Dios. Para el creyente, esto no debe causar miedo sino consuelo: Dios esta cerca cuando oramos, cuando estamos alegres y tambien cuando tenemos temor."
+        },
+        {
+          "title": "Dios vive para siempre",
+          "text": "Isaias 57:15 habla del Alto y Sublime, el que habita la eternidad. Dios no comenzo y no terminara. Todo cambia, pero Dios permanece. Por eso podemos confiar en El."
+        }
+      ],
       "title": "DIOS ES ESPÍRITU Y ETERNO",
       "verse": "Juan 4:24 \"Dios es Espíritu.\"",
       "goal": "Enseñar a los niños que aunque no pueden ver a Dios con sus ojos, Él está siempre presente porque es Espíritu y vive para siempre.",
@@ -119,6 +149,36 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "1/18/2026",
+      "displayTitle": "Cuando Dios siempre hace lo correcto",
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "89",
+        "verses": "14; apoyo: Isaias 6:3 y 1 Pedro 1:15-16",
+        "author": "Ethan ezrahita, segun el encabezado del salmo",
+        "date": "Periodo monarquico de Israel",
+        "context": "El salmo celebra la fidelidad de Dios y declara que su trono descansa sobre justicia y derecho. Dios no gobierna por capricho; todo lo que hace es santo, justo y bueno."
+      },
+      "centralIdea": "Dios siempre hace lo correcto y nos llama a vivir con un corazon limpio y obediente.",
+      "objectives": [
+        "Conocer que Dios es santo y justo.",
+        "Comprender que la justicia de Dios nace de su caracter perfecto.",
+        "Aplicar esta verdad escogiendo hacer lo correcto aunque nadie este mirando."
+      ],
+      "bibleContext": "La Biblia presenta a Dios como santo: separado de todo pecado, puro y perfecto. Tambien lo presenta como justo: El siempre actua correctamente. Para los ninos, esta verdad ensena que Dios no se equivoca, no miente y no trata el pecado como si no importara. Pero tambien nos ayuda a confiar en que sus caminos son buenos.",
+      "exposition": [
+        {
+          "title": "Dios es santo",
+          "text": "Isaias 6:3 repite santo, santo, santo para mostrar que Dios es completamente puro. Dios no tiene pecado ni maldad. Esto nos ensena reverencia: Dios no es como nosotros, pero nos invita a acercarnos a El con humildad."
+        },
+        {
+          "title": "Dios es justo",
+          "text": "Salmos 89:14 dice que justicia y derecho son la base de su trono. Eso significa que Dios gobierna haciendo lo correcto. Sus mandamientos no son para danarnos, sino para guiarnos hacia la vida."
+        },
+        {
+          "title": "Dios nos llama a obedecer",
+          "text": "1 Pedro 1:15-16 llama al pueblo de Dios a ser santo. Los ninos pueden aprender que obedecer no es solo evitar castigo, sino responder al Dios santo que nos ama y quiere formar nuestro caracter."
+        }
+      ],
       "title": "DIOS ES SANTO Y JUSTO",
       "verse": "Salmos 89:14 \"La justicia y el derecho son la base de tu trono.\"",
       "goal": "Ayudar a los niños a entender que Dios nunca se equivoca, siempre hace lo correcto, y desea que también vivamos de forma correcta.",
@@ -140,6 +200,36 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "1/25/2026",
+      "displayTitle": "El amor que corre a perdonar",
+      "biblicalText": {
+        "book": "1 Juan",
+        "chapter": "4",
+        "verses": "8; apoyo: Lucas 15:11-24 y Efesios 2:4-5",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Juan escribe para afirmar que el amor verdadero nace de Dios. La historia del hijo prodigo ayuda a los ninos a ver la misericordia de Dios en accion: Dios recibe al arrepentido con gracia."
+      },
+      "centralIdea": "Dios nos ama con misericordia y nos llama a recibir su perdon y amar a otros.",
+      "objectives": [
+        "Conocer que Dios es amor y misericordia.",
+        "Comprender que la misericordia de Dios perdona al que vuelve a El.",
+        "Aplicar esta verdad mostrando amor y perdon en casa, escuela e iglesia."
+      ],
+      "bibleContext": "1 Juan ensena que el amor no es solo una emocion; el amor verdadero viene de Dios. En Lucas 15, Jesus cuenta la historia de un hijo que se aleja y un padre que lo recibe. La historia muestra el corazon misericordioso de Dios hacia los que se arrepienten.",
+      "exposition": [
+        {
+          "title": "Dios es amor",
+          "text": "1 Juan 4:8 no dice solamente que Dios ama, sino que Dios es amor. Todo amor verdadero nace de su caracter. Los ninos deben entender que el amor de Dios es santo, bueno y fiel."
+        },
+        {
+          "title": "Dios muestra misericordia",
+          "text": "Efesios 2:4-5 ensena que Dios es rico en misericordia. Misericordia significa que Dios no nos trata como merecen nuestros pecados, sino que ofrece perdon y nueva vida en Cristo."
+        },
+        {
+          "title": "El amor recibido se convierte en amor compartido",
+          "text": "Si Dios nos ama y perdona, nosotros aprendemos a amar, pedir perdon y perdonar. Esta aplicacion ayuda a los ninos a conectar la doctrina con situaciones reales de familia y amistades."
+        }
+      ],
       "title": "DIOS ES AMOR Y MISERICORDIA",
       "verse": "1 Juan 4:8 \"Dios es amor.\"",
       "goal": "Que los niños comprendan que Dios los ama profundamente y, aunque nos equivoquemos, él nos perdona y nos ayuda a mejorar.",
