@@ -1323,6 +1323,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "5/24/2026",
+      "displayTitle": "Orar es hablar con mi Padre",
+      "closingSummary": "La oracion es hablar con Dios con un corazon sincero. No necesitamos palabras magicas; podemos acercarnos al Padre porque El nos ama y escucha.",
+      "teacherGuide": [
+        "Presenta la oracion como relacion con Dios, no como formula para conseguir cosas.",
+        "Modela una oracion corta con gratitud, perdon, peticion y confianza.",
+        "Da espacio para que los ninos oren con frases sencillas, sin presionarlos a hablar en publico."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 6:6",
+        "activity": "Haz una tarjeta de oracion con cuatro dibujos: gracias, perdon, ayuda y adoracion.",
+        "reflection": "Puedo hablar con Dios en cualquier momento porque El me escucha."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que orar es hablar con Dios como nuestro Padre amoroso.",
+        "homeQuestion": "Por que cosa quieres dar gracias a Dios hoy?",
+        "familyChallenge": "Hagan una oracion corta juntos antes de dormir por tres dias."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "6",
+        "verses": "5-13",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "Jesus ensena a sus discipulos a orar con sinceridad, sin buscar aplausos humanos. Luego les da un modelo de oracion centrado en el Padre."
+      },
+      "centralIdea": "Dios escucha a sus hijos, y la oracion nos acerca a El con confianza y humildad.",
+      "objectives": [
+        "Conocer que orar es hablar con Dios.",
+        "Comprender que Dios quiere oraciones sinceras, no apariencias.",
+        "Aplicar esta verdad practicando una oracion sencilla durante la semana."
+      ],
+      "bibleContext": "En el Sermon del Monte, Jesus corrige la religiosidad que busca ser vista. La oracion verdadera nace de un corazon que confia en el Padre y desea su voluntad.",
+      "exposition": [
+        {
+          "title": "Dios es Padre",
+          "text": "Jesus nos ensena a acercarnos a Dios con confianza, respeto y amor."
+        },
+        {
+          "title": "La oracion es sincera",
+          "text": "Dios no se impresiona con palabras largas. El mira el corazon."
+        },
+        {
+          "title": "La oracion nos forma",
+          "text": "Cuando oramos, aprendemos a depender de Dios, pedir perdon y buscar su voluntad."
+        }
+      ],
       "title": "LA ORACIÓN - HABLAR CON DIOS",
       "verse": "Mateo 6:6 \"Ora a tu Padre que está en secreto...\"",
       "goal": "Que los niños entiendan que orar es hablar con Dios como nuestro Padre amoroso.",
@@ -1344,6 +1390,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "5/31/2026",
+      "displayTitle": "El fruto que Dios hace crecer",
+      "closingSummary": "El fruto del Espiritu no se fabrica con esfuerzo humano solamente. Dios lo hace crecer en nosotros cuando caminamos con El y aprendemos a obedecer su Palabra.",
+      "teacherGuide": [
+        "Lleva frutas reales o dibujos para explicar que el fruto crece con vida, cuidado y tiempo.",
+        "Aclara que el fruto del Espiritu muestra el caracter de Jesus en nosotros.",
+        "Escoge uno o dos frutos para aplicar de forma concreta segun la edad del grupo."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Galatas 5:22-23",
+        "activity": "Haz un arbol y escribe en las frutas: amor, gozo, paz, paciencia, benignidad, bondad, fe, mansedumbre y templanza.",
+        "reflection": "Dios puede hacer crecer en mi actitudes que se parecen a Jesus."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que el Espiritu Santo produce fruto en la vida del creyente.",
+        "homeQuestion": "Que fruto del Espiritu necesitamos practicar mas en casa?",
+        "familyChallenge": "Elijan un fruto y busquen una forma de practicarlo esta semana."
+      },
+      "biblicalText": {
+        "book": "Galatas",
+        "chapter": "5",
+        "verses": "22-23",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 48-55 d.C.",
+        "context": "Pablo contrasta las obras de la carne con el fruto del Espiritu. La vida cristiana no se vive sola, sino por la obra del Espiritu Santo."
+      },
+      "centralIdea": "El Espiritu Santo forma en nosotros un caracter que refleja a Jesus.",
+      "objectives": [
+        "Conocer el fruto del Espiritu.",
+        "Comprender que Dios produce ese fruto en el creyente.",
+        "Aplicar esta verdad escogiendo un fruto para practicar durante la semana."
+      ],
+      "bibleContext": "Galatas ensena que la libertad cristiana no es vivir como uno quiera, sino caminar por el Espiritu. El fruto muestra la vida nueva que Dios produce en sus hijos.",
+      "exposition": [
+        {
+          "title": "El fruto viene del Espiritu",
+          "text": "No podemos cambiar el corazon por nuestras fuerzas. Dios trabaja en nosotros por su Espiritu."
+        },
+        {
+          "title": "El fruto se parece a Jesus",
+          "text": "Amor, paz, paciencia y dominio propio muestran el caracter de Cristo en la vida diaria."
+        },
+        {
+          "title": "El fruto crece con el tiempo",
+          "text": "Como un arbol, el creyente crece al permanecer cerca de Dios, escuchar su Palabra y obedecer."
+        }
+      ],
       "title": "EL FRUTO DEL ESPÍRITU",
       "verse": "Gálatas 5:22 \"Mas el fruto del Espíritu es amor, gozo, paz...\"",
       "goal": "Aprender que el Espíritu Santo produce cosas buenas en nuestra vida si caminamos con Él.",
@@ -1365,6 +1457,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "6/7/2026",
+      "displayTitle": "Obedezco porque amo a Jesus",
+      "closingSummary": "La obediencia no compra el amor de Dios. Obedecemos porque Jesus nos amo primero, y porque queremos vivir de una forma que agrade a nuestro Senor.",
+      "teacherGuide": [
+        "Evita presentar obediencia como simple conducta externa. Conectala con amor a Jesus.",
+        "Usa situaciones reales de casa y escuela para ayudar a los ninos a practicar discernimiento.",
+        "Distingue obedecer por miedo de obedecer por confianza y amor."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 14:15",
+        "activity": "Haz un semaforo: verde para obedecer, amarillo para pensar y rojo para detenerme cuando algo no agrada a Dios.",
+        "reflection": "Cuando obedezco a Jesus, muestro que lo amo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que obedecer a Dios es una respuesta de amor a Jesus.",
+        "homeQuestion": "Que decision puedes tomar esta semana para obedecer a Dios?",
+        "familyChallenge": "Practiquen una instruccion sencilla en casa y hablen de como la obediencia cuida a la familia."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "14",
+        "verses": "15",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus habla con sus discipulos antes de la cruz y les ensena que el amor verdadero se expresa en obediencia."
+      },
+      "centralIdea": "Los seguidores de Jesus obedecen sus mandamientos como respuesta de amor.",
+      "objectives": [
+        "Conocer que Jesus llama a sus discipulos a obedecer.",
+        "Comprender que la obediencia nace del amor y la confianza.",
+        "Aplicar esta verdad escogiendo una accion concreta de obediencia."
+      ],
+      "bibleContext": "Juan 14 forma parte de las palabras de Jesus a sus discipulos antes de su muerte. En medio de dudas y temor, Jesus les ensena que amarlo incluye guardar sus mandamientos.",
+      "exposition": [
+        {
+          "title": "Jesus nos ama primero",
+          "text": "La obediencia cristiana no empieza con ganar amor, sino con responder al amor de Jesus."
+        },
+        {
+          "title": "Amar a Jesus se nota",
+          "text": "Jesus dijo que el amor se muestra guardando sus mandamientos."
+        },
+        {
+          "title": "Dios nos ayuda a obedecer",
+          "text": "No obedecemos solos. Dios nos ensena por su Palabra y nos ayuda por su Espiritu."
+        }
+      ],
       "title": "LA OBEDIENCIA A DIOS",
       "verse": "Juan 14:15 \"Si me amáis, guardad mis mandamientos.\"",
       "goal": "Comprender que obedecer a Dios demuestra que le amamos.",
@@ -1386,6 +1524,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "6/14/2026",
+      "displayTitle": "La iglesia, una familia que crece junta",
+      "closingSummary": "La iglesia no es solo un edificio. Es la familia de Dios, donde aprendemos la Palabra, oramos, compartimos, servimos y crecemos juntos en Cristo.",
+      "teacherGuide": [
+        "Explica que iglesia son las personas redimidas por Cristo reunidas para adorar, aprender y servir.",
+        "Conecta Hechos 2:42 con practicas visibles: Biblia, comunion, cena/pan, oracion y servicio.",
+        "Invita a los ninos a verse como parte activa de la iglesia, no solo espectadores."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Hechos 2:42",
+        "activity": "Dibuja una iglesia formada por personas y escribe: Crecemos juntos en Cristo.",
+        "reflection": "Dios me dio una familia espiritual para aprender, orar y servir."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que la iglesia es la familia de Dios donde crecemos juntos.",
+        "homeQuestion": "Como podemos participar mejor como familia en la iglesia?",
+        "familyChallenge": "Hagan una accion de servicio por alguien de la iglesia esta semana."
+      },
+      "biblicalText": {
+        "book": "Hechos",
+        "chapter": "2",
+        "verses": "42-47",
+        "author": "Lucas",
+        "date": "Aproximadamente 60-80 d.C.",
+        "context": "Despues de Pentecostes, la primera iglesia perseveraba en la doctrina, la comunion, el partimiento del pan y las oraciones."
+      },
+      "centralIdea": "Dios llama a sus hijos a crecer juntos como iglesia.",
+      "objectives": [
+        "Conocer que la iglesia es la familia de Dios.",
+        "Comprender que los creyentes crecen juntos en Palabra, oracion, comunion y servicio.",
+        "Aplicar esta verdad participando con amor en la iglesia."
+      ],
+      "bibleContext": "Hechos 2 muestra la vida de la iglesia naciente despues de recibir el Espiritu Santo. No vivian la fe aislados; aprendian, compartian, oraban y servian como comunidad.",
+      "exposition": [
+        {
+          "title": "La iglesia aprende la Palabra",
+          "text": "Los creyentes perseveraban en la doctrina de los apostoles. La Palabra guiaba la vida de la comunidad."
+        },
+        {
+          "title": "La iglesia comparte y ora",
+          "text": "La comunion no era solo estar juntos, sino cuidarse, orar y vivir como familia espiritual."
+        },
+        {
+          "title": "La iglesia sirve con amor",
+          "text": "Cada creyente puede participar. Los ninos tambien pueden amar, ayudar, orar y animar a otros."
+        }
+      ],
       "title": "LA VIDA EN COMUNIDAD - LA IGLESIA",
       "verse": "Hechos 2:42 \"Y perseveraban en la doctrina... y en la comunión unos con otros.\"",
       "goal": "Mostrar que la iglesia es la familia de Dios donde crecemos juntos.",
@@ -1393,7 +1577,7 @@ window.PRLessonLibrary = {
       "warmup": "Muestra una hoja, una piedra, una flor o una imagen del cielo. Pregunta: ¿quién puede hacer algo tan hermoso desde cero?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo dividido en cuatro cuadros: sol, árbol, ave y niño. Abajo escribe: Dios hizo todo con amor.",
-      "dynamic": "\"Construyamos la iglesia\": con bloques o dibujos, mostrar la unidad. Manualidad: Casa-iglesia de papel con figuras de niños. Oración: \"Gracias, Dios, por mi iglesia. Ayúdame a ser parte activa en ella. Amén.\" EL CARÁCTER DE UN DISCÍPULO - Como Cristo en mi corazón Paso adicional: Después de leer el versículo, cada niño dibuja algo creado por Dios y comparte una frase: Gracias, Dios, por ____.",
+      "dynamic": "\"Construyamos la iglesia\": con bloques o dibujos, mostrar la unidad. Manualidad: Casa-iglesia de papel con figuras de niños. Paso adicional: Después de leer el versículo, cada niño dibuja algo creado por Dios y comparte una frase: Gracias, Dios, por ____.",
       "application": "Durante la semana, mirar cada día algo creado por Dios y decir una oración corta de gratitud.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
@@ -2346,7 +2530,7 @@ window.PRLessonLibrary = {
       ],
       "challenge": "Escoger una prioridad que debo ordenar alrededor de Cristo esta semana.",
       "teacherNotes": "Permite conversación honesta, evita respuestas forzadas y lleva cada opinión de vuelta al texto bíblico.",
-      "prayer": "\"Gracias, Dios, por mi iglesia. Ayúdame a servir con amor y fidelidad. Amén.\" EL CARÁCTER DE UN DISCÍPULO - Como Cristo en mi corazón",
+      "prayer": "\"Gracias, Dios, por mi iglesia. Ayúdame a servir con amor y fidelidad. Amén.\"",
       "pdf": "clases-originales/juveniles/Clases Biblicas 11-16.pdf"
     },
     {
