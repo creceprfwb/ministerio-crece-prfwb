@@ -1591,6 +1591,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "6/21/2026",
+      "displayTitle": "Sirvo como Jesus",
+      "closingSummary": "Jesus nos mostro que el verdadero liderazgo sirve con amor. Un discipulo no busca ser el mas importante, sino amar con acciones concretas.",
+      "teacherGuide": [
+        "Presenta el servicio como imitacion de Jesus, no como castigo ni tarea pesada.",
+        "Usa ejemplos pequenos y reales: ayudar a recoger, compartir, animar, orar por alguien o cuidar a un companero.",
+        "Cuida que los ninos entiendan que todos pueden servir, aunque sean pequenos."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Marcos 10:45",
+        "activity": "Dibuja dos manos ayudando y escribe: Sirvo como Jesus.",
+        "reflection": "Cuando sirvo con amor, muestro un corazon que sigue a Jesus."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Jesus vino a servir y que sus discipulos tambien sirven con amor.",
+        "homeQuestion": "A quien podemos ayudar esta semana?",
+        "familyChallenge": "Elijan juntos una accion sencilla de servicio en casa o iglesia."
+      },
+      "biblicalText": {
+        "book": "Marcos",
+        "chapter": "10",
+        "verses": "42-45",
+        "author": "Marcos",
+        "date": "Aproximadamente 55-70 d.C.",
+        "context": "Jesus corrige la idea de grandeza de sus discipulos. Les ensena que en su Reino, el grande sirve, porque El mismo vino para servir y dar su vida."
+      },
+      "centralIdea": "El discipulo de Jesus sirve a otros con amor porque Jesus nos sirvio primero.",
+      "objectives": [
+        "Conocer que Jesus vino a servir.",
+        "Comprender que servir es una forma de amar.",
+        "Aplicar esta verdad escogiendo una accion concreta de servicio."
+      ],
+      "bibleContext": "Los discipulos discutian sobre posiciones de importancia. Jesus les mostro un camino diferente: la grandeza en el Reino se ve en el servicio humilde y amoroso.",
+      "exposition": [
+        {
+          "title": "Jesus cambia nuestra idea de grandeza",
+          "text": "Para Jesus, ser grande no es mandar a todos, sino amar y servir."
+        },
+        {
+          "title": "Jesus sirvio primero",
+          "text": "El Hijo de Dios vino a ayudar, sanar, ensenar y entregar su vida por nosotros."
+        },
+        {
+          "title": "Servimos con acciones",
+          "text": "El servicio se ve en cosas concretas: ayudar, compartir, escuchar y cuidar a otros."
+        }
+      ],
       "title": "SERVIR A LOS DEMÁS",
       "verse": "Marcos 10:45 \"Porque el Hijo del Hombre no vino para ser servido, sino para servir.\"",
       "goal": "Enseñar que servir con amor es imitar a Jesús, quien vino a servir, no a ser servido.",
@@ -1612,6 +1658,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "6/28/2026",
+      "displayTitle": "Brillo para Jesus",
+      "closingSummary": "Jesus llama a sus seguidores luz del mundo. No brillamos para llamar la atencion hacia nosotros, sino para que otros vean buenas obras y glorifiquen a Dios.",
+      "teacherGuide": [
+        "Usa una linterna para mostrar que la luz ayuda a ver y guia en la oscuridad.",
+        "Aclara que ser luz significa vivir de una forma que muestra a Jesus.",
+        "Ayuda a los ninos a pensar en lugares donde pueden brillar: casa, escuela, iglesia y comunidad."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 5:14",
+        "activity": "Haz una lampara de papel y escribe: Brillo para Jesus.",
+        "reflection": "Mis palabras y acciones pueden mostrar el amor de Dios."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que Jesus llama a sus discipulos a ser luz en el mundo.",
+        "homeQuestion": "Como podemos mostrar a Jesus con nuestras acciones?",
+        "familyChallenge": "Practiquen una buena obra en secreto y den gracias a Dios."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "5",
+        "verses": "14-16",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "En el Sermon del Monte, Jesus ensena a sus discipulos como vivir como ciudadanos del Reino. Ser luz implica mostrar a Dios con una vida transformada."
+      },
+      "centralIdea": "Los discipulos de Jesus son llamados a reflejar su luz con palabras y acciones.",
+      "objectives": [
+        "Conocer que Jesus llama a sus seguidores luz del mundo.",
+        "Comprender que nuestras buenas obras deben apuntar a Dios.",
+        "Aplicar esta verdad escogiendo una forma de mostrar a Jesus esta semana."
+      ],
+      "bibleContext": "Jesus habla a sus discipulos en una sociedad que necesitaba ver el caracter de Dios. La luz no se esconde; cumple su proposito alumbrando.",
+      "exposition": [
+        {
+          "title": "Jesus nos llama luz",
+          "text": "La luz ayuda a ver. Un discipulo ayuda a otros a ver el amor y la verdad de Dios."
+        },
+        {
+          "title": "La luz no se esconde",
+          "text": "Nuestra fe se ve en como hablamos, obedecemos, perdonamos y amamos."
+        },
+        {
+          "title": "La gloria es para Dios",
+          "text": "No hacemos buenas obras para presumir, sino para que otros conozcan a Dios."
+        }
+      ],
       "title": "SER LUZ EN EL MUNDO",
       "verse": "Mateo 5:14 \"Vosotros sois la luz del mundo.\"",
       "goal": "Comprender que como hijos de Dios debemos ser luz donde estamos: con nuestras palabras y acciones.",
@@ -1633,6 +1725,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "7/5/2026",
+      "displayTitle": "Perdono porque fui perdonado",
+      "closingSummary": "Perdonar no siempre es facil, pero Jesus nos ensena a perdonar porque Dios nos perdono primero. El perdon libera el corazon y refleja el amor del Padre.",
+      "teacherGuide": [
+        "Explica que perdonar no significa decir que lo malo estuvo bien ni permitir abuso.",
+        "Conecta el perdon con el evangelio: Dios nos perdono en Cristo.",
+        "Usa ejemplos adecuados a la edad: compartir, palabras hirientes, peleas entre hermanos o amigos."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Mateo 6:14",
+        "activity": "Haz un corazon de papel con la palabra Perdono y dibuja una cruz en el centro.",
+        "reflection": "Dios me ayuda a perdonar como El me perdono."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que el discipulo perdona porque Dios lo perdono primero.",
+        "homeQuestion": "Que diferencia hay entre pedir perdon y perdonar?",
+        "familyChallenge": "Practiquen una conversacion sencilla: lo siento, te perdono, oremos juntos."
+      },
+      "biblicalText": {
+        "book": "Mateo",
+        "chapter": "6",
+        "verses": "14-15; apoyo: Efesios 4:32",
+        "author": "Mateo, discipulo de Jesus",
+        "date": "Aproximadamente 60-70 d.C.",
+        "context": "Jesus ensena sobre el perdon despues del Padre Nuestro. El perdon recibido de Dios debe formar la manera en que tratamos a otros."
+      },
+      "centralIdea": "El perdon recibido de Dios nos mueve a perdonar a otros con humildad.",
+      "objectives": [
+        "Conocer que Jesus ensena a perdonar.",
+        "Comprender que perdonamos porque Dios nos perdono primero.",
+        "Aplicar esta verdad buscando reconciliacion de manera sabia y amorosa."
+      ],
+      "bibleContext": "Mateo 6 muestra que la vida de oracion y la vida relacional van juntas. No podemos hablar con Dios ignorando la amargura contra otros.",
+      "exposition": [
+        {
+          "title": "Dios nos perdona primero",
+          "text": "El evangelio nos recuerda que todos necesitamos perdon y que Dios nos recibe por gracia."
+        },
+        {
+          "title": "El discipulo perdona",
+          "text": "Perdonar es soltar la venganza y confiar en Dios, aunque a veces necesitemos ayuda de adultos seguros."
+        },
+        {
+          "title": "El perdon busca paz",
+          "text": "Cuando perdonamos, abrimos camino para sanar relaciones y vivir con un corazon libre."
+        }
+      ],
       "title": "EL DISCÍPULO PERDONA",
       "verse": "Mateo 6:14 \"Si ustedes perdonan a otros, su Padre celestial también los perdonará a ustedes.\"",
       "goal": "Enseñar que perdonar es obedecer a Dios y tener un corazón como el de Jesús.",
@@ -1654,6 +1792,52 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "7/12/2026",
+      "displayTitle": "Confio en Dios con todo mi corazon",
+      "closingSummary": "Confiar en Dios es descansar en que El sabe, cuida y dirige mejor que nosotros. Un discipulo aprende a depender de Dios aun cuando no entiende todo.",
+      "teacherGuide": [
+        "Explica confianza con ejemplos sencillos: tomar una mano segura, seguir una instruccion, cruzar un puente firme.",
+        "Evita prometer que confiar en Dios elimina todos los problemas. Enfatiza que Dios esta con nosotros y guia nuestro camino.",
+        "Invita a los ninos a nombrar un miedo o preocupacion y llevarlo a Dios en oracion."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Proverbios 3:5",
+        "activity": "Dibuja un puente y escribe: Confio en Dios con todo mi corazon.",
+        "reflection": "Cuando no entiendo todo, puedo hablar con Dios y seguir su camino."
+      },
+      "parentMaterial": {
+        "summary": "Hoy aprendimos que confiar en Dios es depender de El con todo el corazon.",
+        "homeQuestion": "Que preocupacion podemos entregar a Dios esta semana?",
+        "familyChallenge": "Oren juntos por una situacion dificil y repitan Proverbios 3:5."
+      },
+      "biblicalText": {
+        "book": "Proverbios",
+        "chapter": "3",
+        "verses": "5-6",
+        "author": "Salomon y sabios de Israel",
+        "date": "Coleccion de sabiduria del Antiguo Testamento",
+        "context": "Proverbios ensena sabiduria para vivir delante de Dios. Confiar en Jehova implica no depender solo de nuestra propia opinion."
+      },
+      "centralIdea": "El discipulo confia en Dios y busca su direccion en cada paso.",
+      "objectives": [
+        "Conocer que Dios nos llama a confiar en El.",
+        "Comprender que no debemos depender solo de nuestra propia prudencia.",
+        "Aplicar esta verdad entregando una preocupacion a Dios en oracion."
+      ],
+      "bibleContext": "Proverbios 3 anima al pueblo de Dios a vivir con sabiduria. La verdadera sabiduria comienza confiando en el Senor y reconociendolo en todos los caminos.",
+      "exposition": [
+        {
+          "title": "Confia con todo tu corazon",
+          "text": "Dios no quiere solo un pedacito de nuestra confianza. Podemos descansar en El completamente."
+        },
+        {
+          "title": "No dependas solo de ti",
+          "text": "A veces creemos saberlo todo, pero Dios ve mas lejos y sabe lo que es mejor."
+        },
+        {
+          "title": "Dios dirige el camino",
+          "text": "Cuando reconocemos a Dios, El nos guia para vivir con sabiduria y obediencia."
+        }
+      ],
       "title": "EL DISCÍPULO CONFÍA EN DIOS",
       "verse": "Proverbios 3:5 \"Confía en el Señor con todo tu corazón.\"",
       "goal": "Aprender que confiar en Dios es saber que Él siempre cuida de nosotros.",
@@ -1682,7 +1866,7 @@ window.PRLessonLibrary = {
       "warmup": "Muestra un corazón de papel y pregunta: ¿cómo sabemos que alguien nos ama?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo de un corazón grande con una cruz en el centro y la frase: Dios me ama siempre.",
-      "dynamic": "Representar situaciones donde pueden hablar de Jesús (escuela, parque, casa). Manualidad: Mapa del mundo con corazones y la frase: \"Jesús me envió a compartir su amor\". Oración: \"Jesús, ayúdame a contar a otros lo mucho que me amas. Amén.\" 726/2026: TODOS NECESITAN CONOCER A JESÚS Paso adicional: Cada niño escribe o dibuja una forma de mostrar amor en casa, iglesia o escuela.",
+      "dynamic": "Representar situaciones donde pueden hablar de Jesús (escuela, parque, casa). Manualidad: Mapa del mundo con corazones y la frase: \"Jesús me envió a compartir su amor\". Paso adicional: Cada niño escribe o dibuja una forma de mostrar amor en casa, iglesia o escuela.",
       "application": "Hacer una acción de amor por alguien de la familia sin que se lo pidan.",
       "questions": [
         "¿Qué enseña esta clase acerca de Dios?",
