@@ -3,21 +3,96 @@ window.PRLessonLibrary = {
     {
       "group": "ninos",
       "date": "1/4/2026",
-      "title": "Dios existe y se ha revelado",
+      "title": "Cuando la creacion nos habla de Dios",
       "verse": "Salmos 19:1 \"Los cielos cuentan la gloria de Dios.\"",
+      "biblicalText": {
+        "book": "Salmos",
+        "chapter": "19",
+        "verses": "1-6; apoyo: Hebreos 11:6 y Romanos 1:20",
+        "author": "David",
+        "date": "Aproximadamente siglo X a.C.",
+        "context": "El Salmo 19 celebra dos formas en que Dios se da a conocer: primero por medio de la creacion y luego por medio de su Palabra. En esta clase se trabaja la primera parte: la creacion anuncia que Dios existe, es poderoso, sabio y digno de adoracion."
+      },
+      "centralIdea": "Dios no esta escondido: su creacion nos invita a conocerlo, adorarlo y darle gracias.",
+      "objectives": [
+        "Conocer que la creacion muestra la gloria y el poder de Dios.",
+        "Comprender que Dios quiere que le busquemos con fe.",
+        "Aplicar la gratitud observando la creacion y dando gracias a Dios durante la semana."
+      ],
+      "bibleContext": "David era rey de Israel, pastor, musico y adorador. Al mirar el cielo y la naturaleza, entendio que la creacion apunta al Creador. El Salmo 19 no dice que la naturaleza salva, sino que la naturaleza anuncia que Dios existe y que es glorioso. Para conocer el evangelio necesitamos la Palabra de Dios, pero la creacion nos llama a abrir los ojos y reconocer que hay un Dios digno de confianza.",
+      "exposition": [
+        {
+          "title": "La creacion declara la gloria de Dios",
+          "text": "Salmos 19:1 dice que los cielos cuentan la gloria de Dios. La palabra gloria habla de su grandeza, belleza y valor. Cuando miramos el cielo, el sol, las estrellas o una flor, vemos senales de un Dios poderoso y sabio. La creacion no habla con palabras como nosotros, pero comunica un mensaje claro: Dios es real y merece adoracion."
+        },
+        {
+          "title": "Dios quiere que lo busquemos con fe",
+          "text": "Hebreos 11:6 ensena que para acercarnos a Dios debemos creer que El existe y que recompensa a quienes le buscan. La fe no es cerrar los ojos y adivinar; es responder a lo que Dios ha mostrado. Los ninos pueden aprender que creer en Dios no es solo saber que existe, sino confiar en El y acercarse a El en oracion."
+        },
+        {
+          "title": "La creacion nos lleva a la gratitud",
+          "text": "Si Dios hizo el mundo y nos dio vida, entonces no vivimos como duenos de todo, sino como hijos agradecidos. Cada alimento, cada dia, cada animal, cada persona y cada respiro son oportunidades para decir: Gracias, Dios. La respuesta correcta a la creacion no es solo admiracion, sino adoracion."
+        }
+      ],
       "goal": "Que los niños comprendan que Dios hizo todo lo que existe y que podemos conocerle a través de lo que ha creado.",
-      "summary": "- Muestre láminas, juguetes o ilustraciones de la naturaleza. - Lea Salmos 19:1 y explique que la creación habla de lo grande que es Dios. - Hable de Hebreos 11:6: necesitamos creer que Dios existe para poder agradarle. ¡Dios quiere que lo conozcamos!",
-      "warmup": "Muestra una hoja, una piedra, una flor o una imagen del cielo. Pregunta: ¿quién puede hacer algo tan hermoso desde cero?",
+      "summary": "La creacion no reemplaza la Biblia, pero si nos despierta para mirar hacia Dios. El cielo, las plantas, los animales y nuestro propio cuerpo nos recuerdan que no estamos aqui por accidente. Dios hizo todo con sabiduria, poder y amor. Por eso, cuando vemos lo que Dios creo, respondemos con fe, adoracion y gratitud.",
+      "warmup": "Lleva una hoja, una piedra, una flor o una foto del cielo. Pide a los ninos que observen detalles: color, forma, textura y belleza. Pregunta: Si algo tan pequeno tiene tantos detalles, que nos dice eso acerca de quien lo hizo?",
       "materials": "Biblia, crayones, marcadores, cartulina u hojas blancas, cinta adhesiva.",
       "visual": "Dibujo dividido en cuatro cuadros: sol, árbol, ave y niño. Abajo escribe: Dios hizo todo con amor.",
-      "dynamic": "- Salir al patio o usar imágenes si no es posible salir. Observar el cielo, árboles, pájaros. - Dinámica: decir en voz alta \"¡Gracias, Dios, por...\" mencionando lo que ven. Manualidad: - Dibujo de la creación: cada niño dibuja algo que Dios hizo (sol, luna, animal, etc.) - Escriben debajo: \"Dios hizo esto porque me ama.\" Paso adicional: Después de leer el versículo, cada niño dibuja algo creado por Dios y comparte una frase: Gracias, Dios, por ____.",
-      "application": "¿Qué es lo más hermoso que ha hecho Dios que puedes ver todos los días?",
+      "dynamic": "Exploradores de la creacion: los ninos observan objetos o imagenes y mencionan un detalle que les sorprende. Luego completan la frase: Esto me ensena que Dios es ____. Manualidad: cada nino dibuja algo creado por Dios y escribe: Gracias, Dios, por ____. Cierre participativo: todos levantan su dibujo y dicen una frase corta de gratitud.",
+      "application": "Esta semana voy a detenerme cada dia para mirar algo que Dios creo y darle gracias en una oracion corta.",
       "questions": [
-        "¿Qué es lo más hermoso que ha hecho Dios que puedes ver todos los días?"
+        "Que cosa creada por Dios te hace pensar en su grandeza?",
+        "Por que crees que muchas veces vemos la creacion pero olvidamos dar gracias?",
+        "Como puedes adorar a Dios cuando miras lo que El hizo?",
+        "Que diferencia hay entre admirar la naturaleza y adorar al Creador?"
       ],
-      "challenge": "Durante la semana, mirar cada día algo creado por Dios y decir una oración corta de gratitud.",
-      "teacherNotes": "Usa frases cortas, permite respuestas espontáneas y conecta cada actividad con una verdad sencilla acerca de Dios.",
-      "prayer": "\"Dios, gracias por hacer todas las cosas hermosas que vemos. Ayúdame a conocerte más cada día. Amén.\" CLASES SEMANALES - NIÑOS (3 a 10 años) DIOS Y SU NATURALEZA",
+      "challenge": "Durante la semana, mirar cada dia algo creado por Dios y decir una oracion corta de gratitud.",
+      "teacherNotes": "No presentes la naturaleza como si fuera Dios. La creacion apunta al Creador, pero solo Dios debe ser adorado. Mantén la clase participativa: observar, preguntar, responder, dibujar y orar.",
+      "prayer": "Dios Creador, gracias porque hiciste los cielos, la tierra y todo lo que vemos. Ayudanos a no vivir distraidos, sino con ojos abiertos para reconocer tu gloria. Ensena nuestro corazon a darte gracias, confiar en ti y adorarte cada dia. Amen.",
+      "closingSummary": "Cuando miro la creacion, recuerdo que Dios existe, Dios es grande y Dios merece mi adoracion.",
+      "teacherGuide": {
+        "teacherObjective": "Guiar a los ninos a reconocer que la creacion revela la gloria de Dios y debe llevarnos a la adoracion y gratitud.",
+        "openingIdeas": [
+          "Mostrar una hoja real y pedir que encuentren tres detalles pequenos.",
+          "Mostrar una foto del cielo nocturno y preguntar: Que sientes al mirar algo tan grande?",
+          "Llevar una lupa si hay disponible para observar detalles de una flor u hoja."
+        ],
+        "difficultQuestions": [
+          "Quien hizo a Dios? Dios no fue hecho; El es eterno y siempre ha existido.",
+          "La naturaleza puede salvarnos? No. La creacion muestra que Dios existe, pero necesitamos la Biblia para conocer claramente a Jesus y el evangelio.",
+          "Dios hizo tambien las cosas que me dan miedo? Dios creo todo bueno, pero el pecado trajo dolor, miedo y desorden al mundo."
+        ],
+        "commonErrors": [
+          "Hablar como si la naturaleza fuera divina.",
+          "Quedarse solo en manualidades sin conectar con adoracion.",
+          "Decir que la creacion explica todo lo que necesitamos saber de Dios."
+        ],
+        "extraVerses": [
+          "Genesis 1:1",
+          "Romanos 1:20",
+          "Hebreos 11:6",
+          "Salmos 8:3-4"
+        ]
+      },
+      "studentMaterial": {
+        "memoryVerse": "Salmos 19:1",
+        "weeklyReading": "Leer Salmos 19:1-6 con un adulto.",
+        "activity": "Dibuja algo que Dios creo y escribe: Gracias, Dios, por ____.",
+        "notesPrompt": "Hoy aprendi que Dios es...",
+        "application": "Voy a dar gracias a Dios cada dia por algo que El creo."
+      },
+      "parentMaterial": {
+        "whatWeLearned": "Los ninos aprendieron que la creacion muestra la gloria de Dios y nos llama a adorarlo con gratitud.",
+        "verse": "Salmos 19:1",
+        "familyQuestions": [
+          "Que cosa creada por Dios vimos hoy?",
+          "Que nos ensena eso acerca de Dios?",
+          "Como podemos dar gracias a Dios esta semana?"
+        ],
+        "activity": "Caminen juntos por la casa, patio o calle y nombren cinco cosas creadas por Dios. Oren dando gracias por cada una.",
+        "prayer": "Senor, gracias por mostrarnos tu grandeza en la creacion. Ayudanos como familia a reconocerte, adorarte y vivir agradecidos. Amen."
+      },
       "pdf": "clases-originales/ninos/Clases Biblicas 3-10.pdf"
     },
     {

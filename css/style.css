@@ -852,6 +852,56 @@ body {
   background: #f0fbff;
 }
 
+.central-idea-box,
+.teacher-guide-box,
+.student-material-box,
+.parent-material-box {
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(11, 61, 145, 0.18);
+}
+
+.central-idea-box {
+  background: #fff8e6;
+}
+
+.teacher-guide-box {
+  background: #f8fafc;
+}
+
+.student-material-box {
+  background: #eefdf6;
+}
+
+.parent-material-box {
+  background: #fff5f5;
+}
+
+.exposition-point {
+  margin-top: 14px;
+  padding: 14px;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.lesson-section h3 {
+  margin: 16px 0 8px;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.lesson-section ul {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.lesson-section li {
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
 .question-list {
   display: grid;
   gap: 10px;

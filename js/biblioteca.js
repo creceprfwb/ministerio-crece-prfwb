@@ -21,6 +21,128 @@ function formatQuestions(questions) {
   return questions.map((question) => `<li>${escapeHtml(question)}</li>`).join("");
 }
 
+function formatList(items) {
+  if (!items || !items.length) {
+    return "";
+  }
+
+  return `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+}
+
+function renderBiblicalText(lesson) {
+  if (!lesson.biblicalText) {
+    return "";
+  }
+
+  const text = lesson.biblicalText;
+
+  return `
+    <section class="lesson-section visual-box">
+      <p class="section-kicker">Texto biblico</p>
+      <h2>${escapeHtml(text.book || "")} ${escapeHtml(text.chapter || "")}:${escapeHtml(text.verses || "")}</h2>
+      <p><strong>Autor:</strong> ${escapeHtml(text.author || "Pendiente")}</p>
+      <p><strong>Fecha aproximada:</strong> ${escapeHtml(text.date || "Pendiente")}</p>
+      <p>${formatParagraph(text.context, "Contexto pendiente.")}</p>
+    </section>
+  `;
+}
+
+function renderObjectives(lesson) {
+  if (!lesson.objectives || !lesson.objectives.length) {
+    return "";
+  }
+
+  return `
+    <section class="lesson-section">
+      <p class="section-kicker">Objetivos</p>
+      ${formatList(lesson.objectives)}
+    </section>
+  `;
+}
+
+function renderExposition(lesson) {
+  if (!lesson.exposition || !lesson.exposition.length) {
+    return "";
+  }
+
+  return `
+    <section class="lesson-section">
+      <p class="section-kicker">Desarrollo expositivo</p>
+      ${lesson.exposition.map((point) => `
+        <div class="exposition-point">
+          <h2>${escapeHtml(point.title || "Punto")}</h2>
+          <p>${formatParagraph(point.text, "Contenido pendiente.")}</p>
+        </div>
+      `).join("")}
+    </section>
+  `;
+}
+
+function renderTeacherGuide(lesson) {
+  if (!lesson.teacherGuide) {
+    return "";
+  }
+
+  const guide = lesson.teacherGuide;
+
+  return `
+    <section class="lesson-section teacher-guide-box">
+      <p class="section-kicker">Material para el maestro</p>
+      <h2>Guia de preparacion</h2>
+      <p>${formatParagraph(guide.teacherObjective, "Objetivo del maestro pendiente.")}</p>
+      <h3>Ideas para comenzar</h3>
+      ${formatList(guide.openingIdeas)}
+      <h3>Preguntas dificiles</h3>
+      ${formatList(guide.difficultQuestions)}
+      <h3>Errores doctrinales comunes</h3>
+      ${formatList(guide.commonErrors)}
+      <h3>Versiculos adicionales</h3>
+      ${formatList(guide.extraVerses)}
+    </section>
+  `;
+}
+
+function renderStudentMaterial(lesson) {
+  if (!lesson.studentMaterial) {
+    return "";
+  }
+
+  const material = lesson.studentMaterial;
+
+  return `
+    <section class="lesson-section student-material-box">
+      <p class="section-kicker">Material para el estudiante</p>
+      <h2>Para recordar y practicar</h2>
+      <p><strong>Versiculo:</strong> ${escapeHtml(material.memoryVerse || "Pendiente")}</p>
+      <p><strong>Lectura semanal:</strong> ${escapeHtml(material.weeklyReading || "Pendiente")}</p>
+      <p><strong>Actividad:</strong> ${formatParagraph(material.activity, "Actividad pendiente.")}</p>
+      <p><strong>Notas:</strong> ${escapeHtml(material.notesPrompt || "Hoy aprendi que...")}</p>
+      <p><strong>Aplicacion:</strong> ${formatParagraph(material.application, "Aplicacion pendiente.")}</p>
+    </section>
+  `;
+}
+
+function renderParentMaterial(lesson) {
+  if (!lesson.parentMaterial) {
+    return "";
+  }
+
+  const material = lesson.parentMaterial;
+
+  return `
+    <section class="lesson-section parent-material-box">
+      <p class="section-kicker">Material para los padres</p>
+      <h2>Discipulado en el hogar</h2>
+      <p>${formatParagraph(material.whatWeLearned, "Resumen del hogar pendiente.")}</p>
+      <p><strong>Versiculo:</strong> ${escapeHtml(material.verse || "Pendiente")}</p>
+      <h3>Preguntas familiares</h3>
+      ${formatList(material.familyQuestions)}
+      <p><strong>Actividad:</strong> ${formatParagraph(material.activity, "Actividad pendiente.")}</p>
+      <p><strong>Oracion:</strong> ${formatParagraph(material.prayer, "Oracion pendiente.")}</p>
+    </section>
+  `;
+}
+
 function getLessonFields() {
   return [
     "lessonTitle",
@@ -120,15 +242,35 @@ function renderLessonPreview(lesson) {
   document.getElementById("previewDate").textContent = lesson.date || "Clase";
 
   document.getElementById("previewContent").innerHTML = `
+    ${renderBiblicalText(lesson)}
+
+    ${lesson.centralIdea ? `
+      <section class="lesson-section central-idea-box">
+        <p class="section-kicker">Idea central</p>
+        <h2>${escapeHtml(lesson.centralIdea)}</h2>
+      </section>
+    ` : ""}
+
+    ${renderObjectives(lesson)}
+
     <section class="lesson-section">
       <p class="section-kicker">Versiculo clave</p>
       <h2>${escapeHtml(lesson.verse || "Pendiente")}</h2>
     </section>
 
+    ${lesson.bibleContext ? `
+      <section class="lesson-section">
+        <p class="section-kicker">Contexto biblico</p>
+        <p>${formatParagraph(lesson.bibleContext, "Contexto pendiente.")}</p>
+      </section>
+    ` : ""}
+
     <section class="lesson-section">
       <p class="section-kicker">Ensenanza</p>
       <p>${formatParagraph(lesson.summary, "La clase aun no tiene resumen publicado.")}</p>
     </section>
+
+    ${renderExposition(lesson)}
 
     <section class="lesson-section">
       <p class="section-kicker">Inicio dinamico</p>
@@ -159,6 +301,13 @@ function renderLessonPreview(lesson) {
       <p class="section-kicker">Oracion final</p>
       <p>${formatParagraph(lesson.prayer, "Senor, ayudanos a vivir tu Palabra con un corazon obediente. Amen.")}</p>
     </section>
+
+    ${lesson.closingSummary ? `
+      <section class="lesson-section central-idea-box">
+        <p class="section-kicker">Resumen</p>
+        <h2>${escapeHtml(lesson.closingSummary)}</h2>
+      </section>
+    ` : ""}
   `;
 
   document.getElementById("previewResources").innerHTML = `
@@ -173,6 +322,10 @@ function renderLessonPreview(lesson) {
     <ol class="question-list">
       ${formatQuestions(lesson.questions)}
     </ol>
+
+    ${renderTeacherGuide(lesson)}
+    ${renderStudentMaterial(lesson)}
+    ${renderParentMaterial(lesson)}
   `;
 }
 
