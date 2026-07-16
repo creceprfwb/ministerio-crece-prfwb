@@ -3201,6 +3201,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "1/4/2026",
+      "displayTitle": "Fe con fundamento: Dios se ha dado a conocer",
+      "closingSummary": "La fe cristiana no es un salto ciego. Dios se ha revelado en la creacion, en la conciencia humana, en la Escritura y de manera suprema en Jesucristo.",
+      "teacherGuide": [
+        "Permite preguntas honestas sin ridiculizar dudas; la clase debe modelar una fe que piensa.",
+        "Distingue evidencia de prueba matematica: la fe responde a la revelacion de Dios con confianza.",
+        "Lleva cada argumento a adoracion y obediencia, no solo a debate intelectual."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Hebreos 11:6",
+        "activity": "Escribe tres columnas: creacion, conciencia y Escritura. Anota una evidencia de Dios en cada una.",
+        "reflection": "Mi fe puede crecer cuando miro la evidencia de Dios y respondo buscandolo."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles reflexionaron sobre como Dios se revela y por que creer en El es razonable.",
+        "homeQuestion": "Donde viste evidencia de Dios esta semana?",
+        "familyChallenge": "Conversen sobre una pregunta de fe y busquen juntos un texto biblico relacionado."
+      },
+      "biblicalText": {
+        "book": "Hebreos",
+        "chapter": "11",
+        "verses": "6; apoyo: Salmo 19:1-3 y Romanos 1:20",
+        "author": "Autor de Hebreos no identificado",
+        "date": "Aproximadamente antes del 70 d.C.",
+        "context": "Hebreos anima a creyentes a perseverar por fe. La fe biblica no ignora a Dios; se acerca a El creyendo que existe y recompensa a quienes le buscan."
+      },
+      "centralIdea": "Dios se ha revelado de forma suficiente para que le busquemos con fe sincera.",
+      "objectives": [
+        "Reconocer evidencias de la existencia de Dios en la creacion, la conciencia y la Escritura.",
+        "Comprender que la fe cristiana responde a la revelacion de Dios.",
+        "Aplicar esta verdad identificando evidencias de Dios durante la semana."
+      ],
+      "bibleContext": "Hebreos 11 presenta ejemplos de personas que vivieron por fe. Salmo 19 muestra que la creacion proclama la gloria de Dios, mientras Romanos 1 afirma que su poder y deidad se hacen visibles por medio de lo creado.",
+      "exposition": [
+        {
+          "title": "La creacion apunta al Creador",
+          "text": "El orden, la belleza y la grandeza del mundo no son el mensaje completo, pero si apuntan hacia la gloria de Dios."
+        },
+        {
+          "title": "La conciencia revela responsabilidad",
+          "text": "Nuestra capacidad de reconocer bien y mal muestra que no vivimos en un universo moralmente vacio."
+        },
+        {
+          "title": "Cristo revela a Dios con claridad",
+          "text": "La revelacion mas clara de Dios no es una idea abstracta, sino Jesucristo, quien nos muestra al Padre."
+        }
+      ],
       "title": "Temporada del año: Comienzo de año / Fundamentos de fe",
       "verse": "Hebreos 11:6 \"Pero sin fe es imposible agradar a Dios; porque es necesario que el que se acerca a Dios crea que le hay...\"",
       "goal": "Guiar a los adolescentes a reflexionar sobre la evidencia de la existencia de Dios y su revelación en la creación, la conciencia y la Escritura.",
@@ -3221,6 +3267,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "1/11/2026",
+      "displayTitle": "El Dios eterno que se acerca",
+      "closingSummary": "Dios no esta limitado por cuerpo, espacio ni tiempo. Es eterno y espiritual, pero tambien se acerca al humilde y busca adoradores sinceros.",
+      "teacherGuide": [
+        "Conecta lo invisible pero real con la vida diaria, sin reducir a Dios a una comparacion.",
+        "Enfatiza que Dios es trascendente y cercano: grande sobre todo, presente con su pueblo.",
+        "Lleva la clase a evaluar la adoracion: no apariencia, sino espiritu y verdad."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Juan 4:24",
+        "activity": "Haz una lista de tres cosas invisibles pero reales y luego escribe como eso te ayuda a pensar en la presencia de Dios.",
+        "reflection": "Dios merece una adoracion sincera, no solo costumbre religiosa."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron que Dios es espiritu, eterno y digno de adoracion verdadera.",
+        "homeQuestion": "Como se ve una adoracion sincera fuera del culto?",
+        "familyChallenge": "Apartar cinco minutos en familia para orar reconociendo que Dios esta presente."
+      },
+      "biblicalText": {
+        "book": "Juan",
+        "chapter": "4",
+        "verses": "24; apoyo: Isaias 57:15",
+        "author": "El apostol Juan",
+        "date": "Aproximadamente 85-95 d.C.",
+        "context": "Jesus conversa con la mujer samaritana y ensena que la adoracion verdadera no depende solo de lugar externo, sino de espiritu y verdad."
+      },
+      "centralIdea": "Dios es espiritu y eterno, y llama a una adoracion sincera en espiritu y verdad.",
+      "objectives": [
+        "Comprender que Dios no esta limitado como los seres humanos.",
+        "Reconocer que el Dios eterno se acerca al humilde.",
+        "Aplicar esta verdad evaluando la sinceridad de nuestra adoracion."
+      ],
+      "bibleContext": "Juan 4 rompe barreras culturales y religiosas. Jesus revela que el Padre busca adoradores verdaderos. Isaias 57:15 muestra al Alto y Sublime habitando tambien con el quebrantado y humilde.",
+      "exposition": [
+        {
+          "title": "Dios es espiritu",
+          "text": "Dios no puede ser reducido a imagen, lugar o forma humana. Es real aunque no lo veamos."
+        },
+        {
+          "title": "Dios es eterno",
+          "text": "Dios no comienza ni termina. Su presencia y autoridad superan nuestro tiempo."
+        },
+        {
+          "title": "Dios busca adoradores sinceros",
+          "text": "La adoracion verdadera involucra corazon, verdad, obediencia y reverencia."
+        }
+      ],
       "title": "DIOS ES ESPÍRITU Y ETERNO",
       "verse": "Juan 4:24 \"Dios es Espíritu; y los que le adoran, en espíritu y en verdad es necesario que adoren.\"",
       "goal": "Comprender que Dios no tiene limitaciones humanas, es invisible pero real, y vive por la eternidad.",
@@ -3241,6 +3333,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "1/18/2026",
+      "displayTitle": "Santidad que confronta y gracia que limpia",
+      "closingSummary": "La santidad de Dios revela nuestro pecado, pero no nos deja sin esperanza. El Dios santo tambien limpia, perdona y llama a vivir con integridad.",
+      "teacherGuide": [
+        "Permite que la santidad de Dios pese, pero lleva la conversacion hacia la gracia y limpieza de Dios.",
+        "Usa casos reales de escuela/redes para aplicar justicia e integridad.",
+        "Evita moralismo: la santidad cristiana responde a la gracia de Dios."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Isaias 6:3",
+        "activity": "Analiza una situacion real de presion social y escribe una respuesta que tome en serio la santidad de Dios.",
+        "reflection": "La santidad de Dios me llama a vivir con integridad aun cuando nadie me ve."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles hablaron de la santidad y justicia de Dios, y de nuestra necesidad de limpieza.",
+        "homeQuestion": "Que decision diaria requiere integridad esta semana?",
+        "familyChallenge": "Orar juntos pidiendo un corazon limpio y decisiones sabias."
+      },
+      "biblicalText": {
+        "book": "Isaias",
+        "chapter": "6",
+        "verses": "1-7; apoyo: Salmo 89:14",
+        "author": "El profeta Isaias",
+        "date": "Aproximadamente siglo VIII a.C.",
+        "context": "Isaias ve al Senor en su trono, escucha la declaracion de su santidad y reconoce su pecado. Dios responde limpiandolo y preparandolo para servir."
+      },
+      "centralIdea": "La santidad de Dios confronta el pecado y su gracia limpia al que se humilla ante El.",
+      "objectives": [
+        "Reconocer la santidad y justicia perfecta de Dios.",
+        "Comprender que el pecado no puede tratarse a la ligera.",
+        "Aplicar esta verdad identificando una decision donde debo actuar con integridad."
+      ],
+      "bibleContext": "Isaias 6 ocurre en un tiempo de crisis nacional. La vision del Dios santo reubica al profeta: primero adoracion, luego confesion, limpieza y envio.",
+      "exposition": [
+        {
+          "title": "Dios es completamente santo",
+          "text": "Santo significa separado, puro y perfecto. Dios no se ajusta a nuestras opiniones; nosotros somos llamados a responder a El."
+        },
+        {
+          "title": "La santidad revela nuestro pecado",
+          "text": "Isaias no se compara con otros; delante de Dios reconoce su propia necesidad."
+        },
+        {
+          "title": "Dios limpia y envia",
+          "text": "La gracia no niega la santidad. Dios limpia al pecador arrepentido y lo llama a vivir para El."
+        }
+      ],
       "title": "DIOS ES SANTO Y JUSTO",
       "verse": "Isaías 6:3 \"Santo, santo, santo, Jehová de los ejércitos; toda la tierra está llena de su gloria.\"",
       "goal": "Conocer la perfección moral de Dios y su justicia, y reconocer nuestra necesidad de vivir en santidad.",
@@ -3261,6 +3399,52 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "1/25/2026",
+      "displayTitle": "Amor que salva y misericordia que transforma",
+      "closingSummary": "Dios no nos amo porque fueramos dignos, sino porque El es rico en misericordia. Su amor en Cristo nos perdona y nos transforma para amar a otros.",
+      "teacherGuide": [
+        "Distingue amor biblico de sentimentalismo: Dios ama con verdad, gracia y accion salvadora.",
+        "Explica misericordia como no recibir el juicio merecido y recibir gracia inmerecida.",
+        "Conecta Efesios 2 con relaciones reales: perdonar, servir y amar al dificil."
+      ],
+      "studentMaterial": {
+        "memoryVerse": "Efesios 2:4",
+        "activity": "Haz dos columnas: lo que merecia por mi pecado y lo que Dios me dio en Cristo.",
+        "reflection": "Si Dios me amo con misericordia, yo tambien puedo amar y perdonar a otros."
+      },
+      "parentMaterial": {
+        "summary": "Hoy los juveniles estudiaron el amor y la misericordia de Dios en Cristo.",
+        "homeQuestion": "Como cambia mi trato a otros cuando recuerdo la misericordia de Dios conmigo?",
+        "familyChallenge": "Practicar una accion de misericordia con alguien esta semana."
+      },
+      "biblicalText": {
+        "book": "Efesios",
+        "chapter": "2",
+        "verses": "4-5; apoyo: Romanos 5:8",
+        "author": "El apostol Pablo",
+        "date": "Aproximadamente 60-62 d.C.",
+        "context": "Pablo describe la condicion humana en pecado y luego presenta el contraste glorioso: Dios, rico en misericordia, nos dio vida juntamente con Cristo."
+      },
+      "centralIdea": "El amor misericordioso de Dios salva a pecadores y transforma la manera en que vivimos.",
+      "objectives": [
+        "Reconocer que Dios es rico en misericordia.",
+        "Comprender que la salvacion nace de la gracia de Dios, no de nuestro merito.",
+        "Aplicar esta verdad mostrando amor y perdon a otros."
+      ],
+      "bibleContext": "Efesios 2 muestra el antes y despues de la gracia. Estabamos muertos en delitos, pero Dios actuo por amor para darnos vida en Cristo.",
+      "exposition": [
+        {
+          "title": "Dios es rico en misericordia",
+          "text": "La misericordia de Dios no es pequena ni limitada. El actua hacia pecadores con compasion y gracia."
+        },
+        {
+          "title": "Cristo prueba el amor de Dios",
+          "text": "Romanos 5:8 ensena que Dios mostro su amor cuando Cristo murio por nosotros siendo aun pecadores."
+        },
+        {
+          "title": "La misericordia transforma relaciones",
+          "text": "Quien ha recibido misericordia aprende a perdonar, servir y amar con humildad."
+        }
+      ],
       "title": "DIOS ES AMOR Y MISERICORDIA",
       "verse": "Efesios 2:4 \"Pero Dios, que es rico en misericordia, por su gran amor con que nos amó...\"",
       "goal": "Reconocer que Dios nos ama a pesar de nuestro pecado, y nos extiende misericordia que transforma.",
