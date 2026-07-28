@@ -1826,7 +1826,7 @@ body {
 
 .report-row {
   display: grid;
-  grid-template-columns: minmax(150px, 0.9fr) minmax(90px, 0.45fr) minmax(180px, 1.2fr) minmax(130px, 0.8fr) minmax(130px, 0.8fr) minmax(110px, 0.55fr);
+  grid-template-columns: minmax(145px, 0.9fr) minmax(86px, 0.42fr) minmax(170px, 1.15fr) minmax(105px, 0.55fr) minmax(120px, 0.75fr) minmax(120px, 0.75fr) minmax(105px, 0.5fr);
   gap: 10px;
   align-items: center;
   padding: 12px;
@@ -1850,6 +1850,11 @@ body {
   border-left-color: #0d6efd;
 }
 
+.report-row.status-sin-asignar {
+  border-left-color: #f97316;
+  background: #fff8f1;
+}
+
 .report-row.status-confirmado {
   border-left-color: #198754;
 }
@@ -1861,6 +1866,27 @@ body {
 .report-row span {
   min-width: 0;
   overflow-wrap: anywhere;
+}
+
+.assignment-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.assignment-pill.assigned {
+  background: #e8f3ff;
+  color: #0b3d91;
+}
+
+.assignment-pill.vacant {
+  background: #fff0df;
+  color: #b54708;
 }
 
 .month-service.status-asignado {
@@ -2035,7 +2061,7 @@ body {
   }
 
   .report-row {
-    grid-template-columns: 1.1fr 0.65fr 1.35fr 1fr 1fr 0.8fr;
+    grid-template-columns: 1.05fr 0.55fr 1.2fr 0.75fr 0.9fr 0.9fr 0.75fr;
     break-inside: avoid;
     padding: 8px;
     font-size: 10px;

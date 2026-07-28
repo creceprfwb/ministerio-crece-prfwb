@@ -44,6 +44,18 @@ function getReportStatusLabel(status) {
   return labels[status] || "Sin asignar";
 }
 
+function getMonthKeyFromDate(date = new Date()) {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+}
+
+function getMonthLabel(monthKey) {
+  const [year, month] = monthKey.split("-").map(Number);
+  return new Date(year, month - 1, 1).toLocaleDateString("es-PR", {
+    month: "long",
+    year: "numeric"
+  });
+}
+
 async function loadReportData() {
   reportTeachers = loadReportLocal(REPORT_TEACHERS_STORAGE_KEY);
   reportSchedule = loadReportLocal(REPORT_SCHEDULE_STORAGE_KEY);
@@ -66,11 +78,11 @@ async function loadReportData() {
 
 function getFilteredReportEntries() {
   const group = document.getElementById("reportGroupFilter").value;
-  const status = document.getElementById("reportStatusFilter").value;
+  const month = document.getElementById("reportMonthFilter").value;
 
   return reportSchedule
+    .filter((entry) => !month || (entry.dateIso || "").startsWith(month))
     .filter((entry) => group === "todos" || entry.group === group)
-    .filter((entry) => status === "todos" || (entry.status || "sin-asignar") === status)
     .sort((a, b) => new Date(a.dateIso || 0) - new Date(b.dateIso || 0));
 }
 
@@ -84,14 +96,12 @@ function renderReportStats(entries) {
 function renderReport() {
   const board = document.getElementById("assignmentReport");
   const entries = getFilteredReportEntries();
+  const month = document.getElementById("reportMonthFilter").value;
   renderReportStats(entries);
 
-  document.getElementById("reportDateLabel").textContent = new Date().toLocaleDateString("es-PR", {
-    weekday: "long",
-    month: "long",
-    day: "numeric",
-    year: "numeric"
-  });
+  document.getElementById("reportDateLabel").textContent = month
+    ? `Mes seleccionado: ${getMonthLabel(month)}`
+    : "Selecciona un mes para ver las asignaciones.";
 
   if (!entries.length) {
     board.innerHTML = '<div class="empty-inline">No hay asignaciones con esos filtros.</div>';
@@ -104,6 +114,7 @@ function renderReport() {
         <span>Fecha</span>
         <span>Grupo</span>
         <span>Clase</span>
+        <span>Asignacion</span>
         <span>Maestro</span>
         <span>Ayudante</span>
         <span>Estado</span>
@@ -111,11 +122,13 @@ function renderReport() {
       ${entries.map((entry) => {
         const teacher = getReportTeacher(entry.teacherId);
         const assistant = getReportTeacher(entry.assistantId);
+        const assignmentLabel = teacher ? "Asignado" : "Vacante";
         return `
-          <div class="report-row status-${entry.status || "sin-asignar"}">
+          <div class="report-row ${teacher ? "status-asignado" : "status-sin-asignar"} status-${entry.status || "sin-asignar"}">
             <span>${escapeReportHtml(entry.dateLabel || entry.dateIso)}</span>
             <span>${escapeReportHtml(getReportGroupLabel(entry.group))}</span>
             <span>${escapeReportHtml(entry.lessonTitle || "Clase por confirmar")}</span>
+            <span><strong class="assignment-pill ${teacher ? "assigned" : "vacant"}">${assignmentLabel}</strong></span>
             <span>${teacher ? escapeReportHtml(teacher.name) : "Sin asignar"}</span>
             <span>${assistant ? escapeReportHtml(assistant.name) : "Sin ayudante"}</span>
             <span>${escapeReportHtml(getReportStatusLabel(entry.status))}</span>
@@ -127,8 +140,9 @@ function renderReport() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("reportMonthFilter").value = getMonthKeyFromDate();
   document.getElementById("printReport").addEventListener("click", () => window.print());
+  document.getElementById("reportMonthFilter").addEventListener("change", renderReport);
   document.getElementById("reportGroupFilter").addEventListener("change", renderReport);
-  document.getElementById("reportStatusFilter").addEventListener("change", renderReport);
   loadReportData();
 });
