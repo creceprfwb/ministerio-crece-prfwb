@@ -60,17 +60,24 @@ async function loadReportData() {
   reportTeachers = loadReportLocal(REPORT_TEACHERS_STORAGE_KEY);
   reportSchedule = loadReportLocal(REPORT_SCHEDULE_STORAGE_KEY);
 
-  if (window.PRFirebase && window.PRFirebase.enabled) {
-    const profile = await window.PRFirebase.requireAuth();
-    if (!profile) return;
+  try {
+    if (window.PRFirebase && window.PRFirebase.enabled) {
+      const profile = await window.PRFirebase.requireAuth();
+      if (!profile) {
+        renderReport("Inicia sesion para ver las asignaciones guardadas en la nube.");
+        return;
+      }
 
-    const [cloudTeachers, cloudSchedule] = await Promise.all([
-      window.PRFirebase.getTeachers ? window.PRFirebase.getTeachers() : [],
-      window.PRFirebase.getSchedule ? window.PRFirebase.getSchedule() : []
-    ]);
+      const [cloudTeachers, cloudSchedule] = await Promise.all([
+        window.PRFirebase.getTeachers ? window.PRFirebase.getTeachers() : [],
+        window.PRFirebase.getSchedule ? window.PRFirebase.getSchedule() : []
+      ]);
 
-    if (cloudTeachers.length) reportTeachers = cloudTeachers;
-    if (cloudSchedule.length) reportSchedule = cloudSchedule;
+      if (cloudTeachers.length) reportTeachers = cloudTeachers;
+      if (cloudSchedule.length) reportSchedule = cloudSchedule;
+    }
+  } catch (error) {
+    console.warn("No se pudo cargar el reporte desde Firebase.", error);
   }
 
   renderReport();
@@ -93,7 +100,7 @@ function renderReportStats(entries) {
   document.getElementById("reportConfirmed").textContent = entries.filter((entry) => entry.status === "confirmado").length;
 }
 
-function renderReport() {
+function renderReport(message = "") {
   const board = document.getElementById("assignmentReport");
   const entries = getFilteredReportEntries();
   const month = document.getElementById("reportMonthFilter").value;
@@ -104,7 +111,7 @@ function renderReport() {
     : "Selecciona un mes para ver las asignaciones.";
 
   if (!entries.length) {
-    board.innerHTML = '<div class="empty-inline">No hay asignaciones con esos filtros.</div>';
+    board.innerHTML = `<div class="empty-inline">${message || "No hay asignaciones con esos filtros."}</div>`;
     return;
   }
 
