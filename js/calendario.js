@@ -313,8 +313,12 @@ async function copyMessage(entry) {
 
 function renderSchedule() {
   const board = document.getElementById("scheduleBoard");
-  const groupFilter = document.getElementById("scheduleGroupFilter").value;
-  const statusFilter = document.getElementById("scheduleStatusFilter").value;
+  const groupFilter = document.getElementById("scheduleGroupFilter")?.value || "todos";
+  const statusFilter = document.getElementById("scheduleStatusFilter")?.value || "todos";
+
+  if (!board) {
+    return;
+  }
   const entries = scheduleEntries
     .filter((entry) => groupFilter === "todos" || entry.group === groupFilter)
     .filter((entry) => statusFilter === "todos" || entry.status === statusFilter)
@@ -418,6 +422,10 @@ function renderSchedule() {
 
 function renderUnassigned() {
   const board = document.getElementById("unassignedBoard");
+
+  if (!board) {
+    return;
+  }
   const entries = scheduleEntries
     .filter((entry) => !entry.teacherId || entry.status === "sin-asignar")
     .sort((a, b) => new Date(a.dateIso || 0) - new Date(b.dateIso || 0));
@@ -445,16 +453,10 @@ function renderUnassigned() {
 
   board.querySelectorAll(".focus-schedule-entry").forEach((button) => {
     button.addEventListener("click", () => {
-      document.getElementById("scheduleGroupFilter").value = "todos";
-      document.getElementById("scheduleStatusFilter").value = "todos";
-      renderSchedule();
-
-      const card = document.querySelector(`.schedule-card[data-id="${button.dataset.id}"]`);
-      if (card) {
-        card.scrollIntoView({ behavior: "smooth", block: "center" });
-        card.classList.add("schedule-highlight");
-        window.setTimeout(() => card.classList.remove("schedule-highlight"), 1600);
-      }
+      selectedScheduleEntryId = button.dataset.id;
+      renderMonthCalendar();
+      renderSelectedDayPanel();
+      document.getElementById("selectedDayPanel")?.scrollIntoView({ behavior: "smooth", block: "center" });
     });
   });
 }
@@ -692,16 +694,10 @@ function renderDashboardOverview() {
 
   upcomingBoard.querySelectorAll(".upcoming-assignment").forEach((button) => {
     button.addEventListener("click", () => {
-      document.getElementById("scheduleGroupFilter").value = "todos";
-      document.getElementById("scheduleStatusFilter").value = "todos";
-      renderSchedule();
-
-      const card = document.querySelector(`.schedule-card[data-id="${button.dataset.id}"]`);
-      if (card) {
-        card.scrollIntoView({ behavior: "smooth", block: "center" });
-        card.classList.add("schedule-highlight");
-        window.setTimeout(() => card.classList.remove("schedule-highlight"), 1600);
-      }
+      selectedScheduleEntryId = button.dataset.id;
+      renderMonthCalendar();
+      renderSelectedDayPanel();
+      document.getElementById("selectedDayPanel")?.scrollIntoView({ behavior: "smooth", block: "center" });
     });
   });
 }
@@ -817,8 +813,8 @@ async function setupSchedulePage() {
   setupCustomDateForm();
   document.getElementById("generateSundays").addEventListener("click", generateUpcomingSchedule);
   document.getElementById("printSchedule").addEventListener("click", () => window.print());
-  document.getElementById("scheduleGroupFilter").addEventListener("change", renderSchedule);
-  document.getElementById("scheduleStatusFilter").addEventListener("change", renderSchedule);
+  document.getElementById("scheduleGroupFilter")?.addEventListener("change", renderSchedule);
+  document.getElementById("scheduleStatusFilter")?.addEventListener("change", renderSchedule);
   document.getElementById("prevMonth").addEventListener("click", () => {
     currentMonthDate = new Date(currentMonthDate.getFullYear(), currentMonthDate.getMonth() - 1, 1);
     renderMonthCalendar();

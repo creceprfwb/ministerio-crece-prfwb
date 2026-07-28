@@ -69,9 +69,6 @@
             <h2>Proximas asignaciones</h2>
             <p>Vista corta para saber que necesita atencion primero.</p>
           </div>
-          <a class="btn btn-outline-primary btn-sm" href="#scheduleBoard">
-            <i class="bi bi-list-check"></i> Ver todo
-          </a>
         </div>
         <div id="upcomingAssignments" class="upcoming-assignments"></div>
       </article>
@@ -206,39 +203,6 @@
       <div id="teachersList" class="teacher-list"></div>
     </section>
 
-    <section class="app-card mt-4">
-      <div class="panel-heading">
-        <div>
-          <h2>Sin asignar</h2>
-          <p>Servicios que necesitan maestro principal.</p>
-        </div>
-      </div>
-      <div id="unassignedBoard" class="unassigned-board"></div>
-    </section>
-
-    <section class="app-card mt-4">
-      <div class="panel-heading">
-        <div>
-          <h2>Proximos domingos</h2>
-          <p>Asignacion por grupo, clase y estado.</p>
-        </div>
-        <div class="schedule-filters">
-          <select id="scheduleGroupFilter" class="form-select">
-            <option value="todos">Todos</option>
-            <option value="ninos">Ninos</option>
-            <option value="juveniles">Juveniles</option>
-          </select>
-          <select id="scheduleStatusFilter" class="form-select">
-            <option value="todos">Todos los estados</option>
-            <option value="sin-asignar">Sin asignar</option>
-            <option value="asignado">Asignado</option>
-            <option value="confirmado">Confirmado</option>
-            <option value="completado">Completado</option>
-          </select>
-        </div>
-      </div>
-      <div id="scheduleBoard" class="schedule-board"></div>
-    </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
