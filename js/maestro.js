@@ -20,6 +20,8 @@ const REWARD_LEVELS = [
   { name: "Embajador CRECE", points: 200 }
 ];
 
+const REWARD_PRIZE_POINTS = 25;
+
 let students = [];
 let selectedQrStudent = null;
 let editingStudentCode = null;
@@ -135,6 +137,22 @@ function getRewardProgress(points) {
   const levelRange = nextLevel.points - currentLevel.points;
   const progress = ((points - currentLevel.points) / levelRange) * 100;
   return Math.max(0, Math.min(100, progress));
+}
+
+function getDeliveredPrizeCount(student) {
+  return (student.rewardHistory || []).filter((entry) => {
+    return entry.deliveredPrize || entry.reason === "Premio entregado" || entry.reason === "Canje de premio";
+  }).length;
+}
+
+function getAvailablePrizeCount(student) {
+  return Math.floor(Number(student.rewardPoints || 0) / REWARD_PRIZE_POINTS);
+}
+
+function getRewardHistoryDate(entry) {
+  return entry.createdAt
+    ? new Date(entry.createdAt).toLocaleDateString("es-PR")
+    : "";
 }
 
 // Crea el objeto del estudiante registrado.
@@ -431,21 +449,46 @@ function renderRewardManager() {
     : "Nivel maximo alcanzado";
   document.getElementById("rewardProgressBar").style.width = `${getRewardProgress(student.rewardPoints)}%`;
 
+  const availablePrizes = getAvailablePrizeCount(student);
+  const deliveredPrizes = getDeliveredPrizeCount(student);
+  const prizeStatus = document.getElementById("rewardPrizeStatus");
+  const prizeHelp = document.getElementById("rewardPrizeHelp");
+  const deliverButton = document.getElementById("deliverRewardPrize");
+
+  if (prizeStatus && prizeHelp && deliverButton) {
+    prizeStatus.textContent = availablePrizes
+      ? `${availablePrizes} premio${availablePrizes === 1 ? "" : "s"} disponible${availablePrizes === 1 ? "" : "s"}`
+      : "Sin premio disponible";
+    prizeHelp.textContent = `Premios entregados: ${deliveredPrizes}. Proximo premio cada ${REWARD_PRIZE_POINTS} puntos.`;
+    deliverButton.disabled = availablePrizes < 1;
+  }
+
   const history = student.rewardHistory || [];
   const historyContainer = document.getElementById("rewardHistory");
   historyContainer.innerHTML = history.length
     ? history.slice(0, 12).map((entry) => `
       <div class="reward-history-item">
         <div>
-          <strong>${escapeHtml(entry.reason)}</strong>
-          <span>${escapeHtml(entry.note || new Date(entry.createdAt).toLocaleDateString("es-PR"))}</span>
+          <strong>${escapeHtml(entry.reason)}${entry.deliveredPrize ? ' <em class="reward-delivered">Entregado</em>' : ""}</strong>
+          <span>${escapeHtml(entry.note || getRewardHistoryDate(entry))}</span>
         </div>
-        <b class="${entry.points >= 0 ? "reward-positive" : "reward-negative"}">
-          ${entry.points > 0 ? "+" : ""}${entry.points}
-        </b>
+        <div class="reward-history-actions">
+          <b class="${entry.points >= 0 ? "reward-positive" : "reward-negative"}">
+            ${entry.points > 0 ? "+" : ""}${entry.points}
+          </b>
+          <button class="btn btn-sm btn-outline-danger delete-reward-entry" type="button" data-id="${escapeHtml(entry.id)}" aria-label="Borrar entrada">
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
       </div>
     `).join("")
     : '<div class="text-muted small">Todavia no hay puntos registrados.</div>';
+
+  historyContainer.querySelectorAll(".delete-reward-entry").forEach((button) => {
+    button.addEventListener("click", async () => {
+      await deleteRewardEntry(button.dataset.id);
+    });
+  });
 }
 
 async function addRewardPoints(points, reason, note) {
@@ -482,6 +525,86 @@ async function addRewardPoints(points, reason, note) {
   renderRewardManager();
 }
 
+async function saveRewardStudent(updatedStudent) {
+  students = students.map((item) => item.code === updatedStudent.code ? updatedStudent : item);
+  saveStudents(students);
+
+  if (window.PRFirebase && typeof window.PRFirebase.saveStudent === "function") {
+    await window.PRFirebase.saveStudent(updatedStudent);
+  }
+
+  renderStudentsTable();
+  renderRewardManager();
+}
+
+async function deleteRewardEntry(entryId) {
+  const student = selectedRewardStudentCode ? normalizeRewardData(getStudentByCode(selectedRewardStudentCode)) : null;
+
+  if (!student || !entryId) {
+    return;
+  }
+
+  const entry = (student.rewardHistory || []).find((item) => item.id === entryId);
+
+  if (!entry) {
+    return;
+  }
+
+  const confirmed = window.confirm(`Seguro que quieres borrar esta entrada?\n\n${entry.reason} (${entry.points > 0 ? "+" : ""}${entry.points} puntos)`);
+
+  if (!confirmed) {
+    return;
+  }
+
+  const updatedHistory = (student.rewardHistory || []).filter((item) => item.id !== entryId);
+  const updatedStudent = {
+    ...student,
+    rewardPoints: Math.max(0, Number(student.rewardPoints || 0) - Number(entry.points || 0)),
+    rewardHistory: updatedHistory,
+    updatedAt: new Date().toISOString()
+  };
+
+  await saveRewardStudent(updatedStudent);
+}
+
+async function deliverRewardPrize() {
+  const student = selectedRewardStudentCode ? normalizeRewardData(getStudentByCode(selectedRewardStudentCode)) : null;
+
+  if (!student) {
+    window.alert("Selecciona un estudiante primero.");
+    return;
+  }
+
+  if (getAvailablePrizeCount(student) < 1) {
+    window.alert("Este estudiante todavia no tiene puntos suficientes para premio.");
+    return;
+  }
+
+  const confirmed = window.confirm(`Marcar un premio como entregado a ${student.name}? Se descontaran ${REWARD_PRIZE_POINTS} puntos.`);
+
+  if (!confirmed) {
+    return;
+  }
+
+  const entry = {
+    id: crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}`,
+    points: -REWARD_PRIZE_POINTS,
+    reason: "Premio entregado",
+    note: "Canje registrado por el panel de premios",
+    deliveredPrize: true,
+    createdAt: new Date().toISOString()
+  };
+
+  const updatedStudent = {
+    ...student,
+    rewardPoints: Math.max(0, Number(student.rewardPoints || 0) + entry.points),
+    rewardHistory: [entry, ...(student.rewardHistory || [])],
+    updatedAt: new Date().toISOString()
+  };
+
+  await saveRewardStudent(updatedStudent);
+}
+
 function setupRewardsForm() {
   const form = document.getElementById("rewardForm");
 
@@ -490,6 +613,11 @@ function setupRewardsForm() {
   }
 
   populateRewardControls();
+
+  const deliverButton = document.getElementById("deliverRewardPrize");
+  if (deliverButton) {
+    deliverButton.addEventListener("click", deliverRewardPrize);
+  }
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();

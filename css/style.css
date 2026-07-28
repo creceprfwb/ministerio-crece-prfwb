@@ -1203,6 +1203,32 @@ body {
   transition: width 0.2s ease;
 }
 
+.reward-prize-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid #dce8d8;
+  border-radius: 10px;
+  background: #f7fbf4;
+}
+
+.reward-prize-status div {
+  display: grid;
+  gap: 2px;
+}
+
+.reward-prize-status strong {
+  color: #185c2a;
+  font-size: 1rem;
+}
+
+.reward-prize-status span {
+  color: #52627a;
+  font-size: 0.86rem;
+}
+
 .reward-form {
   display: grid;
   grid-template-columns: minmax(180px, 1.4fr) minmax(110px, 0.5fr) minmax(180px, 1fr) auto;
@@ -1271,6 +1297,46 @@ body {
 .reward-history-item span {
   color: #667085;
   font-size: 0.82rem;
+}
+
+.reward-history-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reward-delivered {
+  display: inline-flex;
+  margin-left: 6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  color: #185c2a;
+  background: #dcfce7;
+  font-size: 0.68rem;
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.reward-report-hero {
+  background:
+    radial-gradient(circle at top right, rgba(251, 199, 64, 0.22), transparent 34%),
+    linear-gradient(135deg, #0f3f52, #0b1f3a);
+}
+
+.reward-report-row {
+  grid-template-columns: 1.4fr 0.8fr 0.6fr 0.9fr 0.6fr 0.8fr 1fr;
+}
+
+.reward-report-row small {
+  display: block;
+  color: #667085;
+  font-size: 0.75rem;
+}
+
+.reward-ready-row {
+  border-left-color: #198754;
+  background: #f3fbf5;
 }
 
 .schedule-hero {
@@ -1868,6 +1934,10 @@ body {
   overflow-wrap: anywhere;
 }
 
+.report-row.reward-report-row {
+  grid-template-columns: 1.4fr 0.8fr 0.6fr 0.9fr 0.6fr 0.8fr 1fr;
+}
+
 .assignment-pill {
   display: inline-flex;
   align-items: center;
@@ -1967,6 +2037,7 @@ body {
   .add-date-form,
   .report-filters,
   .report-row,
+  .reward-report-row,
   .month-grid-head,
   .month-calendar {
     grid-template-columns: 1fr;
@@ -1977,7 +2048,8 @@ body {
   }
 
   .schedule-hero,
-  .schedule-filters {
+  .schedule-filters,
+  .reward-prize-status {
     align-items: stretch;
     flex-direction: column;
   }

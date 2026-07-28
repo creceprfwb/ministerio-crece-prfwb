@@ -22,6 +22,7 @@
       <a href="asistencia.html" class="btn btn-outline-light btn-sm"><i class="bi bi-qr-code-scan"></i> Asistencia</a>
       <a href="biblioteca.html" class="btn btn-outline-light btn-sm"><i class="bi bi-journal-richtext"></i> Biblioteca de clases</a>
       <a href="calendario.html?v=dashboard2" class="btn btn-outline-light btn-sm"><i class="bi bi-calendar-week"></i> Calendario</a>
+      <a href="reporte-premios.html" class="btn btn-outline-light btn-sm"><i class="bi bi-trophy"></i> Reporte premios</a>
     </div>
   </nav>
 
@@ -166,6 +167,17 @@
           <div class="reward-progress">
             <span id="rewardProgressBar"></span>
           </div>
+        </div>
+
+        <div class="reward-prize-status">
+          <div>
+            <strong id="rewardPrizeStatus">Sin premio disponible</strong>
+            <span id="rewardPrizeHelp">Cuando llegue a 25 puntos puede recibir premio.</span>
+          </div>
+          <button id="deliverRewardPrize" class="btn btn-success" type="button" disabled>
+            <i class="bi bi-gift"></i>
+            Marcar premio entregado
+          </button>
         </div>
 
         <form id="rewardForm" class="reward-form">

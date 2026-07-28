@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reporte de premios Ministerio CRECE PRFWB.">
+  <title>Reporte de Premios | Ministerio CRECE</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="admin-body">
+  <nav class="admin-nav no-print">
+    <div>
+      <img src="assets/logo.png" alt="PRFWB" class="nav-logo">
+      <strong>Reporte CRECE</strong>
+      <span>Premios de estudiantes</span>
+    </div>
+    <div class="admin-actions">
+      <a href="index.html" class="btn btn-light btn-sm"><i class="bi bi-house"></i> Inicio</a>
+      <a href="maestro.html" class="btn btn-outline-light btn-sm"><i class="bi bi-person-badge"></i> Panel maestra</a>
+      <button id="printRewardsReport" class="btn btn-outline-light btn-sm" type="button"><i class="bi bi-printer"></i> Imprimir</button>
+    </div>
+  </nav>
+
+  <main class="admin-shell">
+    <section class="admin-hero reward-report-hero no-print">
+      <div>
+        <p class="section-kicker">Sistema de premios</p>
+        <h1>Premios y progreso</h1>
+        <p>Revisa puntos, premios disponibles, premios entregados y estudiantes cerca de ganar.</p>
+      </div>
+    </section>
+
+    <section class="stats-grid report-stats" aria-label="Resumen de premios">
+      <article class="stat-card">
+        <i class="bi bi-people"></i>
+        <span>Estudiantes</span>
+        <strong id="rewardReportTotal">0</strong>
+      </article>
+      <article class="stat-card">
+        <i class="bi bi-gift"></i>
+        <span>Con premio</span>
+        <strong id="rewardReportReady">0</strong>
+      </article>
+      <article class="stat-card">
+        <i class="bi bi-hourglass-split"></i>
+        <span>Cerca</span>
+        <strong id="rewardReportClose">0</strong>
+      </article>
+      <article class="stat-card">
+        <i class="bi bi-check2-circle"></i>
+        <span>Entregados</span>
+        <strong id="rewardReportDelivered">0</strong>
+      </article>
+    </section>
+
+    <section class="app-card mt-4 no-print">
+      <div class="panel-heading">
+        <div>
+          <h2>Filtros</h2>
+          <p>Escoge el grupo o muestra solo los que tienen premio pendiente.</p>
+        </div>
+      </div>
+      <div class="report-filters">
+        <label>
+          Grupo
+          <select id="rewardReportGroupFilter" class="form-select">
+            <option value="todos">Todos</option>
+            <option value="ninos">Ninos</option>
+            <option value="juveniles">Juveniles</option>
+          </select>
+        </label>
+        <label>
+          Vista
+          <select id="rewardReportViewFilter" class="form-select">
+            <option value="todos">Todos</option>
+            <option value="disponibles">Premio disponible</option>
+            <option value="cerca">Cerca de premio</option>
+          </select>
+        </label>
+      </div>
+    </section>
+
+    <section class="app-card mt-4 report-print-card">
+      <div class="panel-heading">
+        <div>
+          <p class="section-kicker">Ministerio CRECE</p>
+          <h2>Reporte de premios</h2>
+          <p id="rewardReportDateLabel">Cargando premios...</p>
+        </div>
+      </div>
+      <div id="rewardReportBoard" class="assignment-report"></div>
+    </section>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/reporte-premios.js"></script>
+</body>
+</html>
