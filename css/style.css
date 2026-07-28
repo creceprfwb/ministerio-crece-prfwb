@@ -1310,8 +1310,9 @@ body {
   margin-left: 6px;
   padding: 2px 7px;
   border-radius: 999px;
-  color: #185c2a;
-  background: #dcfce7;
+  color: #111827;
+  background: #fbc740;
+  box-shadow: 0 0 0 2px rgba(251, 199, 64, 0.22);
   font-size: 0.68rem;
   font-style: normal;
   font-weight: 900;
