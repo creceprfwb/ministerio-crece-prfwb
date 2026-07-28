@@ -482,12 +482,79 @@ function renderStats() {
   document.getElementById("statConfirmed").textContent = confirmedCount;
 }
 
+function getUpcomingEntries(limit = 6) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  return scheduleEntries
+    .filter((entry) => entry.dateIso && new Date(`${entry.dateIso}T12:00:00`) >= today)
+    .sort((a, b) => new Date(a.dateIso || 0) - new Date(b.dateIso || 0))
+    .slice(0, limit);
+}
+
+function renderDashboardOverview() {
+  const upcoming = getUpcomingEntries(6);
+  const nextEntry = upcoming[0] || null;
+  const pendingCount = scheduleEntries.filter((entry) => !entry.teacherId || entry.status === "sin-asignar").length;
+  const upcomingBoard = document.getElementById("upcomingAssignments");
+
+  document.getElementById("pendingCount").textContent = pendingCount;
+
+  if (!nextEntry) {
+    document.getElementById("nextServiceDate").textContent = "Sin generar";
+    document.getElementById("nextServiceLesson").textContent = "Genera los proximos domingos para comenzar.";
+    document.getElementById("nextServiceTeacher").textContent = "Sin asignar";
+    document.getElementById("nextServiceAssistant").textContent = "Ayudante por confirmar";
+    document.getElementById("nextServiceGroup").textContent = "CRECE";
+    document.getElementById("nextServiceStatus").textContent = "Pendiente";
+    upcomingBoard.innerHTML = '<div class="empty-inline">Todavia no hay domingos generados.</div>';
+    return;
+  }
+
+  const teacher = getTeacher(nextEntry.teacherId);
+  const assistant = getTeacher(nextEntry.assistantId);
+
+  document.getElementById("nextServiceDate").textContent = nextEntry.dateLabel || "Proxima fecha";
+  document.getElementById("nextServiceLesson").textContent = nextEntry.lessonTitle || "Clase por confirmar";
+  document.getElementById("nextServiceTeacher").textContent = teacher ? teacher.name : "Sin asignar";
+  document.getElementById("nextServiceAssistant").textContent = assistant ? `Ayudante: ${assistant.name}` : "Ayudante por confirmar";
+  document.getElementById("nextServiceGroup").textContent = getGroupLabel(nextEntry.group);
+  document.getElementById("nextServiceStatus").textContent = getStatusLabel(nextEntry.status);
+
+  upcomingBoard.innerHTML = upcoming.map((entry) => {
+    const entryTeacher = getTeacher(entry.teacherId);
+    return `
+      <button class="upcoming-assignment status-${entry.status || "sin-asignar"}" type="button" data-id="${entry.id}">
+        <span>${escapeHtml(entry.dateLabel || "Fecha por confirmar")}</span>
+        <strong>${escapeHtml(getGroupLabel(entry.group))}</strong>
+        <small>${entryTeacher ? escapeHtml(entryTeacher.name) : "Sin maestro"} - ${escapeHtml(entry.lessonTitle || "Clase por confirmar")}</small>
+      </button>
+    `;
+  }).join("");
+
+  upcomingBoard.querySelectorAll(".upcoming-assignment").forEach((button) => {
+    button.addEventListener("click", () => {
+      document.getElementById("scheduleGroupFilter").value = "todos";
+      document.getElementById("scheduleStatusFilter").value = "todos";
+      renderSchedule();
+
+      const card = document.querySelector(`.schedule-card[data-id="${button.dataset.id}"]`);
+      if (card) {
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        card.classList.add("schedule-highlight");
+        window.setTimeout(() => card.classList.remove("schedule-highlight"), 1600);
+      }
+    });
+  });
+}
+
 function renderAll() {
   renderTeachers();
   renderUnassigned();
   renderMonthCalendar();
   renderSchedule();
   renderStats();
+  renderDashboardOverview();
 }
 
 async function generateUpcomingSchedule() {

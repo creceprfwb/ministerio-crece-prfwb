@@ -1286,6 +1286,149 @@ body {
   gap: 10px;
 }
 
+.schedule-command-center {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 0.85fr 0.75fr;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.command-card {
+  display: grid;
+  gap: 6px;
+  min-height: 132px;
+  padding: 18px;
+  border: 1px solid #d9e7ff;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffffff, #f7fbff);
+  box-shadow: 0 14px 34px rgba(11, 31, 58, 0.08);
+}
+
+.command-card span {
+  color: #667085;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.command-card strong {
+  color: #0b1f3a;
+  font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+  line-height: 1.08;
+}
+
+.command-card small {
+  color: #475467;
+  font-weight: 700;
+}
+
+.command-card.next-service {
+  border-color: #b9d7ff;
+  background: linear-gradient(135deg, #ffffff, #eef6ff);
+}
+
+.command-card.alert-card {
+  border-color: #ffd7b5;
+  background: linear-gradient(135deg, #ffffff, #fff8f1);
+}
+
+.schedule-dashboard-grid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  margin-top: 18px;
+}
+
+.upcoming-assignments {
+  display: grid;
+  gap: 10px;
+}
+
+.upcoming-assignment {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.9fr) minmax(90px, 0.45fr) minmax(0, 1.2fr);
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d9e2f3;
+  border-left: 5px solid #98a2b3;
+  border-radius: 11px;
+  background: #fff;
+  color: #0b1f3a;
+  text-align: left;
+}
+
+.upcoming-assignment.status-asignado {
+  border-left-color: #0d6efd;
+}
+
+.upcoming-assignment.status-confirmado {
+  border-left-color: #198754;
+}
+
+.upcoming-assignment.status-completado {
+  border-left-color: #6f42c1;
+}
+
+.upcoming-assignment span,
+.upcoming-assignment small {
+  color: #667085;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.upcoming-assignment strong {
+  color: #0b3d91;
+}
+
+.schedule-fold {
+  padding: 0;
+  overflow: hidden;
+}
+
+.schedule-fold summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 18px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.schedule-fold summary::-webkit-details-marker {
+  display: none;
+}
+
+.schedule-fold summary span {
+  display: grid;
+  gap: 2px;
+}
+
+.schedule-fold summary strong {
+  color: #0b1f3a;
+  font-size: 1.12rem;
+}
+
+.schedule-fold summary small {
+  color: #667085;
+  font-weight: 700;
+}
+
+.schedule-fold summary i {
+  transition: transform 0.18s ease;
+}
+
+.schedule-fold[open] summary i {
+  transform: rotate(180deg);
+}
+
+.schedule-fold-body {
+  display: grid;
+  gap: 16px;
+  padding: 0 18px 18px;
+}
+
 .teacher-list,
 .schedule-board {
   display: grid;
@@ -1597,6 +1740,7 @@ body {
 
   .lesson-layout,
   .dashboard-grid,
+  .schedule-command-center,
   .stats-grid,
   .home-header,
   .home-content-grid {
@@ -1621,6 +1765,7 @@ body {
 
   .schedule-fields,
   .schedule-stats,
+  .upcoming-assignment,
   .month-grid-head,
   .month-calendar {
     grid-template-columns: 1fr;
