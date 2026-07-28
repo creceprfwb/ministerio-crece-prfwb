@@ -1429,6 +1429,82 @@ body {
   padding: 0 18px 18px;
 }
 
+.calendar-workspace {
+  display: grid;
+  gap: 14px;
+}
+
+.add-date-form {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(160px, 0.55fr) auto;
+  gap: 10px;
+  align-items: end;
+  padding: 12px;
+  border: 1px solid #d9e7ff;
+  border-radius: 12px;
+  background: #f8fbff;
+}
+
+.add-date-form label {
+  display: grid;
+  gap: 5px;
+  color: #344054;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.selected-day-panel {
+  display: grid;
+}
+
+.selected-assignment {
+  display: grid;
+  gap: 13px;
+  padding: 16px;
+  border: 1px solid #d9e2f3;
+  border-left: 5px solid #98a2b3;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #ffffff, #f8fbff);
+}
+
+.selected-assignment.status-asignado {
+  border-left-color: #0d6efd;
+}
+
+.selected-assignment.status-confirmado {
+  border-left-color: #198754;
+}
+
+.selected-assignment.status-completado {
+  border-left-color: #6f42c1;
+}
+
+.selected-assignment-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.selected-assignment-head span:first-child {
+  color: #667085;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.selected-assignment-head h3 {
+  margin: 0;
+  color: #0b1f3a;
+}
+
+.selected-assignment-head p {
+  margin: 2px 0 0;
+  color: #0b3d91;
+  font-weight: 800;
+}
+
 .teacher-list,
 .schedule-board {
   display: grid;
@@ -1670,9 +1746,16 @@ body {
   background: #f8fbff;
 }
 
-.month-cell > strong {
+.month-day-button {
+  width: fit-content;
+  min-width: 34px;
+  min-height: 30px;
+  border: 0;
+  border-radius: 999px;
+  background: #eef6ff;
   color: #0b1f3a;
   font-size: 0.95rem;
+  font-weight: 900;
 }
 
 .month-services {
@@ -1689,6 +1772,25 @@ body {
   border-radius: 8px;
   background: #fff;
   text-align: left;
+}
+
+.month-service.selected {
+  outline: 3px solid rgba(13, 110, 253, 0.22);
+  border-color: #0d6efd;
+}
+
+.month-add-service {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 34px;
+  border: 1px dashed #9bbce8;
+  border-radius: 8px;
+  background: #f8fbff;
+  color: #0b3d91;
+  font-size: 0.78rem;
+  font-weight: 900;
 }
 
 .month-service.status-asignado {
@@ -1766,6 +1868,7 @@ body {
   .schedule-fields,
   .schedule-stats,
   .upcoming-assignment,
+  .add-date-form,
   .month-grid-head,
   .month-calendar {
     grid-template-columns: 1fr;

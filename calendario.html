@@ -104,6 +104,50 @@
       </aside>
     </section>
 
+    <section class="app-card mt-4 calendar-workspace">
+      <div class="panel-heading">
+        <div>
+          <h2>Vista del calendario</h2>
+          <p>Haz clic en un dia o servicio para anadir fecha y asignar maestro.</p>
+        </div>
+        <div class="schedule-filters">
+          <button id="prevMonth" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-chevron-left"></i></button>
+          <strong id="monthLabel" class="month-label">Mes</strong>
+          <button id="nextMonth" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <form id="customDateForm" class="add-date-form">
+        <label>
+          Anadir fecha
+          <input id="customDateInput" class="form-control" type="date" required>
+        </label>
+        <label>
+          Grupo
+          <select id="customDateGroup" class="form-select">
+            <option value="ambos">Ambos grupos</option>
+            <option value="ninos">Ninos</option>
+            <option value="juveniles">Juveniles</option>
+          </select>
+        </label>
+        <button class="btn btn-primary" type="submit">
+          <i class="bi bi-calendar-plus"></i> Anadir al calendario
+        </button>
+      </form>
+
+      <div class="month-grid-head">
+        <span>Dom</span>
+        <span>Lun</span>
+        <span>Mar</span>
+        <span>Mie</span>
+        <span>Jue</span>
+        <span>Vie</span>
+        <span>Sab</span>
+      </div>
+      <div id="monthCalendar" class="month-calendar"></div>
+      <div id="selectedDayPanel" class="selected-day-panel"></div>
+    </section>
+
     <details class="app-card schedule-fold mt-4">
       <summary>
         <span>
@@ -171,39 +215,6 @@
       </div>
       <div id="unassignedBoard" class="unassigned-board"></div>
     </section>
-
-    <details class="app-card schedule-fold mt-4">
-      <summary>
-        <span>
-          <strong>Vista mensual</strong>
-          <small>Abre el calendario completo cuando necesites revisar el mes.</small>
-        </span>
-        <i class="bi bi-chevron-down"></i>
-      </summary>
-      <div class="schedule-fold-body">
-      <div class="panel-heading">
-        <div>
-          <h2>Vista mensual</h2>
-          <p>Calendario completo del mes seleccionado.</p>
-        </div>
-        <div class="schedule-filters">
-          <button id="prevMonth" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-chevron-left"></i></button>
-          <strong id="monthLabel" class="month-label">Mes</strong>
-          <button id="nextMonth" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-chevron-right"></i></button>
-        </div>
-      </div>
-      <div class="month-grid-head">
-        <span>Dom</span>
-        <span>Lun</span>
-        <span>Mar</span>
-        <span>Mie</span>
-        <span>Jue</span>
-        <span>Vie</span>
-        <span>Sab</span>
-      </div>
-      <div id="monthCalendar" class="month-calendar"></div>
-      </div>
-    </details>
 
     <section class="app-card mt-4">
       <div class="panel-heading">

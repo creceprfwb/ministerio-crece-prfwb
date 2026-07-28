@@ -16,6 +16,7 @@ const SCHEDULE_STATUSES = [
 let teachers = [];
 let scheduleEntries = [];
 let currentMonthDate = new Date();
+let selectedScheduleEntryId = "";
 
 function storageKey(baseKey) {
   return window.PRFirebase && typeof window.PRFirebase.getScopedStorageKey === "function"
@@ -117,6 +118,10 @@ function buildScheduleId(dateIso, group) {
   return `${dateIso}_${group}`;
 }
 
+function parseIsoDate(dateIso) {
+  return new Date(`${dateIso}T12:00:00`);
+}
+
 function getUpcomingSundays(count = 12) {
   const dates = [];
   const cursor = new Date();
@@ -150,6 +155,56 @@ async function saveScheduleRecord(entry) {
   if (window.PRFirebase && typeof window.PRFirebase.saveScheduleEntry === "function") {
     await window.PRFirebase.saveScheduleEntry(entry);
   }
+}
+
+async function createScheduleEntriesForDate(dateIso, groupValue = "ambos") {
+  const date = parseIsoDate(dateIso);
+  const dateKey = lessonDateKey(date);
+  const now = new Date().toISOString();
+  const groups = groupValue === "ambos" ? GROUPS : GROUPS.filter((group) => group.id === groupValue);
+  const newEntries = [];
+
+  groups.forEach((group) => {
+    const id = buildScheduleId(dateIso, group.id);
+    const existing = getScheduleEntry(id);
+    const lesson = getLessonForDate(group.id, dateKey);
+
+    if (existing) {
+      newEntries.push(existing);
+      return;
+    }
+
+    newEntries.push({
+      id,
+      dateIso,
+      dateKey,
+      dateLabel: formatDate(date),
+      group: group.id,
+      groupLabel: group.label,
+      lessonTitle: lesson ? (lesson.displayTitle || lesson.title) : "Clase por confirmar",
+      lessonDate: lesson ? lesson.date : "",
+      teacherId: "",
+      assistantId: "",
+      status: "sin-asignar",
+      materialReady: Boolean(lesson),
+      notes: "",
+      createdAt: now
+    });
+  });
+
+  scheduleEntries = [
+    ...newEntries,
+    ...scheduleEntries.filter((entry) => !newEntries.some((item) => item.id === entry.id))
+  ];
+  saveLocal(SCHEDULE_STORAGE_KEY, scheduleEntries);
+
+  if (window.PRFirebase && typeof window.PRFirebase.saveScheduleEntry === "function") {
+    await Promise.all(newEntries.map((entry) => window.PRFirebase.saveScheduleEntry(entry)));
+  }
+
+  selectedScheduleEntryId = newEntries[0] ? newEntries[0].id : selectedScheduleEntryId;
+  currentMonthDate = new Date(date.getFullYear(), date.getMonth(), 1);
+  renderAll();
 }
 
 function renderTeacherOptions(selectedId, group, allowEmptyLabel) {
@@ -440,34 +495,40 @@ function renderMonthCalendar() {
 
     return `
       <div class="month-cell ${cell.entries.length ? "has-service" : ""}">
-        <strong>${cell.day}</strong>
+        <button class="month-day-button" type="button" data-date-iso="${cell.dateIso}" aria-label="Anadir o seleccionar ${cell.day}">
+          ${cell.day}
+        </button>
         <div class="month-services">
           ${cell.entries.map((entry) => {
             const teacher = getTeacher(entry.teacherId);
             return `
-              <button class="month-service status-${entry.status || "sin-asignar"}" type="button" data-id="${entry.id}">
+              <button class="month-service status-${entry.status || "sin-asignar"} ${entry.id === selectedScheduleEntryId ? "selected" : ""}" type="button" data-id="${entry.id}">
                 <span>${escapeHtml(getGroupLabel(entry.group))}</span>
                 <small>${teacher ? escapeHtml(teacher.name) : "Sin asignar"}</small>
               </button>
             `;
           }).join("")}
+          ${cell.entries.length ? "" : `
+            <button class="month-add-service" type="button" data-date-iso="${cell.dateIso}">
+              <i class="bi bi-plus-circle"></i> Anadir
+            </button>
+          `}
         </div>
       </div>
     `;
   }).join("");
 
+  calendar.querySelectorAll(".month-day-button, .month-add-service").forEach((button) => {
+    button.addEventListener("click", async () => {
+      await createScheduleEntriesForDate(button.dataset.dateIso, "ambos");
+    });
+  });
+
   calendar.querySelectorAll(".month-service").forEach((button) => {
     button.addEventListener("click", () => {
-      document.getElementById("scheduleGroupFilter").value = "todos";
-      document.getElementById("scheduleStatusFilter").value = "todos";
-      renderSchedule();
-
-      const card = document.querySelector(`.schedule-card[data-id="${button.dataset.id}"]`);
-      if (card) {
-        card.scrollIntoView({ behavior: "smooth", block: "center" });
-        card.classList.add("schedule-highlight");
-        window.setTimeout(() => card.classList.remove("schedule-highlight"), 1600);
-      }
+      selectedScheduleEntryId = button.dataset.id;
+      renderMonthCalendar();
+      renderSelectedDayPanel();
     });
   });
 }
@@ -480,6 +541,103 @@ function renderStats() {
   document.getElementById("statTeachers").textContent = activeTeachers.length;
   document.getElementById("statOpen").textContent = openCount;
   document.getElementById("statConfirmed").textContent = confirmedCount;
+}
+
+function renderSelectedDayPanel() {
+  const panel = document.getElementById("selectedDayPanel");
+  const entry = getScheduleEntry(selectedScheduleEntryId) || getUpcomingEntries(1)[0] || scheduleEntries[0];
+
+  if (!entry) {
+    panel.innerHTML = `
+      <div class="empty-inline">
+        Selecciona un dia del calendario o anade una fecha para asignar maestro.
+      </div>
+    `;
+    return;
+  }
+
+  selectedScheduleEntryId = entry.id;
+  const teacher = getTeacher(entry.teacherId);
+  const assistant = getTeacher(entry.assistantId);
+  const whatsApp = whatsappUrl(entry);
+
+  panel.innerHTML = `
+    <article class="selected-assignment status-${entry.status || "sin-asignar"}" data-id="${entry.id}">
+      <div class="selected-assignment-head">
+        <div>
+          <span>${escapeHtml(entry.dateLabel)}</span>
+          <h3>${escapeHtml(getGroupLabel(entry.group))}</h3>
+          <p>${escapeHtml(entry.lessonTitle || "Clase por confirmar")}</p>
+        </div>
+        <span class="schedule-status">${escapeHtml(getStatusLabel(entry.status))}</span>
+      </div>
+      <div class="schedule-fields">
+        <label>
+          Maestro principal
+          <select class="form-select selected-teacher">
+            ${renderTeacherOptions(entry.teacherId, entry.group, "Sin asignar")}
+          </select>
+        </label>
+        <label>
+          Ayudante
+          <select class="form-select selected-assistant">
+            ${renderTeacherOptions(entry.assistantId, entry.group, "Sin ayudante")}
+          </select>
+        </label>
+        <label>
+          Estado
+          <select class="form-select selected-status">
+            ${SCHEDULE_STATUSES.map((status) => `
+              <option value="${status.id}" ${status.id === entry.status ? "selected" : ""}>${status.label}</option>
+            `).join("")}
+          </select>
+        </label>
+        <label class="schedule-material">
+          <input class="form-check-input selected-material-ready" type="checkbox" ${entry.materialReady ? "checked" : ""}>
+          Material listo
+        </label>
+      </div>
+      <textarea class="form-control selected-notes" rows="2" placeholder="Notas internas">${escapeHtml(entry.notes || "")}</textarea>
+      <div class="schedule-actions">
+        <button class="btn btn-primary save-selected-entry" type="button">
+          <i class="bi bi-save"></i> Guardar asignacion
+        </button>
+        <button class="btn btn-outline-secondary copy-selected-message" type="button" ${teacher ? "" : "disabled"}>
+          <i class="bi bi-chat-dots"></i> Copiar mensaje
+        </button>
+        <a class="btn btn-outline-success ${whatsApp ? "" : "disabled"}" href="${whatsApp || "#"}" target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp"></i> WhatsApp
+        </a>
+      </div>
+      <p class="schedule-contact">${teacher ? `Principal: ${escapeHtml(teacher.name)}` : "Principal sin asignar"}${assistant ? ` - Ayudante: ${escapeHtml(assistant.name)}` : ""}</p>
+    </article>
+  `;
+
+  panel.querySelector(".save-selected-entry").addEventListener("click", async () => {
+    const existing = getScheduleEntry(entry.id);
+
+    if (!existing) {
+      return;
+    }
+
+    await saveScheduleRecord({
+      ...existing,
+      teacherId: panel.querySelector(".selected-teacher").value,
+      assistantId: panel.querySelector(".selected-assistant").value,
+      status: panel.querySelector(".selected-status").value,
+      materialReady: panel.querySelector(".selected-material-ready").checked,
+      notes: panel.querySelector(".selected-notes").value.trim(),
+      updatedAt: new Date().toISOString()
+    });
+    renderAll();
+  });
+
+  panel.querySelector(".copy-selected-message").addEventListener("click", () => {
+    const current = getScheduleEntry(entry.id);
+    if (current) {
+      copyMessage(current);
+    }
+  });
 }
 
 function getUpcomingEntries(limit = 6) {
@@ -555,6 +713,7 @@ function renderAll() {
   renderSchedule();
   renderStats();
   renderDashboardOverview();
+  renderSelectedDayPanel();
 }
 
 async function generateUpcomingSchedule() {
@@ -625,6 +784,24 @@ function setupTeacherForm() {
   });
 }
 
+function setupCustomDateForm() {
+  const form = document.getElementById("customDateForm");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const dateIso = document.getElementById("customDateInput").value;
+    const group = document.getElementById("customDateGroup").value;
+
+    if (!dateIso) {
+      return;
+    }
+
+    await createScheduleEntriesForDate(dateIso, group);
+    form.reset();
+    document.getElementById("customDateGroup").value = "ambos";
+  });
+}
+
 async function setupSchedulePage() {
   if (window.PRFirebase && typeof window.PRFirebase.requireAuth === "function") {
     const profile = await window.PRFirebase.requireAuth();
@@ -637,6 +814,7 @@ async function setupSchedulePage() {
   renderAll();
 
   setupTeacherForm();
+  setupCustomDateForm();
   document.getElementById("generateSundays").addEventListener("click", generateUpcomingSchedule);
   document.getElementById("printSchedule").addEventListener("click", () => window.print());
   document.getElementById("scheduleGroupFilter").addEventListener("change", renderSchedule);
