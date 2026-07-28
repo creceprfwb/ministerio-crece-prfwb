@@ -1793,6 +1793,76 @@ body {
   font-weight: 900;
 }
 
+.report-hero {
+  background:
+    linear-gradient(90deg, rgba(11, 61, 145, 0.9), rgba(10, 82, 110, 0.88)),
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 48px 48px;
+}
+
+.report-filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.report-filters label {
+  display: grid;
+  gap: 5px;
+  color: #344054;
+  font-weight: 800;
+}
+
+.assignment-report {
+  display: grid;
+  gap: 10px;
+}
+
+.report-table {
+  display: grid;
+  gap: 8px;
+}
+
+.report-row {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.9fr) minmax(90px, 0.45fr) minmax(180px, 1.2fr) minmax(130px, 0.8fr) minmax(130px, 0.8fr) minmax(110px, 0.55fr);
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid #e4eaf5;
+  border-left: 5px solid #98a2b3;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.report-row.report-head {
+  border-left-color: #0b3d91;
+  background: #eef6ff;
+  color: #0b1f3a;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.report-row.status-asignado {
+  border-left-color: #0d6efd;
+}
+
+.report-row.status-confirmado {
+  border-left-color: #198754;
+}
+
+.report-row.status-completado {
+  border-left-color: #6f42c1;
+}
+
+.report-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .month-service.status-asignado {
   border-left-color: #0d6efd;
 }
@@ -1869,6 +1939,8 @@ body {
   .schedule-stats,
   .upcoming-assignment,
   .add-date-form,
+  .report-filters,
+  .report-row,
   .month-grid-head,
   .month-calendar {
     grid-template-columns: 1fr;
@@ -1948,12 +2020,25 @@ body {
   .teacher-form,
   .schedule-filters,
   .schedule-actions,
+  .report-filters,
   .library-control-card,
   .lesson-editor-panel,
   .lesson-preview-actions,
   .back-link,
   .print-button {
     display: none !important;
+  }
+
+  .report-print-card,
+  .report-row {
+    box-shadow: none;
+  }
+
+  .report-row {
+    grid-template-columns: 1.1fr 0.65fr 1.35fr 1fr 1fr 0.8fr;
+    break-inside: avoid;
+    padding: 8px;
+    font-size: 10px;
   }
 
   .page-shell,
