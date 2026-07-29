@@ -29,7 +29,7 @@
       <div>
         <p class="section-kicker">Equipo CRECE</p>
         <h1>Centro de comunicacion</h1>
-        <p>Envia recordatorios por WhatsApp, copia anuncios para el grupo y confirma maestros antes del domingo.</p>
+        <p>Envia recordatorios por WhatsApp, copia anuncios para maestros y comparte mensajes claros con los padres.</p>
       </div>
     </section>
 
@@ -37,7 +37,7 @@
       <article class="app-card">
         <div class="panel-heading">
           <div>
-            <h2>Anuncio para el grupo</h2>
+            <h2>Anuncio para maestros</h2>
             <p>Mensaje general para pegar en el grupo de WhatsApp de maestros.</p>
           </div>
         </div>
@@ -64,6 +64,37 @@
       </aside>
     </section>
 
+    <section class="communication-grid mt-4">
+      <article class="app-card">
+        <div class="panel-heading">
+          <div>
+            <h2>Mensaje para padres</h2>
+            <p>Recordatorio general para las familias de CRECE.</p>
+          </div>
+        </div>
+        <label class="form-label" for="parentGroupMessage">Mensaje</label>
+        <textarea id="parentGroupMessage" class="form-control communication-textarea" rows="8"></textarea>
+        <div class="communication-actions mt-3">
+          <button id="copyParentGroupMessage" class="btn btn-primary" type="button">
+            <i class="bi bi-copy"></i> Copiar mensaje
+          </button>
+          <a id="openWhatsAppParents" class="btn btn-outline-success" href="#" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp"></i> Abrir WhatsApp
+          </a>
+        </div>
+      </article>
+
+      <aside class="app-card">
+        <div class="panel-heading">
+          <div>
+            <h2>Familias registradas</h2>
+            <p>Lista creada desde los estudiantes activos.</p>
+          </div>
+        </div>
+        <div id="parentCommunicationSummary" class="communication-summary"></div>
+      </aside>
+    </section>
+
     <section class="app-card mt-4">
       <div class="panel-heading">
         <div>
@@ -76,6 +107,27 @@
         </div>
       </div>
       <div id="communicationTeachers" class="communication-teacher-grid"></div>
+    </section>
+
+    <section class="app-card mt-4">
+      <div class="panel-heading">
+        <div>
+          <h2>Padres y encargados</h2>
+          <p>Contacta familias por estudiante o por grupo.</p>
+        </div>
+        <div class="communication-filter-row">
+          <select id="guardianGroupFilter" class="form-select">
+            <option value="all">Todos los grupos</option>
+            <option value="ninos">Ninos</option>
+            <option value="juveniles">Juveniles</option>
+          </select>
+          <div class="input-group search-inline">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input id="guardianSearch" class="form-control" type="search" placeholder="Buscar padre o estudiante">
+          </div>
+        </div>
+      </div>
+      <div id="communicationGuardians" class="communication-teacher-grid"></div>
     </section>
 
     <section class="app-card mt-4">

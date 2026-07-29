@@ -1583,6 +1583,17 @@ body {
   gap: 8px;
 }
 
+.communication-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.communication-filter-row .form-select {
+  width: min(190px, 100%);
+}
+
 .communication-summary,
 .communication-teacher-grid,
 .communication-assignment-list {
@@ -1646,6 +1657,11 @@ body {
 .communication-assignment-card.vacant {
   border-left-color: #f97316;
   background: #fff8f1;
+}
+
+.communication-family-card {
+  border-left-color: #c99722;
+  background: #fffdf7;
 }
 
 .schedule-hero {
@@ -2367,10 +2383,16 @@ body {
   .schedule-hero,
   .schedule-filters,
   .reward-prize-status,
+  .communication-filter-row,
   .communication-teacher-card,
   .communication-assignment-card {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .communication-filter-row .form-select,
+  .communication-filter-row .search-inline {
+    width: 100%;
   }
 }
 

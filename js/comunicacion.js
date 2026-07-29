@@ -1,8 +1,10 @@
 const COMM_TEACHERS_STORAGE_KEY = "prfwb_teacher_records";
 const COMM_SCHEDULE_STORAGE_KEY = "prfwb_schedule_records";
+const COMM_STUDENTS_STORAGE_KEY = "prfwb_student_records";
 
 let communicationTeachers = [];
 let communicationSchedule = [];
+let communicationStudents = [];
 
 function commStorageKey(baseKey) {
   return window.PRFirebase && typeof window.PRFirebase.getScopedStorageKey === "function"
@@ -38,6 +40,41 @@ function getCommGroupLabel(group) {
   if (group === "ninos") return "Ninos";
   if (group === "juveniles") return "Juveniles";
   return "Ambos grupos";
+}
+
+function getActiveCommStudents() {
+  return communicationStudents
+    .filter((student) => student.active !== false)
+    .sort((a, b) => String(a.name || "").localeCompare(String(b.name || "")));
+}
+
+function getCommFamilies() {
+  const families = new Map();
+
+  getActiveCommStudents().forEach((student) => {
+    const phone = normalizeCommPhone(student.guardianPhone);
+    const guardianName = String(student.guardianName || "Encargado").trim();
+    const key = phone || guardianName.toLowerCase() || student.code;
+    const existing = families.get(key) || {
+      id: key,
+      guardianName,
+      guardianPhone: student.guardianPhone || "",
+      groups: new Set(),
+      students: []
+    };
+
+    existing.guardianName = existing.guardianName === "Encargado" ? guardianName : existing.guardianName;
+    existing.guardianPhone = existing.guardianPhone || student.guardianPhone || "";
+    existing.groups.add(student.group || "");
+    existing.students.push(student);
+    families.set(key, existing);
+  });
+
+  return Array.from(families.values()).map((family) => ({
+    ...family,
+    groups: Array.from(family.groups).filter(Boolean),
+    studentNames: family.students.map((student) => student.name).filter(Boolean).join(", ")
+  }));
 }
 
 function getUpcomingCommAssignments(limit = 8) {
@@ -79,6 +116,24 @@ function buildGroupMessage() {
   return `Dios les bendiga equipo CRECE.\n\nEstas son las proximas asignaciones:\n${lines.join("\n")}\n\nPor favor revisen su fecha y confirmen si pueden servir. Gracias por sembrar en la vida de nuestros ninos y jovenes.`;
 }
 
+function buildParentGroupMessage() {
+  const next = getUpcomingCommAssignments(1)[0];
+  const nextText = next
+    ? `\n\nProxima clase: ${next.dateLabel || next.dateIso}\nGrupo: ${getCommGroupLabel(next.group)}\nTema: ${next.lessonTitle || "Clase por confirmar"}`
+    : "";
+
+  return `Dios les bendiga familias CRECE.\n\nGracias por permitirnos discipular a sus hijos. Les recordamos traer Biblia, libreta y llegar a tiempo para la clase.${nextText}\n\nSi tienen alguna pregunta, pueden responder a este mensaje. Gracias por caminar con nosotros.`;
+}
+
+function buildGuardianMessage(family) {
+  const next = getUpcomingCommAssignments(1)[0];
+  const nextText = next
+    ? `\n\nProxima clase: ${next.dateLabel || next.dateIso}\nTema: ${next.lessonTitle || "Clase por confirmar"}`
+    : "";
+
+  return `Hola ${family.guardianName || "familia"}, Dios le bendiga.\n\nLe escribimos del Ministerio CRECE sobre ${family.studentNames || "su estudiante"}. Queremos recordarles traer Biblia, libreta y llegar a tiempo para la clase.${nextText}\n\nGracias por permitirnos servir a su familia.`;
+}
+
 function getWhatsAppUrl(phone, message) {
   const normalizedPhone = normalizeCommPhone(phone);
   const encodedMessage = encodeURIComponent(message);
@@ -99,15 +154,17 @@ async function copyText(message) {
 async function loadCommunicationData() {
   communicationTeachers = loadCommLocal(COMM_TEACHERS_STORAGE_KEY);
   communicationSchedule = loadCommLocal(COMM_SCHEDULE_STORAGE_KEY);
+  communicationStudents = loadCommLocal(COMM_STUDENTS_STORAGE_KEY);
 
   try {
     if (window.PRFirebase && window.PRFirebase.enabled) {
       const profile = await window.PRFirebase.requireAuth();
       if (!profile) return;
 
-      const [cloudTeachers, cloudSchedule] = await Promise.all([
+      const [cloudTeachers, cloudSchedule, cloudStudents] = await Promise.all([
         window.PRFirebase.getTeachers ? window.PRFirebase.getTeachers() : [],
-        window.PRFirebase.getSchedule ? window.PRFirebase.getSchedule() : []
+        window.PRFirebase.getSchedule ? window.PRFirebase.getSchedule() : [],
+        window.PRFirebase.getStudents ? window.PRFirebase.getStudents() : []
       ]);
 
       if (cloudTeachers.length) {
@@ -118,6 +175,11 @@ async function loadCommunicationData() {
       if (cloudSchedule.length) {
         communicationSchedule = cloudSchedule;
         localStorage.setItem(commStorageKey(COMM_SCHEDULE_STORAGE_KEY), JSON.stringify(communicationSchedule));
+      }
+
+      if (cloudStudents.length) {
+        communicationStudents = cloudStudents;
+        localStorage.setItem(commStorageKey(COMM_STUDENTS_STORAGE_KEY), JSON.stringify(communicationStudents));
       }
     }
   } catch (error) {
@@ -132,6 +194,28 @@ function renderGroupMessage() {
   const textarea = document.getElementById("groupMessage");
   textarea.value = message;
   document.getElementById("openWhatsAppGroup").href = getWhatsAppUrl("", message);
+}
+
+function renderParentGroupMessage() {
+  const message = buildParentGroupMessage();
+  const textarea = document.getElementById("parentGroupMessage");
+  textarea.value = message;
+  document.getElementById("openWhatsAppParents").href = getWhatsAppUrl("", message);
+}
+
+function renderParentSummary() {
+  const board = document.getElementById("parentCommunicationSummary");
+  const families = getCommFamilies();
+  const withPhone = families.filter((family) => normalizeCommPhone(family.guardianPhone)).length;
+
+  board.innerHTML = `
+    <div class="communication-next-card">
+      <span>Familias activas</span>
+      <strong>${families.length}</strong>
+      <p>${withPhone} con WhatsApp registrado</p>
+      <small>${getActiveCommStudents().length} estudiantes activos en CRECE</small>
+    </div>
+  `;
 }
 
 function renderNextSummary() {
@@ -201,6 +285,56 @@ function renderTeachers() {
   });
 }
 
+function renderGuardians() {
+  const board = document.getElementById("communicationGuardians");
+  const query = String(document.getElementById("guardianSearch").value || "").toLowerCase().trim();
+  const groupFilter = document.getElementById("guardianGroupFilter").value;
+  const families = getCommFamilies()
+    .filter((family) => groupFilter === "all" || family.groups.includes(groupFilter))
+    .filter((family) => {
+      const searchable = `${family.guardianName} ${family.guardianPhone} ${family.studentNames} ${family.groups.join(" ")}`.toLowerCase();
+      return !query || searchable.includes(query);
+    })
+    .sort((a, b) => String(a.guardianName || "").localeCompare(String(b.guardianName || "")));
+
+  if (!families.length) {
+    board.innerHTML = '<div class="empty-inline">No hay padres o encargados con ese filtro.</div>';
+    return;
+  }
+
+  board.innerHTML = families.map((family) => {
+    const message = buildGuardianMessage(family);
+    const hasPhone = Boolean(normalizeCommPhone(family.guardianPhone));
+    const groupLabel = family.groups.map(getCommGroupLabel).join(", ") || "Sin grupo";
+
+    return `
+      <article class="communication-teacher-card communication-family-card">
+        <div>
+          <strong>${escapeCommHtml(family.guardianName || "Encargado")}</strong>
+          <span>${escapeCommHtml(family.studentNames || "Sin estudiante")}</span>
+          <small>${escapeCommHtml(groupLabel)}</small>
+          <small>${escapeCommHtml(family.guardianPhone || "Sin WhatsApp")}</small>
+        </div>
+        <div class="communication-card-actions">
+          <button class="btn btn-sm btn-outline-secondary copy-guardian-message" type="button" data-id="${escapeCommHtml(family.id)}">
+            <i class="bi bi-copy"></i> Copiar
+          </button>
+          <a class="btn btn-sm btn-outline-success ${hasPhone ? "" : "disabled"}" href="${hasPhone ? getWhatsAppUrl(family.guardianPhone, message) : "#"}" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  board.querySelectorAll(".copy-guardian-message").forEach((button) => {
+    button.addEventListener("click", () => {
+      const family = getCommFamilies().find((item) => item.id === button.dataset.id);
+      if (family) copyText(buildGuardianMessage(family));
+    });
+  });
+}
+
 function renderAssignments() {
   const board = document.getElementById("communicationAssignments");
   const entries = getUpcomingCommAssignments(10);
@@ -244,8 +378,11 @@ function renderAssignments() {
 
 function renderCommunication() {
   renderGroupMessage();
+  renderParentGroupMessage();
   renderNextSummary();
+  renderParentSummary();
   renderTeachers();
+  renderGuardians();
   renderAssignments();
 }
 
@@ -258,6 +395,16 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("openWhatsAppGroup").href = getWhatsAppUrl("", document.getElementById("groupMessage").value);
   });
 
+  document.getElementById("copyParentGroupMessage").addEventListener("click", () => {
+    copyText(document.getElementById("parentGroupMessage").value);
+  });
+
+  document.getElementById("parentGroupMessage").addEventListener("input", () => {
+    document.getElementById("openWhatsAppParents").href = getWhatsAppUrl("", document.getElementById("parentGroupMessage").value);
+  });
+
   document.getElementById("teacherSearch").addEventListener("input", renderTeachers);
+  document.getElementById("guardianSearch").addEventListener("input", renderGuardians);
+  document.getElementById("guardianGroupFilter").addEventListener("change", renderGuardians);
   loadCommunicationData();
 });
