@@ -1558,6 +1558,96 @@ body {
   margin: 10px 0 0;
 }
 
+.communication-hero {
+  background:
+    radial-gradient(circle at top right, rgba(37, 211, 102, 0.24), transparent 32%),
+    linear-gradient(135deg, #123f52, #0b1f3a);
+}
+
+.communication-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.communication-textarea {
+  min-height: 220px;
+  resize: vertical;
+}
+
+.communication-actions,
+.communication-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.communication-summary,
+.communication-teacher-grid,
+.communication-assignment-list {
+  display: grid;
+  gap: 12px;
+}
+
+.communication-next-card,
+.communication-teacher-card,
+.communication-assignment-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid #dce4f2;
+  border-left: 5px solid #0b3d91;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.communication-teacher-card,
+.communication-assignment-card {
+  align-items: center;
+}
+
+.communication-next-card {
+  display: grid;
+  background: #f8fbff;
+}
+
+.communication-next-card span,
+.communication-assignment-card span,
+.communication-teacher-card span,
+.communication-next-card small,
+.communication-assignment-card small,
+.communication-teacher-card small {
+  color: #667085;
+  font-weight: 700;
+}
+
+.communication-next-card strong,
+.communication-teacher-card strong,
+.communication-assignment-card strong {
+  color: #0b1f3a;
+  font-size: 1.05rem;
+}
+
+.communication-next-card p,
+.communication-assignment-card p {
+  margin: 2px 0;
+  color: #344054;
+}
+
+.communication-teacher-card > div:first-child,
+.communication-assignment-card > div:first-child {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.communication-assignment-card.vacant {
+  border-left-color: #f97316;
+  background: #fff8f1;
+}
+
 .schedule-hero {
   display: flex;
   align-items: center;
@@ -2233,7 +2323,8 @@ body {
   .home-content-grid,
   .manual-grid,
   .manual-two-col,
-  .manual-card-row {
+  .manual-card-row,
+  .communication-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2275,7 +2366,9 @@ body {
 
   .schedule-hero,
   .schedule-filters,
-  .reward-prize-status {
+  .reward-prize-status,
+  .communication-teacher-card,
+  .communication-assignment-card {
     align-items: stretch;
     flex-direction: column;
   }
