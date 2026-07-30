@@ -92,7 +92,7 @@ window.PRLessonLibrary = {
         "familyQuestions": [
           "Qué cosa creada por Dios vimos hoy?",
           "Qué nos enseña eso acerca de Dios?",
-          "Cómo podemos dar gracias a Dios está semana?"
+          "Cómo podemos dar gracias a Dios esta semana?"
         ],
         "activity": "Caminen juntos por la casa, patio o calle y nombren cinco cosas creadas por Dios. Oren dando gracias por cada una.",
         "prayer": "Señor, gracias por mostrarnos tu grandeza en la creación. Ayúdanos como familia a reconocerte, adorarte y vivir agradecidos. Amén."
@@ -196,14 +196,14 @@ window.PRLessonLibrary = {
         "book": "Salmos",
         "chapter": "89",
         "verses": "14; apoyo: Isaías 6:3 y 1 Pedro 1:15-16",
-        "author": "Ethan ezrahita, segun el encabezado del salmo",
+        "author": "Ethan ezrahita, según el encabezado del salmo",
         "date": "Periodo monarquico de Israel",
         "context": "El salmo celebra la fidelidad de Dios y declara que su trono descansa sobre justicia y derecho. Dios no gobierna por capricho; todo lo que hace es santo, justo y bueno."
       },
       "centralIdea": "Dios siempre hace lo correcto y nos llama a vivir con un corazón limpio y obediente.",
       "objectives": [
         "Conocer que Dios es santo y justo.",
-        "Comprender que la justicia de Dios nace de su caracter perfecto.",
+        "Comprender que la justicia de Dios nace de su carácter perfecto.",
         "Aplicar esta verdad escogiendo hacer lo correcto aunque nadie esté mirando."
       ],
       "bibleContext": "La Biblia presenta a Dios como santo: separado de todo pecado, puro y perfecto. También lo presenta como justo: Él siempre actúa correctamente. Para los niños, esta verdad enseña que Dios no se equivoca, no miente y no trata el pecado como si no importara. Pero también nos ayuda a confiar en que sus caminos son buenos.",
@@ -218,7 +218,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "Dios nos llama a obedecer",
-          "text": "1 Pedro 1:15-16 llama al pueblo de Dios a ser santo. Los niños pueden aprender que obedecer no es solo evitar castigo, sino responder al Dios santo que nos ama y quiere formar nuestro caracter."
+          "text": "1 Pedro 1:15-16 llama al pueblo de Dios a ser santo. Los niños pueden aprender que obedecer no es solo evitar castigo, sino responder al Dios santo que nos ama y quiere formar nuestro carácter."
         }
       ],
       "title": "DIOS ES SANTO Y JUSTO",
@@ -280,7 +280,7 @@ window.PRLessonLibrary = {
       "exposition": [
         {
           "title": "Dios es amor",
-          "text": "1 Juan 4:8 no dice solamente que Dios ama, sino que Dios es amor. Todo amor verdadero nace de su caracter. Los niños deben entender que el amor de Dios es santo, bueno y fiel."
+          "text": "1 Juan 4:8 no dice solamente que Dios ama, sino que Dios es amor. Todo amor verdadero nace de su carácter. Los niños deben entender que el amor de Dios es santo, bueno y fiel."
         },
         {
           "title": "Dios muestra misericordia",
@@ -313,7 +313,7 @@ window.PRLessonLibrary = {
       "group": "ninos",
       "date": "2/1/2026",
       "displayTitle": "Un solo Dios, tres personas",
-      "closingSummary": "Dios es uno y se da a conocer como Padre, Hijo y Espíritu Santo. Esta verdad nos llama a confiar, adorar y hablar con Dios sabiendo que El se acerco a nosotros con amor.",
+      "closingSummary": "Dios es uno y se da a conocer como Padre, Hijo y Espíritu Santo. Esta verdad nos llama a confiar, adorar y hablar con Dios sabiendo que El se acercó a nosotros con amor.",
       "teacherGuide": [
         "Evita explicar la Trinidad con comparaciones que puedan confundir, como agua/hielo/vapor o partes de un huevo. Mejor afirma con sencillez lo que la Biblia revela.",
         "Repite tres frases: El Padre es Dios, el Hijo es Dios, el Espíritu Santo es Dios; y hay un solo Dios.",
@@ -326,7 +326,7 @@ window.PRLessonLibrary = {
       },
       "parentMaterial": {
         "summary": "Hoy aprendimos que hay un solo Dios en tres personas: Padre, Hijo y Espíritu Santo.",
-        "homeQuestion": "Cómo podemos adorar a Dios está semana como familia?",
+        "homeQuestion": "Cómo podemos adorar a Dios esta semana como familia?",
         "familyChallenge": "Antes de dormir, hagan una oración corta dando gracias al Padre, al Hijo y al Espíritu Santo."
       },
       "biblicalText": {
@@ -355,7 +355,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "La Trinidad nos invita a adorar",
-          "text": "Aunque no entendemos todo el misterio de Dios, podemos confiar en lo que El revelo. La Trinidad no es un rompecabezas para ganar discusiones, sino una verdad para adorar al Dios vivo."
+          "text": "Aunque no entendemos todo el misterio de Dios, podemos confiar en lo que El reveló. La Trinidad no es un rompecabezas para ganar discusiones, sino una verdad para adorar al Dios vivo."
         }
       ],
       "title": "EL PADRE, EL HIJO Y EL ESPÍRITU SANTO",
@@ -447,7 +447,7 @@ window.PRLessonLibrary = {
       "group": "ninos",
       "date": "2/15/2026",
       "displayTitle": "Jesús vino a rescatarnos",
-      "closingSummary": "Jesús vino porque Dios nos ama. El murió y resucito para salvarnos, y nos invita a confiar en Él con todo el corazón.",
+      "closingSummary": "Jesús vino porque Dios nos ama. El murió y resucitó para salvarnos, y nos invita a confiar en Él con todo el corazón.",
       "teacherGuide": [
         "Presenta el evangelio con claridad y ternura: Dios ama, el pecado nos separa, Jesús salva y podemos responder con fe.",
         "Evita presionar respuestas emocionales. Invita a los niños a hablar con un maestro o padre si desean orar o tienen preguntas.",
@@ -522,12 +522,12 @@ window.PRLessonLibrary = {
       ],
       "studentMaterial": {
         "memoryVerse": "Juan 14:26",
-        "activity": "Dibuja una llama o una luz y escribe una forma en que necesitas ayuda de Dios está semana.",
+        "activity": "Dibuja una llama o una luz y escribe una forma en que necesitas ayuda de Dios esta semana.",
         "reflection": "No obedezco solo. Dios me ayuda por medio del Espíritu Santo."
       },
       "parentMaterial": {
         "summary": "Hoy aprendimos que el Espíritu Santo enseña, consuela y ayuda al creyente a obedecer.",
-        "homeQuestion": "En que momento necesitaste ayuda de Dios está semana?",
+        "homeQuestion": "En que momento necesitaste ayuda de Dios esta semana?",
         "familyChallenge": "Escojan un fruto del Espíritu y oren para practicarlo en casa."
       },
       "biblicalText": {
@@ -672,7 +672,7 @@ window.PRLessonLibrary = {
         "date": "Aproximadamente 64-68 d.C.",
         "context": "Pedro anima a los creyentes a confiar en la Palabra profetica. Les enseña que la Escritura no nació de ideas humanas, sino que hombres de Dios hablaron siendo guiados por el Espíritu Santo."
       },
-      "centralIdea": "La Biblia llego a nosotros porque Dios guió a sus siervos por medio del Espíritu Santo.",
+      "centralIdea": "La Biblia llegó a nosotros porque Dios guió a sus siervos por medio del Espíritu Santo.",
       "objectives": [
         "Conocer que Dios usó autores humanos para escribir la Biblia.",
         "Comprender que el Espíritu Santo guió el mensaje bíblico.",
@@ -756,7 +756,7 @@ window.PRLessonLibrary = {
           "text": "Dios no siempre nos muestra todo el futuro, pero nos da suficiente luz para obedecer hoy."
         },
         {
-          "title": "La Palabra se práctica",
+          "title": "La Palabra se practica",
           "text": "Leer la Biblia es importante, pero Dios también quiere que la obedezcamos en nuestras palabras, decisiones y trato a otros."
         }
       ],
@@ -849,7 +849,7 @@ window.PRLessonLibrary = {
       "group": "ninos",
       "date": "3/29/2026",
       "displayTitle": "Hechos a imagen de Dios",
-      "closingSummary": "Cada niño tiene valor porque fue creado por Dios a su imagen. No somos valiosos por lo que tenemos o logramos, sino porque Dios nos hizo para conocerlo, amarlo y reflejar su caracter.",
+      "closingSummary": "Cada niño tiene valor porque fue creado por Dios a su imagen. No somos valiosos por lo que tenemos o logramos, sino porque Dios nos hizo para conocerlo, amarlo y reflejar su carácter.",
       "teacherGuide": [
         "Afirma el valor de cada niño con cuidado pastoral, evitando comparaciones entre ellos.",
         "Explica imagen de Dios con palabras sencillas: podemos amar, pensar, crear, decidir y relacionarnos con Dios.",
@@ -1139,7 +1139,7 @@ window.PRLessonLibrary = {
         "verses": "6; apoyo: Génesis 3:15",
         "author": "El profeta Isaías",
         "date": "Aproximadamente siglo VIII a.C.",
-        "context": "Isaías anuncia esperanza al pueblo de Dios en medio de oscuridad. Génesis 3:15 ya habia mostrado que Dios prometia vencer el mal por medio de un descendiente."
+        "context": "Isaías anuncia esperanza al pueblo de Dios en medio de oscuridad. Génesis 3:15 ya había mostrado que Dios prometia vencer el mal por medio de un descendiente."
       },
       "centralIdea": "Dios prometio enviar un Salvador, y Jesús cumple perfectamente esa promesa.",
       "objectives": [
@@ -1159,7 +1159,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "Jesús cumple la promesa",
-          "text": "Jesús no llego por accidente. El es el Salvador prometido por Dios para rescatarnos."
+          "text": "Jesús no llegó por accidente. El es el Salvador prometido por Dios para rescatarnos."
         }
       ],
       "title": "LA PROMESA DEL SALV ADOR",
@@ -1193,7 +1193,7 @@ window.PRLessonLibrary = {
       "studentMaterial": {
         "memoryVerse": "1 Corintios 15:3",
         "activity": "Decora una cruz de papel con corazones y escribe: Jesús murió por mis pecados.",
-        "reflection": "La cruz me muestra cuanto Dios me ama y cuanto necesito a Jesús."
+        "reflection": "La cruz me muestra cuánto Dios me ama y cuánto necesito a Jesús."
       },
       "parentMaterial": {
         "summary": "Hoy aprendimos que Jesús murió por nuestros pecados y tomo nuestro lugar.",
@@ -1222,7 +1222,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "Cristo murió conforme a las Escrituras",
-          "text": "Dios habia anunciado su plan. La cruz muestra que Dios cumple su Palabra y salva a su manera."
+          "text": "Dios había anunciado su plan. La cruz muestra que Dios cumple su Palabra y salva a su manera."
         },
         {
           "title": "La cruz llama a responder",
@@ -1251,7 +1251,7 @@ window.PRLessonLibrary = {
       "group": "ninos",
       "date": "5/10/2026",
       "displayTitle": "La tumba esta vacía",
-      "closingSummary": "Jesús resucito y vive hoy. La resurrección confirma que Jesús venció la muerte y que nuestra fe tiene esperanza verdadera.",
+      "closingSummary": "Jesús resucitó y vive hoy. La resurrección confirma que Jesús venció la muerte y que nuestra fe tiene esperanza verdadera.",
       "teacherGuide": [
         "Presenta la resurrección como un hecho central del evangelio, no solo como final feliz.",
         "Usa una manualidad de tumba vacía para reforzar la frase: No esta aquí; ha resucitado.",
@@ -1263,7 +1263,7 @@ window.PRLessonLibrary = {
         "reflection": "Porque Jesús vive, puedo tener esperanza y confiar en Él."
       },
       "parentMaterial": {
-        "summary": "Hoy celebramos que Jesús resucito y vive para siempre.",
+        "summary": "Hoy celebramos que Jesús resucitó y vive para siempre.",
         "homeQuestion": "Por qué es importante que Jesús haya resucitado?",
         "familyChallenge": "Compartan una razón para tener esperanza porque Jesús vive."
       },
@@ -1273,11 +1273,11 @@ window.PRLessonLibrary = {
         "verses": "1-8",
         "author": "Lucas, medico y colaborador de Pablo",
         "date": "Aproximadamente 60-80 d.C.",
-        "context": "Lucas narra como las mujeres fueron a la tumba y escucharon que Jesús habia resucitado. La tumba vacía confirma la victoria de Cristo."
+        "context": "Lucas narra como las mujeres fueron a la tumba y escucharon que Jesús había resucitado. La tumba vacía confirma la victoria de Cristo."
       },
-      "centralIdea": "Jesús resucito, venció la muerte y vive para siempre.",
+      "centralIdea": "Jesús resucitó, venció la muerte y vive para siempre.",
       "objectives": [
-        "Conocer que Jesús resucito verdaderamente.",
+        "Conocer que Jesús resucitó verdaderamente.",
         "Comprender que la resurrección muestra su victoria sobre la muerte.",
         "Aplicar esta verdad viviendo con esperanza y gozo."
       ],
@@ -1285,7 +1285,7 @@ window.PRLessonLibrary = {
       "exposition": [
         {
           "title": "La tumba estaba vacía",
-          "text": "Las mujeres no encontraron el cuerpo de Jesús porque El habia resucitado."
+          "text": "Las mujeres no encontraron el cuerpo de Jesús porque El había resucitado."
         },
         {
           "title": "Jesús venció la muerte",
@@ -1340,7 +1340,7 @@ window.PRLessonLibrary = {
         "verses": "9-11",
         "author": "Lucas",
         "date": "Aproximadamente 60-80 d.C.",
-        "context": "Después de resucitar, Jesús ascendio al cielo. Los angeles anunciaron que El volveria de la misma manera."
+        "context": "Después de resucitar, Jesús ascendió al cielo. Los ángeles anunciaron que El volvería de la misma manera."
       },
       "centralIdea": "Jesús volvera, y sus seguidores viven con esperanza y obediencia mientras lo esperan.",
       "objectives": [
@@ -1348,11 +1348,11 @@ window.PRLessonLibrary = {
         "Comprender que la esperanza cristiana mira hacia el regreso de Cristo.",
         "Aplicar esta verdad viviendo preparados con amor y obediencia."
       ],
-      "bibleContext": "Hechos 1 muestra a los discípulos mirando al cielo despues de la ascension de Jesús. El mensaje angelical los dirige a vivir con misión y esperanza hasta que Cristo vuelva.",
+      "bibleContext": "Hechos 1 muestra a los discípulos mirando al cielo despues de la ascensión de Jesús. El mensaje angelical los dirige a vivir con misión y esperanza hasta que Cristo vuelva.",
       "exposition": [
         {
-          "title": "Jesús ascendio al cielo",
-          "text": "Jesús resucitado subio al cielo, mostrando que su obra continua y que El reina."
+          "title": "Jesús ascendió al cielo",
+          "text": "Jesús resucitado subió al cielo, mostrando que su obra continúa y que El reina."
         },
         {
           "title": "Jesús prometio volver",
@@ -1385,7 +1385,7 @@ window.PRLessonLibrary = {
       "group": "ninos",
       "date": "5/24/2026",
       "displayTitle": "Orar es hablar con mi Padre",
-      "closingSummary": "La oración es hablar con Dios con un corazón sincero. No necesitamos palabras magicas; podemos acercarnos al Padre porque El nos ama y escucha.",
+      "closingSummary": "La oración es hablar con Dios con un corazón sincero. No necesitamos palabras mágicas; podemos acercarnos al Padre porque El nos ama y escucha.",
       "teacherGuide": [
         "Presenta la oración como relación con Dios, no como formula para conseguir cosas.",
         "Modela una oración corta con gratitud, perdón, petición y confianza.",
@@ -1415,7 +1415,7 @@ window.PRLessonLibrary = {
         "Comprender que Dios quiere oraciones sinceras, no apariencias.",
         "Aplicar esta verdad practicando una oración sencilla durante la semana."
       ],
-      "bibleContext": "En el Sermon del Monte, Jesús corrige la religiosidad que busca ser vista. La oración verdadera nace de un corazón que confia en el Padre y desea su voluntad.",
+      "bibleContext": "En el Sermon del Monte, Jesús corrige la religiosidad que busca ser vista. La oración verdadera nace de un corazón que confía en el Padre y desea su voluntad.",
       "exposition": [
         {
           "title": "Dios es Padre",
@@ -1455,8 +1455,8 @@ window.PRLessonLibrary = {
       "closingSummary": "El fruto del Espíritu no se fabrica con esfuerzo humano solamente. Dios lo hace crecer en nosotros cuando caminamos con Él y aprendemos a obedecer su Palabra.",
       "teacherGuide": [
         "Lleva frutas reales o dibujos para explicar que el fruto crece con vida, cuidado y tiempo.",
-        "Aclara que el fruto del Espíritu muestra el caracter de Jesús en nosotros.",
-        "Escoge uno o dos frutos para aplicar de forma concreta segun la edad del grupo."
+        "Aclara que el fruto del Espíritu muestra el carácter de Jesús en nosotros.",
+        "Escoge uno o dos frutos para aplicar de forma concreta según la edad del grupo."
       ],
       "studentMaterial": {
         "memoryVerse": "Gálatas 5:22-23",
@@ -1476,7 +1476,7 @@ window.PRLessonLibrary = {
         "date": "Aproximadamente 48-55 d.C.",
         "context": "Pablo contrasta las obras de la carne con el fruto del Espíritu. La vida cristiana no se vive sola, sino por la obra del Espíritu Santo."
       },
-      "centralIdea": "El Espíritu Santo forma en nosotros un caracter que refleja a Jesús.",
+      "centralIdea": "El Espíritu Santo forma en nosotros un carácter que refleja a Jesús.",
       "objectives": [
         "Conocer el fruto del Espíritu.",
         "Comprender que Dios produce ese fruto en el creyente.",
@@ -1490,7 +1490,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "El fruto se parece a Jesús",
-          "text": "Amor, paz, paciencia y dominio propio muestran el caracter de Cristo en la vida diaria."
+          "text": "Amor, paz, paciencia y dominio propio muestran el carácter de Cristo en la vida diaria."
         },
         {
           "title": "El fruto crece con el tiempo",
@@ -1533,7 +1533,7 @@ window.PRLessonLibrary = {
       "parentMaterial": {
         "summary": "Hoy aprendimos que obedecer a Dios es una respuesta de amor a Jesús.",
         "homeQuestion": "Qué decisión puedes tomar esta semana para obedecer a Dios?",
-        "familyChallenge": "Practiquen una instruccion sencilla en casa y hablen de como la obediencia cuida a la familia."
+        "familyChallenge": "Practiquen una instrucción sencilla en casa y hablen de como la obediencia cuida a la familia."
       },
       "biblicalText": {
         "book": "Juan",
@@ -1750,7 +1750,7 @@ window.PRLessonLibrary = {
         "Comprender que nuestras buenas obras deben apuntar a Dios.",
         "Aplicar esta verdad escogiendo una forma de mostrar a Jesús esta semana."
       ],
-      "bibleContext": "Jesús habla a sus discípulos en una sociedad que necesitaba ver el caracter de Dios. La luz no se esconde; cumple su propósito alumbrando.",
+      "bibleContext": "Jesús habla a sus discípulos en una sociedad que necesitaba ver el carácter de Dios. La luz no se esconde; cumple su propósito alumbrando.",
       "exposition": [
         {
           "title": "Jesús nos llama luz",
@@ -1856,7 +1856,7 @@ window.PRLessonLibrary = {
       "displayTitle": "Confio en Dios con todo mi corazón",
       "closingSummary": "Confiar en Dios es descansar en que El sabe, cuida y dirige mejor que nosotros. Un discípulo aprende a depender de Dios aun cuando no entiende todo.",
       "teacherGuide": [
-        "Explica confianza con ejemplos sencillos: tomar una mano segura, seguir una instruccion, cruzar un puente firme.",
+        "Explica confianza con ejemplos sencillos: tomar una mano segura, seguir una instrucción, cruzar un puente firme.",
         "Evita prometer que confiar en Dios elimina todos los problemas. Enfatiza que Dios está con nosotros y guía nuestro camino.",
         "Invita a los niños a nombrar un miedo o preocupación y llevarlo a Dios en oración."
       ],
@@ -1867,7 +1867,7 @@ window.PRLessonLibrary = {
       },
       "parentMaterial": {
         "summary": "Hoy aprendimos que confiar en Dios es depender de Él con todo el corazón.",
-        "homeQuestion": "Qué preocupación podemos entregar a Dios está semana?",
+        "homeQuestion": "Qué preocupación podemos entregar a Dios esta semana?",
         "familyChallenge": "Oren juntos por una situación difícil y repitan Proverbios 3:5."
       },
       "biblicalText": {
@@ -1878,7 +1878,7 @@ window.PRLessonLibrary = {
         "date": "Coleccion de sabiduría del Antiguo Testamento",
         "context": "Proverbios enseña sabiduría para vivir delante de Dios. Confiar en Jehova implica no depender solo de nuestra propia opinion."
       },
-      "centralIdea": "El discípulo confia en Dios y busca su direccion en cada paso.",
+      "centralIdea": "El discípulo confía en Dios y busca su direccion en cada paso.",
       "objectives": [
         "Conocer que Dios nos llama a confiar en Él.",
         "Comprender que no debemos depender solo de nuestra propia prudencia.",
@@ -1887,7 +1887,7 @@ window.PRLessonLibrary = {
       "bibleContext": "Proverbios 3 anima al pueblo de Dios a vivir con sabiduría. La verdadera sabiduría comienza confiando en el Señor y reconociendolo en todos los caminos.",
       "exposition": [
         {
-          "title": "Confia con todo tu corazón",
+          "title": "Confía con todo tu corazón",
           "text": "Dios no quiere solo un pedacito de nuestra confianza. Podemos descansar en Él completamente."
         },
         {
@@ -1923,7 +1923,7 @@ window.PRLessonLibrary = {
       "displayTitle": "Jesús me envia a hablar de Él",
       "closingSummary": "Jesús envio a sus discípulos a hacer más discípulos. Los niños también pueden participar contando con sencillez lo que Jesús ha hecho y mostrando su amor.",
       "teacherGuide": [
-        "Presenta la misión como una invitacion gozosa, no como una carga pesada.",
+        "Presenta la misión como una invitación gozosa, no como una carga pesada.",
         "Práctica frases sencillas que un niño pueda decir: Jesús me ama, Jesús escucha, Jesús perdona.",
         "Recalca que hablar de Jesús debe ir unido a amar, escuchar y respetar a otros."
       ],
@@ -2136,7 +2136,7 @@ window.PRLessonLibrary = {
       "parentMaterial": {
         "summary": "Hoy aprendimos que la iglesia comparte a Jesús como un equipo.",
         "homeQuestion": "Cómo puede nuestra familia apoyar la misión de la iglesia?",
-        "familyChallenge": "Participen en una acción de servicio, oración o invitacion esta semana."
+        "familyChallenge": "Participen en una acción de servicio, oración o invitación esta semana."
       },
       "biblicalText": {
         "book": "Hechos",
@@ -2211,12 +2211,12 @@ window.PRLessonLibrary = {
         "verses": "22-24",
         "author": "Marcos",
         "date": "Aproximadamente 55-70 d.C.",
-        "context": "Jesús enseña a sus discípulos sobre fe, oración y confianza en Dios. La oración verdadera se apoya en Dios, no en palabras magicas."
+        "context": "Jesús enseña a sus discípulos sobre fe, oración y confianza en Dios. La oración verdadera se apoya en Dios, no en palabras mágicas."
       },
-      "centralIdea": "La oración con fe confia en que Dios escucha y responde con sabiduría.",
+      "centralIdea": "La oración con fe confía en que Dios escucha y responde con sabiduría.",
       "objectives": [
         "Conocer que Jesús enseno a orar con fe.",
-        "Comprender que la fe descansa en el caracter de Dios.",
+        "Comprender que la fe descansa en el carácter de Dios.",
         "Aplicar esta verdad orando por una necesidad con confianza."
       ],
       "bibleContext": "Marcos 11 muestra a Jesús formando la fe de sus discípulos. La oración no es manipulacion; es dependencia confiada del Dios que tiene poder y bondad.",
@@ -2353,7 +2353,7 @@ window.PRLessonLibrary = {
         "Comprender que interceder es una forma de amar.",
         "Aplicar esta verdad orando por personas concretas."
       ],
-      "bibleContext": "1 Timoteo 2 muestra que la oración de la iglesia mira más alla de uno mismo. Dios desea que todos sean salvos y conozcan la verdad.",
+      "bibleContext": "1 Timoteo 2 muestra que la oración de la iglesia mira más allá de uno mismo. Dios desea que todos sean salvos y conozcan la verdad.",
       "exposition": [
         {
           "title": "Dios escucha oraciones por otros",
@@ -2361,7 +2361,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "Interceder es amar",
-          "text": "Cuando oramos por otros, mostramos cuidado, compasion y dependencia de Dios."
+          "text": "Cuando oramos por otros, mostramos cuidado, compasión y dependencia de Dios."
         },
         {
           "title": "Oramos por salvación y cuidado",
@@ -2471,7 +2471,7 @@ window.PRLessonLibrary = {
       "parentMaterial": {
         "summary": "Hoy aprendimos que Dios protege y equipa a sus hijos para estar firmes.",
         "homeQuestion": "En que situación necesitas pedir ayuda a Dios para estar firme?",
-        "familyChallenge": "Oren juntos pidiendo fortaleza para obedecer a Dios está semana."
+        "familyChallenge": "Oren juntos pidiendo fortaleza para obedecer a Dios esta semana."
       },
       "biblicalText": {
         "book": "Efesios",
@@ -2491,7 +2491,7 @@ window.PRLessonLibrary = {
       "exposition": [
         {
           "title": "Fortaleceos en el Señor",
-          "text": "La primera instruccion es buscar fuerza en Dios. El creyente no pelea solo."
+          "text": "La primera instrucción es buscar fuerza en Dios. El creyente no pelea solo."
         },
         {
           "title": "Dios nos da armadura",
@@ -2554,7 +2554,7 @@ window.PRLessonLibrary = {
         "Comprender que la mentira y el pecado debilitan el corazón.",
         "Aplicar esta verdad escogiendo una acción correcta."
       ],
-      "bibleContext": "En una armadura antigua, el cinturón sostenia otras piezas y la coraza protegia órganos vitales. Pablo usa estas imágenes para enseñar que la verdad y la justicia son esenciales para la vida cristiana.",
+      "bibleContext": "En una armadura antigua, el cinturón sostenia otras piezas y la coraza protegía órganos vitales. Pablo usa estas imágenes para enseñar que la verdad y la justicia son esenciales para la vida cristiana.",
       "exposition": [
         {
           "title": "La verdad sostiene",
@@ -2613,7 +2613,7 @@ window.PRLessonLibrary = {
         "verses": "15-16",
         "author": "El apóstol Pablo",
         "date": "Aproximadamente 60-62 d.C.",
-        "context": "Pablo continua describiendo la armadura de Dios, mostrando que el creyente camina con el evangelio y se protege con la fe."
+        "context": "Pablo continúa describiendo la armadura de Dios, mostrando que el creyente camina con el evangelio y se protege con la fe."
       },
       "centralIdea": "El evangelio nos da paz para caminar y la fe nos ayuda a confiar en Dios.",
       "objectives": [
@@ -2621,7 +2621,7 @@ window.PRLessonLibrary = {
         "Comprender que el evangelio nos mueve a llevar paz.",
         "Aplicar esta verdad confiando en Dios ante una situación difícil."
       ],
-      "bibleContext": "El calzado ayudaba al soldado a mantenerse listo para caminar. El escudo protegia de ataques. Pablo usa estas imágenes para explicar una vida preparada por el evangelio y protegida por la fe.",
+      "bibleContext": "El calzado ayudaba al soldado a mantenerse listo para caminar. El escudo protegía de ataques. Pablo usa estas imágenes para explicar una vida preparada por el evangelio y protegida por la fe.",
       "exposition": [
         {
           "title": "El evangelio trae paz",
@@ -2688,7 +2688,7 @@ window.PRLessonLibrary = {
         "Comprender que la Palabra de Dios nos ayuda a responder con verdad.",
         "Aplicar esta verdad memorizando un versículo para usar durante la semana."
       ],
-      "bibleContext": "El casco protegia la cabeza y la espada era usada en batalla. Pablo enseña que el creyente necesita recordar su salvación y usar la Palabra de Dios para resistir el mal.",
+      "bibleContext": "El casco protegía la cabeza y la espada era usada en batalla. Pablo enseña que el creyente necesita recordar su salvación y usar la Palabra de Dios para resistir el mal.",
       "exposition": [
         {
           "title": "La salvación protege la mente",
@@ -2833,7 +2833,7 @@ window.PRLessonLibrary = {
           "text": "Aunque tengamos problemas, Jesús sigue siendo bueno, cercano y fiel."
         },
         {
-          "title": "El gozo se práctica",
+          "title": "El gozo se practica",
           "text": "Recordar, agradecer, cantar y orar nos ayuda a mirar a Jesús."
         }
       ],
@@ -2956,7 +2956,7 @@ window.PRLessonLibrary = {
         "Comprender que Dios puede transformar nuestras reacciones.",
         "Aplicar esta verdad practicando una respuesta bondadosa esta semana."
       ],
-      "bibleContext": "Gálatas 5 contrasta vivir segun la carne con caminar por el Espíritu. El fruto no es decoracion religiosa; es el caracter de Cristo formandose en nosotros.",
+      "bibleContext": "Gálatas 5 contrasta vivir según la carne con caminar por el Espíritu. El fruto no es decoración religiosa; es el carácter de Cristo formándose en nosotros.",
       "exposition": [
         {
           "title": "La bondad hace el bien",
@@ -3034,7 +3034,7 @@ window.PRLessonLibrary = {
           "text": "Cuando agradecemos, recordamos lo que Dios ha hecho y dejamos de enfocarnos solo en lo que falta."
         },
         {
-          "title": "La gratitud se práctica",
+          "title": "La gratitud se practica",
           "text": "Podemos aprender a dar gracias con palabras, oraciones, canciones y acciones."
         }
       ],
@@ -3073,7 +3073,7 @@ window.PRLessonLibrary = {
       },
       "parentMaterial": {
         "summary": "Hoy aprendimos que podemos alabar a Dios con alegría por quien El es.",
-        "homeQuestion": "Qué canción o frase podemos usar para alabar a Dios está semana?",
+        "homeQuestion": "Qué canción o frase podemos usar para alabar a Dios esta semana?",
         "familyChallenge": "Canten o lean juntos un salmo de alabanza."
       },
       "biblicalText": {
@@ -3194,15 +3194,15 @@ window.PRLessonLibrary = {
       "group": "ninos",
       "date": "11/29/2026",
       "displayTitle": "Celebramos la fiesta de Jesús",
-      "closingSummary": "La historia termina con Jesús reinando y su pueblo celebrando con Él. Nuestra esperanza no es solo una clase bonita; es vivir para Cristo y esperar la gran celebracion con el Cordero.",
+      "closingSummary": "La historia termina con Jesús reinando y su pueblo celebrando con Él. Nuestra esperanza no es solo una clase bonita; es vivir para Cristo y esperar la gran celebración con el Cordero.",
       "teacherGuide": [
         "Presenta Apocalipsis con esperanza, no con miedo. El centro de la fiesta es Jesús.",
         "Conecta la fiesta final con todo el año: Dios creó, salvo, transforma y promete estar con su pueblo.",
-        "Cierra con celebracion, gratitud y una invitacion sencilla a seguir a Jesús."
+        "Cierra con celebración, gratitud y una invitación sencilla a seguir a Jesús."
       ],
       "studentMaterial": {
         "memoryVerse": "Apocalipsis 19:7",
-        "activity": "Haz una invitacion que diga: Jesús me invita a celebrar con Él.",
+        "activity": "Haz una invitación que diga: Jesús me invita a celebrar con Él.",
         "reflection": "Quiero seguir a Jesús y esperar con alegría su Reino."
       },
       "parentMaterial": {
@@ -3216,11 +3216,11 @@ window.PRLessonLibrary = {
         "verses": "6-9",
         "author": "El apóstol Juan",
         "date": "Aproximadamente 90-95 d.C.",
-        "context": "Juan ve una celebracion celestial donde el pueblo de Dios se goza porque el Cordero reina. La imagen de bodas muestra comunión, victoria y esperanza eterna."
+        "context": "Juan ve una celebración celestial donde el pueblo de Dios se goza porque el Cordero reina. La imagen de bodas muestra comunión, victoria y esperanza eterna."
       },
-      "centralIdea": "Jesús es el centro de la celebracion eterna y la esperanza de su pueblo.",
+      "centralIdea": "Jesús es el centro de la celebración eterna y la esperanza de su pueblo.",
       "objectives": [
-        "Conocer que la Biblia presenta una celebracion final con Jesús.",
+        "Conocer que la Biblia presenta una celebración final con Jesús.",
         "Comprender que nuestra esperanza esta en Cristo y su Reino.",
         "Aplicar esta verdad celebrando con gratitud y decidiendo seguir a Jesús."
       ],
@@ -3231,12 +3231,12 @@ window.PRLessonLibrary = {
           "text": "El Cordero nos recuerda a Jesús, quien dio su vida para salvarnos."
         },
         {
-          "title": "Habra una gran celebracion",
+          "title": "Habra una gran celebración",
           "text": "La Biblia muestra el futuro del pueblo de Dios como gozo, comunión y adoración."
         },
         {
           "title": "Vivimos con esperanza",
-          "text": "Esperar esa celebracion nos anima a seguir a Jesús hoy con fe y alegría."
+          "text": "Esperar esa celebración nos anima a seguir a Jesús hoy con fe y alegría."
         }
       ],
       "title": "UNA GRAN FIESTA CON JESÚS",
@@ -3276,7 +3276,7 @@ window.PRLessonLibrary = {
       },
       "parentMaterial": {
         "summary": "Hoy los juveniles reflexionaron sobre como Dios se revela y por que creer en Él es razonable.",
-        "homeQuestion": "Donde viste evidencia de Dios está semana?",
+        "homeQuestion": "Donde viste evidencia de Dios esta semana?",
         "familyChallenge": "Conversen sobre una pregunta de fe y busquen juntos un texto bíblico relacionado."
       },
       "biblicalText": {
@@ -3417,7 +3417,7 @@ window.PRLessonLibrary = {
         "verses": "1-7; apoyo: Salmo 89:14",
         "author": "El profeta Isaías",
         "date": "Aproximadamente siglo VIII a.C.",
-        "context": "Isaías ve al Señor en su trono, escucha la declaracion de su santidad y reconoce su pecado. Dios responde limpiandolo y preparandolo para servir."
+        "context": "Isaías ve al Señor en su trono, escucha la declaración de su santidad y reconoce su pecado. Dios responde limpiandolo y preparandolo para servir."
       },
       "centralIdea": "La santidad de Dios confronta el pecado y su gracia limpia al que se humilla ante El.",
       "objectives": [
@@ -3495,7 +3495,7 @@ window.PRLessonLibrary = {
       "exposition": [
         {
           "title": "Dios es rico en misericordia",
-          "text": "La misericordia de Dios no es pequeña ni limitada. El actúa hacia pecadores con compasion y gracia."
+          "text": "La misericordia de Dios no es pequeña ni limitada. El actúa hacia pecadores con compasión y gracia."
         },
         {
           "title": "Cristo prueba el amor de Dios",
@@ -3554,7 +3554,7 @@ window.PRLessonLibrary = {
       "centralIdea": "Dios es uno en esencia y tres en personas: Padre, Hijo y Espíritu Santo.",
       "objectives": [
         "Comprender las afirmaciones basicas de la doctrina de la Trinidad.",
-        "Reconocer que la Trinidad es revelación bíblica, no especulacion humana.",
+        "Reconocer que la Trinidad es revelación bíblica, no especulación humana.",
         "Aplicar esta verdad adorando y orando con mayor reverencia."
       ],
       "bibleContext": "La Gran Comision muestra que la misión cristiana nace del Dios trino. No bautizamos en nombres separados, sino en el nombre del Padre, del Hijo y del Espíritu Santo.",
@@ -3569,7 +3569,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "La Trinidad nos lleva a adorar",
-          "text": "No entendemos a Dios por completo, pero recibimos con humildad lo que El revelo de si mismo."
+          "text": "No entendemos a Dios por completo, pero recibimos con humildad lo que El reveló de si mismo."
         }
       ],
       "title": "EL PADRE, EL HIJO Y EL ESPÍRITU SANTO",
@@ -3697,7 +3697,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "Jesús salva completamente",
-          "text": "Su obra es suficiente: vivio sin pecado, murió por pecadores y resucito."
+          "text": "Su obra es suficiente: vivio sin pecado, murió por pecadores y resucitó."
         },
         {
           "title": "El evangelio exige respuesta",
@@ -3725,7 +3725,7 @@ window.PRLessonLibrary = {
       "group": "juveniles",
       "date": "2/22/2026",
       "displayTitle": "El Espíritu Santo, presencia que transforma",
-      "closingSummary": "El Espíritu Santo no es una energia impersonal. Es Dios presente en el creyente: enseña, consuela, convence, da poder y forma el caracter de Cristo.",
+      "closingSummary": "El Espíritu Santo no es una energia impersonal. Es Dios presente en el creyente: enseña, consuela, convence, da poder y forma el carácter de Cristo.",
       "teacherGuide": [
         "Corrige ideas vagas sobre el Espíritu como fuerza o emocion solamente.",
         "Conecta su obra con vida diaria: conviccion, obediencia, fruto, poder para testificar.",
@@ -3791,7 +3791,7 @@ window.PRLessonLibrary = {
       "group": "juveniles",
       "date": "3/8/2026",
       "displayTitle": "Cómo Dios nos entrego su Palabra",
-      "closingSummary": "La Biblia llego a nosotros por la obra soberana de Dios: autores humanos fueron guiados por el Espíritu Santo, y el mensaje central apunta a Cristo y su redención.",
+      "closingSummary": "La Biblia llegó a nosotros por la obra soberana de Dios: autores humanos fueron guiados por el Espíritu Santo, y el mensaje central apunta a Cristo y su redención.",
       "teacherGuide": [
         "Distingue inspiracion de dictado mecanico: Dios usó autores reales sin perder autoridad divina.",
         "Conecta la historia de la Biblia con su unidad: muchos autores, un mensaje redentor.",
@@ -3799,7 +3799,7 @@ window.PRLessonLibrary = {
       ],
       "studentMaterial": {
         "memoryVerse": "2 Pedro 1:21",
-        "activity": "Crea una linea de tiempo con cinco momentos: creación, profetas, Jesús, apostoles, iglesia.",
+        "activity": "Crea una línea de tiempo con cinco momentos: creación, profetas, Jesús, apostoles, iglesia.",
         "reflection": "Puedo confiar en la Biblia porque Dios guió su mensaje."
       },
       "parentMaterial": {
@@ -3879,7 +3879,7 @@ window.PRLessonLibrary = {
         "verses": "105",
         "author": "Autor no identificado; salmo de amor por la Palabra",
         "date": "Periodo del Antiguo Testamento",
-        "context": "El Salmo 119 celebra la Palabra de Dios como guía, consuelo, instruccion y deleite para el creyente."
+        "context": "El Salmo 119 celebra la Palabra de Dios como guía, consuelo, instrucción y deleite para el creyente."
       },
       "centralIdea": "La Palabra de Dios guía nuestras decisiones y forma nuestra vida cuando la leemos con obediencia.",
       "objectives": [
@@ -3953,7 +3953,7 @@ window.PRLessonLibrary = {
         "Comprender que la Biblia confronta y consuela.",
         "Aplicar esta verdad identificando un área donde necesito obedecer."
       ],
-      "bibleContext": "Hebreos 4 advierte contra la incredulidad y llama al descanso en Dios. La Palabra penetra más alla de apariencias y expone la condicion real del corazón.",
+      "bibleContext": "Hebreos 4 advierte contra la incredulidad y llama al descanso en Dios. La Palabra penetra más allá de apariencias y expone la condicion real del corazón.",
       "exposition": [
         {
           "title": "La Palabra esta viva",
@@ -4027,7 +4027,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "La imagen de Dios tiene propósito",
-          "text": "Fuimos creados para conocer a Dios, reflejar su caracter y cuidar lo que Él hizo."
+          "text": "Fuimos creados para conocer a Dios, reflejar su carácter y cuidar lo que Él hizo."
         },
         {
           "title": "La imagen de Dios exige respeto",
@@ -4063,7 +4063,7 @@ window.PRLessonLibrary = {
       ],
       "studentMaterial": {
         "memoryVerse": "Romanos 3:23",
-        "activity": "Dibuja una linea partida entre Dios y humanidad. Anota formas en que el pecado rompe relaciones.",
+        "activity": "Dibuja una línea partida entre Dios y humanidad. Anota formas en que el pecado rompe relaciones.",
         "reflection": "No necesito excusar mi pecado; necesito traerlo a Dios con arrepentimiento."
       },
       "parentMaterial": {
@@ -4189,7 +4189,7 @@ window.PRLessonLibrary = {
       "displayTitle": "Nueva vida: identidad transformada en Cristo",
       "closingSummary": "En Cristo no recibimos solo una segunda oportunidad, sino una nueva identidad. Dios transforma mente, deseos, relaciones y propósito para vivir como nueva criatura.",
       "teacherGuide": [
-        "Enfatiza que nueva vida no es perfeccion instantanea, sino una obra real de Dios.",
+        "Enfatiza que nueva vida no es perfección instantánea, sino una obra real de Dios.",
         "Conecta viejos habitos con nueva identidad: redes, amistades, lenguaje, prioridades.",
         "Invita a una decisión concreta de obediencia, no solo reflexion general."
       ],
@@ -4201,7 +4201,7 @@ window.PRLessonLibrary = {
       "parentMaterial": {
         "summary": "Hoy los juveniles estudiaron la nueva vida e identidad en Cristo.",
         "homeQuestion": "Qué área de la vida necesita reflejar mejor la nueva identidad en Cristo?",
-        "familyChallenge": "Escoger un habito concreto para entregar a Dios está semana."
+        "familyChallenge": "Escoger un hábito concreto para entregar a Dios esta semana."
       },
       "biblicalText": {
         "book": "2 Corintios",
@@ -4341,7 +4341,7 @@ window.PRLessonLibrary = {
         "verses": "3-4",
         "author": "El apóstol Pablo",
         "date": "Aproximadamente 53-55 d.C.",
-        "context": "Pablo resume el evangelio recibido y anunciado: Cristo murió por nuestros pecados, fue sepultado y resucito conforme a las Escrituras."
+        "context": "Pablo resume el evangelio recibido y anunciado: Cristo murió por nuestros pecados, fue sepultado y resucitó conforme a las Escrituras."
       },
       "centralIdea": "Jesús murió por nuestros pecados, tomando nuestro lugar para reconciliarnos con Dios.",
       "objectives": [
@@ -4385,7 +4385,7 @@ window.PRLessonLibrary = {
       "group": "juveniles",
       "date": "5/10/2026",
       "displayTitle": "La tumba vacía cambia todo",
-      "closingSummary": "Jesús resucito corporalmente y vive hoy. La resurrección confirma que su sacrificio fue aceptado, que la muerte fue vencida y que nuestra esperanza no depende de emociones sino de una verdad historica y eterna.",
+      "closingSummary": "Jesús resucitó corporalmente y vive hoy. La resurrección confirma que su sacrificio fue aceptado, que la muerte fue vencida y que nuestra esperanza no depende de emociones sino de una verdad historica y eterna.",
       "teacherGuide": [
         "Presenta la resurrección como el centro de la esperanza cristiana, no como un detalle final.",
         "Invita a los juveniles a pensar como seria la fe cristiana si Cristo no hubiera resucitado.",
@@ -4407,18 +4407,18 @@ window.PRLessonLibrary = {
         "verses": "1-8",
         "author": "Lucas, medico y colaborador de Pablo",
         "date": "Aproximadamente 60-62 d.C.",
-        "context": "Lucas registra el testimonio de la tumba vacía y el anuncio angelical de que Jesús habia resucitado como El mismo habia dicho."
+        "context": "Lucas registra el testimonio de la tumba vacía y el anuncio angelical de que Jesús había resucitado como El mismo había dicho."
       },
       "centralIdea": "La resurrección de Jesús confirma su victoria y da esperanza viva a sus seguidores.",
       "objectives": [
-        "Afirmar que Jesús resucito verdaderamente y vive hoy.",
+        "Afirmar que Jesús resucitó verdaderamente y vive hoy.",
         "Comprender por que la resurrección confirma el evangelio.",
         "Vivir con esperanza y valentía porque Cristo venció la muerte."
       ],
       "bibleContext": "Lucas 24 muestra sorpresa, recuerdo y fe. Las mujeres encuentran la tumba vacía y reciben la noticia que transforma la historia: Jesús ha resucitado.",
       "exposition": [
         {
-          "title": "Jesús resucito verdaderamente",
+          "title": "Jesús resucitó verdaderamente",
           "text": "La tumba vacía no es una idea simbolica; anuncia la victoria real de Cristo sobre la muerte."
         },
         {
@@ -4451,9 +4451,9 @@ window.PRLessonLibrary = {
       "group": "juveniles",
       "date": "5/17/2026",
       "displayTitle": "Esperanza activa: Jesús volvera",
-      "closingSummary": "Jesús ascendio y prometio volver. La esperanza de su regreso no produce miedo ni pasividad, sino una vida preparada, santa, fiel y comprometida con la misión mientras esperamos al Rey.",
+      "closingSummary": "Jesús ascendió y prometio volver. La esperanza de su regreso no produce miedo ni pasividad, sino una vida preparada, santa, fiel y comprometida con la misión mientras esperamos al Rey.",
       "teacherGuide": [
-        "Mantén el enfoque en esperanza y fidelidad, no en especulacion de fechas.",
+        "Mantén el enfoque en esperanza y fidelidad, no en especulación de fechas.",
         "Ayuda a distinguir estar preparado de vivir con miedo religioso.",
         "Conecta la segunda venida con santidad, servicio y evangelismo."
       ],
@@ -4473,19 +4473,19 @@ window.PRLessonLibrary = {
         "verses": "9-11",
         "author": "Lucas, medico y colaborador de Pablo",
         "date": "Aproximadamente 60-62 d.C.",
-        "context": "Después de la resurrección, Jesús asciende al cielo y los angeles anuncian que volvera de la misma manera."
+        "context": "Después de la resurrección, Jesús asciende al cielo y los ángeles anuncian que volvera de la misma manera."
       },
       "centralIdea": "Jesús volvera por su iglesia, y esa esperanza nos llama a vivir preparados, fieles y en misión.",
       "objectives": [
         "Conocer la promesa bíblica del regreso de Jesús.",
-        "Rechazar la especulacion y abrazar una esperanza obediente.",
+        "Rechazar la especulación y abrazar una esperanza obediente.",
         "Identificar una forma concreta de vivir preparados esta semana."
       ],
-      "bibleContext": "Hechos 1 une la ascension de Jesús con la misión de la iglesia. Mientras esperamos su regreso, vivimos como testigos llenos del Espíritu.",
+      "bibleContext": "Hechos 1 une la ascensión de Jesús con la misión de la iglesia. Mientras esperamos su regreso, vivimos como testigos llenos del Espíritu.",
       "exposition": [
         {
           "title": "Jesús reina y volvera",
-          "text": "La ascension no significa ausencia sin control; Cristo reina y cumplira su promesa."
+          "text": "La ascensión no significa ausencia sin control; Cristo reina y cumplirá su promesa."
         },
         {
           "title": "Esperar no es adivinar fechas",
@@ -4519,7 +4519,7 @@ window.PRLessonLibrary = {
       "displayTitle": "Orar: hablar con Dios desde la confianza",
       "closingSummary": "La oración no es una formula ni un recurso solo para emergencias. Es una relación viva con el Padre, basada en confianza, reverencia y dependencia diaria.",
       "teacherGuide": [
-        "Ayuda a los juveniles a ver la oración como relación, no como actuacion religiosa.",
+        "Ayuda a los juveniles a ver la oración como relación, no como actuación religiosa.",
         "Usa el Padre Nuestro como modelo: adoración, dependencia, perdón, direccion y proteccion.",
         "Crea un ambiente seguro para que practiquen oraciones sencillas y sinceras."
       ],
@@ -4582,8 +4582,8 @@ window.PRLessonLibrary = {
     {
       "group": "juveniles",
       "date": "5/31/2026",
-      "displayTitle": "El fruto del Espíritu: caracter que se nota",
-      "closingSummary": "El Espíritu Santo no solo produce momentos emocionantes; forma el caracter de Cristo en nosotros. El fruto se ve en decisiones, palabras, relaciones y reacciones diarias.",
+      "displayTitle": "El fruto del Espíritu: carácter que se nota",
+      "closingSummary": "El Espíritu Santo no solo produce momentos emocionantes; forma el carácter de Cristo en nosotros. El fruto se ve en decisiones, palabras, relaciones y reacciones diarias.",
       "teacherGuide": [
         "Explica que Pablo habla de fruto, no de apariencias religiosas.",
         "Contrasta obras de la carne con fruto del Espíritu sin avergonzar al grupo.",
@@ -4592,7 +4592,7 @@ window.PRLessonLibrary = {
       "studentMaterial": {
         "memoryVerse": "Gálatas 5:22-23",
         "activity": "Autoevaluacion del fruto: escoger un fruto fuerte y uno que necesita crecer, y escribir una acción concreta.",
-        "reflection": "El Espíritu forma en mi un caracter que se parece más a Jesús."
+        "reflection": "El Espíritu forma en mi un carácter que se parece más a Jesús."
       },
       "parentMaterial": {
         "summary": "Hoy los juveniles estudiaron el fruto del Espíritu y como se refleja en la conducta diaria.",
@@ -4607,20 +4607,20 @@ window.PRLessonLibrary = {
         "date": "Aproximadamente 48-55 d.C.",
         "context": "Pablo contrasta la vida dominada por la carne con la vida guiada por el Espíritu."
       },
-      "centralIdea": "El Espíritu Santo produce en el creyente un caracter visible que refleja a Cristo.",
+      "centralIdea": "El Espíritu Santo produce en el creyente un carácter visible que refleja a Cristo.",
       "objectives": [
         "Identificar el fruto del Espíritu y su significado práctico.",
         "Reconocer actitudes que compiten contra la obra del Espíritu.",
         "Escoger una acción concreta para cultivar un fruto esta semana."
       ],
-      "bibleContext": "Gálatas 5 enseña que la libertad cristiana no es vivir sin direccion, sino caminar por el Espíritu y reflejar el caracter de Cristo.",
+      "bibleContext": "Gálatas 5 enseña que la libertad cristiana no es vivir sin direccion, sino caminar por el Espíritu y reflejar el carácter de Cristo.",
       "exposition": [
         {
           "title": "El fruto nace de una vida guiada",
-          "text": "No producimos santidad por fuerza humana; caminamos con el Espíritu y El transforma el caracter."
+          "text": "No producimos santidad por fuerza humana; caminamos con el Espíritu y El transforma el carácter."
         },
         {
-          "title": "El caracter se ve en relaciones",
+          "title": "El carácter se ve en relaciones",
           "text": "Amor, paciencia, mansedumbre y dominio propio se prueban especialmente cuando convivir es difícil."
         },
         {
@@ -4803,7 +4803,7 @@ window.PRLessonLibrary = {
         "verses": "35-45",
         "author": "Juan Marcos",
         "date": "Aproximadamente 55-70 d.C.",
-        "context": "Jesús corrige la ambicion de sus discípulos y les enseña que la verdadera grandeza en su reino se expresa sirviendo."
+        "context": "Jesús corrige la ambición de sus discípulos y les enseña que la verdadera grandeza en su reino se expresa sirviendo."
       },
       "centralIdea": "El seguidor de Jesús sirve con humildad porque Cristo mismo vino a servir y dar su vida.",
       "objectives": [
@@ -4811,7 +4811,7 @@ window.PRLessonLibrary = {
         "Examinar motivaciones personales al servir.",
         "Disenar una acción concreta de servicio cristiano."
       ],
-      "bibleContext": "Marcos 10 contrasta la ambicion humana con el camino de Jesús. El Hijo del Hombre muestra que el liderazgo del reino nace de la entrega.",
+      "bibleContext": "Marcos 10 contrasta la ambición humana con el camino de Jesús. El Hijo del Hombre muestra que el liderazgo del reino nace de la entrega.",
       "exposition": [
         {
           "title": "El mundo busca posicion",
@@ -4937,7 +4937,7 @@ window.PRLessonLibrary = {
         "date": "Aproximadamente 60-70 d.C.",
         "context": "Jesús enseña sobre el perdón dentro del llamado a una vida de oración sincera y dependencia del Padre."
       },
-      "centralIdea": "El discípulo perdona porque ha recibido gracia y confia la justicia final a Dios.",
+      "centralIdea": "El discípulo perdona porque ha recibido gracia y confía la justicia final a Dios.",
       "objectives": [
         "Comprender el perdón como obediencia nacida de la gracia.",
         "Distinguir perdón de negacion del daño o falta de limites.",
@@ -4947,7 +4947,7 @@ window.PRLessonLibrary = {
       "exposition": [
         {
           "title": "Perdonar reconoce la gracia",
-          "text": "Solo entendemos el perdón cristiano cuando recordamos cuanto nos ha perdonado Dios."
+          "text": "Solo entendemos el perdón cristiano cuando recordamos cuánto nos ha perdonado Dios."
         },
         {
           "title": "Perdonar entrega la deuda",
@@ -4991,7 +4991,7 @@ window.PRLessonLibrary = {
         "reflection": "Dios puede dirigir mis pasos aun cuando yo no vea toda la ruta."
       },
       "parentMaterial": {
-        "summary": "Hoy los juveniles estudiaron la confianza en Dios segun Proverbios 3.",
+        "summary": "Hoy los juveniles estudiaron la confianza en Dios según Proverbios 3.",
         "homeQuestion": "Qué decisión necesita ser entregada a Dios en oración?",
         "familyChallenge": "Orar por una decisión y buscar un principio bíblico que la guie."
       },
@@ -5003,7 +5003,7 @@ window.PRLessonLibrary = {
         "date": "Compilado durante el periodo de la monarquia de Israel",
         "context": "Proverbios ofrece sabiduría para vivir bajo el temor de Dios, confiando en su direccion más que en la autosuficiencia."
       },
-      "centralIdea": "El discípulo confia en Dios rindiendo su propio control y reconociendo al Señor en cada camino.",
+      "centralIdea": "El discípulo confía en Dios rindiendo su propio control y reconociendo al Señor en cada camino.",
       "objectives": [
         "Explicar que confiar en Dios implica corazón, decisiones y direccion.",
         "Identificar áreas donde dependemos demasiado de nuestra propia prudencia.",
@@ -5113,7 +5113,7 @@ window.PRLessonLibrary = {
       "displayTitle": "Todos necesitan escuchar de Jesús",
       "closingSummary": "El evangelio es urgente porque las personas no pueden creer en aquel de quien no han oído. Dios usa mensajeros comunes para llevar una noticia eterna.",
       "teacherGuide": [
-        "Enfoca urgencia sin manipular con culpa; usa compasion y responsabilidad.",
+        "Enfoca urgencia sin manipular con culpa; usa compasión y responsabilidad.",
         "Ayuda a identificar barreras reales para compartir: miedo, rechazo, falta de claridad.",
         "Invita al grupo a disenar una estrategia simple para su escuela, comunidad o familia."
       ],
@@ -5135,7 +5135,7 @@ window.PRLessonLibrary = {
         "date": "Aproximadamente 57 d.C.",
         "context": "Pablo explica que la salvación se recibe por fe, y que la fe viene por oír la Palabra de Cristo."
       },
-      "centralIdea": "Las personas necesitan escuchar el evangelio, y Dios llama a sus hijos a llevar el mensaje con compasion.",
+      "centralIdea": "Las personas necesitan escuchar el evangelio, y Dios llama a sus hijos a llevar el mensaje con compasión.",
       "objectives": [
         "Reconocer la urgencia espiritual de compartir el evangelio.",
         "Comprender la cadena bíblica: enviar, predicar, oír, creer e invocar.",
@@ -5149,7 +5149,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "Dios envia mensajeros",
-          "text": "La misión ocurre cuando creyentes obedecen y llevan buenas nuevas con compasion."
+          "text": "La misión ocurre cuando creyentes obedecen y llevan buenas nuevas con compasión."
         },
         {
           "title": "La fe viene por la Palabra",
@@ -5212,7 +5212,7 @@ window.PRLessonLibrary = {
       "exposition": [
         {
           "title": "Cada creyente recibe para servir",
-          "text": "Pedro no trata los dones como decoracion personal, sino como herramientas para ministrar a otros."
+          "text": "Pedro no trata los dones como decoración personal, sino como herramientas para ministrar a otros."
         },
         {
           "title": "Los dones se administran",
@@ -5312,7 +5312,7 @@ window.PRLessonLibrary = {
       "group": "juveniles",
       "date": "8/16/2026",
       "displayTitle": "La oración que agrada a Dios",
-      "closingSummary": "La oración que agrada a Dios nace de fe, sinceridad y rendicion. No manipula a Dios ni exige caprichos; se acerca al Padre confiando en su poder, su caracter y su voluntad.",
+      "closingSummary": "La oración que agrada a Dios nace de fe, sinceridad y rendicion. No manipula a Dios ni exige caprichos; se acerca al Padre confiando en su poder, su carácter y su voluntad.",
       "teacherGuide": [
         "Aclara que orar con fe no significa controlar a Dios.",
         "Distingue fe verdadera de formulas religiosas o pensamiento magico.",
@@ -5444,9 +5444,9 @@ window.PRLessonLibrary = {
       "group": "juveniles",
       "date": "8/30/2026",
       "displayTitle": "Interceder: llevar a otros delante de Dios",
-      "closingSummary": "Interceder es amar en oración. Cuando oramos por otros, participamos en el cuidado de Dios, cargamos necesidades con compasion y recordamos que la iglesia es una familia espiritual.",
+      "closingSummary": "Interceder es amar en oración. Cuando oramos por otros, participamos en el cuidado de Dios, cargamos necesidades con compasión y recordamos que la iglesia es una familia espiritual.",
       "teacherGuide": [
-        "Presenta la intercesión como expresion de amor, no como lista mecanica.",
+        "Presenta la intercesión como expresión de amor, no como lista mecanica.",
         "Incluye categorias: familia, iglesia, escuela, autoridades, enfermos y personas sin Cristo.",
         "Cuida la privacidad: no obligues a compartir detalles sensibles en público."
       ],
@@ -5474,11 +5474,11 @@ window.PRLessonLibrary = {
         "Identificar personas y necesidades por las cuales orar.",
         "Crear un plan semanal sencillo de intercesión."
       ],
-      "bibleContext": "1 Timoteo 2 muestra una iglesia que ora más alla de sus propios intereses, incluyendo gobernantes y toda clase de personas.",
+      "bibleContext": "1 Timoteo 2 muestra una iglesia que ora más allá de sus propios intereses, incluyendo gobernantes y toda clase de personas.",
       "exposition": [
         {
           "title": "La intercesión amplía el corazón",
-          "text": "Orar por otros nos saca del egoísmo y nos enseña compasion."
+          "text": "Orar por otros nos saca del egoísmo y nos enseña compasión."
         },
         {
           "title": "La iglesia ora por todos",
@@ -5547,8 +5547,8 @@ window.PRLessonLibrary = {
           "text": "Dios no está limitado al templo o al domingo; podemos depender de Él durante todo el día."
         },
         {
-          "title": "La constancia se práctica",
-          "text": "Un habito espiritual crece con pasos pequenos, intencionales y repetidos."
+          "title": "La constancia se practica",
+          "text": "Un hábito espiritual crece con pasos pequenos, intencionales y repetidos."
         },
         {
           "title": "La gratitud sostiene el corazón",
@@ -5557,7 +5557,7 @@ window.PRLessonLibrary = {
       ],
       "title": "UNA VIDA DE ORACIÓN CONSTANTE",
       "verse": "1 Tesalonicenses 5:17 \"Orad sin cesar.\"",
-      "goal": "Fomentar el hábito de una vida de oración continua, no solo ocasional.",
+      "goal": "Fomentar el hábito de una vida de oración continúa, no solo ocasional.",
       "summary": "- La oración debe ser una actitud, no solo un acto. - Vivir en comunión diaria con Dios transforma.",
       "warmup": "Pregunta inicial: ¿qué evidencia te convence de algo que no puedes ver, como wifi, gravedad o viento?",
       "materials": "Biblia, libreta o notas del celular, pizarra o papel grande, marcadores.",
@@ -5708,7 +5708,7 @@ window.PRLessonLibrary = {
       "group": "juveniles",
       "date": "9/27/2026",
       "displayTitle": "Fe y paz para avanzar",
-      "closingSummary": "La fe apaga los dardos de duda, temor y acusacion, y el evangelio de paz nos prepara para caminar con firmeza. El creyente avanza no porque no haya lucha, sino porque confia en Cristo.",
+      "closingSummary": "La fe apaga los dardos de duda, temor y acusación, y el evangelio de paz nos prepara para caminar con firmeza. El creyente avanza no porque no haya lucha, sino porque confía en Cristo.",
       "teacherGuide": [
         "Explica los dardos como ataques de mentira, temor, culpa, tentación o desánimo.",
         "Conecta la paz del evangelio con relaciones, decisiones y testimonio.",
@@ -5874,7 +5874,7 @@ window.PRLessonLibrary = {
       "exposition": [
         {
           "title": "Jesús define el amor",
-          "text": "No amamos segun moda o sentimiento, sino segun el amor sacrificial de Cristo."
+          "text": "No amamos según moda o sentimiento, sino según el amor sacrificial de Cristo."
         },
         {
           "title": "El amor identifica al discípulo",
@@ -6050,7 +6050,7 @@ window.PRLessonLibrary = {
       "studentMaterial": {
         "memoryVerse": "Gálatas 5:22-23",
         "activity": "Pausa santa: practicar tres pasos antes de reaccionar: detenerme, orar breve, responder con bondad.",
-        "reflection": "Mis reacciones también pueden mostrar que Cristo está formando mi caracter."
+        "reflection": "Mis reacciones también pueden mostrar que Cristo está formando mi carácter."
       },
       "parentMaterial": {
         "summary": "Hoy los juveniles estudiaron dominio propio y bondad como fruto del Espíritu.",
@@ -6071,7 +6071,7 @@ window.PRLessonLibrary = {
         "Identificar situaciones donde reaccionamos impulsivamente.",
         "Practicar una respuesta concreta guiada por Dios."
       ],
-      "bibleContext": "Gálatas 5 contrasta vivir por la carne con caminar por el Espíritu. El caracter cristiano se nota especialmente bajo presión.",
+      "bibleContext": "Gálatas 5 contrasta vivir por la carne con caminar por el Espíritu. El carácter cristiano se nota especialmente bajo presión.",
       "exposition": [
         {
           "title": "El dominio propio frena el impulso",
@@ -6079,7 +6079,7 @@ window.PRLessonLibrary = {
         },
         {
           "title": "La bondad responde con gracia",
-          "text": "La bondad no depende de que otros nos traten bien; nace del caracter de Cristo."
+          "text": "La bondad no depende de que otros nos traten bien; nace del carácter de Cristo."
         },
         {
           "title": "El Espíritu transforma reacciones",
@@ -6145,7 +6145,7 @@ window.PRLessonLibrary = {
           "text": "Dar gracias nos recuerda que todo bien viene del Señor."
         },
         {
-          "title": "La gratitud se práctica en todo",
+          "title": "La gratitud se practica en todo",
           "text": "No esperamos circunstancias perfectas para reconocer la fidelidad de Dios."
         },
         {
@@ -6177,9 +6177,9 @@ window.PRLessonLibrary = {
       "displayTitle": "Alabanza como estilo de vida",
       "closingSummary": "Alabar no es solo cantar los domingos. Es vivir reconociendo la grandeza de Dios con palabras, decisiones, servicio, obediencia y gratitud diaria.",
       "teacherGuide": [
-        "Amplia el concepto de alabanza más alla de música.",
+        "Amplia el concepto de alabanza más allá de música.",
         "Conecta adoración con vida diaria: redes, conversaciones, prioridades y servicio.",
-        "Permite una expresion creativa: poema, oración, dibujo, canto o compromiso escrito."
+        "Permite una expresión creativa: poema, oración, dibujo, canto o compromiso escrito."
       ],
       "studentMaterial": {
         "memoryVerse": "Salmo 100:4",
@@ -6203,7 +6203,7 @@ window.PRLessonLibrary = {
       "objectives": [
         "Comprender que alabar es más que cantar.",
         "Identificar formas diarias de glorificar a Dios.",
-        "Crear una expresion personal de alabanza."
+        "Crear una expresión personal de alabanza."
       ],
       "bibleContext": "Salmo 100 llama a adorar con gozo porque Dios es creador, pastor, bueno y fiel por todas las generaciones.",
       "exposition": [
@@ -6242,16 +6242,16 @@ window.PRLessonLibrary = {
       "group": "juveniles",
       "date": "11/22/2026",
       "displayTitle": "Testigos de su obra",
-      "closingSummary": "Los redimidos tienen una historia que contar. Testificar no es presumir perfeccion, sino decir con humildad lo que Dios ha hecho y como su gracia sigue obrando.",
+      "closingSummary": "Los redimidos tienen una historia que contar. Testificar no es presumir perfección, sino decir con humildad lo que Dios ha hecho y como su gracia sigue obrando.",
       "teacherGuide": [
         "Ayuda a construir testimonios sencillos: antes, encuentro con Dios, cambio y esperanza.",
-        "Evita presionar a compartir detalles sensibles; cada joven decide cuanto contar.",
+        "Evita presionar a compartir detalles sensibles; cada joven decide cuánto contar.",
         "Enfatiza que el centro del testimonio es Cristo, no el drama personal."
       ],
       "studentMaterial": {
         "memoryVerse": "Salmo 107:2",
-        "activity": "Mi testimonio en cuatro frases: antes, Dios obro, hoy, mi esperanza.",
-        "reflection": "Lo que Dios hace en mi puede animar a otros y apuntar a Cristo."
+        "activity": "Mi testimonio en cuatro frases: antes, Dios obró, hoy, mi esperanza.",
+        "reflection": "Lo que Dios hace en mí puede animar a otros y apuntar a Cristo."
       },
       "parentMaterial": {
         "summary": "Hoy los juveniles estudiaron el llamado a compartir lo que Dios ha hecho.",
@@ -6268,7 +6268,7 @@ window.PRLessonLibrary = {
       },
       "centralIdea": "Quienes han recibido la obra de Dios son llamados a contarla con gratitud y humildad.",
       "objectives": [
-        "Comprender el testimonio como declaracion de la obra de Dios.",
+        "Comprender el testimonio como declaración de la obra de Dios.",
         "Preparar un testimonio breve centrado en Cristo.",
         "Identificar una oportunidad segura y respetuosa para compartirlo."
       ],
@@ -6311,13 +6311,13 @@ window.PRLessonLibrary = {
       "displayTitle": "Celebramos a Cristo, nuestra esperanza final",
       "closingSummary": "La historia termina con Cristo reinando y su pueblo celebrando con Él. Esta esperanza futura nos llama a vivir hoy con gozo, fidelidad y adoración.",
       "teacherGuide": [
-        "Presenta la esperanza futura sin especulacion; enfoca adoración y fidelidad.",
-        "Conecta celebracion con vida preparada: Cristo es el centro hoy y por la eternidad.",
+        "Presenta la esperanza futura sin especulación; enfoca adoración y fidelidad.",
+        "Conecta celebración con vida preparada: Cristo es el centro hoy y por la eternidad.",
         "Cierra el año con gratitud, testimonios breves y oración de compromiso."
       ],
       "studentMaterial": {
         "memoryVerse": "Apocalipsis 19:7",
-        "activity": "Celebracion de esperanza: escribir una gratitud del año, una verdad aprendida y una decisión para seguir a Cristo.",
+        "activity": "Celebración de esperanza: escribir una gratitud del año, una verdad aprendida y una decisión para seguir a Cristo.",
         "reflection": "Mi esperanza final no esta en este mundo, sino en Cristo y su reino."
       },
       "parentMaterial": {
@@ -6331,18 +6331,18 @@ window.PRLessonLibrary = {
         "verses": "6-9",
         "author": "El apóstol Juan",
         "date": "Aproximadamente 90-95 d.C.",
-        "context": "Apocalipsis presenta la victoria final de Dios y la celebracion de las bodas del Cordero."
+        "context": "Apocalipsis presenta la victoria final de Dios y la celebración de las bodas del Cordero."
       },
       "centralIdea": "Cristo es nuestra esperanza final, y su victoria futura nos llama a vivir con gozo y fidelidad hoy.",
       "objectives": [
-        "Celebrar que Cristo reina y cumplira su promesa final.",
+        "Celebrar que Cristo reina y cumplirá su promesa final.",
         "Recordar verdades aprendidas durante el año.",
         "Responder con gratitud, adoración y compromiso."
       ],
-      "bibleContext": "Apocalipsis 19 mira hacia la celebracion final del pueblo redimido con Cristo. La esperanza futura fortalece la fidelidad presente.",
+      "bibleContext": "Apocalipsis 19 mira hacia la celebración final del pueblo redimido con Cristo. La esperanza futura fortalece la fidelidad presente.",
       "exposition": [
         {
-          "title": "La celebracion tiene centro",
+          "title": "La celebración tiene centro",
           "text": "El Cordero es el motivo de gozo, adoración y esperanza."
         },
         {
