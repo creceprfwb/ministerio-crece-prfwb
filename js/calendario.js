@@ -2,7 +2,7 @@ const TEACHERS_STORAGE_KEY = "prfwb_teacher_records";
 const SCHEDULE_STORAGE_KEY = "prfwb_schedule_records";
 
 const GROUPS = [
-  { id: "ninos", label: "Ninos" },
+  { id: "ninos", label: "Niños" },
   { id: "juveniles", label: "Juveniles" }
 ];
 
@@ -226,7 +226,7 @@ function renderTeachers() {
   const list = document.getElementById("teachersList");
 
   if (!teachers.length) {
-    list.innerHTML = '<div class="empty-inline">Todavia no hay maestros registrados.</div>';
+    list.innerHTML = '<div class="empty-inline">Todavía no hay maestros registrados.</div>';
     return;
   }
 
@@ -234,7 +234,7 @@ function renderTeachers() {
     <article class="teacher-card ${teacher.active === false ? "inactive-student" : ""}">
       <div>
         <strong>${escapeHtml(teacher.name)}</strong>
-        <span>${escapeHtml(teacher.phone || "Sin telefono")} - ${escapeHtml(getGroupLabel(teacher.group))}</span>
+        <span>${escapeHtml(teacher.phone || "Sin teléfono")} - ${escapeHtml(getGroupLabel(teacher.group))}</span>
       </div>
       <button class="btn btn-sm ${teacher.active === false ? "btn-outline-success" : "btn-outline-warning"} toggle-teacher" type="button" data-id="${teacher.id}">
         <i class="bi ${teacher.active === false ? "bi-check-circle" : "bi-slash-circle"}"></i>
@@ -263,7 +263,7 @@ function renderTeachers() {
 
 function getGroupLabel(group) {
   if (group === "ninos") {
-    return "Ninos";
+    return "Niños";
   }
 
   if (group === "juveniles") {
@@ -325,7 +325,7 @@ function renderSchedule() {
     .sort((a, b) => new Date(a.dateIso || 0) - new Date(b.dateIso || 0));
 
   if (!entries.length) {
-    board.innerHTML = '<div class="empty-inline">Genera los proximos domingos para comenzar el calendario.</div>';
+    board.innerHTML = '<div class="empty-inline">Genera los próximos domingos para comenzar el calendario.</div>';
     return;
   }
 
@@ -497,7 +497,7 @@ function renderMonthCalendar() {
 
     return `
       <div class="month-cell ${cell.entries.length ? "has-service" : ""}">
-        <button class="month-day-button" type="button" data-date-iso="${cell.dateIso}" aria-label="Anadir o seleccionar ${cell.day}">
+        <button class="month-day-button" type="button" data-date-iso="${cell.dateIso}" aria-label="Añadir o seleccionar ${cell.day}">
           ${cell.day}
         </button>
         <div class="month-services">
@@ -512,7 +512,7 @@ function renderMonthCalendar() {
           }).join("")}
           ${cell.entries.length ? "" : `
             <button class="month-add-service" type="button" data-date-iso="${cell.dateIso}">
-              <i class="bi bi-plus-circle"></i> Anadir
+              <i class="bi bi-plus-circle"></i> Añadir
             </button>
           `}
         </div>
@@ -552,7 +552,7 @@ function renderSelectedDayPanel() {
   if (!entry) {
     panel.innerHTML = `
       <div class="empty-inline">
-        Selecciona un dia del calendario o anade una fecha para asignar maestro.
+        Selecciona un día del calendario o añade una fecha para asignar maestro.
       </div>
     `;
     return;
@@ -602,7 +602,7 @@ function renderSelectedDayPanel() {
       <textarea class="form-control selected-notes" rows="2" placeholder="Notas internas">${escapeHtml(entry.notes || "")}</textarea>
       <div class="schedule-actions">
         <button class="btn btn-primary save-selected-entry" type="button">
-          <i class="bi bi-save"></i> Guardar asignacion
+          <i class="bi bi-save"></i> Guardar asignación
         </button>
         <button class="btn btn-outline-secondary copy-selected-message" type="button" ${teacher ? "" : "disabled"}>
           <i class="bi bi-chat-dots"></i> Copiar mensaje
@@ -662,19 +662,19 @@ function renderDashboardOverview() {
 
   if (!nextEntry) {
     document.getElementById("nextServiceDate").textContent = "Sin generar";
-    document.getElementById("nextServiceLesson").textContent = "Genera los proximos domingos para comenzar.";
+    document.getElementById("nextServiceLesson").textContent = "Genera los próximos domingos para comenzar.";
     document.getElementById("nextServiceTeacher").textContent = "Sin asignar";
     document.getElementById("nextServiceAssistant").textContent = "Ayudante por confirmar";
     document.getElementById("nextServiceGroup").textContent = "CRECE";
     document.getElementById("nextServiceStatus").textContent = "Pendiente";
-    upcomingBoard.innerHTML = '<div class="empty-inline">Todavia no hay domingos generados.</div>';
+    upcomingBoard.innerHTML = '<div class="empty-inline">Todavía no hay domingos generados.</div>';
     return;
   }
 
   const teacher = getTeacher(nextEntry.teacherId);
   const assistant = getTeacher(nextEntry.assistantId);
 
-  document.getElementById("nextServiceDate").textContent = nextEntry.dateLabel || "Proxima fecha";
+  document.getElementById("nextServiceDate").textContent = nextEntry.dateLabel || "Próxima fecha";
   document.getElementById("nextServiceLesson").textContent = nextEntry.lessonTitle || "Clase por confirmar";
   document.getElementById("nextServiceTeacher").textContent = teacher ? teacher.name : "Sin asignar";
   document.getElementById("nextServiceAssistant").textContent = assistant ? `Ayudante: ${assistant.name}` : "Ayudante por confirmar";

@@ -1,6 +1,6 @@
 # Ministerio CRECE PRFWB
 
-Aplicacion web responsive para registrar asistencia y manejar clases del Ministerio CRECE de la Puerto Rico Free Will Baptist Association.
+Aplicación web responsive para registrar asistencia y manejar clases del Ministerio CRECE de la Puerto Rico Free Will Baptist Association.
 
 ## Estructura
 
@@ -29,7 +29,7 @@ Aplicacion web responsive para registrar asistencia y manejar clases del Ministe
     └── background.jpg
 ```
 
-## Como abrir
+## Cómo abrir
 
 Abre `index.html` directamente en el navegador o usa la extension Live Server de Visual Studio Code.
 
@@ -38,13 +38,13 @@ Abre `index.html` directamente en el navegador o usa la extension Live Server de
 
 1. La maestra entra a `maestro.html`.
 2. Registra al estudiante con nombre y edad.
-3. El sistema asigna el grupo automaticamente:
+3. El sistema asigna el grupo automáticamente:
    - 3-10 años: Niños.
    - 11-16 años: Juveniles.
-4. El sistema genera un numero de estudiante y un codigo QR.
-5. En cada clase, la maestra o lider escanea el QR o escribe el numero en `asistencia.html`.
-6. La fecha y hora se guardan automaticamente.
-7. El sistema evita registrar asistencia duplicada para el mismo estudiante el mismo dia.
+4. El sistema genera un número de estudiante y un código QR.
+5. En cada clase, la maestra o líder escanea el QR o escribe el número en `asistencia.html`.
+6. La fecha y hora se guardan automáticamente.
+7. El sistema evita registrar asistencia duplicada para el mismo estudiante el mismo día.
 
 ## Panel de maestra
 
@@ -53,19 +53,19 @@ Abre `maestro.html`.
 Desde ahi puedes:
 
 - Registrar estudiantes.
-- Editar informacion de estudiantes sin cambiar su QR.
+- Editar información de estudiantes sin cambiar su QR.
 - Activar o desactivar estudiantes para controlar si aparecen en asistencia.
-- Asignar grupo automaticamente por edad.
-- Crear numero unico.
-- Generar codigo QR.
+- Asignar grupo automáticamente por edad.
+- Crear número único.
+- Generar código QR.
 - Descargar el QR como imagen.
 - Buscar estudiantes registrados.
 - Publicar la clase de la semana.
-- Agregar titulo, versiculo, objetivo, resumen, inicio dinamico, materiales, recurso visual, dinamica, aplicacion, preguntas, reto semanal y notas para la maestra.
+- Agregar título, versículo, objetivo, resumen, inicio dinámico, materiales, recurso visual, dinámica, aplicación, preguntas, reto semanal y notas para la maestra.
 
 ## Modulo de clases
 
-Las paginas `clase-ninos.html` y `clase-juveniles.html` muestran contenido dinamico.
+Las paginas `clase-ninos.html` y `clase-juveniles.html` muestran contenido dinámico.
 
 Para preparar una clase:
 
@@ -74,9 +74,9 @@ Para preparar una clase:
 3. Selecciona la clase por fecha.
 4. Presiona **Editar clase** si necesitas hacer cambios.
 5. Revisa y ajusta el texto para que quede claro y bonito sin cambiar su esencia.
-6. Agrega o mejora la dinamica, recurso visual, aplicacion, reto semanal y preguntas.
+6. Agrega o mejora la dinámica, recurso visual, aplicación, reto semanal y preguntas.
 7. Presiona **Publicar clase**.
-8. Usa **Ver o imprimir clase seleccionada** para abrir la version imprimible.
+8. Usa **Ver o imprimir clase seleccionada** para abrir la versión imprimible.
 
 La biblioteca generada incluye 94 lecciones enriquecidas:
 
@@ -95,7 +95,7 @@ El panel incluye:
 - Total de estudiantes registrados.
 - Asistencia por grupo.
 - Historial.
-- Busqueda de estudiante.
+- Búsqueda de estudiante.
 - Exportacion a Excel.
 - Exportacion a PDF.
 - Grafica por grupo.
@@ -116,7 +116,7 @@ Para activar la data compartida:
 5. Activa **Firestore Database**.
 6. Registra una app Web.
 7. Copia el objeto `firebaseConfig`.
-8. Pegalo en `js/firebase.js`, reemplazando los valores que empiezan con `TU_`.
+8. Pégalo en `js/firebase.js`, reemplazando los valores que empiezan con `TU_`.
 
 Paginas de acceso:
 
@@ -182,12 +182,12 @@ service cloud.firestore {
 Este proyecto no depende del editor de Wix. Puedes integrarlo de tres maneras:
 
 - Publicarlo en un subdominio, por ejemplo `escuela.tudominio.com`.
-- Agregar un boton en Wix que abra la aplicacion.
+- Agregar un botón en Wix que abra la aplicación.
 - Insertarlo en Wix con un iframe.
 
-## Proximas mejoras recomendadas
+## Próximas mejoras recomendadas
 
-- Pantalla para que el administrador agregue mas maestras a su iglesia.
+- Pantalla para que el administrador agregue más maestras a su iglesia.
 - Pantalla para editar o desactivar estudiantes registrados.
 - Escaneo avanzado de QR con camara en todos los dispositivos.
 - Reportes automaticos por semana y mes.

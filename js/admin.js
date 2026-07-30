@@ -55,12 +55,12 @@ async function loadSharedAdminData() {
   }
 }
 
-// Normaliza texto para que la busqueda sea mas flexible.
+// Normaliza texto para que la búsqueda sea más flexible.
 function normalizeText(value) {
   return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
-// Filtra por nombre o grupo segun lo que escriba el administrador.
+// Filtra por nombre o grupo según lo que escriba el administrador.
 function getFilteredRecords() {
   const searchInput = document.getElementById("searchInput");
   const query = normalizeText(searchInput ? searchInput.value : "");
@@ -171,11 +171,11 @@ function exportToExcel() {
   const records = getFilteredRecords();
   const rows = records.map((record) => ({
     Nombre: record.name,
-    Numero: record.studentCode || "Manual",
+    Número: record.studentCode || "Manual",
     Edad: record.age || "",
     Grupo: record.groupLabel,
     Encargado: record.guardianName || "",
-    Telefono: record.guardianPhone || "",
+    Teléfono: record.guardianPhone || "",
     Fecha: record.date,
     Hora: record.time
   }));
@@ -197,7 +197,7 @@ function exportToPdf() {
 
   documentPdf.autoTable({
     startY: 28,
-    head: [["Nombre", "Numero", "Edad", "Grupo", "Encargado", "Telefono", "Fecha", "Hora"]],
+    head: [["Nombre", "Número", "Edad", "Grupo", "Encargado", "Teléfono", "Fecha", "Hora"]],
     body: records.map((record) => [
       record.name,
       record.studentCode || "Manual",
@@ -226,7 +226,7 @@ function clearLocalRecords() {
   renderDashboard();
 }
 
-// Conecta botones, busqueda y cierre de sesion.
+// Conecta botones, búsqueda y cierre de sesion.
 function setupAdminEvents() {
   document.getElementById("searchInput").addEventListener("input", renderDashboard);
   document.getElementById("exportExcel").addEventListener("click", exportToExcel);

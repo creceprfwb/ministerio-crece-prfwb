@@ -1,4 +1,4 @@
-// Claves usadas por la aplicacion para guardar datos locales durante el prototipo.
+// Claves usadas por la aplicación para guardar datos locales durante el prototipo.
 const ATTENDANCE_STORAGE_KEY = "prfwb_attendance_records";
 const STUDENTS_STORAGE_KEY = "prfwb_student_records";
 
@@ -65,7 +65,7 @@ async function syncStudentsFromCloud() {
   }
 }
 
-// Limpia el valor escaneado o escrito para que el codigo funcione aunque venga con espacios.
+// Limpia el valor escaneado o escrito para que el código funcione aunque venga con espacios.
 function normalizeCode(value) {
   return String(value || "").trim().toUpperCase();
 }
@@ -79,7 +79,7 @@ function isActiveStudent(student) {
   return student && student.active !== false;
 }
 
-// Crea una fecha estable para evitar asistencia duplicada el mismo dia.
+// Crea una fecha estable para evitar asistencia duplicada el mismo día.
 function getDateKey(date = new Date()) {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
@@ -87,13 +87,13 @@ function getDateKey(date = new Date()) {
   return `${year}-${month}-${day}`;
 }
 
-// Busca un estudiante por su numero.
+// Busca un estudiante por su número.
 function findStudentByCode(code) {
   const cleanCode = normalizeCode(code);
   return getStudentRecords().find((student) => isActiveStudent(student) && normalizeCode(student.code) === cleanCode);
 }
 
-// Busca estudiantes por nombre cuando perdieron el numero o QR.
+// Busca estudiantes por nombre cuando perdieron el número o QR.
 function findStudentsByName(query) {
   const cleanQuery = normalizeText(query);
 
@@ -129,7 +129,7 @@ function buildAttendanceRecord(student) {
   };
 }
 
-// Verifica si ya existe asistencia para este estudiante en el dia actual.
+// Verifica si ya existe asistencia para este estudiante en el día actual.
 function hasAttendanceToday(student) {
   const todayKey = getDateKey();
   const todayLabel = new Date().toLocaleDateString("es-PR");
@@ -155,7 +155,7 @@ function showStudentPreview(student) {
       <i class="bi bi-exclamation-circle"></i>
       <div>
         <strong>Estudiante no encontrado</strong>
-        <span>Verifica el numero o registralo primero en el panel de maestra.</span>
+        <span>Verifica el número o regístralo primero en el panel de maestra.</span>
       </div>
     `;
     return;
@@ -186,7 +186,7 @@ function showToast(message, variant = "primary") {
   }
 }
 
-// Muestra la fecha del dia en la pantalla de asistencia.
+// Muestra la fecha del día en la pantalla de asistencia.
 function showCurrentAttendanceDate() {
   const dateBox = document.getElementById("currentAttendanceDate");
 
@@ -251,7 +251,7 @@ function setupQrScanner() {
   });
 }
 
-// Permite seleccionar un estudiante por nombre y copia su numero al campo principal.
+// Permite seleccionar un estudiante por nombre y copia su número al campo principal.
 function setupNameSearch() {
   const searchInput = document.getElementById("studentNameSearch");
   const resultsPanel = document.getElementById("nameSearchResults");
@@ -348,7 +348,7 @@ async function setupAttendanceForm() {
     records.unshift(record);
     saveAttendanceRecords(records);
 
-    // Si se configura Firebase en js/firebase.js, esta funcion tambien guardara el registro en la nube.
+    // Si se configura Firebase en js/firebase.js, esta función también guardará el registro en la nube.
     if (window.PRFirebase && typeof window.PRFirebase.saveAttendance === "function") {
       await window.PRFirebase.saveAttendance(record);
     }

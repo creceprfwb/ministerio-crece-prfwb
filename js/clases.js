@@ -7,36 +7,36 @@ function storageKey(baseKey) {
     : baseKey;
 }
 
-// Plantillas iniciales para que la pagina no se vea vacia mientras se cargan las clases.
+// Plantillas iniciales para que la página no se vea vacía mientras se cargan las clases.
 const DEFAULT_LESSONS = {
   ninos: {
     title: "Clase para Niños",
-    verse: "Versiculo clave pendiente",
+    verse: "Versículo clave pendiente",
     goal: "Aprender la enseñanza principal de la clase de hoy.",
     summary: "Aqui se mostrara la clase preparada por la maestra.",
     warmup: "Comienza con una pregunta sencilla relacionada con la vida diaria.",
     materials: "Biblia, hoja, lapices y materiales sencillos para actividad.",
     visual: "Dibujo sugerido: una imagen simple que represente el tema de la clase.",
-    dynamic: "Dinamica sugerida: una conversacion breve con una pregunta sencilla antes de comenzar.",
-    application: "Durante la semana, el estudiante practicara una accion relacionada con la enseñanza.",
-    questions: ["¿Que aprendiste hoy?", "¿Como puedes practicarlo esta semana?"],
-    challenge: "Practicar una accion sencilla durante la semana.",
+    dynamic: "Dinámica sugerida: una conversación breve con una pregunta sencilla antes de comenzar.",
+    application: "Durante la semana, el estudiante practicara una acción relacionada con la enseñanza.",
+    questions: ["¿Qué aprendiste hoy?", "¿Cómo puedes practicarlo esta semana?"],
+    challenge: "Practicar una acción sencilla durante la semana.",
     teacherNotes: "Mantener el lenguaje simple, participativo y centrado en Cristo.",
     updatedAt: ""
   },
   juveniles: {
     title: "Clase para Juveniles",
-    verse: "Versiculo clave pendiente",
-    goal: "Conectar la enseñanza biblica con decisiones reales de la semana.",
+    verse: "Versículo clave pendiente",
+    goal: "Conectar la enseñanza bíblica con decisiones reales de la semana.",
     summary: "Aqui se mostrara la clase preparada por la maestra.",
     warmup: "Abre con una pregunta real que conecte con escuela, familia o amistades.",
-    materials: "Biblia, libreta o telefono para notas, y una pregunta de conversacion.",
+    materials: "Biblia, libreta o teléfono para notas, y una pregunta de conversación.",
     visual: "Recurso sugerido: una frase clave en pantalla o pizarra para iniciar dialogo.",
-    dynamic: "Dinamica sugerida: abrir con una situacion real y conversar como responder biblicamente.",
-    application: "Durante la semana, el estudiante aplicara la enseñanza en una decision concreta.",
-    questions: ["¿Que parte de la enseñanza te reta mas?", "¿Que decision puedes tomar esta semana?"],
-    challenge: "Escoger una decision concreta para vivir la enseñanza esta semana.",
-    teacherNotes: "Dar espacio para respuestas honestas y llevar la conversacion a la Biblia.",
+    dynamic: "Dinámica sugerida: abrir con una situación real y conversar cómo responder bíblicamente.",
+    application: "Durante la semana, el estudiante aplicara la enseñanza en una decisión concreta.",
+    questions: ["¿Qué parte de la enseñanza te reta más?", "¿Qué decisión puedes tomar esta semana?"],
+    challenge: "Escoger una decisión concreta para vivir la enseñanza esta semana.",
+    teacherNotes: "Dar espacio para respuestas honestas y llevar la conversación a la Biblia.",
     updatedAt: ""
   }
 };
@@ -92,7 +92,7 @@ async function saveLesson(group, lesson) {
 
 function formatQuestions(questions) {
   if (!questions || !questions.length) {
-    return "<li>No hay preguntas publicadas todavia.</li>";
+    return "<li>No hay preguntas publicadas todavía.</li>";
   }
 
   return questions.map((question) => `<li>${question}</li>`).join("");
@@ -121,18 +121,18 @@ async function renderLessonPage(group) {
 
   content.innerHTML = `
     <section class="lesson-section">
-      <p class="section-kicker">Versiculo clave</p>
+      <p class="section-kicker">Versículo clave</p>
       <h2>${lesson.verse || "Pendiente"}</h2>
     </section>
 
     <section class="lesson-section">
       <p class="section-kicker">Enseñanza</p>
-      <p>${lesson.summary || "La clase aun no tiene resumen publicado."}</p>
+      <p>${lesson.summary || "La clase aún no tiene resumen publicado."}</p>
     </section>
 
     <section class="lesson-section">
-      <p class="section-kicker">Inicio dinamico</p>
-      <p>${lesson.warmup || "Inicio dinamico pendiente."}</p>
+      <p class="section-kicker">Inicio dinámico</p>
+      <p>${lesson.warmup || "Inicio dinámico pendiente."}</p>
     </section>
 
     <section class="lesson-section visual-box">
@@ -141,13 +141,13 @@ async function renderLessonPage(group) {
     </section>
 
     <section class="lesson-section dynamic-box">
-      <p class="section-kicker">Dinamica</p>
-      <p>${lesson.dynamic || "Dinamica pendiente."}</p>
+      <p class="section-kicker">Dinámica</p>
+      <p>${lesson.dynamic || "Dinámica pendiente."}</p>
     </section>
 
     <section class="lesson-section">
-      <p class="section-kicker">Aplicacion</p>
-      <p>${lesson.application || "Aplicacion pendiente."}</p>
+      <p class="section-kicker">Aplicación</p>
+      <p>${lesson.application || "Aplicación pendiente."}</p>
     </section>
 
     <section class="lesson-section">
@@ -167,7 +167,7 @@ async function renderLessonPage(group) {
       <li><i class="bi bi-bullseye"></i> ${lesson.goal || "Objetivo pendiente"}</li>
       <li><i class="bi bi-backpack"></i> ${lesson.materials || "Materiales pendientes"}</li>
       <li><i class="bi bi-person-video3"></i> ${lesson.teacherNotes || "Notas para la maestra pendientes"}</li>
-      <li><i class="bi bi-chat-square-text"></i> Preguntas de conversacion</li>
+      <li><i class="bi bi-chat-square-text"></i> Preguntas de conversación</li>
     </ul>
 
     <ol class="question-list">
@@ -176,7 +176,7 @@ async function renderLessonPage(group) {
 
     <button class="btn btn-primary w-100 mt-3 no-print" type="button" onclick="window.print()">
       <i class="bi bi-printer"></i>
-      Imprimir version de clase
+      Imprimir versión de clase
     </button>
   `;
 }

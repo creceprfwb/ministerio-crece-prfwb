@@ -37,7 +37,7 @@ function getCommTeacher(id) {
 }
 
 function getCommGroupLabel(group) {
-  if (group === "ninos") return "Ninos";
+  if (group === "ninos") return "Niños";
   if (group === "juveniles") return "Juveniles";
   return "Ambos grupos";
 }
@@ -97,7 +97,7 @@ function buildAssignmentMessage(entry) {
 }
 
 function buildTeacherQuickMessage(teacher) {
-  return `Hola ${teacher.name}, Dios le bendiga.\n\nLe escribimos del Ministerio CRECE para confirmar disponibilidad y compartir informacion de la proxima clase.\n\nGracias por servir.`;
+  return `Hola ${teacher.name}, Dios le bendiga.\n\nLe escribimos del Ministerio CRECE para confirmar disponibilidad y compartir información de la próxima clase.\n\nGracias por servir.`;
 }
 
 function buildGroupMessage() {
@@ -113,7 +113,7 @@ function buildGroupMessage() {
     return `- ${entry.dateLabel || entry.dateIso} | ${getCommGroupLabel(entry.group)} | ${teacher ? teacher.name : "VACANTE"}${assistant ? ` / Ayudante: ${assistant.name}` : ""}`;
   });
 
-  return `Dios les bendiga equipo CRECE.\n\nEstas son las proximas asignaciones:\n${lines.join("\n")}\n\nPor favor revisen su fecha y confirmen si pueden servir. Gracias por sembrar en la vida de nuestros ninos y jovenes.`;
+  return `Dios les bendiga equipo CRECE.\n\nEstas son las próximas asignaciones:\n${lines.join("\n")}\n\nPor favor revisen su fecha y confirmen si pueden servir. Gracias por sembrar en la vida de nuestros ninos y jovenes.`;
 }
 
 function buildParentGroupMessage() {
@@ -183,7 +183,7 @@ async function loadCommunicationData() {
       }
     }
   } catch (error) {
-    console.warn("No se pudo cargar comunicacion desde Firebase.", error);
+    console.warn("No se pudo cargar comunicación desde Firebase.", error);
   }
 
   renderCommunication();
@@ -223,7 +223,7 @@ function renderNextSummary() {
   const next = getUpcomingCommAssignments(1)[0];
 
   if (!next) {
-    board.innerHTML = '<div class="empty-inline">No hay asignaciones proximas.</div>';
+    board.innerHTML = '<div class="empty-inline">No hay asignaciones próximas.</div>';
     return;
   }
 
@@ -340,7 +340,7 @@ function renderAssignments() {
   const entries = getUpcomingCommAssignments(10);
 
   if (!entries.length) {
-    board.innerHTML = '<div class="empty-inline">No hay asignaciones proximas para comunicar.</div>';
+    board.innerHTML = '<div class="empty-inline">No hay asignaciones próximas para comunicar.</div>';
     return;
   }
 

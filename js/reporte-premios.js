@@ -46,7 +46,7 @@ function getRewardReportPointsToNext(student) {
 }
 
 function getRewardReportGroupLabel(group) {
-  if (group === "ninos") return "Ninos";
+  if (group === "ninos") return "Niños";
   if (group === "juveniles") return "Juveniles";
   return "Sin grupo";
 }

@@ -1,7 +1,7 @@
 /*
   Firebase / Firestore para Ministerio CRECE.
 
-  Esta version separa la data por iglesia:
+  Esta versión separa la data por iglesia:
   churches/{churchId}/students
   churches/{churchId}/attendance
   churches/{churchId}/lessons
@@ -88,7 +88,7 @@ async function requireAuth(options = {}) {
   }
 
   if (adminOnly && currentProfile.role !== "admin") {
-    window.alert("Solo el administrador de la iglesia puede abrir esta pagina.");
+    window.alert("Solo el administrador de la iglesia puede abrir esta página.");
     window.location.href = "index.html";
     return null;
   }

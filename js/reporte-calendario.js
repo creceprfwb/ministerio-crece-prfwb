@@ -29,7 +29,7 @@ function getReportTeacher(id) {
 }
 
 function getReportGroupLabel(group) {
-  if (group === "ninos") return "Ninos";
+  if (group === "ninos") return "Niños";
   if (group === "juveniles") return "Juveniles";
   return "Ambos";
 }
@@ -121,7 +121,7 @@ function renderReport(message = "") {
         <span>Fecha</span>
         <span>Grupo</span>
         <span>Clase</span>
-        <span>Asignacion</span>
+        <span>Asignación</span>
         <span>Maestro</span>
         <span>Ayudante</span>
         <span>Estado</span>

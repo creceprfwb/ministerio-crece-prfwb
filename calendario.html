@@ -15,12 +15,12 @@
     <div>
       <img src="assets/logo.png" alt="PRFWB" class="nav-logo">
       <strong>Calendario CRECE</strong>
-      <span>Asignacion de maestros</span>
+      <span>Asignación de maestros</span>
     </div>
     <div class="admin-actions">
       <a href="index.html" class="btn btn-light btn-sm"><i class="bi bi-house"></i> Inicio</a>
       <a href="maestro.html" class="btn btn-outline-light btn-sm"><i class="bi bi-person-video3"></i> Panel de Maestra</a>
-      <a href="comunicacion.html" class="btn btn-outline-light btn-sm"><i class="bi bi-whatsapp"></i> Comunicacion</a>
+      <a href="comunicacion.html" class="btn btn-outline-light btn-sm"><i class="bi bi-whatsapp"></i> Comunicación</a>
       <a href="reporte-calendario.html" class="btn btn-outline-light btn-sm"><i class="bi bi-file-earmark-text"></i> Reporte</a>
       <button id="printSchedule" class="btn btn-outline-light btn-sm" type="button"><i class="bi bi-printer"></i> Imprimir</button>
     </div>
@@ -36,16 +36,16 @@
       <div class="schedule-hero-actions">
         <button id="generateSundays" class="btn btn-primary" type="button">
           <i class="bi bi-calendar-plus"></i>
-          Generar proximos domingos
+          Generar próximos domingos
         </button>
       </div>
     </section>
 
     <section class="schedule-command-center" aria-label="Resumen del calendario">
       <article class="command-card next-service">
-        <span>Proxima clase</span>
+        <span>Próxima clase</span>
         <strong id="nextServiceDate">Sin generar</strong>
-        <small id="nextServiceLesson">Genera los proximos domingos para comenzar.</small>
+        <small id="nextServiceLesson">Genera los próximos domingos para comenzar.</small>
       </article>
       <article class="command-card">
         <span>Maestro asignado</span>
@@ -68,8 +68,8 @@
       <article class="app-card upcoming-card">
         <div class="panel-heading">
           <div>
-            <h2>Proximas asignaciones</h2>
-            <p>Vista corta para saber que necesita atencion primero.</p>
+            <h2>Próximas asignaciones</h2>
+            <p>Vista corta para saber que necesita atención primero.</p>
           </div>
         </div>
         <div id="upcomingAssignments" class="upcoming-assignments"></div>
@@ -107,7 +107,7 @@
       <div class="panel-heading">
         <div>
           <h2>Vista del calendario</h2>
-          <p>Haz clic en un dia o servicio para anadir fecha y asignar maestro.</p>
+          <p>Haz clic en un día o servicio para añadir fecha y asignar maestro.</p>
         </div>
         <div class="schedule-filters">
           <button id="prevMonth" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-chevron-left"></i></button>
@@ -118,19 +118,19 @@
 
       <form id="customDateForm" class="add-date-form">
         <label>
-          Anadir fecha
+          Añadir fecha
           <input id="customDateInput" class="form-control" type="date" required>
         </label>
         <label>
           Grupo
           <select id="customDateGroup" class="form-select">
             <option value="ambos">Ambos grupos</option>
-            <option value="ninos">Ninos</option>
+            <option value="ninos">Niños</option>
             <option value="juveniles">Juveniles</option>
           </select>
         </label>
         <button class="btn btn-primary" type="submit">
-          <i class="bi bi-calendar-plus"></i> Anadir al calendario
+          <i class="bi bi-calendar-plus"></i> Añadir al calendario
         </button>
       </form>
 
@@ -170,7 +170,7 @@
               <input id="teacherName" class="form-control" type="text" required>
             </div>
             <div class="col-md-6">
-              <label for="teacherPhone" class="form-label">Telefono / WhatsApp</label>
+              <label for="teacherPhone" class="form-label">Teléfono / WhatsApp</label>
               <input id="teacherPhone" class="form-control" type="tel" placeholder="787-000-0000">
             </div>
             <div class="col-md-6">
@@ -181,7 +181,7 @@
               <label for="teacherGroup" class="form-label">Grupo preferido</label>
               <select id="teacherGroup" class="form-select">
                 <option value="ambos">Ambos grupos</option>
-                <option value="ninos">Ninos</option>
+                <option value="ninos">Niños</option>
                 <option value="juveniles">Juveniles</option>
               </select>
             </div>

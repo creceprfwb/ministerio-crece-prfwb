@@ -1,10 +1,10 @@
 # Integrar Ministerio CRECE con Wix gratis
 
-La forma mas simple y gratis es publicar esta carpeta como un sitio estatico y luego enlazarla desde Wix.
+La forma mas simple y gratis es publicar esta carpeta como un sitio estático y luego enlazarla desde Wix.
 
 ## Opcion recomendada: GitHub Pages
 
-GitHub Pages publica sitios estaticos hechos con HTML, CSS y JavaScript directamente desde un repositorio. Es ideal para esta version porque no requiere servidor.
+GitHub Pages publica sitios estáticos hechos con HTML, CSS y JavaScript directamente desde un repositorio. Es ideal para esta versión porque no requiere servidor.
 
 Pasos:
 
@@ -47,14 +47,14 @@ https://TU-USUARIO.github.io/ministerio-crece/
 
 Ese enlace se puede poner en Wix.
 
-## Como integrarlo en Wix
+## Cómo integrarlo en Wix
 
 ### Forma mas simple
 
 En Wix:
 
-1. Agrega un boton.
-2. Texto del boton:
+1. Agrega un botón.
+2. Texto del botón:
 
 ```text
 Ministerio CRECE
@@ -66,11 +66,11 @@ Ministerio CRECE
 https://TU-USUARIO.github.io/ministerio-crece/
 ```
 
-4. Configura para abrir en la misma pagina o en una nueva, segun prefieras.
+4. Configura para abrir en la misma página o en una nueva, según prefieras.
 
-### Como subpagina visual dentro de Wix
+### Como subpágina visual dentro de Wix
 
-Puedes crear una pagina en Wix llamada:
+Puedes crear una página en Wix llamada:
 
 ```text
 Ministerio CRECE
@@ -82,15 +82,15 @@ Nota: si usas iframe, la camara para escanear QR puede depender de permisos del 
 
 ## Sobre base de datos
 
-La version actual funciona con `localStorage`, o sea, datos locales del navegador. Sirve para prototipo.
+La versión actual funciona con `localStorage`, o sea, datos locales del navegador. Sirve para prototipo.
 
-Para uso real con varios dispositivos, el proximo paso gratis seria conectar:
+Para uso real con varios dispositivos, el próximo paso gratis seria conectar:
 
 - Firebase free tier
 - Supabase free tier
 - Google Sheets API
 
-Recomendacion: Firebase, porque sirve bien para estudiantes, asistencia y clases.
+Recomendación: Firebase, porque sirve bien para estudiantes, asistencia y clases.
 
 ## Fuentes
 

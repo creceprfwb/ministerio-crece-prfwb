@@ -3,7 +3,7 @@ const STUDENTS_STORAGE_KEY = "prfwb_student_records";
 const REWARD_ACTIONS = [
   { id: "asistencia", label: "Asistencia del domingo", points: 5, icon: "bi-calendar-check" },
   { id: "biblia", label: "Trajo Biblia", points: 3, icon: "bi-book" },
-  { id: "versiculo", label: "Memorizo versiculo", points: 3, icon: "bi-chat-quote" },
+  { id: "versículo", label: "Memorizó versículo", points: 3, icon: "bi-chat-quote" },
   { id: "tarea", label: "Completo tarea del hogar", points: 2, icon: "bi-house-check" },
   { id: "participacion", label: "Participo con respeto", points: 2, icon: "bi-hand-thumbs-up" },
   { id: "invitado", label: "Trajo invitado", points: 2, icon: "bi-person-plus" },
@@ -33,7 +33,7 @@ function storageKey(baseKey) {
     : baseKey;
 }
 
-// Determina automaticamente el grupo segun la edad.
+// Determina automáticamente el grupo según la edad.
 function getGroupByAge(age) {
   if (age >= 3 && age <= 10) {
     return { group: "ninos", groupLabel: "Niños" };
@@ -77,7 +77,7 @@ async function loadSharedStudents() {
   }
 }
 
-// Genera un numero facil de leer para el estudiante.
+// Genera un número fácil de leer para el estudiante.
 function createStudentCode() {
   const number = Math.floor(100000 + Math.random() * 900000);
   return `PRF-${number}`;
@@ -183,13 +183,13 @@ function buildStudentRecord(formData) {
   };
 }
 
-// Actualiza un estudiante existente sin cambiar su numero ni QR.
+// Actualiza un estudiante existente sin cambiar su número ni QR.
 function buildUpdatedStudentRecord(existingStudent, formData) {
   const age = Number(formData.get("studentAge"));
   const groupInfo = getGroupByAge(age);
 
   if (!groupInfo) {
-    throw new Error("La edad debe estar entre 3 y 16 aÃ±os.");
+    throw new Error("La edad debe estar entre 3 y 16 años.");
   }
 
   return {
@@ -229,8 +229,8 @@ function setStudentFormMode(mode) {
 
   title.textContent = isEditing ? "Editar estudiante" : "Nuevo estudiante";
   help.textContent = isEditing
-    ? "Actualiza la informacion sin cambiar el numero ni el QR."
-    : "Al guardar se genera un numero y codigo QR.";
+    ? "Actualiza la información sin cambiar el número ni el QR."
+    : "Al guardar se genera un número y código QR.";
   submitButton.innerHTML = isEditing
     ? '<i class="bi bi-save"></i> GUARDAR CAMBIOS'
     : '<i class="bi bi-person-plus"></i> REGISTRAR Y CREAR QR';
@@ -445,7 +445,7 @@ function renderRewardManager() {
   document.getElementById("rewardStudentPoints").textContent = student.rewardPoints;
   document.getElementById("rewardStudentLevel").textContent = level.name;
   document.getElementById("rewardNextLevel").textContent = nextLevel
-    ? `Proxima meta: ${nextLevel.name} a ${nextLevel.points} puntos`
+    ? `Próxima meta: ${nextLevel.name} a ${nextLevel.points} puntos`
     : "Nivel maximo alcanzado";
   document.getElementById("rewardProgressBar").style.width = `${getRewardProgress(student.rewardPoints)}%`;
 
@@ -459,7 +459,7 @@ function renderRewardManager() {
     prizeStatus.textContent = availablePrizes
       ? `${availablePrizes} premio${availablePrizes === 1 ? "" : "s"} disponible${availablePrizes === 1 ? "" : "s"}`
       : "Sin premio disponible";
-    prizeHelp.textContent = `Premios entregados: ${deliveredPrizes}. Proximo premio cada ${REWARD_PRIZE_POINTS} puntos.`;
+    prizeHelp.textContent = `Premios entregados: ${deliveredPrizes}. Próximo premio cada ${REWARD_PRIZE_POINTS} puntos.`;
     deliverButton.disabled = availablePrizes < 1;
   }
 
@@ -482,7 +482,7 @@ function renderRewardManager() {
         </div>
       </div>
     `).join("")
-    : '<div class="text-muted small">Todavia no hay puntos registrados.</div>';
+    : '<div class="text-muted small">Todavía no hay puntos registrados.</div>';
 
   historyContainer.querySelectorAll(".delete-reward-entry").forEach((button) => {
     button.addEventListener("click", async () => {
@@ -550,7 +550,7 @@ async function deleteRewardEntry(entryId) {
     return;
   }
 
-  const confirmed = window.confirm(`Seguro que quieres borrar esta entrada?\n\n${entry.reason} (${entry.points > 0 ? "+" : ""}${entry.points} puntos)`);
+  const confirmed = window.confirm(`¿Seguro que quieres borrar esta entrada?\n\n${entry.reason} (${entry.points > 0 ? "+" : ""}${entry.points} puntos)`);
 
   if (!confirmed) {
     return;
@@ -576,11 +576,11 @@ async function deliverRewardPrize() {
   }
 
   if (getAvailablePrizeCount(student) < 1) {
-    window.alert("Este estudiante todavia no tiene puntos suficientes para premio.");
+    window.alert("Este estudiante todavía no tiene puntos suficientes para premio.");
     return;
   }
 
-  const confirmed = window.confirm(`Marcar un premio como entregado a ${student.name}? Se descontaran ${REWARD_PRIZE_POINTS} puntos.`);
+  const confirmed = window.confirm(`Marcar un premio como entregado a ${student.name}? Se descontarán ${REWARD_PRIZE_POINTS} puntos.`);
 
   if (!confirmed) {
     return;
