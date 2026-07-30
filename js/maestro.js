@@ -108,6 +108,28 @@ function escapeHtml(value) {
     .replace(/'/g, "&#039;");
 }
 
+function getStudentDisplayName(student) {
+  return String(student.fullName || `${student.name || ""} ${student.lastName || ""}`).trim();
+}
+
+function getProfileFlags(student) {
+  const flags = [];
+
+  if (student.allergies) {
+    flags.push("Alergias");
+  }
+
+  if (student.medicalNotes) {
+    flags.push("Condicion");
+  }
+
+  if (student.careNotes) {
+    flags.push("Notas");
+  }
+
+  return flags;
+}
+
 function normalizeRewardData(student) {
   return {
     ...student,
@@ -170,12 +192,19 @@ function buildStudentRecord(formData) {
     id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()),
     code: createUniqueStudentCode(),
     name: String(formData.get("studentName") || "").trim(),
+    lastName: String(formData.get("studentLastName") || "").trim(),
+    fullName: String(`${formData.get("studentName") || ""} ${formData.get("studentLastName") || ""}`).trim(),
     age,
     group: groupInfo.group,
     groupLabel: groupInfo.groupLabel,
     guardianName: String(formData.get("guardianName") || "").trim(),
     guardianPhone: String(formData.get("guardianPhone") || "").trim(),
     emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
+    guardianEmail: String(formData.get("guardianEmail") || "").trim(),
+    authorizedPickup: String(formData.get("authorizedPickup") || "").trim(),
+    allergies: String(formData.get("allergies") || "").trim(),
+    medicalNotes: String(formData.get("medicalNotes") || "").trim(),
+    careNotes: String(formData.get("careNotes") || "").trim(),
     active: true,
     rewardPoints: 0,
     rewardHistory: [],
@@ -195,12 +224,19 @@ function buildUpdatedStudentRecord(existingStudent, formData) {
   return {
     ...existingStudent,
     name: String(formData.get("studentName") || "").trim(),
+    lastName: String(formData.get("studentLastName") || "").trim(),
+    fullName: String(`${formData.get("studentName") || ""} ${formData.get("studentLastName") || ""}`).trim(),
     age,
     group: groupInfo.group,
     groupLabel: groupInfo.groupLabel,
     guardianName: String(formData.get("guardianName") || "").trim(),
     guardianPhone: String(formData.get("guardianPhone") || "").trim(),
     emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
+    guardianEmail: String(formData.get("guardianEmail") || "").trim(),
+    authorizedPickup: String(formData.get("authorizedPickup") || "").trim(),
+    allergies: String(formData.get("allergies") || "").trim(),
+    medicalNotes: String(formData.get("medicalNotes") || "").trim(),
+    careNotes: String(formData.get("careNotes") || "").trim(),
     active: existingStudent.active !== false,
     rewardPoints: Number(existingStudent.rewardPoints || 0),
     rewardHistory: Array.isArray(existingStudent.rewardHistory) ? existingStudent.rewardHistory : [],
@@ -214,10 +250,16 @@ function getStudentByCode(code) {
 
 function fillStudentForm(student) {
   document.getElementById("studentName").value = student.name || "";
+  document.getElementById("studentLastName").value = student.lastName || "";
   document.getElementById("studentAge").value = student.age || "";
   document.getElementById("guardianName").value = student.guardianName || "";
   document.getElementById("guardianPhone").value = student.guardianPhone || "";
   document.getElementById("emergencyPhone").value = student.emergencyPhone || "";
+  document.getElementById("guardianEmail").value = student.guardianEmail || "";
+  document.getElementById("authorizedPickup").value = student.authorizedPickup || "";
+  document.getElementById("allergies").value = student.allergies || "";
+  document.getElementById("medicalNotes").value = student.medicalNotes || "";
+  document.getElementById("careNotes").value = student.careNotes || "";
 }
 
 function setStudentFormMode(mode) {
@@ -253,7 +295,7 @@ function renderQr(student) {
   result.classList.remove("empty-state");
 
   const title = document.createElement("strong");
-  title.textContent = student.name;
+  title.textContent = getStudentDisplayName(student);
 
   const code = document.createElement("span");
   code.textContent = `${student.code} · ${student.groupLabel}`;
@@ -280,13 +322,13 @@ function renderStudentsTable() {
   const tableBody = document.getElementById("studentsTable");
   const search = normalizeText(document.getElementById("studentSearch").value);
   const visibleStudents = students.filter((student) => {
-    return !search || normalizeText(`${student.code} ${student.name} ${student.groupLabel}`).includes(search);
+    return !search || normalizeText(`${student.code} ${getStudentDisplayName(student)} ${student.guardianName} ${student.guardianPhone} ${student.emergencyPhone} ${student.groupLabel}`).includes(search);
   });
 
   if (!visibleStudents.length) {
     tableBody.innerHTML = `
       <tr>
-        <td colspan="10" class="text-center text-muted py-4">No hay estudiantes registrados.</td>
+        <td colspan="11" class="text-center text-muted py-4">No hay estudiantes registrados.</td>
       </tr>
     `;
     return;
@@ -295,14 +337,20 @@ function renderStudentsTable() {
   tableBody.innerHTML = visibleStudents.map((rawStudent) => {
     const student = normalizeRewardData(rawStudent);
     const rewardLevel = getRewardLevel(student.rewardPoints);
+    const profileFlags = getProfileFlags(student);
 
     return `
     <tr class="${student.active === false ? "inactive-student" : ""}">
       <td><strong>${escapeHtml(student.code)}</strong></td>
-      <td>${escapeHtml(student.name)}</td>
+      <td>${escapeHtml(getStudentDisplayName(student))}</td>
       <td>${escapeHtml(student.age)}</td>
       <td>${escapeHtml(student.groupLabel)}</td>
       <td>${escapeHtml(student.guardianName || "")}</td>
+      <td>
+        ${profileFlags.length
+          ? `<span class="badge text-bg-warning">${escapeHtml(profileFlags.join(" / "))}</span>`
+          : '<span class="text-muted small">Sin notas</span>'}
+      </td>
       <td>${escapeHtml(student.guardianPhone || "")}</td>
       <td>
         <button class="reward-pill manage-rewards" type="button" data-code="${escapeHtml(student.code)}">
@@ -440,7 +488,7 @@ function renderRewardManager() {
   emptyState.classList.add("d-none");
   manager.classList.remove("d-none");
 
-  document.getElementById("rewardStudentName").textContent = student.name;
+  document.getElementById("rewardStudentName").textContent = getStudentDisplayName(student);
   document.getElementById("rewardStudentMeta").textContent = `${student.code} · ${student.groupLabel}`;
   document.getElementById("rewardStudentPoints").textContent = student.rewardPoints;
   document.getElementById("rewardStudentLevel").textContent = level.name;
@@ -644,7 +692,7 @@ function downloadVisibleQr() {
   }
 
   const link = document.createElement("a");
-  link.download = `${selectedQrStudent.code}-${selectedQrStudent.name}.png`.replace(/\s+/g, "-");
+  link.download = `${selectedQrStudent.code}-${getStudentDisplayName(selectedQrStudent)}.png`.replace(/\s+/g, "-");
   link.href = canvas.toDataURL("image/png");
   link.click();
 }

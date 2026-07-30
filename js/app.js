@@ -78,6 +78,45 @@ function normalizeText(value) {
 function isActiveStudent(student) {
   return student && student.active !== false;
 }
+function getStudentDisplayName(student) {
+  return String(student.fullName || [student.name || "", student.lastName || ""].join(" ")).trim();
+}
+
+function getStudentSearchText(student) {
+  return normalizeText([
+    student.code,
+    getStudentDisplayName(student),
+    student.name,
+    student.lastName,
+    student.guardianName,
+    student.guardianPhone,
+    student.emergencyPhone,
+    student.guardianEmail
+  ].join(" "));
+}
+
+function getStudentAlerts(student) {
+  const alerts = [];
+
+  if (student.allergies) {
+    alerts.push("Alergias: " + student.allergies);
+  }
+
+  if (student.medicalNotes) {
+    alerts.push("Condiciones: " + student.medicalNotes);
+  }
+
+  if (student.careNotes) {
+    alerts.push("Notas: " + student.careNotes);
+  }
+
+  if (student.authorizedPickup) {
+    alerts.push("Recoge: " + student.authorizedPickup);
+  }
+
+  return alerts;
+}
+
 
 // Crea una fecha estable para evitar asistencia duplicada el mismo día.
 function getDateKey(date = new Date()) {
@@ -102,8 +141,9 @@ function findStudentsByName(query) {
   }
 
   return getStudentRecords()
-    .filter((student) => isActiveStudent(student) && normalizeText(student.name).includes(cleanQuery))
-    .slice(0, 8);
+    .filter((student) => isActiveStudent(student) && getStudentSearchText(student).includes(cleanQuery))
+    .sort((a, b) => String(a.guardianName || "").localeCompare(String(b.guardianName || "")))
+    .slice(0, 12);
 }
 
 // Crea un registro de asistencia usando el estudiante ya registrado.
@@ -116,10 +156,17 @@ function buildAttendanceRecord(student) {
     studentId: student.id,
     studentCode: student.code,
     name: student.name,
+    lastName: student.lastName || "",
+    fullName: getStudentDisplayName(student),
     age: student.age,
     guardianName: student.guardianName || "",
     guardianPhone: student.guardianPhone || "",
     emergencyPhone: student.emergencyPhone || "",
+    guardianEmail: student.guardianEmail || "",
+    authorizedPickup: student.authorizedPickup || "",
+    allergies: student.allergies || "",
+    medicalNotes: student.medicalNotes || "",
+    careNotes: student.careNotes || "",
     group: student.group,
     groupLabel: student.groupLabel,
     dateKey,
@@ -155,23 +202,26 @@ function showStudentPreview(student) {
       <i class="bi bi-exclamation-circle"></i>
       <div>
         <strong>Estudiante no encontrado</strong>
-        <span>Verifica el número o regístralo primero en el panel de maestra.</span>
+        <span>Verifica el numero o registralo primero en el panel de maestra.</span>
       </div>
     `;
     return;
   }
 
+  const alerts = getStudentAlerts(student);
+
   preview.classList.remove("d-none");
   preview.innerHTML = `
     <i class="bi bi-person-check"></i>
     <div>
-      <strong>${student.name}</strong>
-      <span>${student.code} · ${student.age} años · ${student.groupLabel}</span>
+      <strong>${getStudentDisplayName(student)}</strong>
+      <span>${student.code} ? ${student.age} anos ? ${student.groupLabel}</span>
+      <span>Encargado: ${student.guardianName || "No registrado"}${student.guardianPhone ? ` ? ${student.guardianPhone}` : ""}</span>
+      ${alerts.length ? `<span class="student-alert-line">${alerts.join(" | ")}</span>` : ""}
     </div>
   `;
 }
 
-// Muestra una notificacion corta si Bootstrap esta disponible.
 function showToast(message, variant = "primary") {
   const toastElement = document.getElementById("appToast");
   const toastBody = toastElement ? toastElement.querySelector(".toast-body") : null;
@@ -273,21 +323,26 @@ function setupNameSearch() {
     }
 
     resultsPanel.classList.remove("d-none");
-    resultsPanel.innerHTML = results.map((student) => `
-      <button class="student-result-button" type="button" data-code="${student.code}">
-        <span>
-          <strong>${student.name}</strong>
-          <span>${student.code} · ${student.age} años · ${student.groupLabel}</span>
-        </span>
-        <i class="bi bi-chevron-right"></i>
-      </button>
-    `).join("");
+    resultsPanel.innerHTML = results.map((student) => {
+      const alerts = getStudentAlerts(student);
+      return `
+        <button class="student-result-button" type="button" data-code="${student.code}">
+          <span>
+            <strong>${getStudentDisplayName(student)}</strong>
+            <span>${student.code} ? ${student.age} anos ? ${student.groupLabel}</span>
+            <span>Encargado: ${student.guardianName || "No registrado"}${student.guardianPhone ? ` ? ${student.guardianPhone}` : ""}</span>
+            ${alerts.length ? `<span class="student-alert-line">${alerts.join(" | ")}</span>` : ""}
+          </span>
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      `;
+    }).join("");
 
     resultsPanel.querySelectorAll(".student-result-button").forEach((button) => {
       button.addEventListener("click", () => {
         const student = findStudentByCode(button.dataset.code);
         codeInput.value = student.code;
-        searchInput.value = student.name;
+        searchInput.value = getStudentDisplayName(student);
         resultsPanel.classList.add("d-none");
         showStudentPreview(student);
       });

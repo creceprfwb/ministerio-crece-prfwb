@@ -50,6 +50,11 @@
             <input id="studentName" name="studentName" class="form-control form-control-lg" type="text" required>
           </div>
 
+          <div class="mb-3">
+            <label for="studentLastName" class="form-label">Apellidos</label>
+            <input id="studentLastName" name="studentLastName" class="form-control form-control-lg" type="text" placeholder="Opcional, ayuda en la busqueda">
+          </div>
+
           <div class="row g-3">
             <div class="col-sm-4">
               <label for="studentAge" class="form-label">Edad</label>
@@ -70,6 +75,38 @@
               <label for="emergencyPhone" class="form-label">Teléfono alterno</label>
               <input id="emergencyPhone" name="emergencyPhone" class="form-control form-control-lg" type="tel" placeholder="Opcional">
             </div>
+          </div>
+
+          <div class="mt-4">
+            <h3 class="form-section-title">Perfil del nino</h3>
+            <p class="form-section-help">Informacion importante para maestros y seguridad.</p>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="guardianEmail" class="form-label">Email del encargado</label>
+              <input id="guardianEmail" name="guardianEmail" class="form-control" type="email" placeholder="Opcional">
+            </div>
+            <div class="col-md-6">
+              <label for="authorizedPickup" class="form-label">Persona autorizada a recoger</label>
+              <input id="authorizedPickup" name="authorizedPickup" class="form-control" type="text" placeholder="Si es diferente al encargado">
+            </div>
+          </div>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <label for="allergies" class="form-label">Alergias</label>
+              <textarea id="allergies" name="allergies" class="form-control" rows="2" placeholder="Ej. mani, leche, medicamentos"></textarea>
+            </div>
+            <div class="col-md-6">
+              <label for="medicalNotes" class="form-label">Condiciones o notas medicas</label>
+              <textarea id="medicalNotes" name="medicalNotes" class="form-control" rows="2" placeholder="Ej. asma, anemia, medicamentos, necesidades especiales"></textarea>
+            </div>
+          </div>
+
+          <div class="mt-3">
+            <label for="careNotes" class="form-label">Instrucciones especiales</label>
+            <textarea id="careNotes" name="careNotes" class="form-control" rows="2" placeholder="Notas para la clase, conducta, apoyo, merienda o seguridad"></textarea>
           </div>
 
           <div class="student-form-actions">
@@ -123,6 +160,7 @@
               <th>Edad</th>
               <th>Grupo</th>
               <th>Encargado</th>
+              <th>Perfil</th>
               <th>Teléfono</th>
               <th>Premios</th>
               <th>Estado</th>
