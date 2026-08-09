@@ -1,9 +1,11 @@
 // El panel administrativo usa los mismos registros creados por app.js.
 const ADMIN_STORAGE_KEY = "prfwb_attendance_records";
 const ADMIN_STUDENTS_STORAGE_KEY = "prfwb_student_records";
+const ADMIN_TEACHERS_STORAGE_KEY = "prfwb_teacher_records";
 
 let attendanceRecords = [];
 let studentRecords = [];
+let teacherRecords = [];
 let groupChart = null;
 
 function storageKey(baseKey) {
@@ -26,19 +28,26 @@ function loadStudentRecords() {
   return rawStudents ? JSON.parse(rawStudents) : [];
 }
 
+function loadTeacherRecords() {
+  const rawTeachers = localStorage.getItem(storageKey(ADMIN_TEACHERS_STORAGE_KEY));
+  return rawTeachers ? JSON.parse(rawTeachers) : [];
+}
+
 // Carga datos compartidos desde Firebase y conserva una copia local.
 async function loadSharedAdminData() {
   attendanceRecords = loadAttendanceRecords();
   studentRecords = loadStudentRecords();
+  teacherRecords = loadTeacherRecords();
 
   if (!window.PRFirebase || !window.PRFirebase.enabled) {
     return;
   }
 
   try {
-    const [cloudAttendance, cloudStudents] = await Promise.all([
+    const [cloudAttendance, cloudStudents, cloudTeachers] = await Promise.all([
       window.PRFirebase.getAttendance(),
-      window.PRFirebase.getStudents()
+      window.PRFirebase.getStudents(),
+      window.PRFirebase.getTeachers ? window.PRFirebase.getTeachers() : []
     ]);
 
     if (cloudAttendance.length) {
@@ -49,6 +58,11 @@ async function loadSharedAdminData() {
     if (cloudStudents.length) {
       studentRecords = cloudStudents;
       localStorage.setItem(storageKey(ADMIN_STUDENTS_STORAGE_KEY), JSON.stringify(studentRecords));
+    }
+
+    if (cloudTeachers.length) {
+      teacherRecords = cloudTeachers;
+      localStorage.setItem(storageKey(ADMIN_TEACHERS_STORAGE_KEY), JSON.stringify(teacherRecords));
     }
   } catch (error) {
     console.warn("No se pudo cargar la data compartida.", error);
@@ -203,6 +217,11 @@ function renderStats(records) {
   document.getElementById("totalNinos").textContent = summary.ninos;
   document.getElementById("totalJuveniles").textContent = summary.juveniles;
   document.getElementById("totalStudents").textContent = activeStudents.length;
+
+  const totalTeachers = document.getElementById("totalTeachers");
+  if (totalTeachers) {
+    totalTeachers.textContent = teacherRecords.filter((teacher) => teacher.active !== false).length;
+  }
 }
 
 // Pinta la tabla historica.
