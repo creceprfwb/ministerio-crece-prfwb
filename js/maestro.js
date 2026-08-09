@@ -47,6 +47,18 @@ function getGroupByAge(age) {
   return null;
 }
 
+function getGroupByOverride(group) {
+  if (group === "ninos") {
+    return { group: "ninos", groupLabel: "Ninos" };
+  }
+
+  if (group === "juveniles") {
+    return { group: "juveniles", groupLabel: "Juveniles" };
+  }
+
+  return null;
+}
+
 // Lee los estudiantes guardados localmente.
 function loadStudents() {
   const rawStudents = localStorage.getItem(storageKey(STUDENTS_STORAGE_KEY));
@@ -111,6 +123,55 @@ function escapeHtml(value) {
 
 function getStudentDisplayName(student) {
   return String(student.fullName || `${student.name || ""} ${student.lastName || ""}`).trim();
+}
+
+function formatPhoneNumber(value) {
+  const rawValue = String(value || "").trim();
+  const digits = rawValue.replace(/\D/g, "");
+
+  if (digits.length === 10) {
+    return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+  }
+
+  if (digits.length === 11 && digits.startsWith("1")) {
+    return `${digits.slice(1, 4)}-${digits.slice(4, 7)}-${digits.slice(7)}`;
+  }
+
+  return rawValue;
+}
+
+function getRelationshipLabel(value) {
+  const labels = {
+    padre_madre: "Padre / Madre",
+    abuelo_abuela: "Abuelo / Abuela",
+    tio_tia: "Tio / Tia",
+    padrino_madrina: "Padrino / Madrina",
+    tutor: "Tutor legal",
+    otro: "Otro"
+  };
+
+  return labels[value] || "Padre / Madre";
+}
+
+function getStudentStatusLabel(value) {
+  const labels = {
+    regular: "Estudiante regular",
+    firstTime: "Primera vez",
+    visitor: "Visita"
+  };
+
+  return labels[value] || "Estudiante regular";
+}
+
+function getIdDeliveryLabel(value) {
+  const labels = {
+    none: "No entregado",
+    wristband: "Pulserita entregada",
+    id: "ID entregado",
+    both: "Pulserita e ID entregados"
+  };
+
+  return labels[value] || "No entregado";
 }
 
 function formatDate(value) {
@@ -181,6 +242,18 @@ function getProfileFlags(student) {
     flags.push("Notas");
   }
 
+  if (student.studentStatus === "visitor") {
+    flags.push("Visita");
+  }
+
+  if (student.studentStatus === "firstTime") {
+    flags.push("Primera vez");
+  }
+
+  if (student.idDeliveryStatus && student.idDeliveryStatus !== "none") {
+    flags.push("ID/Pulsera");
+  }
+
   return flags;
 }
 
@@ -234,7 +307,8 @@ function getRewardHistoryDate(entry) {
 // Crea el objeto del estudiante registrado.
 function buildStudentRecord(formData) {
   const age = Number(formData.get("studentAge"));
-  const groupInfo = getGroupByAge(age);
+  const groupOverride = String(formData.get("studentGroupOverride") || "");
+  const groupInfo = getGroupByOverride(groupOverride) || getGroupByAge(age);
 
   if (!groupInfo) {
     throw new Error("La edad debe estar entre 3 y 16 años.");
@@ -252,11 +326,17 @@ function buildStudentRecord(formData) {
     birthDate: String(formData.get("studentBirthDate") || "").trim(),
     group: groupInfo.group,
     groupLabel: groupInfo.groupLabel,
+    groupOverride,
+    studentStatus: String(formData.get("studentStatus") || "regular"),
     guardianName: String(formData.get("guardianName") || "").trim(),
-    guardianPhone: String(formData.get("guardianPhone") || "").trim(),
-    emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
+    guardianRelationship: String(formData.get("guardianRelationship") || "padre_madre"),
+    guardianPhone: formatPhoneNumber(formData.get("guardianPhone")),
+    emergencyPhone: formatPhoneNumber(formData.get("emergencyPhone")),
     guardianEmail: String(formData.get("guardianEmail") || "").trim(),
+    guardianEmailSecondary: String(formData.get("guardianEmailSecondary") || "").trim(),
     authorizedPickup: String(formData.get("authorizedPickup") || "").trim(),
+    idDeliveryStatus: String(formData.get("idDeliveryStatus") || "none"),
+    visitNotes: String(formData.get("visitNotes") || "").trim(),
     allergies: String(formData.get("allergies") || "").trim(),
     medicalNotes: String(formData.get("medicalNotes") || "").trim(),
     careNotes: String(formData.get("careNotes") || "").trim(),
@@ -270,7 +350,8 @@ function buildStudentRecord(formData) {
 // Actualiza un estudiante existente sin cambiar su número ni QR.
 function buildUpdatedStudentRecord(existingStudent, formData) {
   const age = Number(formData.get("studentAge"));
-  const groupInfo = getGroupByAge(age);
+  const groupOverride = String(formData.get("studentGroupOverride") || "");
+  const groupInfo = getGroupByOverride(groupOverride) || getGroupByAge(age);
 
   if (!groupInfo) {
     throw new Error("La edad debe estar entre 3 y 16 años.");
@@ -285,11 +366,17 @@ function buildUpdatedStudentRecord(existingStudent, formData) {
     birthDate: String(formData.get("studentBirthDate") || "").trim(),
     group: groupInfo.group,
     groupLabel: groupInfo.groupLabel,
+    groupOverride,
+    studentStatus: String(formData.get("studentStatus") || "regular"),
     guardianName: String(formData.get("guardianName") || "").trim(),
-    guardianPhone: String(formData.get("guardianPhone") || "").trim(),
-    emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
+    guardianRelationship: String(formData.get("guardianRelationship") || "padre_madre"),
+    guardianPhone: formatPhoneNumber(formData.get("guardianPhone")),
+    emergencyPhone: formatPhoneNumber(formData.get("emergencyPhone")),
     guardianEmail: String(formData.get("guardianEmail") || "").trim(),
+    guardianEmailSecondary: String(formData.get("guardianEmailSecondary") || "").trim(),
     authorizedPickup: String(formData.get("authorizedPickup") || "").trim(),
+    idDeliveryStatus: String(formData.get("idDeliveryStatus") || "none"),
+    visitNotes: String(formData.get("visitNotes") || "").trim(),
     allergies: String(formData.get("allergies") || "").trim(),
     medicalNotes: String(formData.get("medicalNotes") || "").trim(),
     careNotes: String(formData.get("careNotes") || "").trim(),
@@ -309,11 +396,17 @@ function fillStudentForm(student) {
   document.getElementById("studentLastName").value = student.lastName || "";
   document.getElementById("studentAge").value = student.age || "";
   document.getElementById("studentBirthDate").value = student.birthDate || "";
+  document.getElementById("studentGroupOverride").value = student.groupOverride || "";
+  document.getElementById("studentStatus").value = student.studentStatus || "regular";
   document.getElementById("guardianName").value = student.guardianName || "";
   document.getElementById("guardianPhone").value = student.guardianPhone || "";
   document.getElementById("emergencyPhone").value = student.emergencyPhone || "";
   document.getElementById("guardianEmail").value = student.guardianEmail || "";
+  document.getElementById("guardianEmailSecondary").value = student.guardianEmailSecondary || "";
+  document.getElementById("guardianRelationship").value = student.guardianRelationship || "padre_madre";
   document.getElementById("authorizedPickup").value = student.authorizedPickup || "";
+  document.getElementById("idDeliveryStatus").value = student.idDeliveryStatus || "none";
+  document.getElementById("visitNotes").value = student.visitNotes || "";
   document.getElementById("allergies").value = student.allergies || "";
   document.getElementById("medicalNotes").value = student.medicalNotes || "";
   document.getElementById("careNotes").value = student.careNotes || "";
@@ -430,13 +523,18 @@ function openStudentProfile(student) {
 
       <div class="profile-note-grid">
         ${buildProfileNote("Encargado", normalizedStudent.guardianName, "bi-person-badge")}
+        ${buildProfileNote("Parentesco", getRelationshipLabel(normalizedStudent.guardianRelationship), "bi-diagram-3")}
         ${buildProfileNote("Telefono principal", normalizedStudent.guardianPhone, "bi-telephone")}
         ${buildProfileNote("Telefono alterno", normalizedStudent.emergencyPhone, "bi-telephone-plus")}
-        ${buildProfileNote("Email", normalizedStudent.guardianEmail, "bi-envelope")}
+        ${buildProfileNote("Email principal", normalizedStudent.guardianEmail, "bi-envelope")}
+        ${buildProfileNote("Segundo email", normalizedStudent.guardianEmailSecondary, "bi-envelope-plus")}
+        ${buildProfileNote("Tipo de registro", getStudentStatusLabel(normalizedStudent.studentStatus), "bi-person-lines-fill", normalizedStudent.studentStatus === "regular" ? "" : "visitor")}
+        ${buildProfileNote("Pulserita o ID", getIdDeliveryLabel(normalizedStudent.idDeliveryStatus), "bi-person-badge-fill", normalizedStudent.idDeliveryStatus && normalizedStudent.idDeliveryStatus !== "none" ? "success" : "")}
         ${buildProfileNote("Recogido autorizado", normalizedStudent.authorizedPickup, "bi-shield-check")}
         ${buildProfileNote("Alergias", normalizedStudent.allergies, "bi-exclamation-triangle", normalizedStudent.allergies ? "warning" : "")}
         ${buildProfileNote("Notas medicas", normalizedStudent.medicalNotes, "bi-heart-pulse", normalizedStudent.medicalNotes ? "warning" : "")}
-        ${buildProfileNote("Notas para la clase", normalizedStudent.careNotes, "bi-journal-text")}
+        ${buildProfileNote("Notas de visita", normalizedStudent.visitNotes, "bi-door-open", normalizedStudent.visitNotes ? "visitor" : "")}
+        ${buildProfileNote("Notas para la clase", normalizedStudent.careNotes, "bi-journal-text", normalizedStudent.careNotes ? "note" : "")}
       </div>
 
       <article class="student-attendance-card">
@@ -486,7 +584,7 @@ function renderStudentsTable() {
   const tableBody = document.getElementById("studentsTable");
   const search = normalizeText(document.getElementById("studentSearch").value);
   const visibleStudents = students.filter((student) => {
-    return !search || normalizeText(`${student.code} ${getStudentDisplayName(student)} ${student.guardianName} ${student.guardianPhone} ${student.emergencyPhone} ${student.groupLabel}`).includes(search);
+    return !search || normalizeText(`${student.code} ${getStudentDisplayName(student)} ${student.guardianName} ${student.guardianPhone} ${student.emergencyPhone} ${student.guardianEmail} ${student.guardianEmailSecondary} ${student.groupLabel} ${getRelationshipLabel(student.guardianRelationship)} ${getStudentStatusLabel(student.studentStatus)}`).includes(search);
   });
 
   if (!visibleStudents.length) {
@@ -884,6 +982,10 @@ async function setupTeacherPanel() {
   const birthDateInput = document.getElementById("studentBirthDate");
   const ageInput = document.getElementById("studentAge");
   const profileEditButton = document.getElementById("profileEditStudent");
+  const phoneInputs = [
+    document.getElementById("guardianPhone"),
+    document.getElementById("emergencyPhone")
+  ];
 
   if (window.PRFirebase && typeof window.PRFirebase.requireAuth === "function") {
     const profile = await window.PRFirebase.requireAuth();
@@ -945,6 +1047,15 @@ async function setupTeacherPanel() {
   downloadButton.addEventListener("click", downloadVisibleQr);
   cancelEditButton.addEventListener("click", () => resetStudentForm(form));
   profileEditButton.addEventListener("click", () => editStudentFromProfile(profileEditButton.dataset.code));
+  phoneInputs.forEach((input) => {
+    if (!input) {
+      return;
+    }
+
+    input.addEventListener("blur", () => {
+      input.value = formatPhoneNumber(input.value);
+    });
+  });
   birthDateInput.addEventListener("change", () => {
     const calculatedAge = calculateAgeFromBirthDate(birthDateInput.value);
 

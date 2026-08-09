@@ -1242,6 +1242,28 @@ body {
   background: #fff8ec;
 }
 
+.profile-note.note {
+  border-color: #c7d7fe;
+  background: #eef4ff;
+}
+
+.profile-note.visitor {
+  border-color: #c4b5fd;
+  background: #f5f3ff;
+}
+
+.profile-note.success {
+  border-color: #b7e4c7;
+  background: #effaf3;
+}
+
+.notes-field {
+  padding: 12px;
+  border: 1px solid #c7d7fe;
+  border-radius: 10px;
+  background: #eef4ff;
+}
+
 .profile-note i {
   color: #0b3d91;
   font-size: 1.1rem;
@@ -1346,7 +1368,8 @@ body {
 }
 
 .admin-profile-notes.has-alerts {
-  background: #fff8ec;
+  border: 1px solid #c7d7fe;
+  background: #eef4ff;
 }
 
 .admin-profile-details p,

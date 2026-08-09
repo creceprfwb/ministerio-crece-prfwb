@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
@@ -32,7 +32,7 @@
       <div>
         <p class="section-kicker">Panel de maestra</p>
         <h1>Registrar estudiante</h1>
-        <p>El grupo se asigna automáticamente por edad: 3-10 Niños, 11-16 Juveniles.</p>
+        <p>El grupo se asigna automÃ¡ticamente por edad: 3-10 NiÃ±os, 11-16 Juveniles.</p>
       </div>
     </section>
 
@@ -41,7 +41,7 @@
         <div class="panel-heading">
           <div>
             <h2 id="studentFormTitle">Nuevo estudiante</h2>
-            <p id="studentFormHelp">Al guardar se genera un número y código QR.</p>
+            <p id="studentFormHelp">Al guardar se genera un nÃºmero y cÃ³digo QR.</p>
           </div>
         </div>
 
@@ -73,11 +73,30 @@
 
           <div class="row g-3 mt-1">
             <div class="col-md-6">
-              <label for="guardianPhone" class="form-label">Teléfono principal</label>
+              <label for="studentGroupOverride" class="form-label">Grupo asignado</label>
+              <select id="studentGroupOverride" name="studentGroupOverride" class="form-select form-select-lg">
+                <option value="">Automatico por edad</option>
+                <option value="ninos">Ninos</option>
+                <option value="juveniles">Juveniles</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="studentStatus" class="form-label">Tipo de registro</label>
+              <select id="studentStatus" name="studentStatus" class="form-select form-select-lg">
+                <option value="regular">Estudiante regular</option>
+                <option value="firstTime">Primera vez</option>
+                <option value="visitor">Visita</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <label for="guardianPhone" class="form-label">Telefono principal</label>
               <input id="guardianPhone" name="guardianPhone" class="form-control form-control-lg" type="tel" placeholder="787-000-0000" required>
             </div>
             <div class="col-md-6">
-              <label for="emergencyPhone" class="form-label">Teléfono alterno</label>
+              <label for="emergencyPhone" class="form-label">Telefono alterno</label>
               <input id="emergencyPhone" name="emergencyPhone" class="form-control form-control-lg" type="tel" placeholder="Opcional">
             </div>
           </div>
@@ -93,8 +112,42 @@
               <input id="guardianEmail" name="guardianEmail" class="form-control" type="email" placeholder="Opcional">
             </div>
             <div class="col-md-6">
+              <label for="guardianEmailSecondary" class="form-label">Segundo email</label>
+              <input id="guardianEmailSecondary" name="guardianEmailSecondary" class="form-control" type="email" placeholder="Otro padre, madre o encargado">
+            </div>
+          </div>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <label for="guardianRelationship" class="form-label">Parentesco del encargado</label>
+              <select id="guardianRelationship" name="guardianRelationship" class="form-select">
+                <option value="padre_madre">Padre / Madre</option>
+                <option value="abuelo_abuela">Abuelo / Abuela</option>
+                <option value="tio_tia">Tio / Tia</option>
+                <option value="padrino_madrina">Padrino / Madrina</option>
+                <option value="tutor">Tutor legal</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="col-md-6">
               <label for="authorizedPickup" class="form-label">Persona autorizada a recoger</label>
               <input id="authorizedPickup" name="authorizedPickup" class="form-control" type="text" placeholder="Si es diferente al encargado">
+            </div>
+          </div>
+
+          <div class="row g-3 mt-1">
+            <div class="col-md-6">
+              <label for="idDeliveryStatus" class="form-label">Pulserita o ID</label>
+              <select id="idDeliveryStatus" name="idDeliveryStatus" class="form-select">
+                <option value="none">No entregado</option>
+                <option value="wristband">Pulserita entregada</option>
+                <option value="id">ID entregado</option>
+                <option value="both">Pulserita e ID entregados</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="visitNotes" class="form-label">Notas de visita o primera vez</label>
+              <input id="visitNotes" name="visitNotes" class="form-control" type="text" placeholder="Ej. invitado por, iglesia, seguimiento">
             </div>
           </div>
 
@@ -109,11 +162,10 @@
             </div>
           </div>
 
-          <div class="mt-3">
+          <div class="mt-3 notes-field">
             <label for="careNotes" class="form-label">Instrucciones especiales</label>
             <textarea id="careNotes" name="careNotes" class="form-control" rows="2" placeholder="Notas para la clase, conducta, apoyo, merienda o seguridad"></textarea>
           </div>
-
           <div class="student-form-actions">
             <button id="studentSubmitButton" class="btn btn-primary btn-lg w-100 submit-button mt-4" type="submit">
               <i class="bi bi-person-plus"></i>
@@ -130,7 +182,7 @@
       <aside class="app-card">
         <div class="panel-heading">
           <div>
-            <h2>Código generado</h2>
+            <h2>CÃ³digo generado</h2>
             <p>Entrega este QR al estudiante o al encargado.</p>
           </div>
         </div>
@@ -160,13 +212,13 @@
         <table class="table align-middle admin-table">
           <thead>
             <tr>
-              <th>Número</th>
+              <th>NÃºmero</th>
               <th>Nombre</th>
               <th>Edad</th>
               <th>Grupo</th>
               <th>Encargado</th>
               <th>Perfil</th>
-              <th>Teléfono</th>
+              <th>TelÃ©fono</th>
               <th>Premios</th>
               <th>Estado</th>
               <th>QR</th>
@@ -182,12 +234,12 @@
       <div class="panel-heading">
         <div>
           <h2>Sistema de premios CRECE</h2>
-          <p>Asigna puntos por asistencia, Biblia, versículo, tarea, conducta, invitados y servicio.</p>
+          <p>Asigna puntos por asistencia, Biblia, versÃ­culo, tarea, conducta, invitados y servicio.</p>
         </div>
       </div>
       <div id="rewardEmptyState" class="reward-empty">
         <i class="bi bi-award"></i>
-        <span>Selecciona “Premios” en un estudiante para administrar sus puntos.</span>
+        <span>Selecciona â€œPremiosâ€ en un estudiante para administrar sus puntos.</span>
       </div>
       <div id="rewardManager" class="reward-manager d-none">
         <div class="reward-student-card">
@@ -205,7 +257,7 @@
         <div class="reward-level-line">
           <div>
             <strong id="rewardStudentLevel">Semilla CRECE</strong>
-            <span id="rewardNextLevel">Próxima meta: 50 puntos</span>
+            <span id="rewardNextLevel">PrÃ³xima meta: 50 puntos</span>
           </div>
           <div class="reward-progress">
             <span id="rewardProgressBar"></span>
@@ -238,7 +290,7 @@
           </div>
           <button class="btn btn-primary" type="submit">
             <i class="bi bi-plus-circle"></i>
-            Añadir puntos
+            AÃ±adir puntos
           </button>
         </form>
 

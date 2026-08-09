@@ -73,6 +73,40 @@ function getStudentDisplayName(student) {
   return String(student.fullName || `${student.name || ""} ${student.lastName || ""}`).trim();
 }
 
+function getRelationshipLabel(value) {
+  const labels = {
+    padre_madre: "Padre / Madre",
+    abuelo_abuela: "Abuelo / Abuela",
+    tio_tia: "Tio / Tia",
+    padrino_madrina: "Padrino / Madrina",
+    tutor: "Tutor legal",
+    otro: "Otro"
+  };
+
+  return labels[value] || "Padre / Madre";
+}
+
+function getStudentStatusLabel(value) {
+  const labels = {
+    regular: "Estudiante regular",
+    firstTime: "Primera vez",
+    visitor: "Visita"
+  };
+
+  return labels[value] || "Estudiante regular";
+}
+
+function getIdDeliveryLabel(value) {
+  const labels = {
+    none: "No entregado",
+    wristband: "Pulserita entregada",
+    id: "ID entregado",
+    both: "Pulserita e ID entregados"
+  };
+
+  return labels[value] || "No entregado";
+}
+
 function formatDate(value) {
   if (!value) {
     return "No registrada";
@@ -124,6 +158,10 @@ function getFilteredStudents() {
         student.guardianPhone,
         student.emergencyPhone,
         student.guardianEmail,
+        student.guardianEmailSecondary,
+        getRelationshipLabel(student.guardianRelationship),
+        getStudentStatusLabel(student.studentStatus),
+        getIdDeliveryLabel(student.idDeliveryStatus),
         student.groupLabel
       ].join(" "));
 
@@ -216,7 +254,7 @@ function renderStudentProfiles() {
   container.innerHTML = filteredStudents.map((student) => {
     const attendance = getStudentAttendance(student);
     const latestAttendance = attendance[0];
-    const hasAlerts = student.allergies || student.medicalNotes || student.careNotes;
+    const hasAlerts = student.allergies || student.medicalNotes || student.careNotes || student.visitNotes || (student.idDeliveryStatus && student.idDeliveryStatus !== "none");
 
     return `
       <article class="admin-profile-card ${student.active === false ? "inactive-student" : ""}">
@@ -232,19 +270,24 @@ function renderStudentProfiles() {
         <div class="admin-profile-metrics">
           <span><strong>${attendance.length}</strong> asistencias</span>
           <span><strong>${student.rewardPoints}</strong> puntos</span>
-          <span>${student.active === false ? "Inactivo" : "Activo"}</span>
+          <span>${escapeHtml(getStudentStatusLabel(student.studentStatus))}</span>
         </div>
 
         <div class="admin-profile-details">
           <p><strong>Encargado:</strong> ${escapeHtml(student.guardianName || "No registrado")}</p>
+          <p><strong>Parentesco:</strong> ${escapeHtml(getRelationshipLabel(student.guardianRelationship))}</p>
           <p><strong>Telefono:</strong> ${escapeHtml(student.guardianPhone || "No registrado")}</p>
           <p><strong>Alterno:</strong> ${escapeHtml(student.emergencyPhone || "No registrado")}</p>
-          <p><strong>Email:</strong> ${escapeHtml(student.guardianEmail || "No registrado")}</p>
+          <p><strong>Email principal:</strong> ${escapeHtml(student.guardianEmail || "No registrado")}</p>
+          <p><strong>Segundo email:</strong> ${escapeHtml(student.guardianEmailSecondary || "No registrado")}</p>
           <p><strong>Recoge:</strong> ${escapeHtml(student.authorizedPickup || "No registrado")}</p>
+          <p><strong>Pulserita / ID:</strong> ${escapeHtml(getIdDeliveryLabel(student.idDeliveryStatus))}</p>
+          <p><strong>Grupo:</strong> ${escapeHtml(student.groupOverride ? `${student.groupLabel} asignado manualmente` : `${student.groupLabel} por edad`)}</p>
           <p><strong>Ultima asistencia:</strong> ${escapeHtml(latestAttendance ? `${latestAttendance.date} ${latestAttendance.time}` : "Sin asistencia")}</p>
         </div>
 
         <div class="admin-profile-notes ${hasAlerts ? "has-alerts" : ""}">
+          <p><strong>Notas de visita:</strong> ${escapeHtml(student.visitNotes || "No registradas")}</p>
           <p><strong>Alergias:</strong> ${escapeHtml(student.allergies || "No registradas")}</p>
           <p><strong>Notas medicas:</strong> ${escapeHtml(student.medicalNotes || "No registradas")}</p>
           <p><strong>Notas de clase:</strong> ${escapeHtml(student.careNotes || "No registradas")}</p>

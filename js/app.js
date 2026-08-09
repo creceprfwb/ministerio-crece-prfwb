@@ -91,7 +91,9 @@ function getStudentSearchText(student) {
     student.guardianName,
     student.guardianPhone,
     student.emergencyPhone,
-    student.guardianEmail
+    student.guardianEmail,
+    student.guardianEmailSecondary,
+    student.guardianRelationship
   ].join(" "));
 }
 
@@ -160,11 +162,17 @@ function buildAttendanceRecord(student) {
     fullName: getStudentDisplayName(student),
     age: student.age,
     birthDate: student.birthDate || "",
+    groupOverride: student.groupOverride || "",
+    studentStatus: student.studentStatus || "regular",
     guardianName: student.guardianName || "",
+    guardianRelationship: student.guardianRelationship || "padre_madre",
     guardianPhone: student.guardianPhone || "",
     emergencyPhone: student.emergencyPhone || "",
     guardianEmail: student.guardianEmail || "",
+    guardianEmailSecondary: student.guardianEmailSecondary || "",
     authorizedPickup: student.authorizedPickup || "",
+    idDeliveryStatus: student.idDeliveryStatus || "none",
+    visitNotes: student.visitNotes || "",
     allergies: student.allergies || "",
     medicalNotes: student.medicalNotes || "",
     careNotes: student.careNotes || "",
