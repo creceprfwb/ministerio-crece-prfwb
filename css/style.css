@@ -2077,6 +2077,106 @@ body {
   text-align: center;
 }
 
+.resources-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.resource-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid #d9e7ff;
+  border-radius: 999px;
+  color: var(--primary);
+  background: #f7fbff;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.resource-hero-badge i {
+  font-size: 1.35rem;
+}
+
+.resource-module-card {
+  display: grid;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid rgba(220, 228, 242, 0.95);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow);
+}
+
+.module-intro {
+  max-width: 760px;
+}
+
+.module-intro h2 {
+  margin: 0 0 8px;
+  color: #0b1f3a;
+  font-size: clamp(1.6rem, 3vw, 2.45rem);
+}
+
+.module-intro p {
+  color: #52627a;
+}
+
+.resource-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.download-card {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  min-height: 250px;
+  padding: 18px;
+  border: 1px solid #d9e2f3;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fff, #f8fbff);
+}
+
+.download-card > span {
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: var(--primary);
+  background: var(--primary-soft);
+  font-size: 0.76rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.download-card h3 {
+  margin: 0;
+  color: #0b1f3a;
+  font-size: 1.16rem;
+  line-height: 1.22;
+}
+
+.download-card p {
+  margin: 0;
+  color: #52627a;
+  font-size: 0.94rem;
+}
+
+.download-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.resources-disclaimer {
+  margin-top: 20px;
+}
+
 .unassigned-board {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -2405,7 +2505,8 @@ body {
   .reward-prize-status,
   .communication-filter-row,
   .communication-teacher-card,
-  .communication-assignment-card {
+  .communication-assignment-card,
+  .resources-hero {
     align-items: stretch;
     flex-direction: column;
   }
@@ -2413,6 +2514,10 @@ body {
   .communication-filter-row .form-select,
   .communication-filter-row .search-inline {
     width: 100%;
+  }
+
+  .resource-hero-badge {
+    justify-content: center;
   }
 }
 
