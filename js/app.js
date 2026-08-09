@@ -159,6 +159,7 @@ function buildAttendanceRecord(student) {
     lastName: student.lastName || "",
     fullName: getStudentDisplayName(student),
     age: student.age,
+    birthDate: student.birthDate || "",
     guardianName: student.guardianName || "",
     guardianPhone: student.guardianPhone || "",
     emergencyPhone: student.emergencyPhone || "",

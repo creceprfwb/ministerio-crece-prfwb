@@ -1,5 +1,6 @@
 // Clave local para guardar estudiantes hasta conectar Firebase, Supabase o Google Sheets.
 const STUDENTS_STORAGE_KEY = "prfwb_student_records";
+const ATTENDANCE_STORAGE_KEY = "prfwb_attendance_records";
 const REWARD_ACTIONS = [
   { id: "asistencia", label: "Asistencia del domingo", points: 5, icon: "bi-calendar-check" },
   { id: "biblia", label: "Trajo Biblia", points: 3, icon: "bi-book" },
@@ -112,6 +113,59 @@ function getStudentDisplayName(student) {
   return String(student.fullName || `${student.name || ""} ${student.lastName || ""}`).trim();
 }
 
+function formatDate(value) {
+  if (!value) {
+    return "No registrada";
+  }
+
+  const date = new Date(`${value}T00:00:00`);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return date.toLocaleDateString("es-PR", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  });
+}
+
+function calculateAgeFromBirthDate(value) {
+  if (!value) {
+    return "";
+  }
+
+  const birthDate = new Date(`${value}T00:00:00`);
+  const today = new Date();
+
+  if (Number.isNaN(birthDate.getTime())) {
+    return "";
+  }
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age -= 1;
+  }
+
+  return age;
+}
+
+function loadAttendanceRecords() {
+  const rawRecords = localStorage.getItem(storageKey(ATTENDANCE_STORAGE_KEY));
+  return rawRecords ? JSON.parse(rawRecords) : [];
+}
+
+function getAttendanceForStudent(student) {
+  const studentCode = String(student.code || "").toUpperCase();
+
+  return loadAttendanceRecords()
+    .filter((record) => String(record.studentCode || "").toUpperCase() === studentCode)
+    .sort((a, b) => new Date(b.createdAt || b.date) - new Date(a.createdAt || a.date));
+}
+
 function getProfileFlags(student) {
   const flags = [];
 
@@ -195,6 +249,7 @@ function buildStudentRecord(formData) {
     lastName: String(formData.get("studentLastName") || "").trim(),
     fullName: String(`${formData.get("studentName") || ""} ${formData.get("studentLastName") || ""}`).trim(),
     age,
+    birthDate: String(formData.get("studentBirthDate") || "").trim(),
     group: groupInfo.group,
     groupLabel: groupInfo.groupLabel,
     guardianName: String(formData.get("guardianName") || "").trim(),
@@ -227,6 +282,7 @@ function buildUpdatedStudentRecord(existingStudent, formData) {
     lastName: String(formData.get("studentLastName") || "").trim(),
     fullName: String(`${formData.get("studentName") || ""} ${formData.get("studentLastName") || ""}`).trim(),
     age,
+    birthDate: String(formData.get("studentBirthDate") || "").trim(),
     group: groupInfo.group,
     groupLabel: groupInfo.groupLabel,
     guardianName: String(formData.get("guardianName") || "").trim(),
@@ -252,6 +308,7 @@ function fillStudentForm(student) {
   document.getElementById("studentName").value = student.name || "";
   document.getElementById("studentLastName").value = student.lastName || "";
   document.getElementById("studentAge").value = student.age || "";
+  document.getElementById("studentBirthDate").value = student.birthDate || "";
   document.getElementById("guardianName").value = student.guardianName || "";
   document.getElementById("guardianPhone").value = student.guardianPhone || "";
   document.getElementById("emergencyPhone").value = student.emergencyPhone || "";
@@ -317,6 +374,113 @@ function renderQr(student) {
   downloadButton.disabled = false;
 }
 
+function buildProfileNote(label, value, icon, tone = "") {
+  return `
+    <article class="profile-note ${tone}">
+      <i class="bi ${icon}"></i>
+      <div>
+        <strong>${escapeHtml(label)}</strong>
+        <span>${escapeHtml(value || "No registrado")}</span>
+      </div>
+    </article>
+  `;
+}
+
+function openStudentProfile(student) {
+  const normalizedStudent = normalizeRewardData(student);
+  const modalElement = document.getElementById("studentProfileModal");
+  const title = document.getElementById("studentProfileTitle");
+  const content = document.getElementById("studentProfileContent");
+  const editButton = document.getElementById("profileEditStudent");
+  const rewardLevel = getRewardLevel(normalizedStudent.rewardPoints);
+  const nextLevel = getNextRewardLevel(normalizedStudent.rewardPoints);
+  const attendance = getAttendanceForStudent(normalizedStudent);
+  const latestAttendance = attendance[0];
+  const attendanceRows = attendance.slice(0, 8).map((record) => `
+    <tr>
+      <td>${escapeHtml(record.date || "")}</td>
+      <td>${escapeHtml(record.time || "")}</td>
+      <td>${escapeHtml(record.groupLabel || "")}</td>
+    </tr>
+  `).join("");
+
+  title.textContent = getStudentDisplayName(normalizedStudent);
+  editButton.dataset.code = normalizedStudent.code;
+
+  content.innerHTML = `
+    <section class="student-profile-grid">
+      <article class="student-profile-summary">
+        <div class="profile-avatar">${escapeHtml((normalizedStudent.name || "?").charAt(0))}</div>
+        <div>
+          <span class="profile-code">${escapeHtml(normalizedStudent.code)}</span>
+          <h3>${escapeHtml(getStudentDisplayName(normalizedStudent))}</h3>
+          <p>${escapeHtml(normalizedStudent.groupLabel || "")} - ${escapeHtml(normalizedStudent.age || "")} anos</p>
+          <p>Nacimiento: ${escapeHtml(formatDate(normalizedStudent.birthDate))}</p>
+        </div>
+      </article>
+
+      <article class="student-profile-progress">
+        <div>
+          <span>Progreso CRECE</span>
+          <strong>${escapeHtml(rewardLevel.name)}</strong>
+          <small>${normalizedStudent.rewardPoints} puntos${nextLevel ? ` - proxima meta ${nextLevel.points}` : " - meta mayor alcanzada"}</small>
+        </div>
+        <div class="reward-progress"><span style="width: ${getRewardProgress(normalizedStudent.rewardPoints)}%"></span></div>
+      </article>
+
+      <div class="profile-note-grid">
+        ${buildProfileNote("Encargado", normalizedStudent.guardianName, "bi-person-badge")}
+        ${buildProfileNote("Telefono principal", normalizedStudent.guardianPhone, "bi-telephone")}
+        ${buildProfileNote("Telefono alterno", normalizedStudent.emergencyPhone, "bi-telephone-plus")}
+        ${buildProfileNote("Email", normalizedStudent.guardianEmail, "bi-envelope")}
+        ${buildProfileNote("Recogido autorizado", normalizedStudent.authorizedPickup, "bi-shield-check")}
+        ${buildProfileNote("Alergias", normalizedStudent.allergies, "bi-exclamation-triangle", normalizedStudent.allergies ? "warning" : "")}
+        ${buildProfileNote("Notas medicas", normalizedStudent.medicalNotes, "bi-heart-pulse", normalizedStudent.medicalNotes ? "warning" : "")}
+        ${buildProfileNote("Notas para la clase", normalizedStudent.careNotes, "bi-journal-text")}
+      </div>
+
+      <article class="student-attendance-card">
+        <div class="attendance-metric">
+          <span>Asistencias</span>
+          <strong>${attendance.length}</strong>
+          <small>Ultima: ${escapeHtml(latestAttendance ? latestAttendance.date : "Sin asistencia")}</small>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-sm align-middle mb-0">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Grupo</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${attendanceRows || '<tr><td colspan="3" class="text-muted">Todavia no tiene asistencia registrada.</td></tr>'}
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  `;
+
+  const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+  modal.show();
+}
+
+function editStudentFromProfile(code) {
+  const student = getStudentByCode(code);
+
+  if (!student) {
+    return;
+  }
+
+  editingStudentCode = student.code;
+  fillStudentForm(student);
+  setStudentFormMode("edit");
+  bootstrap.Modal.getOrCreateInstance(document.getElementById("studentProfileModal")).hide();
+  document.getElementById("studentForm").scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 // Pinta la tabla de estudiantes registrados.
 function renderStudentsTable() {
   const tableBody = document.getElementById("studentsTable");
@@ -342,8 +506,15 @@ function renderStudentsTable() {
     return `
     <tr class="${student.active === false ? "inactive-student" : ""}">
       <td><strong>${escapeHtml(student.code)}</strong></td>
-      <td>${escapeHtml(getStudentDisplayName(student))}</td>
-      <td>${escapeHtml(student.age)}</td>
+      <td>
+        <button class="student-name-button view-student-profile" type="button" data-code="${escapeHtml(student.code)}">
+          ${escapeHtml(getStudentDisplayName(student))}
+        </button>
+      </td>
+      <td>
+        <strong>${escapeHtml(student.age)}</strong>
+        <span class="table-subtext">${escapeHtml(formatDate(student.birthDate))}</span>
+      </td>
       <td>${escapeHtml(student.groupLabel)}</td>
       <td>${escapeHtml(student.guardianName || "")}</td>
       <td>
@@ -386,6 +557,13 @@ function renderStudentsTable() {
     button.addEventListener("click", () => {
       const student = students.find((item) => item.code === button.dataset.code);
       renderQr(student);
+    });
+  });
+
+  tableBody.querySelectorAll(".view-student-profile").forEach((button) => {
+    button.addEventListener("click", () => {
+      const student = getStudentByCode(button.dataset.code);
+      openStudentProfile(student);
     });
   });
 
@@ -703,6 +881,9 @@ async function setupTeacherPanel() {
   const searchInput = document.getElementById("studentSearch");
   const downloadButton = document.getElementById("downloadQr");
   const cancelEditButton = document.getElementById("cancelStudentEdit");
+  const birthDateInput = document.getElementById("studentBirthDate");
+  const ageInput = document.getElementById("studentAge");
+  const profileEditButton = document.getElementById("profileEditStudent");
 
   if (window.PRFirebase && typeof window.PRFirebase.requireAuth === "function") {
     const profile = await window.PRFirebase.requireAuth();
@@ -716,6 +897,19 @@ async function setupTeacherPanel() {
   saveStudents(students);
   renderStudentsTable();
   setupRewardsForm();
+
+  const pendingEditCode = sessionStorage.getItem("crece_edit_student_code");
+  if (pendingEditCode) {
+    sessionStorage.removeItem("crece_edit_student_code");
+    const pendingStudent = getStudentByCode(pendingEditCode);
+
+    if (pendingStudent) {
+      editingStudentCode = pendingStudent.code;
+      fillStudentForm(pendingStudent);
+      setStudentFormMode("edit");
+      form.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -750,6 +944,14 @@ async function setupTeacherPanel() {
   searchInput.addEventListener("input", renderStudentsTable);
   downloadButton.addEventListener("click", downloadVisibleQr);
   cancelEditButton.addEventListener("click", () => resetStudentForm(form));
+  profileEditButton.addEventListener("click", () => editStudentFromProfile(profileEditButton.dataset.code));
+  birthDateInput.addEventListener("change", () => {
+    const calculatedAge = calculateAgeFromBirthDate(birthDateInput.value);
+
+    if (calculatedAge) {
+      ageInput.value = calculatedAge;
+    }
+  });
 }
 
 // Carga la clase actual del grupo seleccionado dentro del editor.

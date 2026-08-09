@@ -60,6 +60,77 @@ function normalizeText(value) {
   return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+function escapeHtml(value) {
+  return String(value || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function getStudentDisplayName(student) {
+  return String(student.fullName || `${student.name || ""} ${student.lastName || ""}`).trim();
+}
+
+function formatDate(value) {
+  if (!value) {
+    return "No registrada";
+  }
+
+  const date = new Date(`${value}T00:00:00`);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return date.toLocaleDateString("es-PR", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  });
+}
+
+function normalizeRewardData(student) {
+  return {
+    ...student,
+    rewardPoints: Number(student.rewardPoints || 0),
+    rewardHistory: Array.isArray(student.rewardHistory) ? student.rewardHistory : []
+  };
+}
+
+function getStudentAttendance(student) {
+  const studentCode = String(student.code || "").toUpperCase();
+
+  return attendanceRecords
+    .filter((record) => String(record.studentCode || "").toUpperCase() === studentCode)
+    .sort((a, b) => new Date(b.createdAt || b.date) - new Date(a.createdAt || a.date));
+}
+
+function getFilteredStudents() {
+  const searchInput = document.getElementById("studentProfileSearch");
+  const groupSelect = document.getElementById("studentProfileGroup");
+  const query = normalizeText(searchInput ? searchInput.value : "");
+  const selectedGroup = groupSelect ? groupSelect.value : "";
+
+  return studentRecords
+    .map(normalizeRewardData)
+    .filter((student) => {
+      const matchesGroup = !selectedGroup || student.group === selectedGroup;
+      const searchText = normalizeText([
+        student.code,
+        getStudentDisplayName(student),
+        student.guardianName,
+        student.guardianPhone,
+        student.emergencyPhone,
+        student.guardianEmail,
+        student.groupLabel
+      ].join(" "));
+
+      return matchesGroup && (!query || searchText.includes(query));
+    });
+}
+
 // Filtra por nombre o grupo según lo que escriba el administrador.
 function getFilteredRecords() {
   const searchInput = document.getElementById("searchInput");
@@ -123,6 +194,94 @@ function renderTable(records) {
   `).join("");
 }
 
+function renderStudentProfiles() {
+  const container = document.getElementById("studentProfiles");
+
+  if (!container) {
+    return;
+  }
+
+  const filteredStudents = getFilteredStudents();
+
+  if (!filteredStudents.length) {
+    container.innerHTML = `
+      <div class="empty-state admin-profile-empty">
+        <i class="bi bi-person-vcard"></i>
+        <span>No hay expedientes para mostrar.</span>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filteredStudents.map((student) => {
+    const attendance = getStudentAttendance(student);
+    const latestAttendance = attendance[0];
+    const hasAlerts = student.allergies || student.medicalNotes || student.careNotes;
+
+    return `
+      <article class="admin-profile-card ${student.active === false ? "inactive-student" : ""}">
+        <div class="admin-profile-head">
+          <div class="profile-avatar">${escapeHtml((student.name || "?").charAt(0))}</div>
+          <div>
+            <span class="profile-code">${escapeHtml(student.code || "")}</span>
+            <h3>${escapeHtml(getStudentDisplayName(student))}</h3>
+            <p>${escapeHtml(student.groupLabel || "")} - ${escapeHtml(student.age || "")} anos - Nacimiento: ${escapeHtml(formatDate(student.birthDate))}</p>
+          </div>
+        </div>
+
+        <div class="admin-profile-metrics">
+          <span><strong>${attendance.length}</strong> asistencias</span>
+          <span><strong>${student.rewardPoints}</strong> puntos</span>
+          <span>${student.active === false ? "Inactivo" : "Activo"}</span>
+        </div>
+
+        <div class="admin-profile-details">
+          <p><strong>Encargado:</strong> ${escapeHtml(student.guardianName || "No registrado")}</p>
+          <p><strong>Telefono:</strong> ${escapeHtml(student.guardianPhone || "No registrado")}</p>
+          <p><strong>Alterno:</strong> ${escapeHtml(student.emergencyPhone || "No registrado")}</p>
+          <p><strong>Email:</strong> ${escapeHtml(student.guardianEmail || "No registrado")}</p>
+          <p><strong>Recoge:</strong> ${escapeHtml(student.authorizedPickup || "No registrado")}</p>
+          <p><strong>Ultima asistencia:</strong> ${escapeHtml(latestAttendance ? `${latestAttendance.date} ${latestAttendance.time}` : "Sin asistencia")}</p>
+        </div>
+
+        <div class="admin-profile-notes ${hasAlerts ? "has-alerts" : ""}">
+          <p><strong>Alergias:</strong> ${escapeHtml(student.allergies || "No registradas")}</p>
+          <p><strong>Notas medicas:</strong> ${escapeHtml(student.medicalNotes || "No registradas")}</p>
+          <p><strong>Notas de clase:</strong> ${escapeHtml(student.careNotes || "No registradas")}</p>
+        </div>
+
+        <div class="admin-profile-actions">
+          <button class="btn btn-sm btn-primary admin-edit-student" type="button" data-code="${escapeHtml(student.code)}">
+            <i class="bi bi-pencil-square"></i>
+            Editar
+          </button>
+          <button class="btn btn-sm btn-outline-secondary admin-view-attendance" type="button" data-code="${escapeHtml(student.code)}">
+            <i class="bi bi-clock-history"></i>
+            Ver asistencia
+          </button>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  container.querySelectorAll(".admin-edit-student").forEach((button) => {
+    button.addEventListener("click", () => {
+      sessionStorage.setItem("crece_edit_student_code", button.dataset.code);
+      window.location.href = "maestro.html";
+    });
+  });
+
+  container.querySelectorAll(".admin-view-attendance").forEach((button) => {
+    const student = studentRecords.find((record) => record.code === button.dataset.code);
+    button.addEventListener("click", () => {
+      const searchInput = document.getElementById("searchInput");
+      searchInput.value = student ? student.code : button.dataset.code;
+      renderDashboard();
+      document.getElementById("attendanceTable").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
 // Crea o actualiza la grafica de asistencia por grupo.
 function renderChart(records) {
   const canvas = document.getElementById("groupChart");
@@ -163,6 +322,7 @@ function renderDashboard() {
   const records = getFilteredRecords();
   renderStats(records);
   renderTable(records);
+  renderStudentProfiles();
   renderChart(records);
 }
 
@@ -229,6 +389,8 @@ function clearLocalRecords() {
 // Conecta botones, búsqueda y cierre de sesion.
 function setupAdminEvents() {
   document.getElementById("searchInput").addEventListener("input", renderDashboard);
+  document.getElementById("studentProfileSearch").addEventListener("input", renderStudentProfiles);
+  document.getElementById("studentProfileGroup").addEventListener("change", renderStudentProfiles);
   document.getElementById("exportExcel").addEventListener("click", exportToExcel);
   document.getElementById("exportPdf").addEventListener("click", exportToPdf);
   document.getElementById("clearDemoData").addEventListener("click", clearLocalRecords);

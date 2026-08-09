@@ -1107,6 +1107,270 @@ body {
   flex-wrap: nowrap;
 }
 
+.student-name-button {
+  padding: 0;
+  border: 0;
+  color: #0b3d91;
+  background: transparent;
+  font: inherit;
+  font-weight: 900;
+  text-align: left;
+  text-decoration: none;
+}
+
+.student-name-button:hover {
+  color: #072a64;
+  text-decoration: underline;
+}
+
+.table-subtext {
+  display: block;
+  color: #667085;
+  font-size: 0.76rem;
+  font-weight: 600;
+}
+
+.student-profile-modal {
+  border: 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.student-profile-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.student-profile-summary,
+.student-profile-progress,
+.student-attendance-card,
+.admin-profile-card {
+  border: 1px solid #dfe8f5;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 28px rgba(11, 61, 145, 0.08);
+}
+
+.student-profile-summary,
+.student-profile-progress {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+}
+
+.student-profile-summary {
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #f8fbff, #eef7f0);
+}
+
+.profile-avatar {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  border-radius: 16px;
+  color: #fff;
+  background: linear-gradient(135deg, #0b3d91, #3f9a42);
+  font-size: 1.55rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.profile-code {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 4px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  color: #0b3d91;
+  background: #e8f3ff;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.student-profile-summary h3,
+.admin-profile-head h3 {
+  margin: 0;
+  color: #0b1f3a;
+  font-size: 1.35rem;
+}
+
+.student-profile-summary p,
+.admin-profile-head p {
+  margin: 2px 0 0;
+  color: #52627a;
+}
+
+.student-profile-progress {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.student-profile-progress span,
+.student-profile-progress small {
+  display: block;
+  color: #52627a;
+}
+
+.student-profile-progress strong {
+  display: block;
+  color: #0b1f3a;
+  font-size: 1.1rem;
+}
+
+.profile-note-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.profile-note {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid #e4eaf5;
+  border-radius: 10px;
+  background: #f8fbff;
+}
+
+.profile-note.warning {
+  border-color: #f4d49b;
+  background: #fff8ec;
+}
+
+.profile-note i {
+  color: #0b3d91;
+  font-size: 1.1rem;
+}
+
+.profile-note strong,
+.profile-note span {
+  display: block;
+}
+
+.profile-note strong {
+  color: #0b1f3a;
+  font-size: 0.82rem;
+}
+
+.profile-note span {
+  color: #52627a;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.student-attendance-card {
+  padding: 14px;
+}
+
+.attendance-metric {
+  display: grid;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.attendance-metric span,
+.attendance-metric small {
+  color: #52627a;
+}
+
+.attendance-metric strong {
+  color: #0b3d91;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.admin-profile-tools {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-profile-tools .form-select {
+  width: min(190px, 100%);
+}
+
+.admin-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 14px;
+}
+
+.admin-profile-card {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
+.admin-profile-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.admin-profile-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.admin-profile-metrics span {
+  display: grid;
+  gap: 2px;
+  padding: 10px;
+  border-radius: 10px;
+  color: #52627a;
+  background: #f5f8fc;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.admin-profile-metrics strong {
+  color: #0b3d91;
+  font-size: 1.25rem;
+}
+
+.admin-profile-details,
+.admin-profile-notes {
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f8fbff;
+}
+
+.admin-profile-notes.has-alerts {
+  background: #fff8ec;
+}
+
+.admin-profile-details p,
+.admin-profile-notes p {
+  margin: 0;
+  color: #52627a;
+  font-size: 0.88rem;
+}
+
+.admin-profile-details strong,
+.admin-profile-notes strong {
+  color: #0b1f3a;
+}
+
+.admin-profile-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.admin-profile-empty {
+  min-height: 160px;
+}
+
 .reward-pill {
   display: inline-flex;
   align-items: center;
@@ -2503,6 +2767,7 @@ body {
   .schedule-hero,
   .schedule-filters,
   .reward-prize-status,
+  .student-profile-summary,
   .communication-filter-row,
   .communication-teacher-card,
   .communication-assignment-card,
@@ -2512,6 +2777,7 @@ body {
   }
 
   .communication-filter-row .form-select,
+  .admin-profile-tools .form-select,
   .communication-filter-row .search-inline {
     width: 100%;
   }

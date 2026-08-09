@@ -90,6 +90,27 @@
     <section class="app-card mt-4">
       <div class="panel-heading">
         <div>
+          <h2>Expedientes de estudiantes</h2>
+          <p>Informacion completa, progreso, notas y asistencia por nino.</p>
+        </div>
+        <div class="admin-profile-tools">
+          <div class="input-group search-inline">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input id="studentProfileSearch" class="form-control" type="search" placeholder="Buscar expediente">
+          </div>
+          <select id="studentProfileGroup" class="form-select">
+            <option value="">Todos los grupos</option>
+            <option value="ninos">Ninos</option>
+            <option value="juveniles">Juveniles</option>
+          </select>
+        </div>
+      </div>
+      <div id="studentProfiles" class="admin-profile-grid"></div>
+    </section>
+
+    <section class="app-card mt-4">
+      <div class="panel-heading">
+        <div>
           <h2>Historial</h2>
           <p>Registros guardados en este navegador.</p>
         </div>
