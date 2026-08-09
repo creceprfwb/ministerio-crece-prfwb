@@ -27,6 +27,7 @@ let students = [];
 let selectedQrStudent = null;
 let editingStudentCode = null;
 let selectedRewardStudentCode = null;
+let selectedInlineQrCode = null;
 
 function storageKey(baseKey) {
   return window.PRFirebase && typeof window.PRFirebase.getScopedStorageKey === "function"
@@ -467,6 +468,36 @@ function renderQr(student) {
   downloadButton.disabled = false;
 }
 
+function renderInlineQr(student) {
+  const holder = document.querySelector(`[data-inline-qr="${student.code}"]`);
+
+  if (!holder) {
+    return;
+  }
+
+  holder.innerHTML = "";
+
+  new QRCode(holder, {
+    text: student.code,
+    width: 142,
+    height: 142,
+    colorDark: "#0B3D91",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+}
+
+function downloadQrCanvas(canvas, student) {
+  if (!canvas || !student) {
+    return;
+  }
+
+  const link = document.createElement("a");
+  link.download = `${student.code}-${getStudentDisplayName(student)}.png`.replace(/\s+/g, "-");
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+}
+
 function buildProfileNote(label, value, icon, tone = "") {
   return `
     <article class="profile-note ${tone}">
@@ -601,6 +632,30 @@ function renderStudentsTable() {
     const rewardLevel = getRewardLevel(student.rewardPoints);
     const profileFlags = getProfileFlags(student);
 
+    const inlineQrRow = selectedInlineQrCode === student.code ? `
+    <tr class="inline-qr-row">
+      <td colspan="11">
+        <div class="inline-qr-card">
+          <div>
+            <p class="section-kicker mb-1">Codigo QR</p>
+            <h3>${escapeHtml(getStudentDisplayName(student))}</h3>
+            <span>${escapeHtml(student.code)} - ${escapeHtml(student.groupLabel)}</span>
+          </div>
+          <div class="inline-qr-holder" data-inline-qr="${escapeHtml(student.code)}"></div>
+          <div class="inline-qr-actions">
+            <button class="btn btn-sm btn-outline-primary download-inline-qr" type="button" data-code="${escapeHtml(student.code)}">
+              <i class="bi bi-download"></i>
+              Descargar
+            </button>
+            <button class="btn btn-sm btn-outline-secondary close-inline-qr" type="button" data-code="${escapeHtml(student.code)}">
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </td>
+    </tr>
+  ` : "";
+
     return `
     <tr class="${student.active === false ? "inactive-student" : ""}">
       <td><strong>${escapeHtml(student.code)}</strong></td>
@@ -634,7 +689,7 @@ function renderStudentsTable() {
       </td>
       <td>
         <button class="btn btn-sm btn-outline-primary show-qr" type="button" data-code="${student.code}">
-          <i class="bi bi-qr-code"></i> Ver
+          <i class="bi bi-qr-code"></i> ${selectedInlineQrCode === student.code ? "Ocultar" : "Ver"}
         </button>
       </td>
       <td>
@@ -648,13 +703,40 @@ function renderStudentsTable() {
         </div>
       </td>
     </tr>
+    ${inlineQrRow}
   `;
   }).join("");
 
+  if (selectedInlineQrCode) {
+    const selectedStudent = getStudentByCode(selectedInlineQrCode);
+    if (selectedStudent) {
+      renderInlineQr(selectedStudent);
+    }
+  }
+
   tableBody.querySelectorAll(".show-qr").forEach((button) => {
     button.addEventListener("click", () => {
-      const student = students.find((item) => item.code === button.dataset.code);
-      renderQr(student);
+      selectedInlineQrCode = selectedInlineQrCode === button.dataset.code ? null : button.dataset.code;
+      renderStudentsTable();
+    });
+  });
+
+  tableBody.querySelectorAll(".close-inline-qr").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (selectedInlineQrCode === button.dataset.code) {
+        selectedInlineQrCode = null;
+      }
+
+      renderStudentsTable();
+    });
+  });
+
+  tableBody.querySelectorAll(".download-inline-qr").forEach((button) => {
+    button.addEventListener("click", () => {
+      const student = getStudentByCode(button.dataset.code);
+      const row = button.closest(".inline-qr-row");
+      const canvas = row ? row.querySelector("canvas") : null;
+      downloadQrCanvas(canvas, student);
     });
   });
 
@@ -962,15 +1044,7 @@ function setupRewardsForm() {
 // Descarga el QR visible como imagen PNG.
 function downloadVisibleQr() {
   const canvas = document.querySelector("#qrResult canvas");
-
-  if (!canvas || !selectedQrStudent) {
-    return;
-  }
-
-  const link = document.createElement("a");
-  link.download = `${selectedQrStudent.code}-${getStudentDisplayName(selectedQrStudent)}.png`.replace(/\s+/g, "-");
-  link.href = canvas.toDataURL("image/png");
-  link.click();
+  downloadQrCanvas(canvas, selectedQrStudent);
 }
 
 // Conecta el formulario y los controles del panel.

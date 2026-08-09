@@ -1130,6 +1130,51 @@ body {
   font-weight: 600;
 }
 
+.inline-qr-row td {
+  background: #f8fbff;
+}
+
+.inline-qr-card {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 18px;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #d9e7ff;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ffffff, #eef6ff);
+  box-shadow: 0 10px 24px rgba(11, 61, 145, 0.08);
+}
+
+.inline-qr-card h3 {
+  margin: 0;
+  color: #0b1f3a;
+  font-size: 1.05rem;
+}
+
+.inline-qr-card span {
+  color: #52627a;
+  font-size: 0.9rem;
+}
+
+.inline-qr-holder {
+  padding: 10px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 18px rgba(11, 61, 145, 0.1);
+}
+
+.inline-qr-holder canvas,
+.inline-qr-holder img {
+  display: block;
+}
+
+.inline-qr-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 .student-profile-modal {
   border: 0;
   border-radius: 14px;
@@ -2791,6 +2836,7 @@ body {
   .schedule-filters,
   .reward-prize-status,
   .student-profile-summary,
+  .inline-qr-card,
   .communication-filter-row,
   .communication-teacher-card,
   .communication-assignment-card,
@@ -2803,6 +2849,11 @@ body {
   .admin-profile-tools .form-select,
   .communication-filter-row .search-inline {
     width: 100%;
+  }
+
+  .inline-qr-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .resource-hero-badge {
