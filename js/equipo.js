@@ -61,7 +61,7 @@ function getRoleLabel(role) {
 
 function getGroupLabel(group) {
   const labels = {
-    ninos: "Ninos",
+    ninos: "Niños",
     juveniles: "Juveniles",
     ambos: "Ambos grupos"
   };

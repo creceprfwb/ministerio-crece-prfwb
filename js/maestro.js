@@ -50,7 +50,7 @@ function getGroupByAge(age) {
 
 function getGroupByOverride(group) {
   if (group === "ninos") {
-    return { group: "ninos", groupLabel: "Ninos" };
+    return { group: "ninos", groupLabel: "Niños" };
   }
 
   if (group === "juveniles") {
@@ -97,7 +97,7 @@ function createStudentCode() {
   return `PRF-${number}`;
 }
 
-// Evita repetir codigos en el navegador actual.
+// Evita repetir códigos en el navegador actual.
 function createUniqueStudentCode() {
   let code = createStudentCode();
 
@@ -108,7 +108,7 @@ function createUniqueStudentCode() {
   return code;
 }
 
-// Normaliza texto para busquedas.
+// Normaliza texto para búsquedas.
 function normalizeText(value) {
   return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
@@ -145,7 +145,7 @@ function getRelationshipLabel(value) {
   const labels = {
     padre_madre: "Padre / Madre",
     abuelo_abuela: "Abuelo / Abuela",
-    tio_tia: "Tio / Tia",
+    tio_tia: "Tío / Tía",
     padrino_madrina: "Padrino / Madrina",
     tutor: "Tutor legal",
     otro: "Otro"
@@ -538,7 +538,7 @@ function openStudentProfile(student) {
         <div>
           <span class="profile-code">${escapeHtml(normalizedStudent.code)}</span>
           <h3>${escapeHtml(getStudentDisplayName(normalizedStudent))}</h3>
-          <p>${escapeHtml(normalizedStudent.groupLabel || "")} - ${escapeHtml(normalizedStudent.age || "")} anos</p>
+          <p>${escapeHtml(normalizedStudent.groupLabel || "")} - ${escapeHtml(normalizedStudent.age || "")} años</p>
           <p>Nacimiento: ${escapeHtml(formatDate(normalizedStudent.birthDate))}</p>
         </div>
       </article>
@@ -547,7 +547,7 @@ function openStudentProfile(student) {
         <div>
           <span>Progreso CRECE</span>
           <strong>${escapeHtml(rewardLevel.name)}</strong>
-          <small>${normalizedStudent.rewardPoints} puntos${nextLevel ? ` - proxima meta ${nextLevel.points}` : " - meta mayor alcanzada"}</small>
+          <small>${normalizedStudent.rewardPoints} puntos${nextLevel ? ` - próxima meta ${nextLevel.points}` : " - meta mayor alcanzada"}</small>
         </div>
         <div class="reward-progress"><span style="width: ${getRewardProgress(normalizedStudent.rewardPoints)}%"></span></div>
       </article>
@@ -555,15 +555,15 @@ function openStudentProfile(student) {
       <div class="profile-note-grid">
         ${buildProfileNote("Encargado", normalizedStudent.guardianName, "bi-person-badge")}
         ${buildProfileNote("Parentesco", getRelationshipLabel(normalizedStudent.guardianRelationship), "bi-diagram-3")}
-        ${buildProfileNote("Telefono principal", normalizedStudent.guardianPhone, "bi-telephone")}
-        ${buildProfileNote("Telefono alterno", normalizedStudent.emergencyPhone, "bi-telephone-plus")}
+        ${buildProfileNote("Teléfono principal", normalizedStudent.guardianPhone, "bi-telephone")}
+        ${buildProfileNote("Teléfono alterno", normalizedStudent.emergencyPhone, "bi-telephone-plus")}
         ${buildProfileNote("Email principal", normalizedStudent.guardianEmail, "bi-envelope")}
         ${buildProfileNote("Segundo email", normalizedStudent.guardianEmailSecondary, "bi-envelope-plus")}
         ${buildProfileNote("Tipo de registro", getStudentStatusLabel(normalizedStudent.studentStatus), "bi-person-lines-fill", normalizedStudent.studentStatus === "regular" ? "" : "visitor")}
         ${buildProfileNote("Pulserita o ID", getIdDeliveryLabel(normalizedStudent.idDeliveryStatus), "bi-person-badge-fill", normalizedStudent.idDeliveryStatus && normalizedStudent.idDeliveryStatus !== "none" ? "success" : "")}
         ${buildProfileNote("Recogido autorizado", normalizedStudent.authorizedPickup, "bi-shield-check")}
         ${buildProfileNote("Alergias", normalizedStudent.allergies, "bi-exclamation-triangle", normalizedStudent.allergies ? "warning" : "")}
-        ${buildProfileNote("Notas medicas", normalizedStudent.medicalNotes, "bi-heart-pulse", normalizedStudent.medicalNotes ? "warning" : "")}
+        ${buildProfileNote("Notas médicas", normalizedStudent.medicalNotes, "bi-heart-pulse", normalizedStudent.medicalNotes ? "warning" : "")}
         ${buildProfileNote("Notas de visita", normalizedStudent.visitNotes, "bi-door-open", normalizedStudent.visitNotes ? "visitor" : "")}
         ${buildProfileNote("Notas para la clase", normalizedStudent.careNotes, "bi-journal-text", normalizedStudent.careNotes ? "note" : "")}
       </div>
@@ -572,7 +572,7 @@ function openStudentProfile(student) {
         <div class="attendance-metric">
           <span>Asistencias</span>
           <strong>${attendance.length}</strong>
-          <small>Ultima: ${escapeHtml(latestAttendance ? latestAttendance.date : "Sin asistencia")}</small>
+          <small>Última: ${escapeHtml(latestAttendance ? latestAttendance.date : "Sin asistencia")}</small>
         </div>
         <div class="table-responsive">
           <table class="table table-sm align-middle mb-0">
@@ -584,7 +584,7 @@ function openStudentProfile(student) {
               </tr>
             </thead>
             <tbody>
-              ${attendanceRows || '<tr><td colspan="3" class="text-muted">Todavia no tiene asistencia registrada.</td></tr>'}
+              ${attendanceRows || '<tr><td colspan="3" class="text-muted">Todavía no tiene asistencia registrada.</td></tr>'}
             </tbody>
           </table>
         </div>

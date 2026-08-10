@@ -91,7 +91,7 @@ function getRelationshipLabel(value) {
   const labels = {
     padre_madre: "Padre / Madre",
     abuelo_abuela: "Abuelo / Abuela",
-    tio_tia: "Tio / Tia",
+    tio_tia: "Tío / Tía",
     padrino_madrina: "Padrino / Madrina",
     tutor: "Tutor legal",
     otro: "Otro"
@@ -282,7 +282,7 @@ function renderStudentProfiles() {
           <div>
             <span class="profile-code">${escapeHtml(student.code || "")}</span>
             <h3>${escapeHtml(getStudentDisplayName(student))}</h3>
-            <p>${escapeHtml(student.groupLabel || "")} - ${escapeHtml(student.age || "")} anos - Nacimiento: ${escapeHtml(formatDate(student.birthDate))}</p>
+            <p>${escapeHtml(student.groupLabel || "")} - ${escapeHtml(student.age || "")} años - Nacimiento: ${escapeHtml(formatDate(student.birthDate))}</p>
           </div>
         </div>
 
@@ -295,20 +295,20 @@ function renderStudentProfiles() {
         <div class="admin-profile-details">
           <p><strong>Encargado:</strong> ${escapeHtml(student.guardianName || "No registrado")}</p>
           <p><strong>Parentesco:</strong> ${escapeHtml(getRelationshipLabel(student.guardianRelationship))}</p>
-          <p><strong>Telefono:</strong> ${escapeHtml(student.guardianPhone || "No registrado")}</p>
+          <p><strong>Teléfono:</strong> ${escapeHtml(student.guardianPhone || "No registrado")}</p>
           <p><strong>Alterno:</strong> ${escapeHtml(student.emergencyPhone || "No registrado")}</p>
           <p><strong>Email principal:</strong> ${escapeHtml(student.guardianEmail || "No registrado")}</p>
           <p><strong>Segundo email:</strong> ${escapeHtml(student.guardianEmailSecondary || "No registrado")}</p>
           <p><strong>Recoge:</strong> ${escapeHtml(student.authorizedPickup || "No registrado")}</p>
           <p><strong>Pulserita / ID:</strong> ${escapeHtml(getIdDeliveryLabel(student.idDeliveryStatus))}</p>
           <p><strong>Grupo:</strong> ${escapeHtml(student.groupOverride ? `${student.groupLabel} asignado manualmente` : `${student.groupLabel} por edad`)}</p>
-          <p><strong>Ultima asistencia:</strong> ${escapeHtml(latestAttendance ? `${latestAttendance.date} ${latestAttendance.time}` : "Sin asistencia")}</p>
+          <p><strong>Última asistencia:</strong> ${escapeHtml(latestAttendance ? `${latestAttendance.date} ${latestAttendance.time}` : "Sin asistencia")}</p>
         </div>
 
         <div class="admin-profile-notes ${hasAlerts ? "has-alerts" : ""}">
           <p><strong>Notas de visita:</strong> ${escapeHtml(student.visitNotes || "No registradas")}</p>
           <p><strong>Alergias:</strong> ${escapeHtml(student.allergies || "No registradas")}</p>
-          <p><strong>Notas medicas:</strong> ${escapeHtml(student.medicalNotes || "No registradas")}</p>
+          <p><strong>Notas médicas:</strong> ${escapeHtml(student.medicalNotes || "No registradas")}</p>
           <p><strong>Notas de clase:</strong> ${escapeHtml(student.careNotes || "No registradas")}</p>
         </div>
 
