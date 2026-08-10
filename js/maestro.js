@@ -440,6 +440,7 @@ function resetStudentForm(form) {
 function renderQr(student) {
   const result = document.getElementById("qrResult");
   const downloadButton = document.getElementById("downloadQr");
+  const passButton = document.getElementById("downloadPass");
 
   selectedQrStudent = student;
   result.innerHTML = "";
@@ -466,6 +467,9 @@ function renderQr(student) {
   });
 
   downloadButton.disabled = false;
+  if (passButton) {
+    passButton.disabled = false;
+  }
 }
 
 function renderInlineQr(student) {
@@ -494,6 +498,156 @@ function downloadQrCanvas(canvas, student) {
 
   const link = document.createElement("a");
   link.download = `${student.code}-${getStudentDisplayName(student)}.png`.replace(/\s+/g, "-");
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+}
+
+function loadPassImage(src) {
+  return new Promise((resolve) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => resolve(null);
+    image.src = src;
+  });
+}
+
+function drawWrappedText(context, text, x, y, maxWidth, lineHeight) {
+  const words = String(text || "").split(" ");
+  let line = "";
+  let cursorY = y;
+
+  words.forEach((word, index) => {
+    const testLine = line ? `${line} ${word}` : word;
+    const isLast = index === words.length - 1;
+
+    if (context.measureText(testLine).width > maxWidth && line) {
+      context.fillText(line, x, cursorY);
+      line = word;
+      cursorY += lineHeight;
+    } else {
+      line = testLine;
+    }
+
+    if (isLast && line) {
+      context.fillText(line, x, cursorY);
+    }
+  });
+
+  return cursorY;
+}
+
+function drawRoundedRect(context, x, y, width, height, radius) {
+  context.beginPath();
+  context.moveTo(x + radius, y);
+  context.lineTo(x + width - radius, y);
+  context.quadraticCurveTo(x + width, y, x + width, y + radius);
+  context.lineTo(x + width, y + height - radius);
+  context.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+  context.lineTo(x + radius, y + height);
+  context.quadraticCurveTo(x, y + height, x, y + height - radius);
+  context.lineTo(x, y + radius);
+  context.quadraticCurveTo(x, y, x + radius, y);
+  context.closePath();
+  context.fill();
+}
+
+function createQrCanvas(text, size) {
+  const holder = document.createElement("div");
+  holder.style.position = "fixed";
+  holder.style.left = "-9999px";
+  holder.style.top = "-9999px";
+  document.body.appendChild(holder);
+
+  new QRCode(holder, {
+    text,
+    width: size,
+    height: size,
+    colorDark: "#0B3D91",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+
+  const qrCanvas = holder.querySelector("canvas");
+  const output = document.createElement("canvas");
+  output.width = size;
+  output.height = size;
+
+  if (qrCanvas) {
+    output.getContext("2d").drawImage(qrCanvas, 0, 0, size, size);
+  }
+
+  holder.remove();
+  return output;
+}
+
+async function downloadStudentDigitalPass(student) {
+  if (!student) {
+    return;
+  }
+
+  const canvas = document.createElement("canvas");
+  canvas.width = 1080;
+  canvas.height = 1700;
+  const context = canvas.getContext("2d");
+  const logo = await loadPassImage("assets/logo.png");
+  const qrCanvas = createQrCanvas(student.code, 560);
+  const studentName = getStudentDisplayName(student);
+
+  context.fillStyle = "#f4f7fb";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  context.fillStyle = "#0B3D91";
+  context.fillRect(0, 0, canvas.width, 360);
+
+  context.fillStyle = "#ffffff";
+  drawRoundedRect(context, 70, 90, 940, 1510, 42);
+
+  context.fillStyle = "#eaf2ff";
+  drawRoundedRect(context, 110, 130, 860, 250, 30);
+
+  if (logo) {
+    context.drawImage(logo, 145, 165, 300, 96);
+  }
+
+  context.fillStyle = "#0B3D91";
+  context.font = "900 58px Arial";
+  context.fillText("PASE DIGITAL", 145, 315);
+
+  context.fillStyle = "#3f9a42";
+  context.font = "800 34px Arial";
+  context.fillText("Ministerio CRECE PRFWB", 145, 360);
+
+  context.fillStyle = "#0b1f3a";
+  context.font = "900 68px Arial";
+  const nameY = drawWrappedText(context, studentName, 145, 505, 790, 74);
+
+  context.fillStyle = "#52627a";
+  context.font = "700 34px Arial";
+  context.fillText(`${student.groupLabel || "Grupo"} - ${student.age || ""} años`, 145, nameY + 64);
+
+  context.fillStyle = "#eef6ff";
+  drawRoundedRect(context, 145, 690, 790, 790, 36);
+
+  context.fillStyle = "#ffffff";
+  drawRoundedRect(context, 245, 780, 590, 590, 28);
+  context.drawImage(qrCanvas, 260, 795, 560, 560);
+
+  context.fillStyle = "#0B3D91";
+  context.font = "900 48px Arial";
+  context.textAlign = "center";
+  context.fillText(student.code, canvas.width / 2, 1445);
+
+  context.fillStyle = "#52627a";
+  context.font = "700 30px Arial";
+  context.fillText("Presente este pase para registrar asistencia", canvas.width / 2, 1512);
+
+  context.fillStyle = "#0b1f3a";
+  context.font = "700 24px Arial";
+  context.fillText("CRECE - Conocer a Cristo, crecer en fe y compartir su amor.", canvas.width / 2, 1560);
+  context.textAlign = "left";
+
+  const link = document.createElement("a");
+  link.download = `${student.code}-pase-crece.png`.replace(/\s+/g, "-");
   link.href = canvas.toDataURL("image/png");
   link.click();
 }
@@ -647,6 +801,10 @@ function renderStudentsTable() {
               <i class="bi bi-download"></i>
               Descargar
             </button>
+            <button class="btn btn-sm btn-primary download-digital-pass" type="button" data-code="${escapeHtml(student.code)}">
+              <i class="bi bi-phone"></i>
+              Descargar pase
+            </button>
             <button class="btn btn-sm btn-outline-secondary close-inline-qr" type="button" data-code="${escapeHtml(student.code)}">
               Cerrar
             </button>
@@ -737,6 +895,13 @@ function renderStudentsTable() {
       const row = button.closest(".inline-qr-row");
       const canvas = row ? row.querySelector("canvas") : null;
       downloadQrCanvas(canvas, student);
+    });
+  });
+
+  tableBody.querySelectorAll(".download-digital-pass").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const student = getStudentByCode(button.dataset.code);
+      await downloadStudentDigitalPass(student);
     });
   });
 
@@ -1052,6 +1217,7 @@ async function setupTeacherPanel() {
   const form = document.getElementById("studentForm");
   const searchInput = document.getElementById("studentSearch");
   const downloadButton = document.getElementById("downloadQr");
+  const downloadPassButton = document.getElementById("downloadPass");
   const cancelEditButton = document.getElementById("cancelStudentEdit");
   const birthDateInput = document.getElementById("studentBirthDate");
   const ageInput = document.getElementById("studentAge");
@@ -1119,6 +1285,7 @@ async function setupTeacherPanel() {
 
   searchInput.addEventListener("input", renderStudentsTable);
   downloadButton.addEventListener("click", downloadVisibleQr);
+  downloadPassButton.addEventListener("click", () => downloadStudentDigitalPass(selectedQrStudent));
   cancelEditButton.addEventListener("click", () => resetStudentForm(form));
   profileEditButton.addEventListener("click", () => editStudentFromProfile(profileEditButton.dataset.code));
   phoneInputs.forEach((input) => {
