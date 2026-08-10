@@ -772,6 +772,10 @@ async function generateUpcomingSchedule() {
 function setupTeacherForm() {
   const form = document.getElementById("teacherForm");
 
+  if (!form) {
+    return;
+  }
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
