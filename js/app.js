@@ -91,7 +91,9 @@ function getStudentSearchText(student) {
     student.guardianName,
     student.guardianPhone,
     student.emergencyPhone,
-    student.guardianEmail
+    student.guardianEmail,
+    student.guardianEmailSecondary,
+    student.guardianRelationship
   ].join(" "));
 }
 
@@ -159,11 +161,18 @@ function buildAttendanceRecord(student) {
     lastName: student.lastName || "",
     fullName: getStudentDisplayName(student),
     age: student.age,
+    birthDate: student.birthDate || "",
+    groupOverride: student.groupOverride || "",
+    studentStatus: student.studentStatus || "regular",
     guardianName: student.guardianName || "",
+    guardianRelationship: student.guardianRelationship || "padre_madre",
     guardianPhone: student.guardianPhone || "",
     emergencyPhone: student.emergencyPhone || "",
     guardianEmail: student.guardianEmail || "",
+    guardianEmailSecondary: student.guardianEmailSecondary || "",
     authorizedPickup: student.authorizedPickup || "",
+    idDeliveryStatus: student.idDeliveryStatus || "none",
+    visitNotes: student.visitNotes || "",
     allergies: student.allergies || "",
     medicalNotes: student.medicalNotes || "",
     careNotes: student.careNotes || "",
@@ -202,7 +211,7 @@ function showStudentPreview(student) {
       <i class="bi bi-exclamation-circle"></i>
       <div>
         <strong>Estudiante no encontrado</strong>
-        <span>Verifica el numero o registralo primero en el panel de maestra.</span>
+        <span>Verifica el número o regístralo primero en el panel de maestra.</span>
       </div>
     `;
     return;
@@ -215,8 +224,8 @@ function showStudentPreview(student) {
     <i class="bi bi-person-check"></i>
     <div>
       <strong>${getStudentDisplayName(student)}</strong>
-      <span>${student.code} ? ${student.age} anos ? ${student.groupLabel}</span>
-      <span>Encargado: ${student.guardianName || "No registrado"}${student.guardianPhone ? ` ? ${student.guardianPhone}` : ""}</span>
+      <span>${student.code} - ${student.age} años - ${student.groupLabel}</span>
+      <span>Encargado: ${student.guardianName || "No registrado"}${student.guardianPhone ? ` - ${student.guardianPhone}` : ""}</span>
       ${alerts.length ? `<span class="student-alert-line">${alerts.join(" | ")}</span>` : ""}
     </div>
   `;
@@ -329,8 +338,8 @@ function setupNameSearch() {
         <button class="student-result-button" type="button" data-code="${student.code}">
           <span>
             <strong>${getStudentDisplayName(student)}</strong>
-            <span>${student.code} ? ${student.age} anos ? ${student.groupLabel}</span>
-            <span>Encargado: ${student.guardianName || "No registrado"}${student.guardianPhone ? ` ? ${student.guardianPhone}` : ""}</span>
+            <span>${student.code} - ${student.age} años - ${student.groupLabel}</span>
+            <span>Encargado: ${student.guardianName || "No registrado"}${student.guardianPhone ? ` - ${student.guardianPhone}` : ""}</span>
             ${alerts.length ? `<span class="student-alert-line">${alerts.join(" | ")}</span>` : ""}
           </span>
           <i class="bi bi-chevron-right"></i>

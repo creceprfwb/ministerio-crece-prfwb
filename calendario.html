@@ -19,7 +19,8 @@
     </div>
     <div class="admin-actions">
       <a href="index.html" class="btn btn-light btn-sm"><i class="bi bi-house"></i> Inicio</a>
-      <a href="maestro.html" class="btn btn-outline-light btn-sm"><i class="bi bi-person-video3"></i> Panel de Maestra</a>
+      <a href="maestro.html" class="btn btn-outline-light btn-sm"><i class="bi bi-person-vcard"></i> Matricula</a>
+      <a href="equipo.html" class="btn btn-outline-light btn-sm"><i class="bi bi-person-lines-fill"></i> Equipo</a>
       <a href="comunicacion.html" class="btn btn-outline-light btn-sm"><i class="bi bi-whatsapp"></i> Comunicación</a>
       <a href="reporte-calendario.html" class="btn btn-outline-light btn-sm"><i class="bi bi-file-earmark-text"></i> Reporte</a>
       <button id="printSchedule" class="btn btn-outline-light btn-sm" type="button"><i class="bi bi-printer"></i> Imprimir</button>
@@ -146,54 +147,6 @@
       <div id="monthCalendar" class="month-calendar"></div>
       <div id="selectedDayPanel" class="selected-day-panel"></div>
     </section>
-
-    <details class="app-card schedule-fold mt-4">
-      <summary>
-        <span>
-          <strong>Registrar maestro</strong>
-          <small>Guarda contactos para asignarlos al calendario.</small>
-        </span>
-        <i class="bi bi-chevron-down"></i>
-      </summary>
-      <div class="schedule-fold-body">
-        <div class="panel-heading">
-          <div>
-            <h2>Registrar maestro</h2>
-            <p>Guarda contactos para asignarlos al calendario.</p>
-          </div>
-        </div>
-
-        <form id="teacherForm" class="teacher-form">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="teacherName" class="form-label">Nombre</label>
-              <input id="teacherName" class="form-control" type="text" required>
-            </div>
-            <div class="col-md-6">
-              <label for="teacherPhone" class="form-label">Teléfono / WhatsApp</label>
-              <input id="teacherPhone" class="form-control" type="tel" placeholder="787-000-0000">
-            </div>
-            <div class="col-md-6">
-              <label for="teacherEmail" class="form-label">Email opcional</label>
-              <input id="teacherEmail" class="form-control" type="email" placeholder="maestro@email.com">
-            </div>
-            <div class="col-md-6">
-              <label for="teacherGroup" class="form-label">Grupo preferido</label>
-              <select id="teacherGroup" class="form-select">
-                <option value="ambos">Ambos grupos</option>
-                <option value="ninos">Niños</option>
-                <option value="juveniles">Juveniles</option>
-              </select>
-            </div>
-          </div>
-
-          <button class="btn btn-primary w-100 mt-3" type="submit">
-            <i class="bi bi-person-plus"></i>
-            Guardar maestro
-          </button>
-        </form>
-      </div>
-    </details>
 
     <section class="app-card mt-4">
       <div class="panel-heading">

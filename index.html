@@ -23,70 +23,112 @@
         <div id="homeSession" class="home-session"></div>
       </header>
 
-      <section class="home-action-grid" aria-label="Acciones principales">
-        <a class="home-action primary-action" href="asistencia.html">
-          <i class="bi bi-qr-code-scan"></i>
-          <span>
-            <strong>Tomar Asistencia</strong>
-            <small>Escanear QR, escribir número o buscar por nombre.</small>
-          </span>
-        </a>
-        <a class="home-action" href="maestro.html">
-          <i class="bi bi-person-video3"></i>
-          <span>
-            <strong>Panel de Maestra</strong>
-            <small>Registrar estudiantes y crear códigos QR.</small>
-          </span>
-        </a>
-        <a class="home-action" href="biblioteca.html">
-          <i class="bi bi-journal-richtext"></i>
-          <span>
-            <strong>Biblioteca de Clases</strong>
-            <small>Solo maestras: revisar, publicar e imprimir clases.</small>
-          </span>
-        </a>
-        <a class="home-action" href="calendario.html?v=dashboard2">
-          <i class="bi bi-calendar-week"></i>
-          <span>
-            <strong>Calendario CRECE</strong>
-            <small>Asignar maestros, ayudantes y confirmar servicios.</small>
-          </span>
-        </a>
-        <a class="home-action" href="comunicacion.html" data-admin-only>
-          <i class="bi bi-whatsapp"></i>
-          <span>
-            <strong>Comunicación</strong>
-            <small>Mensajes rápidos para maestros y equipo CRECE.</small>
-          </span>
-        </a>
-        <a class="home-action" href="reporte-calendario.html" data-admin-only>
-          <i class="bi bi-file-earmark-text"></i>
-          <span>
-            <strong>Reporte de Asignaciones</strong>
-            <small>Ver e imprimir quiénes están asignados.</small>
-          </span>
-        </a>
-        <a class="home-action" href="reporte-premios.html">
-          <i class="bi bi-trophy"></i>
-          <span>
-            <strong>Reporte de Premios</strong>
-            <small>Ver puntos, premios disponibles y entregados.</small>
-          </span>
-        </a>
-        <a class="home-action" href="manual.html">
-          <i class="bi bi-question-circle"></i>
-          <span>
-            <strong>Manual de Usuario</strong>
-            <small>Guía paso a paso para maestros y líderes.</small>
-          </span>
-        </a>
-        <a class="home-action" href="admin.html" data-admin-only>
-          <i class="bi bi-speedometer2"></i>
-          <span>
-            <strong>Administración</strong>
-            <small>Ver asistencia, reportes, gráficas y exportaciones.</small>
-          </span>
-        </a>
+      <section class="home-module-grid" aria-label="Menu principal">
+        <article class="home-module main-module">
+          <div class="home-module-title">
+            <i class="bi bi-sunrise"></i>
+            <span>
+              <strong>Operacion del domingo</strong>
+              <small>Registro y asistencia en clase.</small>
+            </span>
+          </div>
+          <div class="home-action-grid compact-home-grid">
+            <a class="home-action primary-action" href="asistencia.html">
+              <i class="bi bi-qr-code-scan"></i>
+              <span>
+                <strong>Tomar Asistencia</strong>
+                <small>Escanear QR, escribir numero o buscar por nombre.</small>
+              </span>
+            </a>
+            <a class="home-action" href="maestro.html">
+              <i class="bi bi-person-vcard"></i>
+              <span>
+                <strong>Registro de Matrícula</strong>
+                <small>Registrar estudiantes, encargados y códigos QR.</small>
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <article class="home-module">
+          <div class="home-module-title">
+            <i class="bi bi-calendar-heart"></i>
+            <span>
+              <strong>Planificacion</strong>
+              <small>Clases, calendario y equipo.</small>
+            </span>
+          </div>
+          <div class="home-action-grid compact-home-grid">
+            <a class="home-action" href="biblioteca.html">
+              <i class="bi bi-journal-richtext"></i>
+              <span>
+                <strong>Biblioteca</strong>
+                <small>Revisar, publicar e imprimir clases.</small>
+              </span>
+            </a>
+            <a class="home-action calendar-action" href="calendario.html?v=dashboard2">
+              <i class="bi bi-calendar-week"></i>
+              <span>
+                <strong>Calendario</strong>
+                <small>Asignar maestros, ayudantes y fechas.</small>
+              </span>
+            </a>
+            <a class="home-action" href="equipo.html">
+              <i class="bi bi-person-lines-fill"></i>
+              <span>
+                <strong>Equipo CRECE</strong>
+                <small>Maestros, ayudantes y disponibilidad.</small>
+              </span>
+            </a>
+            <a class="home-action" href="comunicacion.html" data-admin-only>
+              <i class="bi bi-whatsapp"></i>
+              <span>
+                <strong>Comunicacion</strong>
+                <small>Mensajes rapidos para maestros y padres.</small>
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <article class="home-module">
+          <div class="home-module-title">
+            <i class="bi bi-clipboard-data"></i>
+            <span>
+              <strong>Administración y reportes</strong>
+              <small>Resumen, reportes y ayuda.</small>
+            </span>
+          </div>
+          <div class="home-action-grid compact-home-grid">
+            <a class="home-action" href="admin.html" data-admin-only>
+              <i class="bi bi-speedometer2"></i>
+              <span>
+                <strong>Administración</strong>
+                <small>Matrícula, asistencia, gráficas y exportaciones.</small>
+              </span>
+            </a>
+            <a class="home-action" href="reporte-calendario.html" data-admin-only>
+              <i class="bi bi-file-earmark-text"></i>
+              <span>
+                <strong>Asignaciones</strong>
+                <small>Reporte de maestros y ayudantes.</small>
+              </span>
+            </a>
+            <a class="home-action" href="reporte-premios.html">
+              <i class="bi bi-trophy"></i>
+              <span>
+                <strong>Premios</strong>
+                <small>Puntos, premios disponibles y entregados.</small>
+              </span>
+            </a>
+            <a class="home-action" href="manual.html">
+              <i class="bi bi-question-circle"></i>
+              <span>
+                <strong>Manual</strong>
+                <small>Guia paso a paso para el equipo.</small>
+              </span>
+            </a>
+          </div>
+        </article>
       </section>
 
       <section class="home-content-grid">
@@ -98,30 +140,12 @@
             </div>
           </div>
           <div class="prep-steps">
-            <span><strong>1</strong> Registra estudiantes en el Panel de Maestra.</span>
-            <span><strong>2</strong> Toma asistencia con QR, número o nombre.</span>
-            <span><strong>3</strong> Revisa reportes en Administración.</span>
+            <span><strong>1</strong> Registra matricula y equipo CRECE.</span>
+            <span><strong>2</strong> Asigna maestros en el calendario.</span>
+            <span><strong>3</strong> Toma asistencia y revisa reportes.</span>
           </div>
         </article>
 
-        <article class="home-card">
-          <div class="panel-heading">
-            <div>
-              <h2>Recursos rápidos</h2>
-              <p>Enlaces útiles para maestros y líderes.</p>
-            </div>
-          </div>
-          <div class="resource-actions">
-            <a href="https://prfwb.com" target="_blank" rel="noopener" class="resource-action">
-              <i class="bi bi-globe2"></i>
-              <span>PRFWB.com</span>
-            </a>
-            <a href="https://www.biblegateway.com" target="_blank" rel="noopener" class="resource-action">
-              <i class="bi bi-book"></i>
-              <span>BibleGateway</span>
-            </a>
-          </div>
-        </article>
       </section>
 
       <footer class="home-footer-note">

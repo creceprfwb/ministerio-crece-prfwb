@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Panel para registrar maestros y ayudantes del Ministerio CRECE PRFWB.">
+  <title>Equipo CRECE | Ministerio CRECE</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="admin-body">
+  <nav class="admin-nav">
+    <div>
+      <img src="assets/logo.png" alt="PRFWB" class="nav-logo">
+      <strong>Equipo CRECE</strong>
+      <span>Maestros y ayudantes</span>
+    </div>
+    <div class="admin-actions">
+      <a href="index.html" class="btn btn-light btn-sm"><i class="bi bi-house"></i> Inicio</a>
+      <a href="calendario.html?v=equipo1" class="btn btn-outline-light btn-sm"><i class="bi bi-calendar-week"></i> Calendario</a>
+      <a href="comunicacion.html" class="btn btn-outline-light btn-sm"><i class="bi bi-whatsapp"></i> Comunicacion</a>
+      <a href="admin.html" class="btn btn-outline-light btn-sm"><i class="bi bi-speedometer2"></i> Admin</a>
+    </div>
+  </nav>
+
+  <main class="admin-shell">
+    <section class="admin-hero team-hero">
+      <div>
+        <p class="section-kicker">Personal ministerial</p>
+        <h1>Registro de maestros y ayudantes</h1>
+        <p>Centraliza contactos, grupos preferidos, roles y disponibilidad para asignarlos al calendario de servicio.</p>
+      </div>
+      <div class="team-hero-note">
+        <i class="bi bi-shield-check"></i>
+        <span>La data queda separada por iglesia y disponible para calendario, comunicacion y reportes.</span>
+      </div>
+    </section>
+
+    <section class="stats-grid" aria-label="Resumen del equipo">
+      <article class="stat-card">
+        <i class="bi bi-person-video3"></i>
+        <span>Maestros activos</span>
+        <strong id="activeTeachersCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <i class="bi bi-person-hearts"></i>
+        <span>Ayudantes activos</span>
+        <strong id="activeAssistantsCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <i class="bi bi-people"></i>
+        <span>Equipo total</span>
+        <strong id="totalTeamCount">0</strong>
+      </article>
+      <article class="stat-card">
+        <i class="bi bi-pause-circle"></i>
+        <span>Pausados</span>
+        <strong id="pausedTeamCount">0</strong>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="app-card">
+        <div class="panel-heading">
+          <div>
+            <h2 id="teamFormTitle">Nuevo servidor</h2>
+            <p id="teamFormHelp">Registra maestros, ayudantes o personal disponible para ambos roles.</p>
+          </div>
+        </div>
+
+        <form id="teamForm" class="teacher-form">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="teamName" class="form-label">Nombre completo</label>
+              <input id="teamName" class="form-control form-control-lg" type="text" required>
+            </div>
+            <div class="col-md-6">
+              <label for="teamRole" class="form-label">Rol principal</label>
+              <select id="teamRole" class="form-select form-select-lg">
+                <option value="maestro">Maestro/a</option>
+                <option value="ayudante">Ayudante</option>
+                <option value="ambos">Maestro/a y ayudante</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="teamPhone" class="form-label">Teléfono / WhatsApp</label>
+              <input id="teamPhone" class="form-control" type="tel" placeholder="787-000-0000">
+            </div>
+            <div class="col-md-6">
+              <label for="teamEmail" class="form-label">Email</label>
+              <input id="teamEmail" class="form-control" type="email" placeholder="nombre@email.com">
+            </div>
+            <div class="col-md-6">
+              <label for="teamGroup" class="form-label">Grupo preferido</label>
+              <select id="teamGroup" class="form-select">
+                <option value="ambos">Ambos grupos</option>
+                <option value="ninos">Niños</option>
+                <option value="juveniles">Juveniles</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="teamAvailability" class="form-label">Disponibilidad</label>
+              <select id="teamAvailability" class="form-select">
+                <option value="domingo">Domingos</option>
+                <option value="rotativo">Rotativo</option>
+                <option value="solo_suplente">Solo suplente</option>
+                <option value="por_confirmar">Por confirmar</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label for="teamNotes" class="form-label">Notas internas</label>
+              <textarea id="teamNotes" class="form-control" rows="3" placeholder="Ej. experiencia, restricciones, fechas que no puede servir"></textarea>
+            </div>
+          </div>
+
+          <div class="student-form-actions">
+            <button id="teamSubmitButton" class="btn btn-primary btn-lg w-100 submit-button mt-4" type="submit">
+              <i class="bi bi-person-plus"></i>
+              Guardar servidor
+            </button>
+            <button id="cancelTeamEdit" class="btn btn-outline-secondary btn-lg w-100 mt-2 d-none" type="button">
+              <i class="bi bi-x-circle"></i>
+              Cancelar edición
+            </button>
+          </div>
+        </form>
+      </article>
+
+      <aside class="app-card">
+        <div class="panel-heading">
+          <div>
+            <h2>Filtros</h2>
+            <p>Encuentra rapido a quien puede servir.</p>
+          </div>
+        </div>
+        <div class="team-filter-stack">
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input id="teamSearch" class="form-control" type="search" placeholder="Buscar por nombre, telefono o email">
+          </div>
+          <select id="teamRoleFilter" class="form-select">
+            <option value="">Todos los roles</option>
+            <option value="maestro">Maestros</option>
+            <option value="ayudante">Ayudantes</option>
+            <option value="ambos">Ambos roles</option>
+          </select>
+          <select id="teamGroupFilter" class="form-select">
+            <option value="">Todos los grupos</option>
+            <option value="ninos">Niños</option>
+            <option value="juveniles">Juveniles</option>
+            <option value="ambos">Ambos grupos</option>
+          </select>
+          <a class="btn btn-outline-primary w-100" href="calendario.html?v=equipo1">
+            <i class="bi bi-calendar-plus"></i>
+            Asignar en calendario
+          </a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="app-card mt-4">
+      <div class="panel-heading">
+        <div>
+          <h2>Directorio del equipo</h2>
+          <p>Maestros y ayudantes registrados para la iglesia activa.</p>
+        </div>
+      </div>
+      <div id="teamList" class="team-directory"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
+  <script src="js/firebase.js"></script>
+  <script src="js/equipo.js"></script>
+</body>
+</html>

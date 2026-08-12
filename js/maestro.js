@@ -1,5 +1,6 @@
 // Clave local para guardar estudiantes hasta conectar Firebase, Supabase o Google Sheets.
 const STUDENTS_STORAGE_KEY = "prfwb_student_records";
+const ATTENDANCE_STORAGE_KEY = "prfwb_attendance_records";
 const REWARD_ACTIONS = [
   { id: "asistencia", label: "Asistencia del domingo", points: 5, icon: "bi-calendar-check" },
   { id: "biblia", label: "Trajo Biblia", points: 3, icon: "bi-book" },
@@ -26,6 +27,7 @@ let students = [];
 let selectedQrStudent = null;
 let editingStudentCode = null;
 let selectedRewardStudentCode = null;
+let selectedInlineQrCode = null;
 
 function storageKey(baseKey) {
   return window.PRFirebase && typeof window.PRFirebase.getScopedStorageKey === "function"
@@ -40,6 +42,18 @@ function getGroupByAge(age) {
   }
 
   if (age >= 11 && age <= 16) {
+    return { group: "juveniles", groupLabel: "Juveniles" };
+  }
+
+  return null;
+}
+
+function getGroupByOverride(group) {
+  if (group === "ninos") {
+    return { group: "ninos", groupLabel: "Niños" };
+  }
+
+  if (group === "juveniles") {
     return { group: "juveniles", groupLabel: "Juveniles" };
   }
 
@@ -83,7 +97,7 @@ function createStudentCode() {
   return `PRF-${number}`;
 }
 
-// Evita repetir codigos en el navegador actual.
+// Evita repetir códigos en el navegador actual.
 function createUniqueStudentCode() {
   let code = createStudentCode();
 
@@ -94,7 +108,7 @@ function createUniqueStudentCode() {
   return code;
 }
 
-// Normaliza texto para busquedas.
+// Normaliza texto para búsquedas.
 function normalizeText(value) {
   return String(value || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
@@ -112,6 +126,108 @@ function getStudentDisplayName(student) {
   return String(student.fullName || `${student.name || ""} ${student.lastName || ""}`).trim();
 }
 
+function formatPhoneNumber(value) {
+  const rawValue = String(value || "").trim();
+  const digits = rawValue.replace(/\D/g, "");
+
+  if (digits.length === 10) {
+    return `${digits.slice(0, 3)}-${digits.slice(3, 6)}-${digits.slice(6)}`;
+  }
+
+  if (digits.length === 11 && digits.startsWith("1")) {
+    return `${digits.slice(1, 4)}-${digits.slice(4, 7)}-${digits.slice(7)}`;
+  }
+
+  return rawValue;
+}
+
+function getRelationshipLabel(value) {
+  const labels = {
+    padre_madre: "Padre / Madre",
+    abuelo_abuela: "Abuelo / Abuela",
+    tio_tia: "Tío / Tía",
+    padrino_madrina: "Padrino / Madrina",
+    tutor: "Tutor legal",
+    otro: "Otro"
+  };
+
+  return labels[value] || "Padre / Madre";
+}
+
+function getStudentStatusLabel(value) {
+  const labels = {
+    regular: "Estudiante regular",
+    firstTime: "Primera vez",
+    visitor: "Visita"
+  };
+
+  return labels[value] || "Estudiante regular";
+}
+
+function getIdDeliveryLabel(value) {
+  const labels = {
+    none: "No entregado",
+    wristband: "Pulserita entregada",
+    id: "ID entregado",
+    both: "Pulserita e ID entregados"
+  };
+
+  return labels[value] || "No entregado";
+}
+
+function formatDate(value) {
+  if (!value) {
+    return "No registrada";
+  }
+
+  const date = new Date(`${value}T00:00:00`);
+
+  if (Number.isNaN(date.getTime())) {
+    return value;
+  }
+
+  return date.toLocaleDateString("es-PR", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  });
+}
+
+function calculateAgeFromBirthDate(value) {
+  if (!value) {
+    return "";
+  }
+
+  const birthDate = new Date(`${value}T00:00:00`);
+  const today = new Date();
+
+  if (Number.isNaN(birthDate.getTime())) {
+    return "";
+  }
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age -= 1;
+  }
+
+  return age;
+}
+
+function loadAttendanceRecords() {
+  const rawRecords = localStorage.getItem(storageKey(ATTENDANCE_STORAGE_KEY));
+  return rawRecords ? JSON.parse(rawRecords) : [];
+}
+
+function getAttendanceForStudent(student) {
+  const studentCode = String(student.code || "").toUpperCase();
+
+  return loadAttendanceRecords()
+    .filter((record) => String(record.studentCode || "").toUpperCase() === studentCode)
+    .sort((a, b) => new Date(b.createdAt || b.date) - new Date(a.createdAt || a.date));
+}
+
 function getProfileFlags(student) {
   const flags = [];
 
@@ -125,6 +241,18 @@ function getProfileFlags(student) {
 
   if (student.careNotes) {
     flags.push("Notas");
+  }
+
+  if (student.studentStatus === "visitor") {
+    flags.push("Visita");
+  }
+
+  if (student.studentStatus === "firstTime") {
+    flags.push("Primera vez");
+  }
+
+  if (student.idDeliveryStatus && student.idDeliveryStatus !== "none") {
+    flags.push("ID/Pulsera");
   }
 
   return flags;
@@ -180,7 +308,8 @@ function getRewardHistoryDate(entry) {
 // Crea el objeto del estudiante registrado.
 function buildStudentRecord(formData) {
   const age = Number(formData.get("studentAge"));
-  const groupInfo = getGroupByAge(age);
+  const groupOverride = String(formData.get("studentGroupOverride") || "");
+  const groupInfo = getGroupByOverride(groupOverride) || getGroupByAge(age);
 
   if (!groupInfo) {
     throw new Error("La edad debe estar entre 3 y 16 años.");
@@ -195,13 +324,20 @@ function buildStudentRecord(formData) {
     lastName: String(formData.get("studentLastName") || "").trim(),
     fullName: String(`${formData.get("studentName") || ""} ${formData.get("studentLastName") || ""}`).trim(),
     age,
+    birthDate: String(formData.get("studentBirthDate") || "").trim(),
     group: groupInfo.group,
     groupLabel: groupInfo.groupLabel,
+    groupOverride,
+    studentStatus: String(formData.get("studentStatus") || "regular"),
     guardianName: String(formData.get("guardianName") || "").trim(),
-    guardianPhone: String(formData.get("guardianPhone") || "").trim(),
-    emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
+    guardianRelationship: String(formData.get("guardianRelationship") || "padre_madre"),
+    guardianPhone: formatPhoneNumber(formData.get("guardianPhone")),
+    emergencyPhone: formatPhoneNumber(formData.get("emergencyPhone")),
     guardianEmail: String(formData.get("guardianEmail") || "").trim(),
+    guardianEmailSecondary: String(formData.get("guardianEmailSecondary") || "").trim(),
     authorizedPickup: String(formData.get("authorizedPickup") || "").trim(),
+    idDeliveryStatus: String(formData.get("idDeliveryStatus") || "none"),
+    visitNotes: String(formData.get("visitNotes") || "").trim(),
     allergies: String(formData.get("allergies") || "").trim(),
     medicalNotes: String(formData.get("medicalNotes") || "").trim(),
     careNotes: String(formData.get("careNotes") || "").trim(),
@@ -215,7 +351,8 @@ function buildStudentRecord(formData) {
 // Actualiza un estudiante existente sin cambiar su número ni QR.
 function buildUpdatedStudentRecord(existingStudent, formData) {
   const age = Number(formData.get("studentAge"));
-  const groupInfo = getGroupByAge(age);
+  const groupOverride = String(formData.get("studentGroupOverride") || "");
+  const groupInfo = getGroupByOverride(groupOverride) || getGroupByAge(age);
 
   if (!groupInfo) {
     throw new Error("La edad debe estar entre 3 y 16 años.");
@@ -227,13 +364,20 @@ function buildUpdatedStudentRecord(existingStudent, formData) {
     lastName: String(formData.get("studentLastName") || "").trim(),
     fullName: String(`${formData.get("studentName") || ""} ${formData.get("studentLastName") || ""}`).trim(),
     age,
+    birthDate: String(formData.get("studentBirthDate") || "").trim(),
     group: groupInfo.group,
     groupLabel: groupInfo.groupLabel,
+    groupOverride,
+    studentStatus: String(formData.get("studentStatus") || "regular"),
     guardianName: String(formData.get("guardianName") || "").trim(),
-    guardianPhone: String(formData.get("guardianPhone") || "").trim(),
-    emergencyPhone: String(formData.get("emergencyPhone") || "").trim(),
+    guardianRelationship: String(formData.get("guardianRelationship") || "padre_madre"),
+    guardianPhone: formatPhoneNumber(formData.get("guardianPhone")),
+    emergencyPhone: formatPhoneNumber(formData.get("emergencyPhone")),
     guardianEmail: String(formData.get("guardianEmail") || "").trim(),
+    guardianEmailSecondary: String(formData.get("guardianEmailSecondary") || "").trim(),
     authorizedPickup: String(formData.get("authorizedPickup") || "").trim(),
+    idDeliveryStatus: String(formData.get("idDeliveryStatus") || "none"),
+    visitNotes: String(formData.get("visitNotes") || "").trim(),
     allergies: String(formData.get("allergies") || "").trim(),
     medicalNotes: String(formData.get("medicalNotes") || "").trim(),
     careNotes: String(formData.get("careNotes") || "").trim(),
@@ -252,11 +396,18 @@ function fillStudentForm(student) {
   document.getElementById("studentName").value = student.name || "";
   document.getElementById("studentLastName").value = student.lastName || "";
   document.getElementById("studentAge").value = student.age || "";
+  document.getElementById("studentBirthDate").value = student.birthDate || "";
+  document.getElementById("studentGroupOverride").value = student.groupOverride || "";
+  document.getElementById("studentStatus").value = student.studentStatus || "regular";
   document.getElementById("guardianName").value = student.guardianName || "";
   document.getElementById("guardianPhone").value = student.guardianPhone || "";
   document.getElementById("emergencyPhone").value = student.emergencyPhone || "";
   document.getElementById("guardianEmail").value = student.guardianEmail || "";
+  document.getElementById("guardianEmailSecondary").value = student.guardianEmailSecondary || "";
+  document.getElementById("guardianRelationship").value = student.guardianRelationship || "padre_madre";
   document.getElementById("authorizedPickup").value = student.authorizedPickup || "";
+  document.getElementById("idDeliveryStatus").value = student.idDeliveryStatus || "none";
+  document.getElementById("visitNotes").value = student.visitNotes || "";
   document.getElementById("allergies").value = student.allergies || "";
   document.getElementById("medicalNotes").value = student.medicalNotes || "";
   document.getElementById("careNotes").value = student.careNotes || "";
@@ -289,6 +440,7 @@ function resetStudentForm(form) {
 function renderQr(student) {
   const result = document.getElementById("qrResult");
   const downloadButton = document.getElementById("downloadQr");
+  const passButton = document.getElementById("downloadPass");
 
   selectedQrStudent = student;
   result.innerHTML = "";
@@ -315,6 +467,301 @@ function renderQr(student) {
   });
 
   downloadButton.disabled = false;
+  if (passButton) {
+    passButton.disabled = false;
+  }
+}
+
+function renderInlineQr(student) {
+  const holder = document.querySelector(`[data-inline-qr="${student.code}"]`);
+
+  if (!holder) {
+    return;
+  }
+
+  holder.innerHTML = "";
+
+  new QRCode(holder, {
+    text: student.code,
+    width: 142,
+    height: 142,
+    colorDark: "#0B3D91",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+}
+
+function downloadQrCanvas(canvas, student) {
+  if (!canvas || !student) {
+    return;
+  }
+
+  const link = document.createElement("a");
+  link.download = `${student.code}-${getStudentDisplayName(student)}.png`.replace(/\s+/g, "-");
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+}
+
+function loadPassImage(src) {
+  return new Promise((resolve) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => resolve(null);
+    image.src = src;
+  });
+}
+
+function drawWrappedText(context, text, x, y, maxWidth, lineHeight) {
+  const words = String(text || "").split(" ");
+  let line = "";
+  let cursorY = y;
+
+  words.forEach((word, index) => {
+    const testLine = line ? `${line} ${word}` : word;
+    const isLast = index === words.length - 1;
+
+    if (context.measureText(testLine).width > maxWidth && line) {
+      context.fillText(line, x, cursorY);
+      line = word;
+      cursorY += lineHeight;
+    } else {
+      line = testLine;
+    }
+
+    if (isLast && line) {
+      context.fillText(line, x, cursorY);
+    }
+  });
+
+  return cursorY;
+}
+
+function drawRoundedRect(context, x, y, width, height, radius) {
+  context.beginPath();
+  context.moveTo(x + radius, y);
+  context.lineTo(x + width - radius, y);
+  context.quadraticCurveTo(x + width, y, x + width, y + radius);
+  context.lineTo(x + width, y + height - radius);
+  context.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+  context.lineTo(x + radius, y + height);
+  context.quadraticCurveTo(x, y + height, x, y + height - radius);
+  context.lineTo(x, y + radius);
+  context.quadraticCurveTo(x, y, x + radius, y);
+  context.closePath();
+  context.fill();
+}
+
+function createQrCanvas(text, size) {
+  const holder = document.createElement("div");
+  holder.style.position = "fixed";
+  holder.style.left = "-9999px";
+  holder.style.top = "-9999px";
+  document.body.appendChild(holder);
+
+  new QRCode(holder, {
+    text,
+    width: size,
+    height: size,
+    colorDark: "#0B3D91",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+
+  const qrCanvas = holder.querySelector("canvas");
+  const output = document.createElement("canvas");
+  output.width = size;
+  output.height = size;
+
+  if (qrCanvas) {
+    output.getContext("2d").drawImage(qrCanvas, 0, 0, size, size);
+  }
+
+  holder.remove();
+  return output;
+}
+
+async function downloadStudentDigitalPass(student) {
+  if (!student) {
+    return;
+  }
+
+  const canvas = document.createElement("canvas");
+  canvas.width = 1080;
+  canvas.height = 1700;
+  const context = canvas.getContext("2d");
+  const logo = await loadPassImage("assets/logo.png");
+  const qrCanvas = createQrCanvas(student.code, 560);
+  const studentName = getStudentDisplayName(student);
+
+  context.fillStyle = "#f4f7fb";
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  context.fillStyle = "#0B3D91";
+  context.fillRect(0, 0, canvas.width, 360);
+
+  context.fillStyle = "#ffffff";
+  drawRoundedRect(context, 70, 90, 940, 1510, 42);
+
+  context.fillStyle = "#eaf2ff";
+  drawRoundedRect(context, 110, 130, 860, 250, 30);
+
+  if (logo) {
+    context.drawImage(logo, 145, 165, 300, 96);
+  }
+
+  context.fillStyle = "#0B3D91";
+  context.font = "900 58px Arial";
+  context.fillText("PASE DIGITAL", 145, 315);
+
+  context.fillStyle = "#3f9a42";
+  context.font = "800 34px Arial";
+  context.fillText("Ministerio CRECE PRFWB", 145, 360);
+
+  context.fillStyle = "#0b1f3a";
+  context.font = "900 68px Arial";
+  const nameY = drawWrappedText(context, studentName, 145, 505, 790, 74);
+
+  context.fillStyle = "#52627a";
+  context.font = "700 34px Arial";
+  context.fillText(`${student.groupLabel || "Grupo"} - ${student.age || ""} años`, 145, nameY + 64);
+
+  context.fillStyle = "#eef6ff";
+  drawRoundedRect(context, 145, 690, 790, 790, 36);
+
+  context.fillStyle = "#ffffff";
+  drawRoundedRect(context, 245, 780, 590, 590, 28);
+  context.drawImage(qrCanvas, 260, 795, 560, 560);
+
+  context.fillStyle = "#0B3D91";
+  context.font = "900 48px Arial";
+  context.textAlign = "center";
+  context.fillText(student.code, canvas.width / 2, 1445);
+
+  context.fillStyle = "#52627a";
+  context.font = "700 30px Arial";
+  context.fillText("Presente este pase para registrar asistencia", canvas.width / 2, 1512);
+
+  context.fillStyle = "#0b1f3a";
+  context.font = "700 24px Arial";
+  context.fillText("CRECE - Conocer a Cristo, crecer en fe y compartir su amor.", canvas.width / 2, 1560);
+  context.textAlign = "left";
+
+  const link = document.createElement("a");
+  link.download = `${student.code}-pase-crece.png`.replace(/\s+/g, "-");
+  link.href = canvas.toDataURL("image/png");
+  link.click();
+}
+
+function buildProfileNote(label, value, icon, tone = "") {
+  return `
+    <article class="profile-note ${tone}">
+      <i class="bi ${icon}"></i>
+      <div>
+        <strong>${escapeHtml(label)}</strong>
+        <span>${escapeHtml(value || "No registrado")}</span>
+      </div>
+    </article>
+  `;
+}
+
+function openStudentProfile(student) {
+  const normalizedStudent = normalizeRewardData(student);
+  const modalElement = document.getElementById("studentProfileModal");
+  const title = document.getElementById("studentProfileTitle");
+  const content = document.getElementById("studentProfileContent");
+  const editButton = document.getElementById("profileEditStudent");
+  const rewardLevel = getRewardLevel(normalizedStudent.rewardPoints);
+  const nextLevel = getNextRewardLevel(normalizedStudent.rewardPoints);
+  const attendance = getAttendanceForStudent(normalizedStudent);
+  const latestAttendance = attendance[0];
+  const attendanceRows = attendance.slice(0, 8).map((record) => `
+    <tr>
+      <td>${escapeHtml(record.date || "")}</td>
+      <td>${escapeHtml(record.time || "")}</td>
+      <td>${escapeHtml(record.groupLabel || "")}</td>
+    </tr>
+  `).join("");
+
+  title.textContent = getStudentDisplayName(normalizedStudent);
+  editButton.dataset.code = normalizedStudent.code;
+
+  content.innerHTML = `
+    <section class="student-profile-grid">
+      <article class="student-profile-summary">
+        <div class="profile-avatar">${escapeHtml((normalizedStudent.name || "?").charAt(0))}</div>
+        <div>
+          <span class="profile-code">${escapeHtml(normalizedStudent.code)}</span>
+          <h3>${escapeHtml(getStudentDisplayName(normalizedStudent))}</h3>
+          <p>${escapeHtml(normalizedStudent.groupLabel || "")} - ${escapeHtml(normalizedStudent.age || "")} años</p>
+          <p>Nacimiento: ${escapeHtml(formatDate(normalizedStudent.birthDate))}</p>
+        </div>
+      </article>
+
+      <article class="student-profile-progress">
+        <div>
+          <span>Progreso CRECE</span>
+          <strong>${escapeHtml(rewardLevel.name)}</strong>
+          <small>${normalizedStudent.rewardPoints} puntos${nextLevel ? ` - próxima meta ${nextLevel.points}` : " - meta mayor alcanzada"}</small>
+        </div>
+        <div class="reward-progress"><span style="width: ${getRewardProgress(normalizedStudent.rewardPoints)}%"></span></div>
+      </article>
+
+      <div class="profile-note-grid">
+        ${buildProfileNote("Encargado", normalizedStudent.guardianName, "bi-person-badge")}
+        ${buildProfileNote("Parentesco", getRelationshipLabel(normalizedStudent.guardianRelationship), "bi-diagram-3")}
+        ${buildProfileNote("Teléfono principal", normalizedStudent.guardianPhone, "bi-telephone")}
+        ${buildProfileNote("Teléfono alterno", normalizedStudent.emergencyPhone, "bi-telephone-plus")}
+        ${buildProfileNote("Email principal", normalizedStudent.guardianEmail, "bi-envelope")}
+        ${buildProfileNote("Segundo email", normalizedStudent.guardianEmailSecondary, "bi-envelope-plus")}
+        ${buildProfileNote("Tipo de registro", getStudentStatusLabel(normalizedStudent.studentStatus), "bi-person-lines-fill", normalizedStudent.studentStatus === "regular" ? "" : "visitor")}
+        ${buildProfileNote("Pulserita o ID", getIdDeliveryLabel(normalizedStudent.idDeliveryStatus), "bi-person-badge-fill", normalizedStudent.idDeliveryStatus && normalizedStudent.idDeliveryStatus !== "none" ? "success" : "")}
+        ${buildProfileNote("Recogido autorizado", normalizedStudent.authorizedPickup, "bi-shield-check")}
+        ${buildProfileNote("Alergias", normalizedStudent.allergies, "bi-exclamation-triangle", normalizedStudent.allergies ? "warning" : "")}
+        ${buildProfileNote("Notas médicas", normalizedStudent.medicalNotes, "bi-heart-pulse", normalizedStudent.medicalNotes ? "warning" : "")}
+        ${buildProfileNote("Notas de visita", normalizedStudent.visitNotes, "bi-door-open", normalizedStudent.visitNotes ? "visitor" : "")}
+        ${buildProfileNote("Notas para la clase", normalizedStudent.careNotes, "bi-journal-text", normalizedStudent.careNotes ? "note" : "")}
+      </div>
+
+      <article class="student-attendance-card">
+        <div class="attendance-metric">
+          <span>Asistencias</span>
+          <strong>${attendance.length}</strong>
+          <small>Última: ${escapeHtml(latestAttendance ? latestAttendance.date : "Sin asistencia")}</small>
+        </div>
+        <div class="table-responsive">
+          <table class="table table-sm align-middle mb-0">
+            <thead>
+              <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Grupo</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${attendanceRows || '<tr><td colspan="3" class="text-muted">Todavía no tiene asistencia registrada.</td></tr>'}
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  `;
+
+  const modal = bootstrap.Modal.getOrCreateInstance(modalElement);
+  modal.show();
+}
+
+function editStudentFromProfile(code) {
+  const student = getStudentByCode(code);
+
+  if (!student) {
+    return;
+  }
+
+  editingStudentCode = student.code;
+  fillStudentForm(student);
+  setStudentFormMode("edit");
+  bootstrap.Modal.getOrCreateInstance(document.getElementById("studentProfileModal")).hide();
+  document.getElementById("studentForm").scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 // Pinta la tabla de estudiantes registrados.
@@ -322,7 +769,7 @@ function renderStudentsTable() {
   const tableBody = document.getElementById("studentsTable");
   const search = normalizeText(document.getElementById("studentSearch").value);
   const visibleStudents = students.filter((student) => {
-    return !search || normalizeText(`${student.code} ${getStudentDisplayName(student)} ${student.guardianName} ${student.guardianPhone} ${student.emergencyPhone} ${student.groupLabel}`).includes(search);
+    return !search || normalizeText(`${student.code} ${getStudentDisplayName(student)} ${student.guardianName} ${student.guardianPhone} ${student.emergencyPhone} ${student.guardianEmail} ${student.guardianEmailSecondary} ${student.groupLabel} ${getRelationshipLabel(student.guardianRelationship)} ${getStudentStatusLabel(student.studentStatus)}`).includes(search);
   });
 
   if (!visibleStudents.length) {
@@ -339,11 +786,46 @@ function renderStudentsTable() {
     const rewardLevel = getRewardLevel(student.rewardPoints);
     const profileFlags = getProfileFlags(student);
 
+    const inlineQrRow = selectedInlineQrCode === student.code ? `
+    <tr class="inline-qr-row">
+      <td colspan="11">
+        <div class="inline-qr-card">
+          <div>
+            <p class="section-kicker mb-1">Codigo QR</p>
+            <h3>${escapeHtml(getStudentDisplayName(student))}</h3>
+            <span>${escapeHtml(student.code)} - ${escapeHtml(student.groupLabel)}</span>
+          </div>
+          <div class="inline-qr-holder" data-inline-qr="${escapeHtml(student.code)}"></div>
+          <div class="inline-qr-actions">
+            <button class="btn btn-sm btn-outline-primary download-inline-qr" type="button" data-code="${escapeHtml(student.code)}">
+              <i class="bi bi-download"></i>
+              Descargar
+            </button>
+            <button class="btn btn-sm btn-primary download-digital-pass" type="button" data-code="${escapeHtml(student.code)}">
+              <i class="bi bi-phone"></i>
+              Descargar pase
+            </button>
+            <button class="btn btn-sm btn-outline-secondary close-inline-qr" type="button" data-code="${escapeHtml(student.code)}">
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </td>
+    </tr>
+  ` : "";
+
     return `
     <tr class="${student.active === false ? "inactive-student" : ""}">
       <td><strong>${escapeHtml(student.code)}</strong></td>
-      <td>${escapeHtml(getStudentDisplayName(student))}</td>
-      <td>${escapeHtml(student.age)}</td>
+      <td>
+        <button class="student-name-button view-student-profile" type="button" data-code="${escapeHtml(student.code)}">
+          ${escapeHtml(getStudentDisplayName(student))}
+        </button>
+      </td>
+      <td>
+        <strong>${escapeHtml(student.age)}</strong>
+        <span class="table-subtext">${escapeHtml(formatDate(student.birthDate))}</span>
+      </td>
       <td>${escapeHtml(student.groupLabel)}</td>
       <td>${escapeHtml(student.guardianName || "")}</td>
       <td>
@@ -365,7 +847,7 @@ function renderStudentsTable() {
       </td>
       <td>
         <button class="btn btn-sm btn-outline-primary show-qr" type="button" data-code="${student.code}">
-          <i class="bi bi-qr-code"></i> Ver
+          <i class="bi bi-qr-code"></i> ${selectedInlineQrCode === student.code ? "Ocultar" : "Ver"}
         </button>
       </td>
       <td>
@@ -379,13 +861,54 @@ function renderStudentsTable() {
         </div>
       </td>
     </tr>
+    ${inlineQrRow}
   `;
   }).join("");
 
+  if (selectedInlineQrCode) {
+    const selectedStudent = getStudentByCode(selectedInlineQrCode);
+    if (selectedStudent) {
+      renderInlineQr(selectedStudent);
+    }
+  }
+
   tableBody.querySelectorAll(".show-qr").forEach((button) => {
     button.addEventListener("click", () => {
-      const student = students.find((item) => item.code === button.dataset.code);
-      renderQr(student);
+      selectedInlineQrCode = selectedInlineQrCode === button.dataset.code ? null : button.dataset.code;
+      renderStudentsTable();
+    });
+  });
+
+  tableBody.querySelectorAll(".close-inline-qr").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (selectedInlineQrCode === button.dataset.code) {
+        selectedInlineQrCode = null;
+      }
+
+      renderStudentsTable();
+    });
+  });
+
+  tableBody.querySelectorAll(".download-inline-qr").forEach((button) => {
+    button.addEventListener("click", () => {
+      const student = getStudentByCode(button.dataset.code);
+      const row = button.closest(".inline-qr-row");
+      const canvas = row ? row.querySelector("canvas") : null;
+      downloadQrCanvas(canvas, student);
+    });
+  });
+
+  tableBody.querySelectorAll(".download-digital-pass").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const student = getStudentByCode(button.dataset.code);
+      await downloadStudentDigitalPass(student);
+    });
+  });
+
+  tableBody.querySelectorAll(".view-student-profile").forEach((button) => {
+    button.addEventListener("click", () => {
+      const student = getStudentByCode(button.dataset.code);
+      openStudentProfile(student);
     });
   });
 
@@ -686,15 +1209,7 @@ function setupRewardsForm() {
 // Descarga el QR visible como imagen PNG.
 function downloadVisibleQr() {
   const canvas = document.querySelector("#qrResult canvas");
-
-  if (!canvas || !selectedQrStudent) {
-    return;
-  }
-
-  const link = document.createElement("a");
-  link.download = `${selectedQrStudent.code}-${getStudentDisplayName(selectedQrStudent)}.png`.replace(/\s+/g, "-");
-  link.href = canvas.toDataURL("image/png");
-  link.click();
+  downloadQrCanvas(canvas, selectedQrStudent);
 }
 
 // Conecta el formulario y los controles del panel.
@@ -702,7 +1217,15 @@ async function setupTeacherPanel() {
   const form = document.getElementById("studentForm");
   const searchInput = document.getElementById("studentSearch");
   const downloadButton = document.getElementById("downloadQr");
+  const downloadPassButton = document.getElementById("downloadPass");
   const cancelEditButton = document.getElementById("cancelStudentEdit");
+  const birthDateInput = document.getElementById("studentBirthDate");
+  const ageInput = document.getElementById("studentAge");
+  const profileEditButton = document.getElementById("profileEditStudent");
+  const phoneInputs = [
+    document.getElementById("guardianPhone"),
+    document.getElementById("emergencyPhone")
+  ];
 
   if (window.PRFirebase && typeof window.PRFirebase.requireAuth === "function") {
     const profile = await window.PRFirebase.requireAuth();
@@ -716,6 +1239,19 @@ async function setupTeacherPanel() {
   saveStudents(students);
   renderStudentsTable();
   setupRewardsForm();
+
+  const pendingEditCode = sessionStorage.getItem("crece_edit_student_code");
+  if (pendingEditCode) {
+    sessionStorage.removeItem("crece_edit_student_code");
+    const pendingStudent = getStudentByCode(pendingEditCode);
+
+    if (pendingStudent) {
+      editingStudentCode = pendingStudent.code;
+      fillStudentForm(pendingStudent);
+      setStudentFormMode("edit");
+      form.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -749,7 +1285,25 @@ async function setupTeacherPanel() {
 
   searchInput.addEventListener("input", renderStudentsTable);
   downloadButton.addEventListener("click", downloadVisibleQr);
+  downloadPassButton.addEventListener("click", () => downloadStudentDigitalPass(selectedQrStudent));
   cancelEditButton.addEventListener("click", () => resetStudentForm(form));
+  profileEditButton.addEventListener("click", () => editStudentFromProfile(profileEditButton.dataset.code));
+  phoneInputs.forEach((input) => {
+    if (!input) {
+      return;
+    }
+
+    input.addEventListener("blur", () => {
+      input.value = formatPhoneNumber(input.value);
+    });
+  });
+  birthDateInput.addEventListener("change", () => {
+    const calculatedAge = calculateAgeFromBirthDate(birthDateInput.value);
+
+    if (calculatedAge) {
+      ageInput.value = calculatedAge;
+    }
+  });
 }
 
 // Carga la clase actual del grupo seleccionado dentro del editor.

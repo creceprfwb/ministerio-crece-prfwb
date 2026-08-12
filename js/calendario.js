@@ -234,7 +234,7 @@ function renderTeachers() {
     <article class="teacher-card ${teacher.active === false ? "inactive-student" : ""}">
       <div>
         <strong>${escapeHtml(teacher.name)}</strong>
-        <span>${escapeHtml(teacher.phone || "Sin teléfono")} - ${escapeHtml(getGroupLabel(teacher.group))}</span>
+        <span>${escapeHtml(getRoleLabel(teacher.role || teacher.ministryRole))} - ${escapeHtml(teacher.phone || "Sin teléfono")} - ${escapeHtml(getGroupLabel(teacher.group))}</span>
       </div>
       <button class="btn btn-sm ${teacher.active === false ? "btn-outline-success" : "btn-outline-warning"} toggle-teacher" type="button" data-id="${teacher.id}">
         <i class="bi ${teacher.active === false ? "bi-check-circle" : "bi-slash-circle"}"></i>
@@ -271,6 +271,18 @@ function getGroupLabel(group) {
   }
 
   return "Ambos grupos";
+}
+
+function getRoleLabel(role) {
+  if (role === "ayudante") {
+    return "Ayudante";
+  }
+
+  if (role === "ambos") {
+    return "Maestro/a y ayudante";
+  }
+
+  return "Maestro/a";
 }
 
 function getStatusLabel(status) {
@@ -760,6 +772,10 @@ async function generateUpcomingSchedule() {
 function setupTeacherForm() {
   const form = document.getElementById("teacherForm");
 
+  if (!form) {
+    return;
+  }
+
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -770,6 +786,8 @@ function setupTeacherForm() {
       phone: document.getElementById("teacherPhone").value.trim(),
       email: document.getElementById("teacherEmail").value.trim(),
       group: document.getElementById("teacherGroup").value,
+      role: "maestro",
+      ministryRole: "maestro",
       active: true,
       createdAt: now
     };

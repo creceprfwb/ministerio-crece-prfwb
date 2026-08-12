@@ -20,6 +20,7 @@
     <div class="admin-actions">
       <a href="index.html" class="btn btn-light btn-sm"><i class="bi bi-house"></i> Volver al inicio</a>
       <a href="calendario.html?v=dashboard2" class="btn btn-outline-light btn-sm"><i class="bi bi-calendar-week"></i> Calendario</a>
+      <a href="equipo.html" class="btn btn-outline-light btn-sm"><i class="bi bi-person-lines-fill"></i> Equipo</a>
       <button id="logoutAdmin" class="btn btn-outline-light btn-sm" type="button"><i class="bi bi-box-arrow-right"></i> Salir</button>
     </div>
   </nav>
@@ -28,9 +29,40 @@
     <section class="admin-hero">
       <div>
         <p class="section-kicker">Panel administrativo</p>
-        <h1>Asistencia</h1>
-        <p>Resumen, historial, búsqueda, exportaciones y gráficas.</p>
+        <h1>Centro Administrativo CRECE</h1>
+        <p>Matrícula, asistencia, equipo ministerial, reportes, exportaciones y gráficas por iglesia.</p>
       </div>
+    </section>
+
+    <section class="admin-command-grid" aria-label="Areas administrativas">
+      <a class="admin-command-card" href="maestro.html">
+        <i class="bi bi-person-vcard"></i>
+        <span>
+          <strong>Matrícula</strong>
+          <small>Registrar estudiantes, encargados, teléfonos, QR y notas de seguridad.</small>
+        </span>
+      </a>
+      <a class="admin-command-card" href="asistencia.html">
+        <i class="bi bi-qr-code-scan"></i>
+        <span>
+          <strong>Asistencia</strong>
+          <small>Escanear QR, buscar por nombre o registrar asistencia por numero.</small>
+        </span>
+      </a>
+      <a class="admin-command-card" href="equipo.html">
+        <i class="bi bi-person-lines-fill"></i>
+        <span>
+          <strong>Maestros y ayudantes</strong>
+          <small>Gestionar servidores, roles, grupos preferidos y disponibilidad.</small>
+        </span>
+      </a>
+      <a class="admin-command-card" href="reporte-calendario.html">
+        <i class="bi bi-file-earmark-text"></i>
+        <span>
+          <strong>Reportes</strong>
+          <small>Revisar asignaciones, asistencia, premios y exportaciones.</small>
+        </span>
+      </a>
     </section>
 
     <section class="stats-grid" aria-label="Resumen de asistencia">
@@ -53,6 +85,11 @@
         <i class="bi bi-person-badge"></i>
         <span>Estudiantes registrados</span>
         <strong id="totalStudents">0</strong>
+      </article>
+      <article class="stat-card">
+        <i class="bi bi-person-lines-fill"></i>
+        <span>Maestros y ayudantes</span>
+        <strong id="totalTeachers">0</strong>
       </article>
     </section>
 
@@ -84,6 +121,27 @@
           <button id="clearDemoData" class="btn btn-outline-secondary" type="button"><i class="bi bi-trash3"></i> Limpiar registros locales</button>
         </div>
       </article>
+    </section>
+
+    <section class="app-card mt-4">
+      <div class="panel-heading">
+        <div>
+          <h2>Expedientes de estudiantes</h2>
+          <p>Información completa, progreso, notas y asistencia por niño.</p>
+        </div>
+        <div class="admin-profile-tools">
+          <div class="input-group search-inline">
+            <span class="input-group-text"><i class="bi bi-search"></i></span>
+            <input id="studentProfileSearch" class="form-control" type="search" placeholder="Buscar expediente">
+          </div>
+          <select id="studentProfileGroup" class="form-select">
+            <option value="">Todos los grupos</option>
+            <option value="ninos">Niños</option>
+            <option value="juveniles">Juveniles</option>
+          </select>
+        </div>
+      </div>
+      <div id="studentProfiles" class="admin-profile-grid"></div>
     </section>
 
     <section class="app-card mt-4">

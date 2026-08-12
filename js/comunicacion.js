@@ -104,7 +104,7 @@ function buildGroupMessage() {
   const upcoming = getUpcomingCommAssignments(4);
 
   if (!upcoming.length) {
-    return "Dios les bendiga equipo CRECE.\n\nTodavia no hay asignaciones generadas para compartir. Por favor revisen el calendario cuando este listo.";
+    return "Dios les bendiga equipo CRECE.\n\nTodavía no hay asignaciones generadas para compartir. Por favor revisen el calendario cuando esté listo.";
   }
 
   const lines = upcoming.map((entry) => {
@@ -113,13 +113,13 @@ function buildGroupMessage() {
     return `- ${entry.dateLabel || entry.dateIso} | ${getCommGroupLabel(entry.group)} | ${teacher ? teacher.name : "VACANTE"}${assistant ? ` / Ayudante: ${assistant.name}` : ""}`;
   });
 
-  return `Dios les bendiga equipo CRECE.\n\nEstas son las próximas asignaciones:\n${lines.join("\n")}\n\nPor favor revisen su fecha y confirmen si pueden servir. Gracias por sembrar en la vida de nuestros ninos y jovenes.`;
+  return `Dios les bendiga equipo CRECE.\n\nEstas son las próximas asignaciones:\n${lines.join("\n")}\n\nPor favor revisen su fecha y confirmen si pueden servir. Gracias por sembrar en la vida de nuestros niños y jóvenes.`;
 }
 
 function buildParentGroupMessage() {
   const next = getUpcomingCommAssignments(1)[0];
   const nextText = next
-    ? `\n\nProxima clase: ${next.dateLabel || next.dateIso}\nGrupo: ${getCommGroupLabel(next.group)}\nTema: ${next.lessonTitle || "Clase por confirmar"}`
+    ? `\n\nPróxima clase: ${next.dateLabel || next.dateIso}\nGrupo: ${getCommGroupLabel(next.group)}\nTema: ${next.lessonTitle || "Clase por confirmar"}`
     : "";
 
   return `Dios les bendiga familias CRECE.\n\nGracias por permitirnos discipular a sus hijos. Les recordamos traer Biblia, libreta y llegar a tiempo para la clase.${nextText}\n\nSi tienen alguna pregunta, pueden responder a este mensaje. Gracias por caminar con nosotros.`;
@@ -128,7 +128,7 @@ function buildParentGroupMessage() {
 function buildGuardianMessage(family) {
   const next = getUpcomingCommAssignments(1)[0];
   const nextText = next
-    ? `\n\nProxima clase: ${next.dateLabel || next.dateIso}\nTema: ${next.lessonTitle || "Clase por confirmar"}`
+    ? `\n\nPróxima clase: ${next.dateLabel || next.dateIso}\nTema: ${next.lessonTitle || "Clase por confirmar"}`
     : "";
 
   return `Hola ${family.guardianName || "familia"}, Dios le bendiga.\n\nLe escribimos del Ministerio CRECE sobre ${family.studentNames || "su estudiante"}. Queremos recordarles traer Biblia, libreta y llegar a tiempo para la clase.${nextText}\n\nGracias por permitirnos servir a su familia.`;
