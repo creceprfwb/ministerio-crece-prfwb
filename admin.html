@@ -111,6 +111,52 @@
         </table>
       </div>
     </section>
+
+    <section class="app-card mt-4">
+      <div class="panel-heading">
+        <div>
+          <h2>Cuentas de maestros</h2>
+          <p>Crea accesos limitados para tu equipo de maestros (sin panel administrativo).</p>
+        </div>
+      </div>
+      <div class="dashboard-grid">
+        <form id="teacherAccountForm">
+          <div class="mb-3">
+            <label for="teacherName" class="form-label">Nombre del maestro</label>
+            <input id="teacherName" name="teacherName" class="form-control" type="text" required>
+          </div>
+          <div class="mb-3">
+            <label for="teacherEmail" class="form-label">Correo electronico</label>
+            <input id="teacherEmail" name="teacherEmail" class="form-control" type="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="teacherPassword" class="form-label">Contrasena</label>
+            <input id="teacherPassword" name="teacherPassword" class="form-control" type="password" minlength="6" required>
+          </div>
+          <div id="teacherAccountMessage" class="alert alert-danger d-none" role="alert"></div>
+          <button class="btn btn-primary" type="submit">
+            <i class="bi bi-person-plus"></i> Crear cuenta de maestro
+          </button>
+        </form>
+
+        <div>
+          <div class="table-responsive">
+            <table class="table align-middle admin-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Correo</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="teacherAccountsTable">
+                <tr><td colspan="3" class="text-center text-muted py-4">Cargando...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

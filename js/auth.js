@@ -115,6 +115,12 @@ async function setupHomeSession() {
   document.getElementById("logoutButton").addEventListener("click", () => {
     window.PRFirebase.logout();
   });
+
+  if (profile.role !== "admin") {
+    document.querySelectorAll("[data-admin-only]").forEach((element) => {
+      element.style.display = "none";
+    });
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {

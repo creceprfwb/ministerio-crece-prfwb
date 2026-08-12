@@ -235,6 +235,101 @@ function setupAdminEvents() {
   document.getElementById("logoutAdmin").addEventListener("click", () => window.PRFirebase.logout());
 }
 
+// Pinta la tabla de cuentas de maestros.
+function renderTeacherAccounts(teachers) {
+  const tableBody = document.getElementById("teacherAccountsTable");
+
+  if (!teachers.length) {
+    tableBody.innerHTML = `
+      <tr>
+      <td colspan="3" class="text-center text-muted py-4">Todavia no has creado cuentas de maestro.</td>
+      </tr>
+    `;
+    return;
+  }
+
+  tableBody.innerHTML = teachers.map((teacher) => `
+    <tr>
+      <td><strong>${teacher.name}</strong></td>
+      <td>${teacher.email}</td>
+      <td class="text-end">
+        <button type="button" class="btn btn-outline-danger btn-sm" data-revoke-teacher="${teacher.uid}">
+          <i class="bi bi-person-dash"></i> Revocar
+        </button>
+      </td>
+    </tr>
+  `).join("");
+}
+
+// Carga las cuentas de maestro de la iglesia actual.
+async function loadTeacherAccounts() {
+  if (!window.PRFirebase || typeof window.PRFirebase.getTeacherAccounts !== "function") {
+    return;
+  }
+
+  try {
+    const teachers = await window.PRFirebase.getTeacherAccounts();
+    renderTeacherAccounts(teachers);
+  } catch (error) {
+    console.warn("No se pudieron cargar las cuentas de maestro.", error);
+    renderTeacherAccounts([]);
+  }
+}
+
+// Conecta el formulario de creacion y los botones de revocar.
+function setupTeacherAccounts() {
+  const form = document.getElementById("teacherAccountForm");
+  const messageBox = document.getElementById("teacherAccountMessage");
+  const table = document.getElementById("teacherAccountsTable");
+
+  if (!form) {
+    return;
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    messageBox.classList.add("d-none");
+
+    const formData = new FormData(form);
+    const submitButton = form.querySelector("button[type='submit']");
+
+    try {
+      submitButton.disabled = true;
+      await window.PRFirebase.createTeacherAccount({
+        name: String(formData.get("teacherName") || "").trim(),
+        email: String(formData.get("teacherEmail") || "").trim(),
+        password: String(formData.get("teacherPassword") || "")
+      });
+
+      form.reset();
+      await loadTeacherAccounts();
+    } catch (error) {
+      messageBox.textContent = "No se pudo crear la cuenta. Verifica el correo o intenta con otro.";
+      messageBox.classList.remove("d-none");
+      console.warn(error);
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+
+  table.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-revoke-teacher]");
+
+    if (!button) {
+      return;
+    }
+
+    const confirmed = window.confirm("¿Revocar el acceso de este maestro? Ya no podra iniciar sesion.");
+
+    if (!confirmed) {
+      return;
+    }
+
+    await window.PRFirebase.revokeTeacherAccount(button.getAttribute("data-revoke-teacher"));
+    await loadTeacherAccounts();
+  });
+}
+
 // Punto de entrada del panel administrativo.
 document.addEventListener("DOMContentLoaded", async () => {
   if (window.PRFirebase && typeof window.PRFirebase.requireAuth === "function") {
@@ -249,4 +344,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadSharedAdminData();
   setupAdminEvents();
   renderDashboard();
+  setupTeacherAccounts();
+  await loadTeacherAccounts();
 });

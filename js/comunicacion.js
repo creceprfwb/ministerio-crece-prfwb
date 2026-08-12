@@ -158,7 +158,7 @@ async function loadCommunicationData() {
 
   try {
     if (window.PRFirebase && window.PRFirebase.enabled) {
-      const profile = await window.PRFirebase.requireAuth();
+      const profile = await window.PRFirebase.requireAuth({ adminOnly: true });
       if (!profile) return;
 
       const [cloudTeachers, cloudSchedule, cloudStudents] = await Promise.all([

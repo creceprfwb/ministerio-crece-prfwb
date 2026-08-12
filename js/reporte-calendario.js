@@ -62,9 +62,9 @@ async function loadReportData() {
 
   try {
     if (window.PRFirebase && window.PRFirebase.enabled) {
-      const profile = await window.PRFirebase.requireAuth();
+      const profile = await window.PRFirebase.requireAuth({ adminOnly: true });
       if (!profile) {
-        renderReport("Inicia sesion para ver las asignaciones guardadas en la nube.");
+        renderReport("Inicia sesion como administrador para ver las asignaciones guardadas en la nube.");
         return;
       }
 

@@ -107,6 +107,64 @@ function getChurchCollection(collectionName) {
     .collection(collectionName);
 }
 
+async function createTeacherAccountRecord(data) {
+  const profile = await requireAuth({ adminOnly: true });
+
+  if (!profile) {
+    throw new Error("Solo el administrador puede crear cuentas de maestro.");
+  }
+
+  const secondaryApp = firebase.initializeApp(firebaseConfig, `teacher-create-${Date.now()}`);
+
+  try {
+    const secondaryAuth = secondaryApp.auth();
+    const credential = await secondaryAuth.createUserWithEmailAndPassword(data.email, data.password);
+    const now = new Date().toISOString();
+
+    const teacherProfile = {
+      uid: credential.user.uid,
+      churchId: profile.churchId,
+      churchName: profile.churchName,
+      name: data.name,
+      email: data.email,
+      role: "teacher",
+      createdAt: now
+    };
+
+    await firestoreDb.collection("users").doc(credential.user.uid).set(teacherProfile);
+    await secondaryAuth.signOut();
+
+    return teacherProfile;
+  } finally {
+    await secondaryApp.delete();
+  }
+}
+
+async function getTeacherAccountRecords() {
+  const profile = await requireAuth({ adminOnly: true });
+
+  if (!profile) {
+    return [];
+  }
+
+  const snapshot = await firestoreDb.collection("users")
+    .where("churchId", "==", profile.churchId)
+    .where("role", "==", "teacher")
+    .get();
+
+  return sortByCreatedAtDesc(snapshot.docs.map((doc) => doc.data()));
+}
+
+async function revokeTeacherAccountRecord(uid) {
+  const profile = await requireAuth({ adminOnly: true });
+
+  if (!profile) {
+    return;
+  }
+
+  await firestoreDb.collection("users").doc(uid).delete();
+}
+
 async function createChurchAccount(data) {
   if (!authService || !firestoreDb) {
     throw new Error("Firebase Auth no esta disponible.");
@@ -325,5 +383,17 @@ window.PRFirebase = {
     const snapshot = await collection.get();
     return snapshot.docs.map((doc) => doc.data())
       .sort((a, b) => new Date(a.dateIso || 0) - new Date(b.dateIso || 0));
+  },
+
+  async createTeacherAccount(data) {
+    return createTeacherAccountRecord(data);
+  },
+
+  async getTeacherAccounts() {
+    return getTeacherAccountRecords();
+  },
+
+  async revokeTeacherAccount(uid) {
+    return revokeTeacherAccountRecord(uid);
   }
 };
