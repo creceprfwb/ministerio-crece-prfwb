@@ -1,0 +1,62 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function hasProfile() {
+      return signedIn()
+        && exists(/databases/$(database)/documents/users/$(request.auth.uid));
+    }
+
+    function belongsToChurch(churchId) {
+      return hasProfile()
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.churchId == churchId;
+    }
+
+    function isChurchAdmin(churchId) {
+      return hasProfile()
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.churchId == churchId
+        && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == "admin";
+    }
+
+    match /churches/{churchId} {
+      allow create: if signedIn()
+        && request.resource.data.ownerUid == request.auth.uid;
+
+      allow read, update: if belongsToChurch(churchId);
+
+      match /{collectionName}/{docId} {
+        allow read, write: if belongsToChurch(churchId);
+      }
+    }
+
+    match /users/{userId} {
+      allow create: if signedIn()
+        && request.auth.uid == userId
+        && get(/databases/$(database)/documents/churches/$(request.resource.data.churchId)).data.ownerUid == request.auth.uid;
+
+      // El admin de una iglesia puede crear cuentas de maestro para su propia iglesia.
+      allow create: if signedIn()
+        && request.resource.data.role == "teacher"
+        && isChurchAdmin(request.resource.data.churchId);
+
+      allow read: if signedIn()
+        && request.auth.uid == userId;
+
+      // El admin de una iglesia puede ver los perfiles de su propia iglesia (lista de maestros).
+      allow read: if isChurchAdmin(resource.data.churchId);
+
+      allow update: if signedIn()
+        && request.auth.uid == userId
+        && request.resource.data.churchId == resource.data.churchId
+        && request.resource.data.role == resource.data.role;
+
+      // El admin de una iglesia puede revocar (borrar) cuentas de maestro de su propia iglesia.
+      allow delete: if isChurchAdmin(resource.data.churchId)
+        && resource.data.role == "teacher";
+    }
+  }
+}
