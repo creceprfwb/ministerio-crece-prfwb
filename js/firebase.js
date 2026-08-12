@@ -131,7 +131,13 @@ async function createTeacherAccountRecord(data) {
       createdAt: now
     };
 
-    await firestoreDb.collection("users").doc(credential.user.uid).set(teacherProfile);
+    try {
+      await firestoreDb.collection("users").doc(credential.user.uid).set(teacherProfile);
+    } catch (profileError) {
+      await credential.user.delete().catch(() => {});
+      throw profileError;
+    }
+
     await secondaryAuth.signOut();
 
     return teacherProfile;
